@@ -7,6 +7,6 @@ i) \frac{e^{at}}{p(a)} &p(a)\neq0\\
 ii) \frac{te^{at}}{p'(a)}&p(a)=0&\text{and}&p'(a)\neq0\\
 iii) \frac{t^2e^{at}}{p''(a)}&p(a)=p'(a)=0&\text{and}&p''(a)\neq0\\
 ...\\
-iv) \frac{te^{at}}{p'(a)}&\text{f a is an s-fold zero}
+iv) \frac{t^se^{at}}{p^{(s)}(a)}&\text{f a is an s-fold zero}
 \end{cases}
 $$

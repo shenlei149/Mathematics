@@ -49,7 +49,7 @@ $$
 \begin{aligned}
 D^2e^{at}u=D(De^{at}u)&=D(e^{at}(D+a)u)\\
 &=e^{at}(D+a)((D+a)u)\\
-&=e^{at}D^2u
+&=e^{at}(D+a)^2u
 \end{aligned}
 $$
 In the same way,
@@ -57,7 +57,7 @@ $$
 \begin{aligned}
 D^3e^{at}u=D(D^2e^{at}u)&=D(e^{at}(D+a)^2u)\\
 &=e^{at}(D+a)((D+a)^2u)\\
-&=e^{at}D^3u
+&=e^{at}(D+a)^3u
 \end{aligned}
 $$
 and so on. This shows that $(6)$ is true for an operator of the form $D^k$. To show it is true for a general operator
