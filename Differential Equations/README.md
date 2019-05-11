@@ -37,4 +37,5 @@ Matrix Exponentials
 Nonlinear Systems  
 Linearization  
 Limit Cycles and Chaos  
-  
+
+Exercises are the problem that I can't solve or get wrong answer
