@@ -12,7 +12,7 @@ where we used '∼' instead of an equal sign. The following theorem shows that o
 
 **Theorem:** If $f(t)$ is piecewise smooth and periodic then the Fourier series for $f$
 1. converges to $f(t)$ at values of $t$ where $f$ is continuous
-2. converges to the average of $f(t^−)$ and $f(t+)$ where it has a jump discontinuity.
+2. converges to the average of $f(t^-)$ and $f(t+)$ where it has a jump discontinuity.
 
 **Example.** Square wave. No matter what the endpoint behavior of $f(t)$ the Fourier series converges to:  
 ![](pic230401.png)

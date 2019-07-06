@@ -13,7 +13,7 @@ Most periodic functions have a *minimal* period, which is often called either *t
 The only exception is the constant function. Every value of $P > 0$ is a period and so it has no minimal period. (We don’t allow $P = 0$ to be a period because then every function would be periodic with period $P = 0$.)
 
 ### Windows
-To fully describe a periodic function you only need to specify the period and the value of the function over one full period. We call an interval containing one full period a **window**. Typical choices for windows are $[−P/2, P/2)$ and $[0, P)$, but any interval of length $P$ will work.
+To fully describe a periodic function you only need to specify the period and the value of the function over one full period. We call an interval containing one full period a **window**. Typical choices for windows are $[-P/2, P/2)$ and $[0, P)$, but any interval of length $P$ will work.
 
 ### Frequency Terminology
 **Angular frequency**, also called **circular frequency** has units of radians/unit time.

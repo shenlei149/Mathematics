@@ -10,7 +10,7 @@ $$
 **Note:** The integrated function $h(t)$ is not periodic (because of the $t$ term), so the result is a series, but not a Fourier series.
 
 We can also differentiate a Fourier series term-by-term to get the Fourier series of the derivative function.  
-**Example 2.** Let $f(t)$ be the period $2\pi$ triangle wave (continuous sawtooth) given on the interval $[−\pi, \pi)$ by $f(t) = |t|$. Its Fourier series is
+**Example 2.** Let $f(t)$ be the period $2\pi$ triangle wave (continuous sawtooth) given on the interval $[-\pi, \pi)$ by $f(t) = |t|$. Its Fourier series is
 $$
 f(t)=\frac{\pi}{2}-\frac{4}{\pi}(\cos t+\frac{\cos 3t}{3^2}+\frac{\cos 5t}{5^2}+\ldots)
 $$

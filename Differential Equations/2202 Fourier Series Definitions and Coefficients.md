@@ -33,7 +33,7 @@ The graph over several periods is shown below.
 ![](pic220201.png)
 
 **Solution** Computing a Fourier series means computing its Fourier coefficients.  
-In applying these formulas to the given square wave function, we have to split the integrals into two pieces corresponding to where $f(t)$ is +1 and where it is −1. We find  
+In applying these formulas to the given square wave function, we have to split the integrals into two pieces corresponding to where $f(t)$ is +1 and where it is -1. We find  
 $$
 \begin{aligned}
 a_n&=\frac{1}{\pi}\int_{-\pi}^{\pi}f(t)\cos(nt)dt\\
@@ -61,7 +61,7 @@ b_n&=\frac{1}{\pi}\int_{-\pi}^{\pi}f(t)\sin(nt)dt\\
 \end{cases}
 \end{aligned}
 $$
-We have used the simplification $\cos n\pi = (−1)^n$ to get a nice formula for the coefficients $b_n$.
+We have used the simplification $\cos n\pi = (-1)^n$ to get a nice formula for the coefficients $b_n$.
 
 This then gives the Fourier series for $f(t)$:
 $$f(t)=\sum_{n=1}^\infty b_n\sin(nt)=\frac{4}{n\pi}(\sin t+\frac{1}{3}\sin 3t + \frac{1}{5}\sin 5t + \ldots)$$
@@ -72,4 +72,4 @@ However, it is not easy to see that the sum on the right-hand side is in fact co
 Notice that since a finite sum of sine functions is continuous (in fact smooth), the partial sums cannot jump when $t$ is an integer multiple of $\pi$, the way the square way $f(t)$ does. But they are certainly "trying" to become the square wave $f(t)$! And the more terms you add in, the better the fit, with the theoretical limit as $N \rightarrow \infty$ being exactly equal to $f(t)$ (except
 actually at the jumps $t = n\pi$, as we’ll see).
 
-**Note**: In this case we don’t have any cosine terms, just sine. This turns out to be not an accident: it follows from the fact that $f(t)$ here is an *odd* function, i.e. $f(−t) = −f(t)$, and such functions have only sines (which are also odd functions) in their Fourier series. Similarly for even functions and cosine series: if $f(t)$ is even ($f(−t) = f(t)$) then all the $b_n$'s vanish and the Fourier series is simply $f(t)=\frac{a_0}{2}+\sum_{n=1}^{\infty}a_n\cos nt$; while if $f(t)$ is odd then all the $a_n$'s vanish and the Fourier series is $f(t)=\sum_{n=1}^{\infty}b_n\sin nt$.
+**Note**: In this case we don’t have any cosine terms, just sine. This turns out to be not an accident: it follows from the fact that $f(t)$ here is an *odd* function, i.e. $f(-t) = -f(t)$, and such functions have only sines (which are also odd functions) in their Fourier series. Similarly for even functions and cosine series: if $f(t)$ is even ($f(-t) = f(t)$) then all the $b_n$'s vanish and the Fourier series is simply $f(t)=\frac{a_0}{2}+\sum_{n=1}^{\infty}a_n\cos nt$; while if $f(t)$ is odd then all the $a_n$'s vanish and the Fourier series is $f(t)=\sum_{n=1}^{\infty}b_n\sin nt$.

@@ -1,4 +1,4 @@
-Suppose that we have a periodic function $f(t)$ with arbitrary period $P = 2L$, generalizing the special case $P = 2\pi$ which we have already seen. Then a simple re-scaling of the interval $(−\pi, \pi)$ to $(−L, L)$ allows us to write down the general Fourier series and Fourier coefficent formulas:
+Suppose that we have a periodic function $f(t)$ with arbitrary period $P = 2L$, generalizing the special case $P = 2\pi$ which we have already seen. Then a simple re-scaling of the interval $(-\pi, \pi)$ to $(-L, L)$ allows us to write down the general Fourier series and Fourier coefficent formulas:
 $$f(t)=\frac{a_0}{2}+\sum_{n=1}^{\infty}a_n\cos (n\frac{\pi}{L}t)+b_n\sin (n\frac{\pi}{L}t)\tag{1}$$
 with Fourier coefficients given by the general Fourier coefficent formulas 
 $$
@@ -9,7 +9,7 @@ $$
 Note: The number $L = \frac{P}{2}$ is called the **half-period**.
 
 ### Example
-Let $f(t)$ be the period 2 function, which is defined on the window $[−1, 1)$ by $f(t) = |t|$. Compute the Fourier series of $f(t)$.
+Let $f(t)$ be the period 2 function, which is defined on the window $[-1, 1)$ by $f(t) = |t|$. Compute the Fourier series of $f(t)$.
 
 **Solution** In this case the period is $P = 2$, so the half-period $L = 1$. This means $n\frac{\pi}{L}=n\pi$ and we compute the coefficients from the formulas in $(2)$,
 using integration by parts, as follows.  

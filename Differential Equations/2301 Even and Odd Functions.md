@@ -1,15 +1,15 @@
 ### Even and odd functions
-**Definition.** A function $f(t)$ is **called** even if $f(−t) = f(t)$ for all $t$.  
+**Definition.** A function $f(t)$ is **called** even if $f(-t) = f(t)$ for all $t$.  
 The graph of an even function is symmetric about the $y$-axis.
 
-We will need the following fact about the integral of an even function over a 'balanced' interval $[−L, L]$.  
+We will need the following fact about the integral of an even function over a 'balanced' interval $[-L, L]$.  
 If $f(t)$ is even then
 $$\int_{-L}^{L}f(t)dt=2\int_{0}^{L}f(t)dt$$
 
-**Definition.** A function $f(t)$ is called **odd** if $f(−t) = −f(t)$ for all $t$.  
+**Definition.** A function $f(t)$ is called **odd** if $f(-t) = -f(t)$ for all $t$.  
 The graph of an odd function is symmetric about the the origin.
 
-We will need the following fact about the integral of an odd function over a 'balanced' interval $[−L, L]$.  
+We will need the following fact about the integral of an odd function over a 'balanced' interval $[-L, L]$.  
 If $f(t)$ is odd then
 $$\int_{-L}^{L}f(t)dt=0$$
 

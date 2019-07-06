@@ -34,19 +34,19 @@ $$\widetilde{g}(\omega)=\frac{i\omega b}{p(i\omega)}$$
 Thus,
 $$z_p=B_1\widetilde{g}(\omega)e^{i\omega t}$$
 
-We can write $\widetilde{g} = \lvert\widetilde{g}\rvert e^{−i\phi}$, where $\phi = −Arg(\widetilde{g})$. (We use the minus sign so $\phi$ will come out as the phase lag.) Substitute this expression into the formula for $z_p$ to get
+We can write $\widetilde{g} = \lvert\widetilde{g}\rvert e^{-i\phi}$, where $\phi = -Arg(\widetilde{g})$. (We use the minus sign so $\phi$ will come out as the phase lag.) Substitute this expression into the formula for $z_p$ to get
 $$z_p = B_1\lvert\widetilde{g}\rvert e^{i(\omega t-\phi)}$$
 Taking the real part we have
 $$x_p = B_1\lvert\widetilde{g}\rvert \cos(\omega t-\phi)$$
 
-All that’s left is to compute the gain $g = \lvert\widetilde{g}\rvert$ and the phase lag  $\phi = −Arg(\widetilde{g})$. We have
+All that’s left is to compute the gain $g = \lvert\widetilde{g}\rvert$ and the phase lag  $\phi = -Arg(\widetilde{g})$. We have
 $$p(i\omega)=m(i\omega)^2+bi\omega+k=(k-m\omega^2)+bi\omega$$
 so
 $$\widetilde{g}(\omega)=\frac{i\omega b}{p(i\omega)}=\frac{i\omega b}{(k-m\omega^2)+bi\omega}\tag{4}$$
 This gives
 $$g(\omega)=\lvert\widetilde{g}\rvert=\frac{\omega b}{\lvert p(i\omega)\rvert }=\frac{\omega b}{\sqrt{(k-m\omega^2)^2+b^2\omega^2}}$$
 In computing the phase $\phi$ we have to be careful not to forget the factor of $i$ in the numerator of $\widetilde{g}$. After a little algebra we get
-$$\phi(\omega)=−Arg(\widetilde{g})=tan^{-1}(-(k-m\omega^2)/(b\omega))$$
+$$\phi(\omega)=-Arg(\widetilde{g})=tan^{-1}(-(k-m\omega^2)/(b\omega))$$
 As with the system driven through the spring, we try to find the input frequency $\omega=\omega_r$ which gives the largest system response. In this case we can find $\omega_r$ without any calculus by using the following shortcut: divide the numerator and denominator in $(4)$ by $bi\omega$ and rearrange to get
 $$\widetilde{g}=\frac{1}{1+(k-m\omega^2)/(i\omega b)}=\frac{1}{1-i(k-m\omega^2)/(\omega b)}$$
 Now the gain $g = \lvert \widetilde{g} \rvert$ can be written as

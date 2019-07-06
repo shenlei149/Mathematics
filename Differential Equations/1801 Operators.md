@@ -1,7 +1,7 @@
 `Operators` are  to functions as functions are  to numbers. An operator takes a function, does something to it, and returns this modified function.
 
 There are lots of examples of operators around:
-- The `shift-by-aoperator` (where ais a number) takes as input a function $f(t)$ and gives as output the function $f(t−a)$. This operator shifts graphs to the right by `a` units.
+- The `shift-by-aoperator` (where ais a number) takes as input a function $f(t)$ and gives as output the function $f(t-a)$. This operator shifts graphs to the right by `a` units.
 - The `multiply-by-h(t) operator` (where $h(t)$ is a function) multiplies by $h(t)$: it takes as input the function $f(t)$ and gives as output the function $h(t)f(t)$.
 
 You can go on to invent many other operators. In this course `the most important` operator is:
