@@ -24,10 +24,8 @@ Some comments are in order.
 ### Example
 Compute the Fourier series of $f(t)$, where $f(t)$ is the square wave with period $2\pi$. which is defined over one period by
 $$f(t)=\begin{cases}
-\begin{aligned}
--1 &\text{ for }-\pi\leq t < 0\\
-1 &\text{ for }0\leq t <\pi
-\end{aligned}
+-1&\text{for }-\pi\leq t < 0\\
+1&\text{for }0\leq t <\pi
 \end{cases}$$
 The graph over several periods is shown below.  
 ![](pic220201.png)
@@ -56,8 +54,8 @@ b_n&=\frac{1}{\pi}\int_{-\pi}^{\pi}f(t)\sin(nt)dt\\
 &=\frac{2}{n\pi}(1-\cos(n\pi))\\
 &=\frac{2}{n\pi}(1-(-1)^n)\\
 &=\begin{cases}
-\frac{4}{n\pi} &\text{for $n$ odd}\\
-0 &\text{for $n$ even}
+\frac{4}{n\pi}&\text{for $n$ odd}\\
+0&\text{for $n$ even}
 \end{cases}
 \end{aligned}
 $$

@@ -1,26 +1,22 @@
 ### Heaviside Unit Step Function
 The **unit step function** is defined by
 $$
-\begin{aligned}
 u(t)=
 \begin{cases}
 0&\text{for }t<0\\
 1&\text{for }t>0
 \end{cases}
-\end{aligned}
 $$
-The reason for the name *unit step* can be seen in the graph.
+The reason for the name *unit step* can be seen in the graph.  
 ![](pic250201.png)
 
 The first graph shows the function $u(t)$. The second graph shows $u(t - a)$, which is simply $u(t)$ shifted to the right.
 $$
-\begin{aligned}
 u(t-1)=
 \begin{cases}
 0&\text{for }t<a\\
 1&\text{for }t>a
 \end{cases}
-\end{aligned}
 $$
 A few details need to be highlighted.
 1. $u(t)$ is also called the **Heaviside function**.
@@ -37,14 +33,12 @@ At the longer time scale, we don’t care about these details. Modeling the proc
 ### Box Functions
 When we modeled the light with $u(t)$ we assumed the light went on and stayed on forever. Eventually the light will be turned off or burn out. To be general, let’s assume the light goes on at time $a$ and off at time $b$. We can model this with the function
 $$
-\begin{aligned}
 u_{ab}(t)=
 \begin{cases}
 0&\text{for }t<a\\
 1&\text{for }a<t<b\\
 0&\text{for }b<t
 \end{cases}
-\end{aligned}
 $$
 The graph of this is  
 ![](pic250203.png)  
@@ -68,7 +62,6 @@ We now have two ways to express functions that change formulas for different int
 **Example.** Suppose $f(t)$ is 0 for $t < 0$, $t$ for $0 < t < 1$, $t^2$ for $1 < t < 2$ and $2t$ for $t > 2$. Express $f(t)$ in both $u$ and cases formats.  
 **Solution.** Cases format expresses $f(t)$ by specifying the formula for each case:
 $$
-\begin{aligned}
 f(t)=
 \begin{cases}
 0&\text{for }t<0\\
@@ -76,7 +69,6 @@ t&\text{for }0<t<1\\
 t^2&\text{for }1<t<2\\
 2t&\text{for }2<t\\
 \end{cases}
-\end{aligned}
 $$
 $u$-format uses step and box functions to turn on and off expressions:
 $$f(t) = (u(t) - u(t - 1))\cdot t + (u(t - 1) - u(t - 2)) \cdot t^2  + u(t - 2) \cdot 2t
@@ -86,7 +78,6 @@ Notice how each case tells us which step or box functions to use as switches and
 **Example.** Write $f(t) = u(t)\cdot 4t + u(t - 2)\cdot t^2 + u(t - 4)\cdot t^3/4$ in cases format.  
 **Solution.**
 $$
-\begin{aligned}
 f(t)=
 \begin{cases}
 0&\text{for }t<0\\
@@ -94,6 +85,5 @@ f(t)=
 4t+t^2&\text{for }2<t<4\\
 4t+t^2+t^3/4&\text{for }4<t\\
 \end{cases}
-\end{aligned}
 $$
 Notice how there are no *off* switches in the expression for $f(t)$, so in cases format the number of terms in each successive case grows as the $u$-switches turn on.

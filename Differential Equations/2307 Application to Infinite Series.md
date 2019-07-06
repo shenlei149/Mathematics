@@ -4,7 +4,7 @@ $$
 $$
 We'll show how you can use a Fourier series to get this result.
 
-Consider the period $2\pi$ function given by $f(t)=t(\pi-t/2)$ on $[0,2\pi]$.
+Consider the period $2\pi$ function given by $f(t)=t(\pi-t/2)$ on $[0,2\pi]$.  
 ![](pic230701.png)
 
 First, we compute the Fourier series of $f(t)$. Since $f$ is even, the sine terms are all 0. For the cosine terms it is slightly easier to integrate over a full period from 0 to $2\pi$ rather than doubling the integral over the halfperiod.  

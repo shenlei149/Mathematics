@@ -6,22 +6,21 @@ b_n=\frac{1}{L}\int_{-L}^{L}f(t)\sin(n\frac{\pi}{L}t)dt\tag{1}
 $$
 The key fact is the following collection of integral formulas for sines and cosines, which go by the name of **orthogonality relations**:
 $$
-\frac{1}{L}\int_{-L}^L\cos(n\frac{\pi}{L}t)\cos(m\frac{\pi}{L}t)dt=\begin{aligned}\begin{cases}
+\frac{1}{L}\int_{-L}^L\cos(n\frac{\pi}{L}t)\cos(m\frac{\pi}{L}t)dt=\begin{cases}
 1 &n=m\neq 0\\
 0 &n\neq m\\
 2 &n=m=0
 \end{cases}
-\end{aligned}\tag{2}
+\tag{2}
 $$
 $$
 \frac{1}{L}\int_{-L}^L\cos(n\frac{\pi}{L}t)\sin(m\frac{\pi}{L}t)dt=0\tag{3}
 $$
 $$
-\frac{1}{L}\int_{-L}^L\sin(n\frac{\pi}{L}t)\sin(m\frac{\pi}{L}t)dt=\begin{aligned}\begin{cases}
+\frac{1}{L}\int_{-L}^L\sin(n\frac{\pi}{L}t)\sin(m\frac{\pi}{L}t)dt=\begin{cases}
 1 &n=m\neq 0\\
 0 &n\neq m
-\end{cases}
-\end{aligned}\tag{4}
+\end{cases}\tag{4}
 $$
 **Proof of the orthogonality relations:**  
 For $(2)$

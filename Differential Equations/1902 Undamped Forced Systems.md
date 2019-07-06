@@ -19,12 +19,12 @@ $$
 Exponential Response formula:
 $$
 z_p=\begin{cases}
-\frac{e^{i\omega t}}{p(i\omega)}=\frac{e^{i\omega t}}{\omega_0^2-\omega^2}\text{ if }\omega\neq\omega_0\\
-\frac{te^{i\omega t}}{p'(i\omega)}=\frac{te^{i\omega t}}{2i\omega}\text{ if } \omega=\omega_0
+\frac{e^{i\omega t}}{p(i\omega)}&=\frac{e^{i\omega t}}{\omega_0^2-\omega^2}&\text{if }\omega\neq\omega_0\\
+\frac{te^{i\omega t}}{p'(i\omega)}&=\frac{te^{i\omega t}}{2i\omega}&\text{if } \omega=\omega_0
 \end{cases}\\
 x_p=\begin{cases}
-\frac{\cos \omega t}{\omega_0^2-\omega^2}\text{ if }\omega\neq\omega_0\\
-\frac{t\sin \omega_0 t}{2\omega_0}\text{ if } \omega=\omega_0
+\frac{\cos \omega t}{\omega_0^2-\omega^2}&\text{if }\omega\neq\omega_0\\
+\frac{t\sin \omega_0 t}{2\omega_0}&\text{if } \omega=\omega_0
 \end{cases}
 $$
 
