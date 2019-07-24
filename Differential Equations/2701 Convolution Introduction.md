@@ -6,4 +6,4 @@ The motivation will come in the form of Green's formula. This important tool tel
 
 The rest of the session is concerned with the proof of the Green's formula and examples of convolution and Green's formula.
 
-**Technical Detail:** Because we want convolution to work with delta functions we needed to be careful with the limits of integration. This explains the plus and minus on the limits.. If both functions are continuous or have at most jump discontinuities then the limits can be 0 and $t$.
+**Technical Detail:** Because we want convolution to work with delta functions we needed to be careful with the limits of integration. This explains the plus and minus on the limits. If both functions are continuous or have at most jump discontinuities then the limits can be 0 and $t$.
