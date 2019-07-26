@@ -13,7 +13,7 @@ $$y(t)=(f*w)(t)=\int_{0^-}^{t^+} f(\tau)w(t-\tau)d\tau\tag{2}$$
 This is a wonderful formula! It tells us the response to *any* input once we know the unit impulse response. Furthermore, it gives us that response as an integral which can be computed numerically if necessary. For many physical systems the impulse response can be measured directly or deduced from measurements. So, Green's formula gives us a method for predicting the system's response to any input.
 
 ### Unit Impulse Response = Weight Function
-The unit impulse response is also called the **weight function**. We will use the terms interchangeably. If we think of an integral as a 'sum' then Green's formula shows the solution $y(t)$ to $(1)$ is given as a weighted sum of the small bits of input, $f(\tau) d\tau$ from before time $t$. Each piece is weighted by $w(t − \tau)$.  
+The unit impulse response is also called the **weight function**. We will use the terms interchangeably. If we think of an integral as a 'sum' then Green's formula shows the solution $y(t)$ to $(1)$ is given as a weighted sum of the small bits of input, $f(\tau) d\tau$ from before time $t$. Each piece is weighted by $w(t - \tau)$.  
 Before proceeding, let us recall the definition of the unit impulse response. The weight $w(t)$ is the unique solution to the IVP
 $$P(D)y=\delta(t) \text{ with rest IC}\tag{3}$$
 In the previous session we learned how to rewrite $(3)$ as a homegeneous equation. We will only restate this for second order equations. The weight function for the system
@@ -32,7 +32,7 @@ we have
 $$y_p(t)=\int_0^t A\sin(t-\tau)d\tau=A\cos(t-\tau)\bigg|_0^t=A(1-\cos t)$$
 We check this by another method: The exponential response formula or the method of undetermined coefficients produces the particular solution $y_p = A$. Adding in the homogeneous solution we get the general solution to the DE is
 $$y=A+c_1\cos t+c_2\sin t$$
-You can easily compute that the rest initial conditions are matched by $y = A − A \cos t$, as found by Green's formula.
+You can easily compute that the rest initial conditions are matched by $y = A - A \cos t$, as found by Green's formula.
 
 **Example 2.** Find the particular solution for $t \geq 0$ given by $(2)$ to
 $$y''+y=f(t)=\begin{cases}

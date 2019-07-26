@@ -2,7 +2,7 @@ We can extend our reasoning in the first and second order cases to any order. Co
 $$a_nx^{(n)}+a_{n-1}x^{(n-1)}+\ldots+a_1x'+a_0x=f(t)\tag{1}$$
 where we take $f(t)$ to be the input. The equation for the unit impulse response of this system is
 $$a_nx^{(n)}+a_{n-1}x^{(n-1)}+\ldots+a_1x'+a_0x=\delta(t), \text{ with rest IC.}\tag{2}$$
-The effect of the $\delta$ function input is to cause a jump in the $(n − 1)^{st}$ derivative at time $t = 0$, while the lower order derivatives do not jump. That is, the system is put in the state
+The effect of the $\delta$ function input is to cause a jump in the $(n - 1)^{st}$ derivative at time $t = 0$, while the lower order derivatives do not jump. That is, the system is put in the state
 $$x(0^+)=0,x'(0^+)=0,\ldots,x^{(n-2)}(0^+)=0,x^{(n-1)}(0^+)=1/a_n$$
 To show this we use the same reasoning as in the second order case. Suppose there was a jump in a lower derivative. For example, suppose
 $$x^{(n-3)}(0^+)=b\neq 0$$

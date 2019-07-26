@@ -30,7 +30,7 @@ This is a homogeneous constant coefficient linear differential equation which we
 $$2x''+8x'+26x=f(t)\tag{2}$$
 **Solution.** We will use the standard notation $w(t)$ for the unit impulse response. We are looking for the response from rest to $f(t) = \delta(t)$. We know $w(t) = 0$ for $t < 0$. At $t = 0$ the input causes a unit jump in momentum, i.e., $2w'(0^+) = 1$. So, for $t > 0$ we have to solve
 $$2w''+8w'+26w=0, w'(0^+)=1/2, w(0^+)=0$$
-The roots of the characteristic polynomial are $−2 \pm 3i$. Which implies
+The roots of the characteristic polynomial are $-2 \pm 3i$. Which implies
 $$w(t)=c_1e^{-2t}\cos 3t+c_2e^{-2t}\sin 3t, t>0$$
 The initial conditions give
 $$

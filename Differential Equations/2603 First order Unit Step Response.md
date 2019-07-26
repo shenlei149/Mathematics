@@ -46,7 +46,7 @@ r&\text{for }t>0\\
 \end{cases}
 \end{aligned}
 $$
-Comparing this with the right side of $(2)$ we see that $r/k + c_2 = 0$, or c$_2 = −r/k$. This gives exactly the same solution $(1)$ we had before.
+Comparing this with the right side of $(2)$ we see that $r/k + c_2 = 0$, or c$_2 = -r/k$. This gives exactly the same solution $(1)$ we had before.
 
 Figure 1 shows the graph of the unit step response ($r = 1$). Notice that it starts at 0 and goes asymptotically up to $1/k$.  
 ![](pic260301.png)

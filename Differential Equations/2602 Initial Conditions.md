@@ -58,7 +58,7 @@ Checking the pre and post initial conditions gives
 $$x(0^-)=0=x(0^+)$$
 $$x'(0^-)=0\neq x(0^+)=1$$
 In other words, $x(t)$ itself is continuous, but for the second order equation the input $\delta(t)$ caused a jump in the first derivative.  
-If we continued these examples we'd find that for an $n^{th}$-order equation an input of $\delta(t)$ causes a jump in the derivative of order $n − 1$.
+If we continued these examples we'd find that for an $n^{th}$-order equation an input of $\delta(t)$ causes a jump in the derivative of order $n - 1$.
 
 ### Rest Initial Conditions
 The case where $x(t) = 0$ for $t < 0$ is called **rest initial conditions**. If we have a DE of order $n$ this translates into pre-initial conditions
