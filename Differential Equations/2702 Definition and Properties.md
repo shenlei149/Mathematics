@@ -77,8 +77,18 @@ The notation for the second equation is ugly, but its meaning is clear.
 We prove these formulas by direct computation. First, remember the rules of integration with delta functions: for $b>0$
 $$\int_{0^-}^b \delta(\tau)f(\tau)d\tau=f(0)$$
 The formulas follow easily for $t\geq 0$
-$$(\delta*f)(t)=\int_{0^-}^{t^+}\delta(\tau)f(t-\tau)d\tau=f(t-0)=f(t)$$
-$$(\delta(t-a)*f)(t)=\int_{0^-}^{t^+} \delta(\tau-a)f(t-\tau)d\tau=f(t-a)$$
+$$\begin{aligned}
+(\delta*f)(t)&=\int_{0^-}^{t^+}\delta(\tau)f(t-\tau)d\tau\\
+&=\int_{0^-}^{t^+}\delta(\tau)f(t-0)d\tau\\
+&=f(t-0)\int_{0^-}^{t^+}\delta(\tau)d\tau\\
+&=f(t)
+\end{aligned}$$
+$$\begin{aligned}
+(\delta(t-a)*f)(t)&=\int_{0^-}^{t^+} \delta(\tau-a)f(t-\tau)d\tau\\
+&=\int_{0^-}^{t^+} \delta(\tau-a)f(t-a)d\tau\\
+&=f(t-a)\int_{0^-}^{t^+} \delta(\tau-a)d\tau\\
+&=f(t-a)
+\end{aligned}$$
 
 ### Convolution is a Type of Multiplication
 You should think of convolution as a type of multiplication of functions. In fact, it is often referred to as the *convolution product*. In fact, it has the properties we associate with multiplication:
