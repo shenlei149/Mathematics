@@ -51,4 +51,32 @@ First we put the expression $(5)$ for complex impedance in the form we need
 $$\tilde{Z}=iL\omega+\frac{1}{iC\omega}+R=i(L\omega-\frac{1}{C\omega})+R=iS+R$$
 We call $S = L\omega-\frac{1}{C\omega}$ the **reactance**; note that $S = 0$ when $\omega^2 =1/(LC)$.  
 In amplitude phase form $\tilde{Z}=|\tilde{Z}|e^{i\phi}$, where $|\tilde{Z}|=\sqrt{S^2+R^2}$ and $\phi=Arg(\tilde{Z})=\tan^{-1}(S/R)$  
-TODO
+Notice the sign of $\phi$ depends on the sign of $S = L\omega-1/C\omega$ and also that $\phi$ is between $-\pi/2$ and $\pi/2$.  
+Thus,
+$$\tilde{I}=\frac{V_0}{\sqrt{S^2+R^2}}e^{i(\omega t-\phi)}=\frac{V_0}{\sqrt{(L\omega-1/C\omega)^2+R^2}}e^{i(\omega t-\phi)}\tag{8}$$
+The term $\sqrt{S^2+R^2}=|\tilde{Z}|=\sqrt{(L\omega-1/C\omega)^2+R^2}$ is called the **real impedance**.  
+Taking imaginary parts in $(8)$ gives
+$$I|\tilde{Z}|=V_0\sin(\omega t-\phi)$$
+which is like Ohm's Law, except with a phase shift.
+
+### Phasors
+(The term phasor just means $e{i\omega t}$).  
+We have seen that each element of an LRC circuit obeys a complex Ohm's law:
+$$\tilde{V}_L=\tilde{Z}_L\tilde{I}=Li\omega\tilde{I},\tilde{V}_R=R\tilde{I},\tilde{V}_C=\tilde{Z}_C\tilde{I}=\frac{1}{iC\omega}\tilde{I}\tag{9}$$
+Each of complex voltages is some constant factor $\tilde{I}$, which is, in turn, a multiple of $e^i\omega t$. If we plot the voltages in the complex plane then as $t$ increases the entire picture will rotate at frequency $\omega$. We call each of these voltages a **phasor**.  
+We want to look at the phase difference between the various voltages. By our simple arithmetic fact $(1)$, the factors $i$ and $1/i$ in $\tilde{V}_L$ and $\tilde{V}_C$ imply
+1. The phasors $\tilde{V}_L$ and $\tilde{V}_C$ are respectively $\pi/2$ ahead and $\pi/2$ behind $\tilde{V}_R$  
+Equation $(8)$ implies 
+2. The phasor $\tilde{V}_R$ is $\phi$ behind $\tilde{V}_{in}$ (if $\phi$ is negative then $\tilde{V}_R$ is ahead of $\tilde{V}_{in}$.)
+
+![](pic210303.png)
+
+### Amplitude Response and Practical Resonance
+The natural frequency of the circuit is $\omega_0 = 1/\sqrt{LC}$. This is the frequency of oscillation when the "damping" term $R$ is zero.
+
+The *practical resonance* of the system $(3)$ is independent of the value of $R$ and always at the natural frequency $\omega_0 = 1/\sqrt{LC}$ (This is easy to see in $(8)$, since $|\tilde{I}|$ is clearly maximized when the term $(L\omega-1/C\omega)^2=0$.)  
+That is, practical resonance occurs when
+$$\tilde{Z}_L+\tilde{Z}_C=0 \rArr iL\omega-i/C\omega=0 \rArr \tilde{Z}=R, \tilde{I}=\frac{V_0}{R}e^{i\omega t}$$
+In the phasor picture, at practical resonance $\tilde{V}_{in}$, $\tilde{I}$ and $\tilde{V}_R$ all line up, i.e.,
+lag is 0 and $\tilde{V}_R = \tilde{V}_{in}$.  
+This is one case where the corresponding sinusoidal graphs of the real voltages are neat enough to give a nice picture: the graph of $V_R$ is exactly in phase with $V_{in}$; $V_L$ and $V_C$ have the same magnitude and are $180\degree$ out of phase; increasing $R$ doesn't change $V_R$, but decreases the amplitude of $V_L$ and $V_C$.
