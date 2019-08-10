@@ -23,3 +23,45 @@ it is understood that we mean $F(s) = \mathcal{L}(f)$.
 $$(\mathcal{L}f)(s) = F(s) = \mathcal{L}f(s) = \mathcal{L}(f(t))(s) = \mathcal{L}(t^2)(s); \mathcal{L}f = F = \mathcal{L}(t^2)$$
 
 ### Examples
+For the first few examples we will explicitly use a limit for the improper integral. Soon we will do this implicitly without comment.
+
+**Example 1.** Let $f(t) = 1$, find $F(s) = \mathcal{L}f(s)$.  
+**Solution.** Using the definition $(1')$ we have
+$$\mathcal{L}(1)=F(s)=\int_0^\infty e^{-st}dt=\lim_{T \to \infty} \frac{e^{-st}}{-s}\bigg|_0^T=\lim_{T \to \infty} \frac{e^{-sT}-1}{-s}$$
+The limit depends on whether s is positive or negative.
+$$\lim_{T \to \infty} e^{-sT}=\begin{cases}
+0&\text{if }s>0\\
+\infty&\text{if }s<0
+\end{cases}$$
+Therefore,
+$$\mathcal{L}(1)=F(s)=\begin{cases}
+\frac{1}{s}&\text{if }s>0\\
+\text{diverges}&\text{if }s\leq 0
+\end{cases}$$
+(We didn't actually compute the case $s = 0$, but it is easy to see it diverges.)
+
+**Example 2.** Compute $\mathcal{L}e^{at}$  
+**Solution.** Using the definition $(1')$ we have
+$$\mathcal{L}(e^{at})=F(s)=\int_0^\infty e^{at}e^{-st}dt=\lim_{T \to \infty} \frac{e^{(a-s)t}}{a-s}\bigg|_0^T=\lim_{T \to \infty} \frac{e^{(a-s)T}-1}{a-s}$$
+The limit depends on whether $s > a$ or $s < a$.
+$$\lim_{T \to \infty} e^{(a-s)T}=\begin{cases}
+0&\text{if }s>a\\
+\infty&\text{if }s<a
+\end{cases}$$
+Therefore,
+$$\mathcal{L}(e^{at})=\begin{cases}
+\frac{1}{s-a}&\text{if }s>a\\
+\text{diverges}&\text{if }s\leq a
+\end{cases}$$
+(We didn't actually compute the case $s = a$, but it is easy to see it diverges.)
+
+We have the first two entries in our table of Laplace transforms:
+$$\begin{aligned}
+&f(t)=1 &\rArr &F(s)=1/s, &s>0\\
+&f(t)=e^{at} &\rArr &F(s)=1/(s-a), &s>a
+\end{aligned}$$
+
+### Linearity
+You will not be surprised to learn that the Laplace transform is linear. For functions $f,g$ and constants $c_1, c_2$
+$$\mathcal{L}(c_1f+c_2g)=c_1\mathcal{L}(f)+c_2\mathcal{L}(g)$$
+This is clear from the definition $(1)$ of $\mathcal{L}$ and the linearity of integration.
