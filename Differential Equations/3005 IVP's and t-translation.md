@@ -34,7 +34,7 @@ $$u(t-a)f(t-a)=\mathcal{L}^{-1}(e^{-as}F(s))$$
 $$\begin{aligned}
 \mathcal{L}(u(t-a)f(t-a))&=\int_0^\infty u(t-a)f(t-a)e^{-st}dt\\
 &=\int_a^\infty f(t-a)e^{-st}dt &\text{($u(t - a) = 0$ for $t < a$)}\\
-&=\int_0^\infty f(\tau)e^{-s(\tau+a)}d\tau &\text{(change of variables: $\tau = t − a$)}\\
+&=\int_0^\infty f(\tau)e^{-s(\tau+a)}d\tau &\text{(change of variables: $\tau = t - a$)}\\
 &=e^{-as}\int_0^\infty f(\tau)e^{-s\tau}d\tau\\
 &=e^{-as}F(s)
 \end{aligned}$$
