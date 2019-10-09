@@ -27,7 +27,7 @@ $$\begin{aligned}
 &=\int_0^\infty \int_0^t f(t-u)g(u)e^{-st}dudt\\
 &\text{Next, we change the order of integration (see the figure below).}\\
 &=\int_0^\infty \int_u^\infty f(t-u)g(u)e^{-st}dtdu\\
-&\text{Finally, change variables in the inner integral: substitute $v = t − u, dv =
+&\text{Finally, change variables in the inner integral: substitute $v = t - u, dv =
 dt$, ($u$ a constant)}\\
 &=\int_0^\infty \int_0^\infty f(v)g(u)e^{-s(v+u)}dvdu\\
 &=\int_0^\infty f(v)e^{-sv}dv \int_0^\infty g(u)e^{-su}du\\
