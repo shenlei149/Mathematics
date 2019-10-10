@@ -26,7 +26,7 @@ $$\begin{aligned}
 The proofs of (2) and (3) are similar, and we will omit them.
 
 ### Note on the Relation to Resonance:
-Each of the formulas $(1)$, $(2)$, and $(3)$ has a term with a factor of $t$. This is exactly what we saw with the response x in the resonance equation
+Each of the formulas $(1)$, $(2)$, and $(3)$ has a term with a factor of $t$. This is exactly what we saw with the response $x$ in the resonance equation
 $$x''+\omega^2x=\cos(\omega t)$$
 which has solution $x(t) = t\sin(\omega t)/(2\omega)$.  
 Notice that $\mathcal{L}^{-1}(1/s^2) = t$ and the $s$-shift rule shows $\mathcal{L}^{-1}(1/(s - a)^2) =te^{at}$. So repeated factors on the frequency side always lead to multiplication by $t$ on the time side. If the repeated factor has a higher power then we get multiplication by a higher power of $t$.
