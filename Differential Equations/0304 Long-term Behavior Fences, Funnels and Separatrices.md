@@ -17,5 +17,20 @@ Notice that the bottom half of the isocline $m = 0$ is a lower fence and for $x$
 Notice the bottom half of the isocline $m = -1$ becomes an upper fence only for $x$ is large enough. If you look carefully you'll see one of the integral curves crossing it from above near $x = 1$.
 
 ### Funnels
+An important use of fences is to construct funnels. A **funnel** for the equation $y' = f(x, y)$ consists of a pair of fences; one lower fence $L(x)$ and one upper fence $U(x)$, with the properties:
+1. For $x$ large the lower fence is below the upper fence, i.e. $L(x) < U(x)$.
+2. The two fences come together asymptotically, i.e. $U(x) - L(x)$ is small for large $x$.
+
+In figure 2 above the bottom parts of the two isoclines $m = 0$ and $m = -1$ act as a funnel once $x$ is large enough. (It is clear from the picture that $x > 2$ will work.) Thus the integral curves that end up between them are trapped there. The bottom half of the isocline $m = 0$ is $y = -\sqrt{x}$ and the bottom half of $m = -1$ is $y = -\sqrt{x - 1}$. Thus, for the solutions between them we have the highly accurate estimates
+$$-\sqrt{x}<y(x)<-\sqrt{x-1}$$
+which is valid for large $x$.  
+**Exercise.** Use algebra to show that $U(x) = -\sqrt{x-1}$ and $L(x) = -\sqrt{x}$ satsify the 'funnel condition' $U(x)-L(x) \rarr 0$ as $x\rarr \infty$.  
+**Solution.**
+$$\lim_{x \to \infty} -\sqrt{x-1}-(-\sqrt{x})=\lim_{x \to \infty} \frac{1}{\sqrt{x}+\sqrt{x-1}}=0$$
+**Caution.** Not all pairs of 'close' upper/lower fences form a funnel. For example, if figure 2 the upper and lower branches of the isocline $m = 0$ are upper and lower fences. So solutions that lie between them, stay between them. It is not a funnel, because the two curves don't come asymptotically together as $x$ gets large.  
+Here is another example. Consider the differential equation $y' = x - 2y$. (This is one of the ones available on the isoclines applet.) One upper fence is the nullcline, with equation $y = x/2$; one lower fence is the $m = 2$ isocline, with equation $y = x/2-1$. These two fences do not form a funnel: they are parallel, at constant distance one apart.
 
 ### Separatrices
+**Definition.** A **separatrix** is an integral curve such that integral curves above it behave entirely differently from integral curves below it as $x$ increases to infinity.  
+**Example.** In the isoclines applet video, we saw that there was one special solution, which as time increases just gets closer and closer to the upper branch of the nullcline - that is, to the function $y = \sqrt{x}$. All solutions below it are eventually asymototic to $y = -\sqrt{x}$, while all solutions above it take off for $+\infty$ at some point. This integral curve is called a **sepatratrix**. On the screenshot in figure 2 the sepatratrix is marked with red dots.  
+The name *separatrix* comes from the fact that it separates solutions with radically different behavior.
