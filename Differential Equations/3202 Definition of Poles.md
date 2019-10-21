@@ -32,3 +32,32 @@ Let's now try to graph $|F_1(s)|$ and $|F_2(s)|$ when we allow $s$ to be complex
 Roughly speaking, the poles tell you the shape of the graph of a function $|F(s)|$: it is *large near the poles*. In the typical pole diagams seen in practice, the $|F(s)|$ is also small far away from the poles.
 
 ### Poles and Exponential Growth Rate
+If $a > 0$, the exponential function $f_1(t) = e^{at}$ grows rapidly to infinity as $t \rarr \infty$. Likewise the function $f_2(t) = e^{at} \sin bt$ is oscillatory with the amplitude of the oscillations growing exponentially to infinity as $t \rarr \infty$. In both cases we call $a$ the *exponential growth rate* of the function.  
+The formal definition is the following
+**Definition:** The **exponential growth rate** of a function $f(t)$ is the smallest value a such that
+$$\lim_{t \to \infty} \frac{f(t)}{e^{at}}=0 \text{ for all }b > a\tag{1}$$
+In words, this says $f(t)$ grows slower than any exponential with growth rate larger than $a$.  
+**Examples.**
+1. $e^{2t}$ has exponential growth rate 2.
+2. $e^{-2t}$ has exponential growth rate -2. A negative growth rate means that the function is decaying exponentially to zero as $t \rarr \infty$.
+3. $f(t) = 1$ has exponential growth rate 0.
+4. $\cos t$ has exponential growth rate 0. This follows because $\lim_{t \to \infty} \frac{\cos t}{e^{at}}=0$ for all positive $b$.
+5. $f(t) = t$ has exponential growth rate 0. This may be surprising because $f(t)$ grows to infinity. But it grows linearly, which is slower than any positive exponential growth rate.
+6. $f(t) = e^{t^2}$ does not have an exponential growth rate since it grows faster than any exponential.
+
+**Poles and Exponential Growth Rate**  
+We have the following theorem connecting poles and exponential growth rate.  
+**Theorem:** The exponential growth rate of the function $f(t)$ is the largest real part of all the poles of its Laplace transform $F(s)$.  
+**Examples.** We'll check the theorem in a few cases.
+1. $f(t) = e^{3t}$ clearly has exponential growth rate equal to 3. Its Laplace transform is $1/(s - 3)$ which has a single pole at $s = 3$, and this agrees with the exponential growth rate of $f(t)$.
+2. Let $f(t) t$, then $F(s)= 1/s^2$. $F(s)$ has one pole at $s = 0$. This matches the exponential growth rate zero found in (5) from the previous set of examples.
+3. Consider the function $f(t)=3e^{2t}+5e^t+7e^{-8t}$. The Laplace transform is $F(s) = 3/(s - 2) + 5/(s - 1) + 7/(s + 8)$, which has poles at $s = 2, 1, -8$. The largest of these is 2. (Don't be fooled by the absolute value of -8, since 2 > -8, the largest pole is 2.) Thus, the exponential growth rate is 2. We can also see this directly from the formula for the function. It is clear that the $3e^{2t}$ term determines the growth rate since it is the dominant term as $t \rarr \infty$.
+4. Consider the function $f(t)=e^{-t} \cos 2t+3e^{-2t}$. The Laplace transform is $F(s) = \frac{s}{(s+1)^2+4}+\frac{s}{s+2}$. This has poles $s = -1\plusmn 2i, -2$. The largest real part among these is -1, so the exponential growth rate is -1.
+
+Note that in item (4) in this set of examples the growth rate is negative because $f(t)$ actually *decays* to 0 as $t \to \infty$. We have the following  
+**Rule:**
+1. If $f(t)$ has a negative exponential growth rate then $f(t) \to 0$ as $t \to \infty$.
+2. If $f(t)$ has a positive exponential growth rate then $f(t) \to \infty$ as $t \to \infty$.
+
+### An Example of What the Poles Don't Tell Us
+Consider an arbitrary function $f(t)$ with Laplace transform $F(s)$ and $a > 0$. Shift $f(t)$ to produce $g(t) = u(t - a)f(t - a)$, which has Laplace transform $G(s) = e^{-as}F(s)$. Since $^e{-as}$ does not have any poles, $G(s)$ and $F(s)$ have exactly the same poles. That is, the poles can't detect this type of shift in time.
