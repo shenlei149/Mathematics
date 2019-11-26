@@ -26,8 +26,8 @@ In this way, we get an approximation to the integral curve consisting of line se
 ![](pic040202.png)  
 We will call the line segments "Euler struts", and their union the Euler polygon. It is an approximation to the integral curve $y = y(x)$.  
 In doing a few steps of Euler's method by hand, as you are asked to do in some of the exercises to get a feel for the method, it's best to arrange the work systematically in a table.  
-**Example.** For the IVP: $y' = x^2 − y^2, y(1) = 0$, use Euler's method with step size 0.1 to find $y(1.2)$.  
-**Solution.** We use $f(x, y) = x^2 − y^2, h = 0.1$, and $(1)$ above to find xn and $y_n$.  
+**Example.** For the IVP: $y' = x^2 - y^2, y(1) = 0$, use Euler's method with step size 0.1 to find $y(1.2)$.  
+**Solution.** We use $f(x, y) = x^2 - y^2, h = 0.1$, and $(1)$ above to find xn and $y_n$.  
 |n|$x_n$|$y_n$|$f(x_n,y_n)$|$hf(x_n,y_n)$|
 |---|---|---|---|---|
 |0|1|0|1|0.1|
