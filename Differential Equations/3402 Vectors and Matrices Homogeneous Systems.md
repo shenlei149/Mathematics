@@ -22,6 +22,24 @@ can be abbreviated by the matrix equation
 $$A\boldsymbol{x}=0\tag{2}$$
 This always has the solution $\boldsymbol{x} = 0$, which we call the **trivial solution**. The question is: when does it have a nontrivial solution?  
 Theorem. Let $A$ be a square matrix. The equation 
-$$A\boldsymbol{x} = 0 \text{ has a nontrivial solution} \rArr \det{A} = 0 \text{(i.e., A is singular)}\tag{3}$$
+$$A\boldsymbol{x} = 0 \text{ has a nontrivial solution} \lrArr \det{A} = 0 \text{(i.e., A is singular)}\tag{3}$$
 
 ### Linear independence of vectors
+Conceptually, linear independence of vectors means each one provides something new to the mix. For two vectors this just means they are not zero and are not multiples of each of other.  
+**Example 1.** $(1, 2)$ and $(3, 4)$ are linearly independent.  
+**Example 2.** $\boldsymbol{a} = (1, 2)$ and $\boldsymbol{b} = (2, 4)$ are linearly dependent because $\boldsymbol{b}$ is a multiple of $\boldsymbol{a}$. Notice that if we take linear combinations then $\boldsymbol{b}$ doesn't add anything to the set of vectors we can get from $\boldsymbol{a}$ alone.  
+**Example 3.** $\boldsymbol{a} = (1, 2)$ and $\boldsymbol{b} = (0, 0)$ are linearly dependent because $\boldsymbol{b}$ is a multiple of $\boldsymbol{a}$, i.e., $\boldsymbol{b} = 0 \boldsymbol{a}$.  
+**Determinantal criterion for linear independence**  
+Let $\boldsymbol{a} = (a_1, a_2)$ and $\boldsymbol{b} = (b_1, b_2)$ be 2-vectors, and $A$ the square matrix having these vectors for its rows (or columns). Then
+$$\boldsymbol{a},\boldsymbol{b} \text{ are linearly independent } \lrArr \det{A}\neq 0\tag{4}$$  
+Let us re-visit our previous examples.  
+**Examples.**
+1. $\det \begin{pmatrix}1&2\\3&4\end{pmatrix} = 4 - 6 = -2 \neq 0$. Therefore, $(1, 2)$ and $(3, 4)$ are linearly independent.
+2. $\det \begin{pmatrix}1&2\\2&4\end{pmatrix} = 4 - 4 = 0$. Therefore, $(1, 2)$ and $(2, 4)$ are linearly dependent.
+3. $\det \begin{pmatrix}1&2\\0&0\end{pmatrix} = 0 - 0 = 0$. Therefore, $(1, 2)$ and $(0, 0)$ are linearly dependent.
+
+**Remark.** The theorem on square homogeneous systems $(3)$ follows from this criterion. We will prove neither.
+
+Two linearly independent 2-vectors $\boldsymbol{v}_1$ and $\boldsymbol{v}_2$ form a basis for the plane: every 2-vector $\boldsymbol{w}$ can be written as a linear combination of $\boldsymbol{v}_1$ and $\boldsymbol{v}_2$. That is, there are scalars $c_1$ and $c_2$ such that
+$$c_1\boldsymbol{v}_1+c_2\boldsymbol{v}_2=\boldsymbol{w}$$
+**Remark.** All of the notions and theorems mentioned in this section generalize to higher $n$ (and a larger collection of vectors), though we will not need them.
