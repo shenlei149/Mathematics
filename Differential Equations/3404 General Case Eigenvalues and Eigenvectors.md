@@ -89,3 +89,22 @@ There are now various cases to consider, according to whether the eigenvalues of
 We begin with the first case: for the rest of this note, the eigenvalues are two distinct real numbers $\lambda_1$ and $\lambda_2$.
 
 ### Real distinct eigenvalues
+To complete our work, we have to find the solutions to the system $(2)$ corresponding to the eigenvalues $\lambda_1$ and $\lambda_2$. Formally, the systems become
+$$\begin{aligned}
+(a-\lambda_1)a_1+ba_2=0&&(a-\lambda_2)a_1+b_2=0\\
+ca_1+(d-\lambda_1)a_2=0&&ca_1+(d-\lambda_2)a_2=0\tag{3}
+\end{aligned}$$
+The solutions to these two systems are column vectors, for which we will typically use $\boldsymbol{v}$.  
+**Definition.** The respective solutions $a = v_1$ and $a = v_2$ to the systems $(3)$ are called **eigenvectors** (or **characteristic vectors**) corresponding to the **eigenvalues** $\lambda_1$ and $\lambda_2$.  
+**Remarks.**
+1. If the work has been done correctly, in each of the two systems in $(3)$, the two equations will be dependent, i.e., one will be a constant multiple of the other. Why? The two values of $\lambda$ have been selected so that in each case the coefficient determinant $A - \lambda I$ will be zero, which means the equations will be dependent.
+2. The solution $\boldsymbol{v}$ is determined only up to an arbitrary non-zero constant factor: if $\boldsymbol{v}$ is an eigenvector for $\lambda$, then so is $c\boldsymbol{v}$, for any real constant $c$; because of this, the line through $\boldsymbol{v}$ is sometimes called an **eigenline**. A convenient way of finding the eigenvector $\boldsymbol{v}$ is to assign the value 1 to one of the $a_i$ , then use the equation to solve for the corresponding value of the other $a_i$. (First try $a_1 = 1$; if that does not work, then $a_2 = 1$ will.)
+
+Once the eigenvalues and their corresponding eigenvectors have been found, we have two independent solutions to the system $(1)$. They are
+$$x_1(t)=e^{\lambda_1t}v_1,x_2(t)=e^{\lambda_2t}v_2, \text{ where } x_i(t)=\begin{pmatrix}x_i\\y_i\end{pmatrix}$$
+**Definition.** In science and engineering applications, these are usually called the **normal modes**.  
+Using superposition, the general solution to the system $(1)$ is
+$$x=c_1x_1+c_2x_2=c_1e^{\lambda_1t}v_1+e^{\lambda_2t}v_2$$
+**Remarks.**
+1. The normal nodes often have physical interpretations; this means that it is sometimes possible to find them just by inspection of the physical problem.
+2. In the compact notation, the definitions and derivations are valid for square systems of any size. Thus, for instance, you know how to solve a $3 \times 3$ system, if its eigenvalues turn out to be real and distinct. We won't consider any such systems in these notes, though.
