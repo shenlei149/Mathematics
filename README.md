@@ -7,4 +7,4 @@ I did the following changes:
 * Fixed some typos, maybe I introduced some new typos
 
 ## A Walk Through Combinatorics
-Book: A Walk Through Combinatorics - An Introduction to Enumeration and Graph Theory Third Edition
+Book: A Walk Through Combinatorics - An Introduction to Enumeration and Graph Theory Fourth Edition
