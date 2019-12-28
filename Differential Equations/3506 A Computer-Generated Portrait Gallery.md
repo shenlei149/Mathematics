@@ -23,7 +23,7 @@ As $t \to -\infty$ the term $e^{\lambda_2t}\boldsymbol{v}_2$ dominates and $\bol
 ii) $\lambda_1 < \lambda_2 < 0$.  
 **Stable nodal sink (asymptotically stable)**.  
 (Simply reverse the arrows on case (i).)  
-As $t \to 0$ the term $e^{\lambda_2t}\boldsymbol{v}_2$ dominates and $\boldsymbol{x} \to \infty$.  
+As $t \to \infty$ the term $e^{\lambda_2t}\boldsymbol{v}_2$ dominates and $\boldsymbol{x} \to 0$.  
 As $t \to -\infty$ the term $e^{\lambda_1t}\boldsymbol{v}_1$ dominates and $\boldsymbol{x} \to \infty$.  
 ![](pic350603.png)
 
