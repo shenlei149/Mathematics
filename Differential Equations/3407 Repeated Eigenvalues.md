@@ -71,7 +71,7 @@ a_1\\a_2
 \end{pmatrix}
 \end{aligned}$$
 *Check: this gives two identical equations, which is good.*  
-The equation is $a_1 + a_2 = 0$. Setting $a_1 = 1$ gives $a_2 = 1$. Thus, one eigenvector for $\lambda_1$ is $\boldsymbol{v}_1 = (1, 1)^T$. All other eigenvectors for $\lambda_1$ are multiples of this.  
+The equation is $-a_1 + a_2 = 0$. Setting $a_1 = 1$ gives $a_2 = 1$. Thus, one eigenvector for $\lambda_1$ is $\boldsymbol{v}_1 = (1, 1)^T$. All other eigenvectors for $\lambda_1$ are multiples of this.  
 Step 4. Find $\boldsymbol{v}_2$: This vector $\boldsymbol{v}_2 = (b_1, b_2)^T$ must satisfy
 $$\begin{aligned}
 &(A-\lambda_1 I)\boldsymbol{v}_2=\boldsymbol{v}_1\\
