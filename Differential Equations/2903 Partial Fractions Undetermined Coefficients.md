@@ -11,7 +11,14 @@ A rational function is called **proper** if the degree of the numerator is stric
 **Long-division:** Using long-division we can always write an improper rational function as a polynomial plus a proper rational function. The partial fraction decomposition only applies to proper functions.  
 **Example 1.** Use long-division to write $\frac{s^3+2s+1}{s^2+s-2}$ as a the sum of a polynomial and a proper rational function.  
 **Solution.**
-$$TODO$$
+$$\begin{aligned}
+&&&+s&-1\\
+s^2+s-2|&s^3&&+2s&+1\\
+&s^3&+s^2&-2s\\
+&&-s^2&+4s&+1\\
+&&-s^2&-s&+2\\
+&&&+5s&-1
+\end{aligned}$$
 Therefore,
 $$\frac{s^3+2s+1}{s^2+s-2}=s-1+\frac{5s-1}{s^2+s-2}$$
 
