@@ -4,7 +4,7 @@ Gibbs' phenomenon occurs near a jump discontinuity in the signal. It says that n
 
 We illustrate with the example. of the square wave $sq(t)$. The Fourier series of $sq(t)$ fits it well at points of continuity. But there is *always* an overshoot of about .18 (9% of the jump of 2) near the points of discontinuity.
 
-![](pic230601.png)
+![](pic230701.png)
 
 In these figures, for example, 'max n=9' means we included the terms for $n = 1, 3, 5, 7$ and 9 in the Fourier sum
 $$\frac{4}{\pi}(\sin t+\frac{\sin 3t}{3}+\frac{\sin 5t}{5}+\frac{\sin 7t}{7}+\frac{\sin 9t}{9})$$
