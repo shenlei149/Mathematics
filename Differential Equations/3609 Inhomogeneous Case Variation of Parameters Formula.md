@@ -1,3 +1,25 @@
+The fundamental matrix $\Phi(t)$ also provides a very compact and efficient integral formula for a particular solution to the inhomogeneous equation $\boldsymbol{x'} = A(t)\boldsymbol{x} + F(t)$. (presupposing of course that one can solve the homogeneous equation $\boldsymbol{x'} = A(t)\boldsymbol{x}$ first to get $\Phi$.) In this short note we give the formula (with proof!) and one example.
+
+**Variation of parameters:** (solving inhomegeneous systems)  
+(H) $\boldsymbol{x'}=A(t)\boldsymbol{x}\rightsquigarrow \Phi(t) =$ fundamental matrix  
+(I) $\boldsymbol{x'}=A(t)\boldsymbol{x}+F(x)$  
+Variation of parameters formula for solution to (I) (just like order 1 DE's):
+$$\boldsymbol{x}=\Phi\cdot(\int\Phi^{-1}\cdot Fdt+C)$$
+**proof**  
+General homogeneous solution: $\boldsymbol{x}=\Phi\cdot \boldsymbol{c}$ for a constant vector $\boldsymbol{c}$  
+Make $c$ variable $\rightsquigarrow$ trial solution $\boldsymbol{x}=\Phi\cdot\boldsymbol{v}(t)$  
+Plug this into (I): $\boldsymbol{x'}=A\boldsymbol{x}+F\rArr \Phi'\cdot\boldsymbol{v}+\Phi\cdot\boldsymbol{v'}=A\Phi\cdot\boldsymbol{v}+F$  
+Now substitute for $\Phi'=A\Phi$
+$$\begin{aligned}
+\rArr &A\Phi\cdot\boldsymbol{v}+\Phi\cdot\boldsymbol{v'}=A\Phi\cdot\boldsymbol{v}+F\\
+\rArr &\Phi\cdot\boldsymbol{v'}=F\\
+\rArr &\boldsymbol{v'}=\Phi^{-1}\cdot F\\
+\rArr &\boldsymbol{v}=\int\Phi^{-1}\cdot F+C\\
+\rArr &\boldsymbol{x}=\Phi\cdot(\int\Phi^{-1}\cdot Fdt+C)
+\end{aligned}
+$$
+**Definite integral version of variation of parameters**  
+$$\boldsymbol{x}(t)=\Phi(t)(\int_{t_0}^{t}\Phi^{-1}(u)\cdot F(u)du+C), \text{ where } C=\Phi^{-1}(t_0)\cdot\boldsymbol{x}(t_0)$$
 
 **Example.** Solve
 $$\boldsymbol{x'}=\begin{pmatrix}
