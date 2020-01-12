@@ -68,4 +68,35 @@ Statement (b) follows immediately from $(1)$, in view of $(4)$.
 We prove (a) is true by using the fact that if $t_0 = 0$ then the normalized fundamental matrix has $\Phi(0) = I$. Letting $\Phi = e^{At}$, we must show $\Phi' = A\Phi$ and $\Phi(0) = I$.  
 The second of these follows from substituting $t = 0$ into the infinite series definition $(3)$ for $e^{At}$.  
 To show $\Phi' = A\Phi$, we assume that we can differentiate the series $(3)$ term-by-term; then we have for the individual terms
-$$$$
+$$\frac{d}{dt}A^n\frac{t^n}{n!}=A^n\frac{t^{n-1}}{(n-1)!}$$
+since $A^n$ is a constant matrix. Differentiating $(3)$ term-by-term then gives
+$$\frac{d\Phi}{dt}=\frac{d}{dt}e^{At}=A+A^2t+\ldots+A^n\frac{t^{n-1}}{(n-1)!}+\ldots=Ae^{At}=A\Phi\tag{5}$$
+
+### Calculation of $e^{At}$
+The main use of the exponential matrix is in Theorem 3 - writing down explicitly the solution to an IVP. If $e^{At}$ has to be calculated for a specific system, several techniques are available.  
+a) In simple cases, it can be calculated directly as an infinite series of matrices.  
+b) It can always be calculated, according to Theorem 3, as the normalized fundamental matrix $\widetilde{\Phi}_0(t)$, using: $\widetilde{\Phi}_0(t) = \Phi(t)\Phi(0)^{-1}$.  
+c) A third technique uses the exponential law
+$$e^{(B+C)t}=e^{Bt}+e^{Ct}, \text{ valid if } BC=CB\tag{6}$$
+To use it, one looks for constant matrices $B$ and $C$ such that
+$$A = B + C, BC = CB, e^{Bt} \text{ and } e^{Ct} \text{ are computable}\tag{7}$$
+then
+$$e^{At}=e^{(B+C)t}=e^{Bt}+e^{Ct}\tag{8}$$
+**Example 3C.** Let $A=\begin{pmatrix}2&1\\0&2\end{pmatrix}$. Solve $\boldsymbol{x'}=A\boldsymbol{x}, \boldsymbol{x}(0)=\begin{pmatrix}1\\2\end{pmatrix}$, using $e^{At}$.  
+**Solution.** We set $B=\begin{pmatrix}2&0\\0&2\end{pmatrix}$ and $C=\begin{pmatrix}0&1\\0&0\end{pmatrix}$ then $(7)$ is satisfied, and
+$$e^{At}=\begin{pmatrix}
+e^{2t}&0\\0&e^{2t}
+\end{pmatrix}\begin{pmatrix}
+1&t\\0&1
+\end{pmatrix}=e^{2t}\begin{pmatrix}
+1&t\\0&1
+\end{pmatrix}$$
+by $(8)$ and Examples 3A and 3B.  
+Therefore, by Theorem 3, we get
+$$\boldsymbol{x}=e^{At}\boldsymbol{x}_0=e^{2t}\begin{pmatrix}
+1&t\\0&1
+\end{pmatrix}\begin{pmatrix}
+1\\2
+\end{pmatrix}=e^{2t}\begin{pmatrix}
+1+2t\\2
+\end{pmatrix}$$
