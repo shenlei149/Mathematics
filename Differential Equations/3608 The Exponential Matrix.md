@@ -29,7 +29,7 @@ e^A&=I+A+\frac{A^2}{2!}+\ldots+\frac{A^n}{n!}+\ldots\\
 0&1+b+\frac{1}{2!}b^2+\ldots+\frac{1}{n!}b^n+\ldots
 \end{pmatrix}\\
 &=\begin{pmatrix}
-e^a&0\\0e^b
+e^a&0\\0&e^b
 \end{pmatrix}
 \end{aligned}$$
 $e^{At}$ is the same.

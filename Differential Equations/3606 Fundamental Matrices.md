@@ -2,7 +2,7 @@ In the literature, solutions to linear systems often are expressed using square 
 We return to the system
 $$\boldsymbol{x}'=A(t)\boldsymbol{x}\tag{1}$$
 with the general solution
-$$\boldsymbol{x}=c_1\boldsymbol{x}(t)+c_2\boldsymbol{x}(t)\tag{2}$$
+$$\boldsymbol{x}=c_1\boldsymbol{x}_1(t)+c_2\boldsymbol{x}(t)_2\tag{2}$$
 where $\boldsymbol{x}_1$ and $\boldsymbol{x}_2$ are two independent solutions to $(1)$, and $c_1$ and $c_2$ are arbitrary constants.
 We form the matrix whose columns are the solutions $\boldsymbol{x}_1$ and $\boldsymbol{x}_2$:
 $$\Phi(t)=\begin{pmatrix}
