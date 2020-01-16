@@ -1,7 +1,7 @@
 The general linear ODE of order $n$ for a function $y = y(t)$ can be written as
-$$y^{(n)} + p_1(t)y^{(n−1)} + \ldots + p_n(t)y = q(t)\tag{1}$$
+$$y^{(n)} + p_1(t)y^{(n-1)} + \ldots + p_n(t)y = q(t)\tag{1}$$
 From now on we will consider only the case where $(1)$ has constant coefficients. This type of ODE can be written as
-$$y^{(n)} + a_1(t)y^{(n−1)} + \ldots + a_n(t)y = q(t)\tag{1}$$
+$$y^{(n)} + a_1(t)y^{(n-1)} + \ldots + a_n(t)y = q(t)\tag{1}$$
 or, as we have seen, much more compactly using the differentiation operator $D=\frac{d}{dt}$:
 $$p(D)y=q(t)$$
 where
