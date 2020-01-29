@@ -15,7 +15,7 @@ where we used '∼' instead of an equal sign. The following theorem shows that o
 2. converges to the average of $f(t^-)$ and $f(t+)$ where it has a jump discontinuity.
 
 **Example.** Square wave. No matter what the endpoint behavior of $f(t)$ the Fourier series converges to:  
-![](pic230401.png)
+![](pic230501.png)
 
 **Example.** Continuous sawtooth: Fourier series converges to $f(t)$.  
-![](pic230402.png)
+![](pic230502.png)
