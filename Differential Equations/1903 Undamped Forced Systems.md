@@ -33,12 +33,12 @@ $$
 In $x_p$ the amplitude $=A=A(\omega)=\vert\frac{1}{\omega_0^2-\omega^2}\vert$ is a function of $\omega$.  
 The plot below shows $A$ as a function of $\omega$. Note, it is similar to the damped amplitude response except the peak is inﬁnitely high. As $\omega$ gets closer to $\omega_0$ the amplitude increases.
 Tplot is output amplitude vs. input frequency.  
-![](pic190201.png)
+![](pic190301.png)
 
 When $\omega=\omega_0$ we have $x_p=\frac{t\sin \omega t}{2\omega_0}$. This is called *pure resonance* (like a swing). The frequency $\omega_0$ is called the *resonant* or *natural* frequency of the system.  
 In the plot below notice that the response is oscillatory but not periodic. The amplitude keeps growing in time (caused by the factor of $t$ in $x_p$).   
 The plot is output vs. time (for a ﬁxed input frequency).  
-![](pic190202.png)
+![](pic190302.png)
 
 ### Reconciling the Resonant and Non-resonant Solutions
 Let's find another particular solution to $(1)$.
