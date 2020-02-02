@@ -4,7 +4,7 @@ Suppose that the position of the bottom of the dashpot is given by $y(t)$ and th
 $$mx''=-kx+b\frac{d}{dt}(y-x)$$
 since the force exerted by a dashpot is supposed to be proportional to the speed of the piston moving through it. This can be rewritten as
 $$mx''+bx'+kx=by'\tag{1}$$
-![](pic200401.png)
+![](pic200501.png)
 
 We will consider $x$ as the system response, and again on physical grounds we specify as the input signal the position $y$ of the back end of the dashpot. Note that the *derivative* of the input signal (multiplied by $b$) occurs on the right hand side of the equation.
 

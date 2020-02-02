@@ -10,7 +10,7 @@ $$
 $$
 
 The gain or amplitude response is a function of $\omega$. It tells us the size of the system's response to the given input frequency. If the amplitude has a peak at $\omega_r$ we call this the **practical resonance frequency**. If the damping $b$ gets too large then, for the system in equation $(1)$, there is no peak and, hence, no practical resonance. The following ﬁgure shows two graphs of $g(\omega)$, one for small $b$ and one for large $b$.  
-![](pic200201.png)
+![](pic200301.png)
 
 ### Finding the Practical Resonant Frequency
 We now turn our attention to ﬁnding a formula for the practical resonant frequency -if it exists-of the system in $(1)$. Practical resonance occurs at the frequency $\omega_r$ where $g(\omega)$ has a maximum. For the system $(1)$ with gain $(2)$ it is clear that the maximum gain occurs when the expression under the radical has a minimum. Accordingly we look for the minimum of
@@ -30,4 +30,4 @@ $$
 ### Phase Lag
 In the picture below the dotted line is the input and the solid line is the response.
 The damping causes a lag between when the input reaches its maximum and when the output does. In radians, the angle $\phi$ is called the phase lag and in units of time $\phi/\omega$ is the time lag.  
-![](pic200202.png)
+![](pic200302.png)

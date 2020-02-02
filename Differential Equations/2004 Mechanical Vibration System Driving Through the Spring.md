@@ -1,5 +1,5 @@
 The figure below shows a spring-mass-dashpot system that is driven through the spring.  
-![](pic200301.png)
+![](pic200401.png)
 
 Suppose that $y$ denotes the displacement of the plunger at the top of the spring and $x(t)$ denotes the position of the mass, arranged so that $x = y$ when the spring is unstretched and uncompressed. There are two forces acting on the mass: the spring exerts a force given by $k(y - x)$ (where $k$ is the spring constant) and the dashpot exerts a force given $by - bx'$ (against the motion of the mass, with damping coefficient $b$). Newton’s law gives
 $$mx''=k(y-x)-bx'$$
