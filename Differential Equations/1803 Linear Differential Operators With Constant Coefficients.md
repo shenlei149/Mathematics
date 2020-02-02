@@ -7,6 +7,6 @@ $$p(D)y=q(t)$$
 where
 $$p(D)=D^n+a_1D^{n-1}+\ldots+a_n$$
 We call $p(D)$ a polynomial differential operator with constant coefficients. We think of the formal polynomial $p(D)$ as operating on a function $y(t)$, converting it into another function; it is like a black box, in which the function $y(t)$ goes in, and $p(D)y$ comes out.  
-![](pic180201.png)  
+![](pic180301.png)  
 The reason for introducing the polynomial operator $p(D)$ is that this allows us to use polynomial algebra to simplify, streamline and extend our calculations for solving ODE's. Throughout this session we use the notation of equation $(4)$:
 $$p(D)=D^n+a_1D^{n-1}+\ldots+a_n, a_i \text{ constants}\tag{4}$$
