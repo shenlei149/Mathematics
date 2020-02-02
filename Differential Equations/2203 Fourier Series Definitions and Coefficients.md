@@ -28,7 +28,7 @@ $$f(t)=\begin{cases}
 1&\text{for }0\leq t <\pi
 \end{cases}$$
 The graph over several periods is shown below.  
-![](pic220201.png)
+![](pic220301.png)
 
 **Solution** Computing a Fourier series means computing its Fourier coefficients.  
 In applying these formulas to the given square wave function, we have to split the integrals into two pieces corresponding to where $f(t)$ is +1 and where it is -1. We find  
@@ -65,7 +65,7 @@ This then gives the Fourier series for $f(t)$:
 $$f(t)=\sum_{n=1}^\infty b_n\sin(nt)=\frac{4}{n\pi}(\sin t+\frac{1}{3}\sin 3t + \frac{1}{5}\sin 5t + \ldots)$$
 **seeing the convergence of a Fourier series**  
 However, it is not easy to see that the sum on the right-hand side is in fact converging to the square wave $f(t)$. So let’s use a computer to plot the sums of the first $N$ terms of the series. for $N = 1, 3, 9, 33$. We get the following four graphs:  
-![](pic220202.png)
+![](pic220302.png)
 
 Notice that since a finite sum of sine functions is continuous (in fact smooth), the partial sums cannot jump when $t$ is an integer multiple of $\pi$, the way the square way $f(t)$ does. But they are certainly "trying" to become the square wave $f(t)$! And the more terms you add in, the better the fit, with the theoretical limit as $N \rightarrow \infty$ being exactly equal to $f(t)$ (except
 actually at the jumps $t = n\pi$, as we’ll see).
