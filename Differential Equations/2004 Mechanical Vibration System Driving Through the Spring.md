@@ -1,7 +1,7 @@
 The figure below shows a spring-mass-dashpot system that is driven through the spring.  
 ![](pic200401.png)
 
-Suppose that $y$ denotes the displacement of the plunger at the top of the spring and $x(t)$ denotes the position of the mass, arranged so that $x = y$ when the spring is unstretched and uncompressed. There are two forces acting on the mass: the spring exerts a force given by $k(y - x)$ (where $k$ is the spring constant) and the dashpot exerts a force given $by - bx'$ (against the motion of the mass, with damping coefficient $b$). Newton’s law gives
+Suppose that $y$ denotes the displacement of the plunger at the top of the spring and $x(t)$ denotes the position of the mass, arranged so that $x = y$ when the spring is unstretched and uncompressed. There are two forces acting on the mass: the spring exerts a force given by $k(y - x)$ (where $k$ is the spring constant) and the dashpot exerts a force given $by - bx'$ (against the motion of the mass, with damping coefficient $b$). Newton's law gives
 $$mx''=k(y-x)-bx'$$
 or, putting the system on the left and the driving term on the right,
 $$mx''+bx'+kx=ky\tag{1}$$
@@ -12,7 +12,7 @@ $$x_p=A\cos (\omega t-\phi)$$
 
 By definition the *gain* is the ratio of the amplitude of the system response to that of the input signal. Since $B_1$ is the amplitude of the input we have $g = A/B_1$.
 
-In the previous note in this session, we worked out the formulas for $g$ and $\phi$, and so we can now use them with the following small change. The $k$ on the right-hand-side of equation $(1)$ needs to be included in the gain (since we don’t include it as part of the input). We get
+In the previous note in this session, we worked out the formulas for $g$ and $\phi$, and so we can now use them with the following small change. The $k$ on the right-hand-side of equation $(1)$ needs to be included in the gain (since we don't include it as part of the input). We get
 $$
 g(\omega)=\frac{A}{B_1}=\frac{k}{\left\lvert p(i\omega)\right\rvert}=\frac{k}{\sqrt{(k-m\omega^2)^2+(b\omega)^2}}
 $$

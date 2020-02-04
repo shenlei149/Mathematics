@@ -25,7 +25,7 @@ Accordingly we define the **complex impedance** as
 $$\tilde{Z}=iL\omega+1/iC\omega+R\tag{5}$$
 (Notice $\tilde{Z}$ depends on the input frequency $\omega$.)
 
-We can now write the complex version of Ohm’s law (always assuming $\tilde{V}_{in}=V_0e^{i\omega t}$):
+We can now write the complex version of Ohm's law (always assuming $\tilde{V}_{in}=V_0e^{i\omega t}$):
 $$\tilde{I}=\frac{1}{\tilde{Z}}\tilde{V}_{in}\text{ or }\tilde{V}_{in}=\tilde{Z}\tilde{I}\tag{6}$$
 We can associate a separate impedance to each circuit element:
 $$\tilde{Z}_L=i\omega L,\tilde{Z}_R=R,\tilde{Z}_C=\frac{1}{i\omega C}\tag{7}$$

@@ -71,7 +71,7 @@ $$
 ### Using the orthogonality relations to prove the Fourier coefficient formula
 Suppose we know that a periodic function $f(t)$ has a Fourier series expansion
 $$f(t)=\frac{a_0}{2}+\sum_{n=1}^{\infty}a_n\cos (n\frac{\pi}{L}t)+b_n\sin (n\frac{\pi}{L}t)\tag{5}$$
-How can we find the values of the coefficients? Let’s choose one coefficient, say $a_2$, and compute it; you will easily how to generalize this to any other coefficient. The claim is that the right-hand side of the Fourier coefficient formula $(1)$, namely the integral
+How can we find the values of the coefficients? Let's choose one coefficient, say $a_2$, and compute it; you will easily how to generalize this to any other coefficient. The claim is that the right-hand side of the Fourier coefficient formula $(1)$, namely the integral
 $$
 \frac{1}{L}\int_{-L}^{L}f(t)\cos(2\frac{\pi}{L}t)dt
 $$

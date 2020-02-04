@@ -1,4 +1,4 @@
-We start with the second order linear constant coefﬁcient (CC) DE, which as we’ve seen can be interpreted as modeling a **damped forced harmonic oscillator**. If we further specify the oscillator to be a mechanical system with mass $m$, damping coefﬁcient $b$, spring constant $k$, and with a *sinusoidal driving* force $B\cos \omega t$ (with $B$ constant), then the DE is
+We start with the second order linear constant coefﬁcient (CC) DE, which as we've seen can be interpreted as modeling a **damped forced harmonic oscillator**. If we further specify the oscillator to be a mechanical system with mass $m$, damping coefﬁcient $b$, spring constant $k$, and with a *sinusoidal driving* force $B\cos \omega t$ (with $B$ constant), then the DE is
 $$mx''+bx'+kx=B\cos \omega t\tag{1}$$
 For many applications it is of interest to be able to predict the periodic response of the system to various values of $\omega$.
 

@@ -9,7 +9,7 @@ $$\begin{aligned}
 x'=f(x,y)\\y'=g(x,y)
 \end{aligned}\tag{1}$$
 it is represented geometrically as a vector field, and its trajectories - the solution curves - are the curves which at each point have the direction prescribed by the vector field. Our goal is to see how one can get information about the trajectories of $(1)$, without determining them analytically or using a computer to plot them numerically.  
-**Linearizing at the origin.** To illustrate the general idea, let’s suppose that $(0, 0)$ is a critical point of the system $(1)$, i.e.,
+**Linearizing at the origin.** To illustrate the general idea, let's suppose that $(0, 0)$ is a critical point of the system $(1)$, i.e.,
 $$f(0,0)=0,g(0,0)\tag{2}$$
 Then if $f$ and $g$ are sufficiently differentiable, we can approximate them near $(0, 0)$ (the approximation will have no constant term by $(2)$):
 $$\begin{aligned}

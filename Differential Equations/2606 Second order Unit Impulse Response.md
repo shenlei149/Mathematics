@@ -1,7 +1,7 @@
 ### Effect of a Unit Impulse on a Second order System
 We consider a second order system
 $$mx''+bx'+kx=f(t)\tag{1}$$
-Our first task is to derive the following. If the input $f(t)$ is an impulse $c\delta(t - a)$, then the system’s response to $f(t)$ has the following properties.
+Our first task is to derive the following. If the input $f(t)$ is an impulse $c\delta(t - a)$, then the system's response to $f(t)$ has the following properties.
 1. The momentum $mx'(t)$ jumps by $c$ units at $t = a$. That is,
 $$mx'(a^+)-mx'(a^-)=c$$
 2. The position $x(t)$ is unchanged at $t = a$. That is,

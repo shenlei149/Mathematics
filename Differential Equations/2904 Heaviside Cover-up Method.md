@@ -1,5 +1,5 @@
 ### Introduction
-The cover-up method was introduced by Oliver Heaviside as a fast way to do a decomposition into partial fractions. This is an essential step in using the Laplace transform to solve differential equations, and this was more or less Heaviside’s original motivation.  
+The cover-up method was introduced by Oliver Heaviside as a fast way to do a decomposition into partial fractions. This is an essential step in using the Laplace transform to solve differential equations, and this was more or less Heaviside's original motivation.  
 The cover-up method can be used to make a partial fractions decomposition of a proper rational function $\frac{p(s)}{q(s)}$ *whenever the denominator can be factored into distinct linear factors*.
 
 ### Linear Factors

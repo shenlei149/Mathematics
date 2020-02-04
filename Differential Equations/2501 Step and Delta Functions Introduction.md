@@ -7,6 +7,6 @@ A delta function represents an idealized input that acts all at once. If a finit
 
 In the above, the delta function represented an idealized impulsive force acting on a second order mechanical system. First order system, and indeed systems of any order, also have the notion of an impulse, which can also be modeled by a delta function.
 
-Step functions and delta functions are not differentiable in the usual sense, but they do have what we call *generalized derivatives*. In fact, as a generalized derivative we have $u'(t) = \delta(t)$. Since step and delta functions can also be integrated they can used in DE’s.
+Step functions and delta functions are not differentiable in the usual sense, but they do have what we call *generalized derivatives*. In fact, as a generalized derivative we have $u'(t) = \delta(t)$. Since step and delta functions can also be integrated they can used in DE's.
 
 Step and delta functions are of fundamental importance in our study of LTI systems. For example, if we know the response of such a system to either the unit delta or unit step function then we can compute its response to any input whatsoever.

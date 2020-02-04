@@ -3,7 +3,7 @@ In our discussion of the unit step function $u(t)$ we saw that it was an idealiz
 
 In this note we will have an idealized model of a large input that acts over a short time. We will call this model the *delta function* or *Dirac delta function* or *unit impulse*.
 
-After constructing the delta function we will look at its properties. The first is that it is not really a function. This won’t bother us, we will simply call it a *generalized function*. The reason it won’t bother us is that the delta function is useful and easy to work with. Inside integrals or as input to differential equations we will see that it is much simpler than almost any other function.
+After constructing the delta function we will look at its properties. The first is that it is not really a function. This won't bother us, we will simply call it a *generalized function*. The reason it won't bother us is that the delta function is useful and easy to work with. Inside integrals or as input to differential equations we will see that it is much simpler than almost any other function.
 
 ### Delta Function as Idealized Input
 Suppose that radioactive material is dumped in a container. The equation governing the amount of material in the tank is

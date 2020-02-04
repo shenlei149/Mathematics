@@ -10,7 +10,7 @@ Graphically, a function with period $P$ is one whose graph stays the same if it 
 
 ### Base Period
 Most periodic functions have a *minimal* period, which is often called either *the* period or **the base period**. For example, $\sin t$ has minimal period is $2\pi$. It follows from this that the minimal period for $sin(2t)$ is $\pi$.  
-The only exception is the constant function. Every value of $P > 0$ is a period and so it has no minimal period. (We don’t allow $P = 0$ to be a period because then every function would be periodic with period $P = 0$.)
+The only exception is the constant function. Every value of $P > 0$ is a period and so it has no minimal period. (We don't allow $P = 0$ to be a period because then every function would be periodic with period $P = 0$.)
 
 ### Windows
 To fully describe a periodic function you only need to specify the period and the value of the function over one full period. We call an interval containing one full period a **window**. Typical choices for windows are $[-P/2, P/2)$ and $[0, P)$, but any interval of length $P$ will work.

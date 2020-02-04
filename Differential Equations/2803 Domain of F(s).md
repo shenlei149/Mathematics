@@ -1,6 +1,6 @@
 ### Complex $s$ and region of convergence
 We will allow $s$ to be complex, using as needed the properties of the complex exponential we learned in unit 1.  
-**Example 1.** In the previous note we saw that $\mathcal{L}(1) = 1/s$, valid for all $s > 0$. Let’s recompute $\mathcal{L}(1)(s)$ for complex $s$. Let $s = \alpha+i\beta$
+**Example 1.** In the previous note we saw that $\mathcal{L}(1) = 1/s$, valid for all $s > 0$. Let's recompute $\mathcal{L}(1)(s)$ for complex $s$. Let $s = \alpha+i\beta$
 $$\begin{aligned}
 \mathcal{L}(1)(s)&=\int_0^\infty e^{-st}dt\\
 &=\lim_{T \to \infty}\frac{e^{-st}}{-s}\bigg|_0^T\\

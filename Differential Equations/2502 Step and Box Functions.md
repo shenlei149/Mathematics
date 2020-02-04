@@ -26,12 +26,12 @@ A few details need to be highlighted.
 
 ### Models
 We can use $u(t)$ to model an on/off process. Suppose a light turns on; first it is dark, then it is light. The basic model is the unit step function.  
-Of course a light doesn’t reach its steady state instantaneously; it takes a small amount of time. If we use a finer time scale, you can see what happens. It might move up smoothly; it might overshoot; it might move up in fits and starts as different elements come on line. If we zoomed in near $t = 0$ the graph might actually look like  
+Of course a light doesn't reach its steady state instantaneously; it takes a small amount of time. If we use a finer time scale, you can see what happens. It might move up smoothly; it might overshoot; it might move up in fits and starts as different elements come on line. If we zoomed in near $t = 0$ the graph might actually look like  
 ![](pic250202.png)  
-At the longer time scale, we don’t care about these details. Modeling the process by $u(t)$ lets us ignore them.
+At the longer time scale, we don't care about these details. Modeling the process by $u(t)$ lets us ignore them.
 
 ### Box Functions
-When we modeled the light with $u(t)$ we assumed the light went on and stayed on forever. Eventually the light will be turned off or burn out. To be general, let’s assume the light goes on at time $a$ and off at time $b$. We can model this with the function
+When we modeled the light with $u(t)$ we assumed the light went on and stayed on forever. Eventually the light will be turned off or burn out. To be general, let's assume the light goes on at time $a$ and off at time $b$. We can model this with the function
 $$
 u_{ab}(t)=
 \begin{cases}

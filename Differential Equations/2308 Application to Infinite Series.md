@@ -31,4 +31,4 @@ Thus the Fourier series is $f(t)=\frac{\pi^2}{3}-2\sum_{n=1}^\infty\frac{\cos(nt
 Since the function $f(t)$ is continuous, the series converges to $f(t)$ for all $t$.  
 Plugging in $t = 0$, we then get
 $$f(0)=t(\pi-t/2)=0=\frac{\pi^2}{3}-2\sum_{n=1}^\infty\frac{1}{n^2}$$
-A little bit of algebra then gives Euler’s result $(1)$.
+A little bit of algebra then gives Euler's result $(1)$.

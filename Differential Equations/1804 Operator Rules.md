@@ -15,7 +15,7 @@ $$D^{(n)}(c_1f+c_2g)=\frac{d^n}{dt^n}(c_1f+c_2g)=c_1f^{(n)}+c_2g^{(n)}=c_1D^{(n)
 Next, we can scale the linear operator $D^n$ by $a$ and it stays linear. That is,
 $$aD^{(n)}(c_1f+c_2g)=a\frac{d^n}{dt^n}(c_1f+c_2g)=c_1af^{(n)}+c_2ag^{(n)}=c_1aD^{(n)}f+c_2aD^{(n)}g$$
 
-(Notice that `a` does not actually have to be a constant, it can be a function of t (or of whatever independent variable we’re using). )  
+(Notice that `a` does not actually have to be a constant, it can be a function of t (or of whatever independent variable we're using). )  
 Finally we can combine these operators into a polynomial operator
 $$D^n+a_1D^{n-1}+...+a_{n-1}D^{n-1}+a_n$$
 which clearly still obeys the linearity rule. □
@@ -24,7 +24,7 @@ which clearly still obeys the linearity rule. □
 $$p(D)u=g(D)(h(D)u)\tag{3}$$
 The property is true when $h(D)$ is the simple operator $aD^k$, essentially because
 $$D^m(aD^ku)=aD^{m+k}u$$
-It extends to general polynomial operators $h(D)$ by linearity. Note that here `a` must be a constant; it’s `false` otherwise.
+It extends to general polynomial operators $h(D)$ by linearity. Note that here `a` must be a constant; it's `false` otherwise.
 
 An important corollary of the multiplication property is that `polynomial operators with constant coefﬁcients commute`; i.e., for every function $u(t)$,
 $$g(D)(h(D)u)=h(D)(g(D)u)\tag{4}$$

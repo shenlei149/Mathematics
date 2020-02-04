@@ -39,7 +39,7 @@ $$z_p = B_1\lvert\widetilde{g}\rvert e^{i(\omega t-\phi)}$$
 Taking the real part we have
 $$x_p = B_1\lvert\widetilde{g}\rvert \cos(\omega t-\phi)$$
 
-All that’s left is to compute the gain $g = \lvert\widetilde{g}\rvert$ and the phase lag  $\phi = -Arg(\widetilde{g})$. We have
+All that's left is to compute the gain $g = \lvert\widetilde{g}\rvert$ and the phase lag  $\phi = -Arg(\widetilde{g})$. We have
 $$p(i\omega)=m(i\omega)^2+bi\omega+k=(k-m\omega^2)+bi\omega$$
 so
 $$\widetilde{g}(\omega)=\frac{i\omega b}{p(i\omega)}=\frac{i\omega b}{(k-m\omega^2)+bi\omega}\tag{4}$$
@@ -56,6 +56,6 @@ Because squares are always positive, this is clearly largest when the term $k-m\
 Since $\widetilde{g}(\omega_0)=1$, we also see that the phase lag $\phi=Arg(widetilde{g})$ is 0 at $\omega_r$
 Thus the input and output sinusoids are in phase at resonance.
 
-We have found interesting and rather surprising results for this dashpot-driven mechanical system, namely, that the resonant frequency occurs at the system’s natural undamped frequency $\omega_0$; that this resonance is independent of the damping coefficient $b$; and that the maximum gain which can be obtained is $g = 1$. We can contrast this with the spring-side driven system worked out in the previous note, where the resonant frequency certainly did depend on the damping coefficient. In fact, there was no resonance at all if the system is too heavily damped. In addition, the gain could, in principle, be arbitarily large.
+We have found interesting and rather surprising results for this dashpot-driven mechanical system, namely, that the resonant frequency occurs at the system's natural undamped frequency $\omega_0$; that this resonance is independent of the damping coefficient $b$; and that the maximum gain which can be obtained is $g = 1$. We can contrast this with the spring-side driven system worked out in the previous note, where the resonant frequency certainly did depend on the damping coefficient. In fact, there was no resonance at all if the system is too heavily damped. In addition, the gain could, in principle, be arbitarily large.
 
 Comparing these two mechanical systems side-by-side, we can see the importance of the choice of the specification for the input in terms of understanding the resulting behavior of the physical system. In both cases the right-hand side of the DE is a sinusoidal function of the form $B\cos \omega t$ or $B\sin \omega t$, and the resulting mathematical formulas are essentially the same. The key difference lies in the dependence of the constant $B$ on either the system parameters $m, b, k$ and/or the input frequency $\omega$. It is in fact the dependence of $B$ on $\omega$ and $b$ in the dashpot-driven case that results in the radically different result for the resonant input frequency $\omega_r$.

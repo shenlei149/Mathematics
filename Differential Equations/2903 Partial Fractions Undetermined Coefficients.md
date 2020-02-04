@@ -62,7 +62,7 @@ $$\frac{s-1}{(s+1)(s^2+4)}=\frac{A}{s+1}+\frac{Bs+C}{s^2+4}\tag{2}$$
 Notice the quadratic factor gets a linear term in the numerator. Notice also that the number of unknown coefficients is the same as the degree of the denominator in the original fraction.  
 From $(2)$ we can write
 $$\mathcal{L}^{-1}(\frac{s-1}{(s+1)(s^2+4)}=Ae^{-t}+B\cos(2t)+\frac{C}{2}\sin(2t)$$
-All that’s left is to do some algebra to find the coefficients Muliplying $(2)$ through by the denominator gives
+All that's left is to do some algebra to find the coefficients Muliplying $(2)$ through by the denominator gives
 $$s - 1 = A(s^2 + 4) + (Bs + C)(s + 1) = (A + B)s
 2 + (B + C)s + (4A + C)$$
 Equate the coefficients on both sides:

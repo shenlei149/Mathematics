@@ -35,7 +35,7 @@ Since the determinant $|\Phi(t_0)|$ is the value at $t_0$ of the Wronskian of $\
 $$\boldsymbol{c}=\Phi(t_0)^{-1}\boldsymbol{x}_0$$
 Using the above value of $\boldsymbol{c}$ in $(4)$, the solution to the IVP $(1)$ can now be written
 $$\boldsymbol{x}=\Phi(t)\Phi(t_0)^{-1}\boldsymbol{x}_0$$
-Note that when the solution is written in this form, it’s "obvious" that $\boldsymbol{x}(t_0) = \boldsymbol{x}_0$, i.e., that the initial condition in $(5)$ is satisfied.  
+Note that when the solution is written in this form, it's "obvious" that $\boldsymbol{x}(t_0) = \boldsymbol{x}_0$, i.e., that the initial condition in $(5)$ is satisfied.  
 **An equation for fundamental matrices** We have been saying "a" rather than "the" fundamental matrix since the system $(1)$ doesn't have a unique fundamental matrix: there are many ways to pick two independent solutions of $\boldsymbol{x'} = A\boldsymbol{x}$ to form the columns of $\Phi$. It is therefore useful to have a way of recognizing a fundamental matrix when you see one. The following theorem is good for this; we'll need it shortly.  
 **Theorem 1** $\Phi(t)$ is a fundamental matrix for the system $(1)$ if its determinant $|\Phi(t)|$ is non-zero and it satisfies the matrix equation
 $$\Phi'=A\Phi\tag{7}$$
