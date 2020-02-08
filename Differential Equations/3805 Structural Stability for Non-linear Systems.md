@@ -23,7 +23,7 @@ $J(0,0)=\begin{pmatrix}0&1\\-1&0\end{pmatrix}$:
 eigenvalues: $\lambda=\plusmn i$  
 a linearized center.  
 This is *not structurally stable*. The nonlinear system could be any one of a center, spiral out or spiral in. Using a computer program it appears that $(0,0)$ is in fact a center. (This can be proven using more advanced methods.)  
-We can show the trajectories near $(0,0)$ are not spirals by exploiting the symmetry of the picture. First note, if $(x(t), y(t))$ is a solution then so is $(y(−t), x(−t))$. That is, the trajectory is symmetric in the line $x = y$. This implies it can't be a spiral. Since the only other choice choice is that the critical point $(0,0)$ is a center, the trajectories must be closed.  
+We can show the trajectories near $(0,0)$ are not spirals by exploiting the symmetry of the picture. First note, if $(x(t), y(t))$ is a solution then so is $(y(-t), x(-t))$. That is, the trajectory is symmetric in the line $x = y$. This implies it can't be a spiral. Since the only other choice choice is that the critical point $(0,0)$ is a center, the trajectories must be closed.  
 ![](pic380501.png)
 
 The following two examples show that a linearized center might also be a spiral in or a spiral out in the nonlinear system.  
