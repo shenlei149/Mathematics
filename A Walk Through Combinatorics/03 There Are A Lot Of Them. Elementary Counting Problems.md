@@ -58,3 +58,43 @@ $$n\cdot (n-1)\cdots (n-k+1)=\frac{n!}{(n-k)!}$$
 **Solution.** 略。
 
 ## Choice Problems
+从给定集合中选出一个子集(`subset`)，顺序是无关紧要的。
+
+**Definition 3.15.** 从集合$[n]$中选出$k$个元素的子集的个数用$\begin{pmatrix}n\\k\end{pmatrix}$来表示，也被称作是二项式系数(`binomial coefficient`)。
+
+**Theorem 3.16.** 对所有非负整数$k\leq n$，
+$$\begin{pmatrix}
+n\\k
+\end{pmatrix}=\frac{n!}{k!(n-k)!}$$
+
+**Definition 3.17.** $S$是集合$[n]$的子集，$S^c$表示$S$的补集。$S^c$是唯一满足下面条件的$[n]$的子集：$i\in S^c$ 当且仅当$i\not\in S$，其中$i\in [n]$。
+
+**Proposition 3.18.** 对所有非负整数$k\leq n$，有以下两个性质：
+$$\begin{pmatrix}
+n\\k
+\end{pmatrix}=\begin{pmatrix}
+n\\n-k
+\end{pmatrix}$$
+$$\begin{pmatrix}
+n\\0
+\end{pmatrix}=\begin{pmatrix}
+n\\n
+\end{pmatrix}=1$$
+**Proof.** 我们建立一个从$k$个元素的子集到$n-k$个元素的子集的双射$f$：$S$是任意一个$k$个元素的子集，$T=S^c$是对应的$n-k$个元素的子集，$f(S)=T$。根据双射定义，两者元素个数相等，所以$\begin{pmatrix}n\\k\end{pmatrix}=\begin{pmatrix}n\\n-k\end{pmatrix}$。  
+取$k=0$即可得到第二个性质。$\begin{pmatrix}n\\0\end{pmatrix}=0$，这个唯一的集合就是空集。
+
+**Example 3.19.** 一个医学院学生一月份要去医院工作五天，但是不能连续两天都去，他有多少种不同的选法呢？  
+**Solution.** 不妨设这个学生选择的五天依次是$a_1,a_2,a_3,a_4,a_5$，根据题意$1\leq a_i\leq 31$，那么$1\leq a_1 <a_2-1<a_3-2<a_4-3<a_5-4\leq 27$。我们可以选择$a_i-j$，然后再得到$a_i$，所以问题从集合$[31]$中选择不相邻的五个数转化成了从集合$[27]$选择五个数，那么有$\begin{pmatrix}27\\5\end{pmatrix}$种不同选法。
+
+**Example 3.20.** 从集合$[90]$中有放回的选择五个数，那么有多少种选法？  
+**Solution.** 和上题类似，这五个数满足
+$$1\leq b_1\leq b_2\leq b_3\leq b_4\leq b_5\leq 90$$
+选择一个双射$f(b_1,b_2,b_3,b_4,b_5)=(b_1,b_2+1,b_3+2,b_4+3,b_5+4)$，那么
+$$1\leq b_1< b_2+1< b_3+2< b_4+3< b_5+4\leq 94$$
+那么共有$\begin{pmatrix}94\\5\end{pmatrix}$种选法。
+
+**Theorem 3.21.** 从集合$[n]$中选择$k$个元素的多重集，有
+$$\begin{pmatrix}
+n+k-1\\k
+\end{pmatrix}$$
+种不同选法。
