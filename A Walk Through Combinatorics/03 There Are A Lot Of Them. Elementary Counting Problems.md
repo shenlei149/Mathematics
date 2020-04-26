@@ -98,3 +98,33 @@ $$\begin{pmatrix}
 n+k-1\\k
 \end{pmatrix}$$
 种不同选法。
+
+## Exercises
+(24) 幻方(`magic square`)是每行每列相加都相等的由非负整数组成的方阵。$H_3(r)$表示$3\times 3$的方阵的个数，其中$r$是每行每列的和。求证：
+$$H_3(r)=\begin{pmatrix}
+r+4\\4
+\end{pmatrix}+\begin{pmatrix}
+r+3\\4
+\end{pmatrix}+\begin{pmatrix}
+r+2\\4
+\end{pmatrix}$$
+**Solution.** 对于$3\times 3$的方阵，如下图所示四个数就能确定一种组成形式。  
+![](0201.png)  
+下图展示了其他位置上的数。  
+![](0202.png)  
+每个数都是非负数，所以有以下一系列的限制
+$$a+d\leq r\tag{1}$$
+$$b+d\leq r\tag{2}$$
+$$c\leq a+d\tag{3}$$
+$$c\leq b+d\tag{4}$$
+$$a+d+b-c\leq r\tag{5}$$
+我们下面分三种情况讨论。  
+(a) $0\leq a\leq b,0\leq a\leq c$，那么$(1)(4)(5)$被$(2)(3)$所隐含，也就是冗余的。那么
+$$a\leq 2a+d-c\leq a+b+d-c\leq b+d\leq r$$
+第一个不等式等价于公式(3)，第二个不等式等价于我们的假设$a\leq b$，第三个不等式等价于我们的假设$a\leq c$，最后一个就是我们的公式(2)。$a,2a+d-c,a+b+d-c,b+d$确定的话，那么$a,b,c,d$也就确定了。利用例题中的方法将不等号变成等号，那么共有$\begin{pmatrix}r+4\\4\end{pmatrix}$种可能性。  
+(b) $a>b,c\geq b$，那么$(2)(4)(5)$是冗余的。那么
+$$b\leq 2b+d-c\leq a+b+d-c-1\leq a+d-1\leq r-1$$
+与(a)同理，那么共有$\begin{pmatrix}r+3\\4\end{pmatrix}$种可能性。  
+(c) $a>c,b>c$，那么$(1)(2)(3)(4)$都是冗余的。
+$$c\leq b-1\leq b+d-1\leq a+b+d-c-2\leq r-2$$
+同理，共有$\begin{pmatrix}r+2\\4\end{pmatrix}$种可能性。
