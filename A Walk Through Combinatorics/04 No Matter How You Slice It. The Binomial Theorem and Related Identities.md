@@ -62,3 +62,43 @@ $$n(x+1)^{n-1}=\sum_{k=1}^nk\begin{pmatrix}
 n\\k
 \end{pmatrix}x^{k-1}$$
 再令$x=1$即可。
+
+**Theorem 4.7.** [范德蒙恒等式(`Vandermonde's identity`)] 对所有正整数$n,m,k$，
+$$\begin{pmatrix}
+n+m\\k
+\end{pmatrix}=\sum_{k=0}^n\begin{pmatrix}
+n\\i
+\end{pmatrix}\begin{pmatrix}
+m\\k-i
+\end{pmatrix}$$
+**Proof.** 公式的左边是$n+m$个元素集合的有$k$个元素子集的个数。右边是分两步进行，先从前$n$个元素中选择$i$个，有$\begin{pmatrix}n\\i\end{pmatrix}$种不同的方式，再从后$m$个元素中选择$k-i$个，有$\begin{pmatrix}m\\k-i\end{pmatrix}$种不同的方式，最后对不同的$i$求和。
+
+观察帕斯卡三角的每一行，都是先增加再减少，下面两个定理说明了这一点。
+
+**Theorem 4.8.** 对于所有非负整数$k$和$n$，其中$k\leq\frac{n-1}{2}$，有
+$$\begin{pmatrix}
+n\\k
+\end{pmatrix}\leq\begin{pmatrix}
+n\\k+1
+\end{pmatrix}$$
+当且仅当$n=2k+1$时等号成立。  
+**Proof.** 将不等式展开
+$$\frac{n!}{k!(n-k)!}\leq\frac{n!}{(k+1)!(n-k-1)!}$$
+化简
+$$\frac{1}{n-k}\leq\frac{1}{k+1}$$
+$$n-k\geq k+1$$
+$$2k+1\leq n$$
+$$k\leq\frac{n-1}{2}$$
+
+**Corollary 4.9.** 对于所有正整数$k$和$n$，其中$k\geq\frac{n-1}{2}$，有
+$$\begin{pmatrix}
+n\\k
+\end{pmatrix}\geq\begin{pmatrix}
+n\\k+1
+\end{pmatrix}$$
+当且仅当$n=2k+1$时等号成立。  
+**Proof.** 略。
+
+一个序列先递增再递减，被称之为单峰(`unimodal`)序列。对于实数序列$a_0,a_2\cdots a_n$，存在一$m$，使得$a_0\leq a_1\leq\cdots\leq a_m$且$a_m\geq\cdots\geq a_n$。
+
+## The Multinomial Theorem
