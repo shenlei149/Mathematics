@@ -102,3 +102,17 @@ n\\k+1
 一个序列先递增再递减，被称之为单峰(`unimodal`)序列。对于实数序列$a_0,a_2\cdots a_n$，存在一$m$，使得$a_0\leq a_1\leq\cdots\leq a_m$且$a_m\geq\cdots\geq a_n$。
 
 ## The Multinomial Theorem
+**Example 4.10.** 求证
+$$(x+y+z)^3=x^3+y^3+z^3+3x^2y+3x^2z+3y^2x+3y^2z+3z^2x+3z^2y+6xyz$$
+**Proof** 略。
+
+**Definition 4.11.** $n=\sum_{i=1}^k a_i$，其中$a_1,a_2,\cdots a_k$是非负整数
+$$\begin{pmatrix}
+n\\a_1,a_2,\cdots a_k
+\end{pmatrix}=\frac{n!}{a_1!\cdot a_2!\cdots a_k!}$$
+$\begin{pmatrix}n\\a_1,a_2,\cdots a_k\end{pmatrix}$称之为多项式系数(`multinomial coefficients`)。
+
+**Theorem 4.12** [多项式理论(`Multinomial theorem`)] 对所有非负整数$n$和$k$，有
+$$(x_1+x_2+\cdots +x_k)^n=\sum_{a_1,a_2,\cdots a_k}x_1^{a_1}x_2^{a_2}\cdots x_k^{a_k}$$
+其中$k$元非负整数$a_1,a_2,\cdots a_k$满足$n=\sum_{i=1}^k a_i$。  
+**Proof.** 
