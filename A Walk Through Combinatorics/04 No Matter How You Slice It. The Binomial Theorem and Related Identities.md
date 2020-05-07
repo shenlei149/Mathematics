@@ -115,4 +115,6 @@ $\begin{pmatrix}n\\a_1,a_2,\cdots a_k\end{pmatrix}$称之为多项式系数(`mul
 **Theorem 4.12** [多项式理论(`Multinomial theorem`)] 对所有非负整数$n$和$k$，有
 $$(x_1+x_2+\cdots +x_k)^n=\sum_{a_1,a_2,\cdots a_k}x_1^{a_1}x_2^{a_2}\cdots x_k^{a_k}$$
 其中$k$元非负整数$a_1,a_2,\cdots a_k$满足$n=\sum_{i=1}^k a_i$。  
-**Proof.** 
+**Proof.** Hint: Theorem 3.5
+
+
