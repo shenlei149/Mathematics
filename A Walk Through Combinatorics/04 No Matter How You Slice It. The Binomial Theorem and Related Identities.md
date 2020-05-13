@@ -117,4 +117,24 @@ $$(x_1+x_2+\cdots +x_k)^n=\sum_{a_1,a_2,\cdots a_k}x_1^{a_1}x_2^{a_2}\cdots x_k^
 其中$k$元非负整数$a_1,a_2,\cdots a_k$满足$n=\sum_{i=1}^k a_i$。  
 **Proof.** Hint: Theorem 3.5
 
+**Theorem 4.13.** 对于所有非负整数$n$和$a_1,a_2,\cdots,a_k$，其中$n=\sum_{i=1}^k a_i$，有
+$$\begin{pmatrix}
+n\\a_1,a_2,\cdots,a_k
+\end{pmatrix}=\begin{pmatrix}
+n\\a_1
+\end{pmatrix}\begin{pmatrix}
+n-a_1\\a_2
+\end{pmatrix}\cdots\begin{pmatrix}
+n-a_1-a_2-\cdots -a_i\\a_{i+1}
+\end{pmatrix}\cdots\begin{pmatrix}
+n-a_1-a_2-\cdots - a_{k-1}\\a_k
+\end{pmatrix}$$
+**Proof** 略。
 
+## When the Exponent Is Not a Positive Integer
+当$m$不是正整数时，$(1 +x)^m$是多少呢？首先给出$m$是任意实数时二项式系数$\begin{pmatrix}m\\k\end{pmatrix}$的定义。  
+**Definition 4.14.** 对于任意实数$m$和非负整数$k$，$\begin{pmatrix} m\\0 \end{pmatrix}=1$，$k>0$时有
+$$\begin{pmatrix}
+m\\k
+\end{pmatrix}=\frac{m(m-1)\cdots(m-k+1)}{k!}$$
+这个定义扩大了$m$的域。
