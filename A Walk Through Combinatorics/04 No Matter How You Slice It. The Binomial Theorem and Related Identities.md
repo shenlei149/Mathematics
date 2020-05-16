@@ -138,3 +138,28 @@ $$\begin{pmatrix}
 m\\k
 \end{pmatrix}=\frac{m(m-1)\cdots(m-k+1)}{k!}$$
 这个定义扩大了$m$的域。
+
+利用$(1+x)^m$在$x=0$附近的泰勒级数(`Taylor series`)，其$n$阶导为$\frac{m!}{(m-n)!}(1+x)^{m-n}$，可以得到下面定理：  
+**Theorem 4.15** $m$为任意实数，有
+$$(1+x)^m=\sum_{n\geq 0}\begin{pmatrix}
+m\\n
+\end{pmatrix}x^n$$
+如果$m$不是整数，那么$(1+x)^m$是无穷级数。
+
+**Example 4.16.** 求$\sqrt{1-4x}$的幂级数。  
+**Solution.** 根据定理4.15，
+$$\sqrt{1-4x}=(1-4x)^{1/2}=\sum_{n\geq 0}\begin{pmatrix}
+1/2\\n
+\end{pmatrix}(-4x)^n$$
+为了简化这个表达式，我们需要简化$\begin{pmatrix}1/2\\n\end{pmatrix}$。$\begin{pmatrix}1/2\\0\end{pmatrix}=1$，$\begin{pmatrix}1/2\\1\end{pmatrix}=1/2$，当$n\geq 2$时，
+$$\begin{pmatrix}
+1/2\\n
+\end{pmatrix}=\frac{\frac{1}{2}\cdot\frac{-1}{2}\cdot\frac{-3}{2}\cdots\frac{-2n+3}{2}}{n!}=(-1)^{n-1}\frac{(2n-3)!!}{2^n\cdot n!}$$
+$(2n-3)!!$表示从$1$到$2n-3$所有奇数之积，称之为$2n-3$的半阶乘或双阶乘(`semifactorial` or `double factorial`)。  
+代入上式得到
+$$\sqrt{1-4x}=1-2x-\sum_{n\geq 2}\frac{2^n\cdot(2n-3)!!}{n!}x^n$$
+对$\frac{2^n\cdot(2n-3)!!}{n!}$的分子分母同乘$(n-1)!$，那么$2^{n-1}(n-1)!$就等于从$2$到$2n-2$所有偶数的乘积。所以
+$$\frac{2^n\cdot(2n-3)!!}{n!}=2\frac{(2n-2)!}{n!(n-1)!}$$
+$$\sqrt{1-4x}=1-2x-\frac{2}{n}\sum_{n\geq 2}\begin{pmatrix}
+2n-2\\n-1
+\end{pmatrix}x^n$$
