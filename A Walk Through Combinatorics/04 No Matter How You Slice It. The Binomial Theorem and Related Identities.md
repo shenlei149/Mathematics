@@ -163,3 +163,22 @@ $$\frac{2^n\cdot(2n-3)!!}{n!}=2\frac{(2n-2)!}{n!(n-1)!}$$
 $$\sqrt{1-4x}=1-2x-\frac{2}{n}\sum_{n\geq 2}\begin{pmatrix}
 2n-2\\n-1
 \end{pmatrix}x^n$$
+
+## Exercises
+TODO 2
+
+TODO 5
+
+(7) 有$n$个石头，将其分成两堆，令$p_1$是两堆石头数量的乘积，对每堆石头做重复的操作，令$p_2$是第二次分成两堆石头数量的乘积，以此类推，直至每堆石头都只有一个为止，显然这需要$n-1$步。求$p_1+p_2+\cdots+p_{n-1}$的最大值和最小值。  
+**Solution.** 考虑极端情况，每次都取出一个石头单独一堆，那么$p_1=n-1, p_2=n-2,\cdots,p_{n-1}=1$，所以
+$$p_1+p_2+\cdots+p_{n-1}=\frac{n(n-1)}{2}=\begin{pmatrix}
+n\\2
+\end{pmatrix}$$
+下面我们证明当$n\geq 2$时，其和都是$\begin{pmatrix}n\\2\end{pmatrix}$。$n=2$时明显成立，假设小于$n$时该命题都成立，现在考察$n$，我们将其分成任意$k$和$n-k$两堆，其乘积是$k(n-k)$，那么总和为
+$$k(n-k)+\begin{pmatrix}
+k\\2
+\end{pmatrix}+\begin{pmatrix}
+n-k\\2
+\end{pmatrix}=\frac{n(n-1)}{2}=\begin{pmatrix}
+n\\2
+\end{pmatrix}$$
