@@ -66,7 +66,7 @@ n\\k
 **Theorem 4.7.** [范德蒙恒等式(`Vandermonde's identity`)] 对所有正整数$n,m,k$，
 $$\begin{pmatrix}
 n+m\\k
-\end{pmatrix}=\sum_{k=0}^n\begin{pmatrix}
+\end{pmatrix}=\sum_{i=0}^k\begin{pmatrix}
 n\\i
 \end{pmatrix}\begin{pmatrix}
 m\\k-i
