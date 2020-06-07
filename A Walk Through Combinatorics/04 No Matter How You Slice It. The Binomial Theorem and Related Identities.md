@@ -66,7 +66,7 @@ n\\k
 **Theorem 4.7.** [范德蒙恒等式(`Vandermonde's identity`)] 对所有正整数$n,m,k$，
 $$\begin{pmatrix}
 n+m\\k
-\end{pmatrix}=\sum_{k=0}^n\begin{pmatrix}
+\end{pmatrix}=\sum_{i=0}^k\begin{pmatrix}
 n\\i
 \end{pmatrix}\begin{pmatrix}
 m\\k-i
@@ -184,3 +184,20 @@ n-k\\2
 \end{pmatrix}=\frac{n(n-1)}{2}=\begin{pmatrix}
 n\\2
 \end{pmatrix}$$
+
+(53) $(\sqrt{3}+\sqrt{2})^{2002}$小数点后第一个数字是几？  
+**Solution.**  
+$$\begin{aligned}
+&(\sqrt{3}+\sqrt{2})^{2002}+(\sqrt{3}-\sqrt{2})^{2002}\\
+=&\sum_{i=0}^{2002}\begin{pmatrix}
+2002\\i
+\end{pmatrix}\sqrt{3}^i\sqrt{2}^{2002-i}+\sum_{i=0}^{2002}\begin{pmatrix}
+2002\\i
+\end{pmatrix}\sqrt{3}^i(-\sqrt{2})^{2002-i}\\
+=&\sum_{i=0}^{2002}\begin{pmatrix}
+2002\\i
+\end{pmatrix}(\sqrt{3}^i\sqrt{2}^{2002-i})(1+(-1)^{2002-i})
+\end{aligned}$$
+如果$i$是奇数，$(1+(-1)^{2002-i})=0$  
+如果$i$是偶数，$(\sqrt{3}^i\sqrt{2}^{2002-i})$是整数。  
+所以$(\sqrt{3}+\sqrt{2})^{2002}+(\sqrt{3}-\sqrt{2})^{2002}$是整数，由于$\sqrt{3}-\sqrt{2}<1/2$，所以其2002次方远远小于0，那么$(\sqrt{3}+\sqrt{2})^{2002}$的小数点后面有数百个9。
