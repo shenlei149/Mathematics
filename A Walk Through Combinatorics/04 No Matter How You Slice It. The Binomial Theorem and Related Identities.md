@@ -167,7 +167,9 @@ $$\sqrt{1-4x}=1-2x-\frac{2}{n}\sum_{n\geq 2}\begin{pmatrix}
 \end{pmatrix}x^n$$
 
 ## Exercises
-TODO 2
+(2) 在凸八边形内种13棵数，然后将各点和各个树连接起来，问有多少个三角形？如果在边上多种5棵数呢？  
+**Solution.** 我们通过角度来推算三角形的个数。八边形内角和是$180\degree *(8-2)=1080\degree$，13棵树，每棵树一个圆周角，$360\degree *360=4680\degree$，所以若干个三角形内角和是$5760\degree$，所以有$5760\degree/180\degree=32$个三角形。  
+如果边上多种五棵树，那么内角和增加了$180\degree *5$，刚好增加了五个三角形，共37个三角形。
 
 TODO 5
 
@@ -184,6 +186,10 @@ n-k\\2
 \end{pmatrix}=\frac{n(n-1)}{2}=\begin{pmatrix}
 n\\2
 \end{pmatrix}$$
+
+TODO 8
+
+TODO 24
 
 (53) $(\sqrt{3}+\sqrt{2})^{2002}$小数点后第一个数字是几？  
 **Solution.**  
