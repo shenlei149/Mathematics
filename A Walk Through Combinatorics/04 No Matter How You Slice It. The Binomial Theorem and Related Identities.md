@@ -171,7 +171,14 @@ $$\sqrt{1-4x}=1-2x-\frac{2}{n}\sum_{n\geq 2}\begin{pmatrix}
 **Solution.** 我们通过角度来推算三角形的个数。八边形内角和是$180\degree *(8-2)=1080\degree$，13棵树，每棵树一个圆周角，$360\degree *360=4680\degree$，所以若干个三角形内角和是$5760\degree$，所以有$5760\degree/180\degree=32$个三角形。  
 如果边上多种五棵树，那么内角和增加了$180\degree *5$，刚好增加了五个三角形，共37个三角形。
 
-TODO 5
+(5) 证明对所有整数$0\leq k \leq n-1$，
+$$\sum_{j=0}^k\begin{pmatrix}
+n\\j
+\end{pmatrix}=\sum_{j=0}^k\begin{pmatrix}
+n-1-j\\k-j
+\end{pmatrix}2^j$$
+**Solution.** 左边长度为$n$的0-1序列最多有$k$个1的组合方式。  
+右边比较复杂。如果我们能找到$n-k$个0，那么最多只有$k$个1。$k \leq n-1$告诉我们至少有一个0，假设这个0在$n-j$的位置上，其左边有$n-k-1$个零，有$\begin{pmatrix}n-j-1\\n-k-1\end{pmatrix}=\begin{pmatrix}n-1-j\\k-j\end{pmatrix}$种取法，右边$j$个0-1序列不管是多少个零都没有关系了，有$2^j$种可能性。
 
 (7) 有$n$个石头，将其分成两堆，令$p_1$是两堆石头数量的乘积，对每堆石头做重复的操作，令$p_2$是第二次分成两堆石头数量的乘积，以此类推，直至每堆石头都只有一个为止，显然这需要$n-1$步。求$p_1+p_2+\cdots+p_{n-1}$的最大值和最小值。  
 **Solution.** 考虑极端情况，每次都取出一个石头单独一堆，那么$p_1=n-1, p_2=n-2,\cdots,p_{n-1}=1$，所以
@@ -187,12 +194,13 @@ n-k\\2
 n\\2
 \end{pmatrix}$$
 
-TODO 8
+(8) 证明任意正整数$n$的$4k+1$形式的因子至少和形式为$4k-1$的因子一样多。  
+**Solution.** TODO
 
 TODO 24
 
 (53) $(\sqrt{3}+\sqrt{2})^{2002}$小数点后第一个数字是几？  
-**Solution.**  
+**Solution.**
 $$\begin{aligned}
 &(\sqrt{3}+\sqrt{2})^{2002}+(\sqrt{3}-\sqrt{2})^{2002}\\
 =&\sum_{i=0}^{2002}\begin{pmatrix}
