@@ -213,6 +213,26 @@ $$g(q)=a_1^{c_1}\cdots a_m^{c_m}\cdot b_1^{d_1}\cdots b_i^{y_i-1-d_i}\cdots b_p^
 **Solution.** 从$(0,0)$到$(n,n)$，一共有$\begin{pmatrix}2n\\n\end{pmatrix}$种走法。如果碰到了$y=x+1$，那就不符合题意了，那么一共有多少种不合题意的走法呢？  
 设某种不符合题意的走法为$p$，第一个在直线$y=x+1$的点为$P(x,x+1)$，这一段记作$p_s$。考察点$(-1,1)$到点$P$，一个$x+1,x$的矩形，将$p_s$对称的对应到某个点$(-1,1)$到点$P$的路径$p_s'$，那么$p_s$和$p_s'$一一对应，如果将路径$p$的点$P$到点$(n,n)$那一段接到$p_s'$的后面，那么不符合题意的路径和点$(-1,1)$到点$(n,n)$一一对应，而后者共有$\begin{pmatrix}2n\\n-1\end{pmatrix}$种走法。
 
+(48) 令$n=4k$且$k\geq 0$，求证
+$$\sum_{i=0}^{2k}\begin{pmatrix}
+n\\2i
+\end{pmatrix}(-1)^i=2^{2k}(-1)^k$$
+> 准备在Mathematics Stack Exchange上面提问，敲完公式自动排配到一个链接，已经有人问且有大神[回答了](https://math.stackexchange.com/questions/533978/given-n-4k-prove-that-sum-i-02k-binomn2i-1i-22k-1k)，个人觉得RobPratt比较容易懂，复制下来以供参考。
+
+**Solution.** Let $i=\sqrt{-1}$, and note that $(1+i)^4=(1-i)^4=-4$. Also, for $j \ge 0$, we have
+$$\frac{1+(-1)^j}{2} = \begin{cases}1 &\text{if $2|j$}\\0 &\text{otherwise}\end{cases}$$
+Then
+$$\begin{aligned}
+\sum_{j\ge 0}\binom{4k}{2j}(-1)^j
+&=\sum_{j\ge 0}\binom{4k}{2j}i^{2j} \\
+&=\sum_{j\ge 0}\frac{1+(-1)^j}{2}\binom{4k}{j}i^{j} \\
+&=\frac{1}{2}\sum_{j\ge 0}\binom{4k}{j}i^{j} + \frac{1}{2}\sum_{j\ge 0}\binom{4k}{j}(-i)^{j} \\
+&=\frac{1}{2}(1+i)^{4k} + \frac{1}{2}(1-i)^{4k} \\
+&=\frac{1}{2}(-4)^k + \frac{1}{2}(-4)^k \\
+&=(-4)^k \\
+&=2^{2k}(-1)^k
+\end{aligned}$$
+
 (53) $(\sqrt{3}+\sqrt{2})^{2002}$小数点后第一个数字是几？  
 **Solution.**
 $$\begin{aligned}
