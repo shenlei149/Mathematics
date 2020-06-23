@@ -233,6 +233,12 @@ $$\begin{aligned}
 &=2^{2k}(-1)^k
 \end{aligned}$$
 
+(49) $n=3k$，证明
+$$\lim_{n\to \infty}\frac{\sum_{i=0}^k\begin{pmatrix}
+n\\3i
+\end{pmatrix}}{2^n}=\frac{1}{3}$$
+> 贴大神的[回答](https://math.stackexchange.com/questions/2200539/show-that-lim-n-rightarrow-infty-frac-sigma-i-0k-binomn3i2n)
+
 (53) $(\sqrt{3}+\sqrt{2})^{2002}$小数点后第一个数字是几？  
 **Solution.**
 $$\begin{aligned}
