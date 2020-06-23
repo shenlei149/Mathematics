@@ -54,3 +54,21 @@ $$S(n,k)=S(n-1,k-1)+k\cdot S(n-1,k)$$
 
 **Corollary 5.9.** 所有$[n]\to[k]$上的满射函数$f$的数量是$k!\cdot S(n,k)$  
 **Proof.** 略。
+
+**Corollary 5.10.** 对于所有的实数$x$和非负整数$n$，有
+$$x^n=\sum_{k=0}^nS(n,k)(x)_k$$
+**Proof.** 等式两边是$x$的$n$阶多项式，所以我们如果能够证明多于$n$个的$x$值都成立，那么上述等式成立。我们证明一个更强的命题，对于所有的正整数$x$其都成立。
+> 上面这段初看时我有两点不懂，这里是[我的提问和大神的回答](https://math.stackexchange.com/questions/3731157/why-is-it-stronger-statement-for-all-positive-integers-x-but-x-is-real-numb)。
+
+左边是所有$[n]\to[x]$的函数的个数，注意，不必是满射；右边是对于$[n]\to[k]$上函数个数求和，先选出$k$个数，$\begin{pmatrix}n\\k\end{pmatrix}$，根据Corollary 5.9.，函数个数是$k!\cdot S(n,k)$，其积是$k!\cdot S(n,k)\begin{pmatrix}n\\k\end{pmatrix}$，$(x)_k=\begin{pmatrix}n\\k\end{pmatrix}\cdot k!$
+
+**Definition 5.11.** 集合$[n]$的所有分割的个数（不限定块的大小）记作$B(n)$，称之为第$n$贝尔数($n$`th Bell number`)，习惯上$B(0)=1$。  
+所以$B(n)=\sum_{i=0}^nS(n,i)$，同时它也满足一个优雅的递归关系。
+
+**Theorem 5.12.** 对于所有非负整数$n$，有
+$$B(n+1)=\sum_{i=0}^n\begin{pmatrix}
+n\\i
+\end{pmatrix}B(i)$$
+**Proof.** 左边是集合$[n+1]$所有分割的个数。假设第$n+1$元素所在块的大小是$n-i+1$，也就是有$i$个元素不在这个块。有$\begin{pmatrix}n\\i\end{pmatrix}$种方式取出这$i$个数，然后有$B(i)$个分割数，对所有可能的$i$求和。
+
+## Integer Partitions
