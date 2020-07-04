@@ -99,6 +99,9 @@ n+k-1\\k
 \end{pmatrix}$$
 种不同选法。
 
+下面是本章的总结。  
+![](0301.png)
+
 ## Exercises
 (24) 幻方(`magic square`)是每行每列相加都相等的由非负整数组成的方阵。$H_3(r)$表示$3\times 3$的方阵的个数，其中$r$是每行每列的和。求证：
 $$H_3(r)=\begin{pmatrix}
