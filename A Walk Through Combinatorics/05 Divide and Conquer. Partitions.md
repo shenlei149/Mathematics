@@ -60,7 +60,7 @@ $$x^n=\sum_{k=0}^nS(n,k)(x)_k$$
 **Proof.** 等式两边是$x$的$n$阶多项式，所以我们如果能够证明多于$n$个的$x$值都成立，那么上述等式成立。我们证明一个更强的命题，对于所有的正整数$x$其都成立。
 > 上面这段初看时我有两点不懂，这里是[我的提问和大神的回答](https://math.stackexchange.com/questions/3731157/why-is-it-stronger-statement-for-all-positive-integers-x-but-x-is-real-numb)。
 
-左边是所有$[n]\to[x]$的函数的个数，注意，不必是满射；右边是对于$[n]\to[k]$上函数个数求和，先选出$k$个数，$\begin{pmatrix}n\\k\end{pmatrix}$，根据Corollary 5.9.，函数个数是$k!\cdot S(n,k)$，其积是$k!\cdot S(n,k)\begin{pmatrix}n\\k\end{pmatrix}$，$(x)_k=\begin{pmatrix}n\\k\end{pmatrix}\cdot k!$
+左边是所有$[n]\to[x]$的函数的个数，注意，不必是满射；右边是对于$[x]\to[k]$上函数个数求和，先选出$k$个数，$\begin{pmatrix}x\\k\end{pmatrix}$，根据Corollary 5.9.，函数个数是$k!\cdot S(n,k)$，其积是$k!\cdot S(n,k)\begin{pmatrix}x\\k\end{pmatrix}$，$(x)_k=\begin{pmatrix}x\\k\end{pmatrix}\cdot k!$
 
 **Definition 5.11.** 集合$[n]$的所有分割的个数（不限定块的大小）记作$B(n)$，称之为第$n$贝尔数($n$`th Bell number`)，习惯上$B(0)=1$。  
 所以$B(n)=\sum_{i=0}^nS(n,i)$，同时它也满足一个优雅的递归关系。
@@ -99,7 +99,7 @@ Example 5.14 告诉我们整数5的分割中，最多分成两部分的有三种
 **Theorem 5.17.** 将$n$最多分成$k$部分的分割数等于每堆数量不大于$k$的分割数。  
 **Proof.** 前者对应的是Ferrers shape最多有$k$行的图，而后者对应那些最多有$k$列的图，根据共轭，我们可以将两者一一映射。
 
-**Theorem 5.18.** $n$分成不同的奇数部分的分割数等于其共轭的分割数。
+**Theorem 5.18.** $n$分成不同的奇数部分的分割数等于其共轭的分割数。  
 **Proof.** 在两者之间建立双射。  
 取任意一个共轭分割$\pi=(\pi_1,\pi_2,\cdots,\pi_t)$，我们移除图形的第一列和第一行，共计$2\pi_1-1$个，接着移除新的第一列和第一行，共计$2\pi_2-3$个，以此类推。我们得到了$f(\pi)=(2\pi_1-1,2\pi_2-3,\cdots,2\pi_i-(2i-1),\cdots)$。每一块都是奇数，且因为$\pi_1\ge \pi_2\ge \cdots\ge \pi_t$，所以每一块的数量都不同。一个块$b$下方和右侧的块被称为`hook`，使用这个术语来描述的话就是每次都移除了左上角的`hook`。  
 任意一个全都是奇数且均不相同的分割$\alpha=(2a_1-1,2a_2-3,\cdots,2a_u-(2u-1))$，第一行和第一列有$a_1$个块，第二行和第二列$a_2$个块，依次类推，组成了一个自共轭的分割。
@@ -124,6 +124,10 @@ n\\a_1,a_2,\cdots,a_k
 下面是本章的总结。  
 如果盒子不能是空的：  
 ![](0504.png)  
+> $n$个一样的物体，$k$个不同的盒子，对应的公式应该是$\begin{pmatrix}
+n-1\\k-1
+\end{pmatrix}$
+
 如果盒子能空，那么我们要说明盒子的数量，否则可以通过无限添加空盒子来增加分割数量。  
 ![](0505.png)
 
