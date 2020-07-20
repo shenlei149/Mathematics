@@ -168,7 +168,7 @@ $$p_{k,q}(r)-p_{k,q}(r-1)=\sum_{i=0}^{k-1}p_{i,q}(r-1)$$
 (32) 求证对所有正整数$n$有$p(n)^2<p(n^2+2n)$。  
 > 参考了[这个回答](https://math.stackexchange.com/questions/506636/proving-an-inequality-involving-integer-partitions)
 
-**Solution.** 使用文中描述的Ferrers shape来帮助证明。先放$n\times n$个块，然后取两个$n$的分割，一个放在其右边，一个放在其下边，那么得到了$n^2+2n$的分割。这样建立了$p(n)^2$和盒子数大于$n$且前$n$个盒子的球的数量大于等于$n$的$n^2+2n$的分割的映射关系，显然$p(n^+2n)$比后者大。
+**Solution.** 使用文中描述的Ferrers shape来帮助证明。先放$n\times n$个块，然后取两个$n$的分割，一个放在其右边，一个放在其下边，那么得到了$n^2+2n$的分割。这样建立了$p(n)^2$和盒子数大于$n$且前$n$个盒子的球的数量大于等于$n$的$n^2+2n$的分割的映射关系，显然$p(n^2+2n)$比后者大。
 
 (36) - (39)
 > 想了半个多小时，基本思路就是利用**Corollary 5.4** **Proof 2**的分割思想。
