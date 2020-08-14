@@ -53,3 +53,29 @@ $$\frac{D(n)}{n!}=\sum_{i=0}^n\frac{(-1)^i}{i!}$$
 当$n$趋于无穷大的时候，由泰勒级数
 $$e^x=\sum_{n=0}^\infty \frac{x^n}{n!}$$
 得到右边收敛于$1/e$。
+
+下面给出第二类斯特林数的一个求和公式。  
+**Theorem 7.5.** 对于所有正整数$n$和$k$，有
+$$S(n,k)=\frac{1}{k!}\sum_{i=0}^k(-1)^i\begin{pmatrix}
+k\\i
+\end{pmatrix}(k-i)^n=\sum_{i=0}^k(-1)^i\frac{1}{i!(k-i)!}(k-i)^n$$
+**Proof.** 通过证明$k!\cdot S(n,k)$来证明$S(n,k)$。从Corollary 5.9得到前者等于$[n]$到$[k]$满射函数的个数。  
+从$[n]$到$[k]$的函数总数是$k^n$，但是这里有很多非满射的情况，需要减去。有点像之前的证明。  
+$A_i$表示从$[n]$到$[k]$的不包含$i$的所有函数，那么$|A_i|=(k-1)^n$。类似的
+$$|A_{i_1} \cap A_{i_2} \cap \cdots \cap A_{i_j}|=(k-j)^n$$
+那么
+$$|A_1 \cup A_2 \cup \cdots \cup A_n|=\sum_{i=1}^k(-1)^{i-1}\begin{pmatrix}
+k\\i
+\end{pmatrix}(k-i)^n$$
+用总数减去上式就是要证明的结论。
+
+**Theorem 7.6.** $f,g$是定义在$[n]$的子集上的函数，其范围是实数集。假设
+$$g(S)=\sum_{T\subseteq S}f(T)$$
+那么
+$$f(S)=\sum_{T\subseteq S}g(T)(-1)^{|S-T|}$$
+**Proof.** 将右侧的$g(T)$展开，对于所有$U\subseteq S$，$f(U)$会出现一次如果$U\subseteq T\subseteq S$。同时注意到$f(U)$会乘以$(-1)^{|S-T|}$，满足$|S-T|=i$的$T$的子集个数是$\begin{pmatrix}|S-U|\\i\end{pmatrix}$，其意义是从更大的差集里面选择$i$个元素组成小的差集。  
+那么右侧$f(U)$出现的次数是
+$$\sum_{i=0}^{|S-U|}(-1)^i\begin{pmatrix}
+|S-U|\\i
+\end{pmatrix}=(1-1)^{|S-U|}$$
+除了$S=U$外，其他值均为0，所以右侧就是$f(S)$。
