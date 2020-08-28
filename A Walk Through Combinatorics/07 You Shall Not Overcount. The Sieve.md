@@ -79,3 +79,9 @@ $$\sum_{i=0}^{|S-U|}(-1)^i\begin{pmatrix}
 |S-U|\\i
 \end{pmatrix}=(1-1)^{|S-U|}$$
 除了$S=U$外，其他值均为0，所以右侧就是$f(S)$。
+
+## Exercises
+(36)(37) $F(n)$表示集合$[n]$分区中没有单元素块的数量。使用贝尔数$B(n)$来表示$F(n)$，进而证明
+$$\lim_{n\to\infty}\frac{F(n)}{B(n)}$$
+**Solution**
+> 第一步在提问前找到了答案，后一部分提问才明白怎么证明，其实不需要知道公式也能证明，包括第一步的解题思路也是要定义二者的差值。https://math.stackexchange.com/questions/3804855/relation-between-bell-number-and-fn-the-number-of-partitions-of-n-withou
