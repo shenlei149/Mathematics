@@ -60,4 +60,19 @@ $$\begin{aligned}
 $$a_n=1000\cdot 1.05^n+10000\cdot (1.05^n-1)=1.05^n\cdot 11000-10000$$
 
 下面这个例子来展示如何用这个方法将包含多项的递推式写作显式公式。  
-**Example 8.3.** 
+**Example 8.3.** $n\geq 0$时，令$a_{n+2}=3a_{n+1}-2a_n, a_0=0, a_1=1$，求$a_n$。  
+**Solution** 令$G(x)=\sum_{n\geq 0}a_nx^n$。递归式的两边同乘$x^{n+2}$，
+$$\sum_{n\geq 0}a_{n+2}x^{n+2}=3\sum_{n\geq 0}a_{n+1}x^{n+1}-2\sum_{n\geq 0}a_nx^n$$
+$$G(x)-a_1x-a_0=G(x)-x=3x(G(x)-a_0)-2x^2G(x)=3xG(x)-2x^xG(x)$$
+$$G(x)=\frac{x}{1-3x-2x^2}=\frac{A}{x-1}+\frac{B}{2x-1}$$
+$$x=A(2x-1)+B(x-1)=(2A+B)x-(A+B)$$
+$$2A+B=1,A+B=0\rArr A=1,B=-1$$
+$$\begin{aligned}
+G(x)&=\frac{-1}{1-x}+\frac{1}{1-2x}\\
+&=-\sum_{n\geq 0}x^n+\sum_{n\geq 0}2^nx^n\\
+&=\sum_{n\geq 0}(2^n-1)x^n
+\end{aligned}$$
+所以
+$$a_n=2^n-1$$
+
+### Products of Generating Functions
