@@ -85,3 +85,35 @@ $$A(x)B(x)=C(x)$$
 **Theorem 8.5.** (`The Product formula`) 在$n$个元素集合上构建某种结构有$a_n$种方式，在另一个$n$个元素集合上构建另外某种结构有$b_n$种方式。将集合$[n]$分成两个间隔$S=\{1,2,\cdots,i\}$和$T=\{i+1,i+2,\cdots,n\}$（$S$和$T$可空），$c_n$表示在$S$上构建第一种结构并且在$T$上构建第二种结构的方式数。$A(x),B(x),C(x)$表示对应的生成函数，那么
 $$A(x)B(x)=C(x)$$
 **Proof.** 在$S$上构建第一种结构有$a_i$种方式，在$T$上构建第二种结构有$b_{n-i}$种方式，$i$的取值范围是$[0,n]$，那么$c_n=\sum_{i=0}^na_ib_{n-i}$，这就回到了**Lemma 8.4.**。
+
+**Example 8.6.** 某技术大学某学期有$n$天。教授分成两个部分，前$k(1\leq k\leq n-2)$天学习理论，后$n-k$天实践。教授从前一个部分选择一天作为假期，从后一个部分选择两天作为假期。问有多少种方式来安排这个学期。  
+**Solution.** 令有$f_n$种方式安排这学期，那么最直接的方式是$f_n=\sum_{k=1}^{n-2}k\begin{pmatrix}n-k\\2\end{pmatrix}$，但是这个很难写成闭型（没有求和号）。  
+换个思路，有$k$种方式从第一部分选择一天，有$\begin{pmatrix}m\\2\end{pmatrix}$种方式从第二部分选择两天，其中$m=n-k$。对应的生成函数是$A(x)=\sum_{k\geq 1}kx^k$和$B(x)=\sum_{m\geq 2}\begin{pmatrix}m\\2\end{pmatrix}x^m$。从$\sum_{i\geq 0}x^i=\frac{1}{1-x}$出发求导，可以得到
+$$A(x)=\frac{x}{(1-x)^2}$$
+$$B(x)=\frac{x^2}{(1-x)^3}$$
+序列$\{f_n\}$的生成函数$F(x)=A(x)B(x)$，因此
+$$\begin{aligned}
+F(x)&=A(x)B(x)\\
+&=\frac{x^3}{(1-x)^5}\\
+&=x^3\sum_{n\geq 0}\begin{pmatrix}
+n+4\\4
+\end{pmatrix}x^n\\
+&=\sum_{n\geq 3}\begin{pmatrix}
+n+1\\4
+\end{pmatrix}x^n
+\end{aligned}$$
+所以$f_n=\begin{pmatrix}n+1\\4\end{pmatrix}$。
+> 上述$(1-x)^5$那里需要多次求导。
+
+> 这个问题从之前学习的计数角度来看，可以看作往$n$天里面加一个隔板隔开，然后从$n+1$个里面选择4个，分别是第一个假期、隔板、两天的假期。
+
+**Example 8.7.** 假设不设置假期，而是从两个部分选择一些天来自习。问有多少种方式来安排这个学期。  
+**Solution.** 令$C(x)$是从前一部分选择一些天来自习的方式数的生成函数，$k$个元素的集合有$2^k$个子集，那么$C(x)=\sum_{k\geq 0}2^kx^k=\frac{1}{1-2x}$，注意$k$从0开始，因为前一个部分可以没有任何自习。后一个部分的生成函数也是$C(x)$。那么
+$$F(x)=C(x)C(x)=\frac{1}{(1-2x)^2}$$
+显然$F(x)=\frac{1}{2}C'(x)$，因此
+$$F(x)=\frac{1}{2}\cdot \sum_{n\geq 1}n\cdot 2^nx^{n-1}=\sum_{n\geq 0}(n+1)2^nx^n$$
+所以$f_n=(n+1)\cdot 2^n$。
+
+**Theorem 8.5**可以扩展到任意固定数量的生成函数。下面这个例子展示了其一般性。
+
+**Example 8.8.**
