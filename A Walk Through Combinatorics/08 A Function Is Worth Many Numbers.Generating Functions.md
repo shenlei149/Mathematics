@@ -116,4 +116,59 @@ $$F(x)=\frac{1}{2}\cdot \sum_{n\geq 1}n\cdot 2^nx^{n-1}=\sum_{n\geq 0}(n+1)2^nx^
 
 **Theorem 8.5**可以扩展到任意固定数量的生成函数。下面这个例子展示了其一般性。
 
-**Example 8.8.**
+**Example 8.8.** 将$n$天的学期分成三部分，从第一部分任意选择一些天作为假期，从第二部分选择奇数天作为假期，从第三部分选择偶数天作为假期。  
+**Solution.** 令$A(x),B(x),C(x)$为对应序列的生成函数。从$n$天中选择任意天数的方式有$2^n$种，那么$A(x)=\sum_{n\geq 0}2^nx^n=\frac{1}{1-2x}$；集合$[n]$的子集中有奇数个元素的集合数是$2^{n-1},n\geq 1$，$n=0$时是0，所以$B(x)=\sum_{n\geq 1}2^{n-1}x^n=\frac{x}{1-2x}$；类似地，若子集元素是偶数，$n\geq 1$时集合数是$2^{n-1}$，$n=0$时是1，因为0本身是偶数，所以$C(x)=1+\frac{x}{1-2x}=\frac{1-x}{1-2x}$。  
+$$\begin{aligned}
+F(x)&=A(x)B(x)C(x)\\
+&=\frac{1}{1-2x}\cdot\frac{x}{1-2x}\cdot\frac{1-x}{1-2x}\\
+&=\frac{x(1-x)}{(1-2x)^3}\\
+&=-\frac{1}{4}\cdot\frac{1}{1-2x}+\frac{1}{4}\cdot\frac{1}{(1-2x)^3}
+\end{aligned}$$
+利用二项式定理，
+$$(1-2x)^{-3}=\sum_{n\geq 0}\begin{pmatrix}
+-3\\n
+\end{pmatrix}(-2x)^n=\sum_{n\geq 0}\begin{pmatrix}
+n+2\\n
+\end{pmatrix}2^nx^n$$
+因此
+$$F(x)=-\frac{1}{4}\sum_{n\geq 0}2^nx^n+\frac{1}{4}\sum_{n\geq 0}\begin{pmatrix}
+n+2\\2
+\end{pmatrix}2^nx^n$$
+所以
+$$f(n)=\frac{\begin{pmatrix}
+n+2\\2
+\end{pmatrix}2^n-2^n}{4}=2^{n-3}n(n+3),n\geq 0$$
+
+**Example 8.9.** $p_{\leq k}(n)$表示将$n$分成大小不超过$k$的若干部分的分法，那么
+$$\begin{aligned}
+\sum_{n\geq 0}^\infty p_{\leq k}(n)x^n&=&&\prod_{i=1}^k\frac{1}{1-x^i}\\
+&=&&(1+x+x^2+x^3+\cdots)\\
+&&&(1+x^2+x^4+x^6+\cdots)\\
+&&&\cdots\\
+&&&(1+x^k+x^{2k}+x^{3k}+\cdots)
+\end{aligned}\tag{8.11}$$
+**Solution.** 考察右边$x^n$的系数。右边是$k$部分相乘，令第$i$部分形式为$x^{ij_i}$，其指数之和是$n$，也就是说$1j_1+2j_2+\cdots+kj_k=n$。将$1j_1$写成$j_1$个$1$相加$1+1+\cdots+1$，一般地，将$ij_i$写成$j_i$个$i$相加$i+i+\cdots+i$。那么这就是$n$的分割方式，其最大块不超过$k$。  
+右边每个$x^n$都对应一个$n$的分割方式且满足题意；相反地，每一个满足题意的分割都对应于右边的一个$x^n$。
+
+在第五章，已经证得$p_{\leq k}(n)$也是将$n$分成最多$k$部分的分割数，那么$\prod_{i=1}^k\frac{1}{1-x^i}$也是这些分割的生产函数。  
+这个生成函数不是闭形式，那有什么用呢？一是很多数学软件可以提供扩展形式，进而可以获得很多值。二是通过它可以推得更多信息（见下一例题），甚至比精确得公式更多。
+
+**Example 8.10.** $p(n)$表示将$n$所有分割的数量，那么
+$$\begin{aligned}
+\sum_{n\geq 0}^\infty p(n)x^n&=&&\prod_{k=1}^\infty\frac{1}{1-x^k}\\
+&=&&(1+x+x^2+x^3+\cdots)\\
+&&&(1+x^2+x^4+x^6+\cdots)\\
+&&&(1+x^3+x^6+x^9+\cdots)\\
+&&&\cdots
+\end{aligned}\tag{8.12}$$
+**Solution.** 和上一个例子类似，只是右边是无限项罢了。
+
+**Example 8.11.** $p_{odd}(n)$表示$n$分成奇数块的分割数，$p_d(n)$表示$n$分成若干个各不相同的块的分割数，求证两者相等。  
+**Solution.** 关键的核心思想是：证明两者的生成函数相等。
+$$F(x)=\sum_{n\geq 0}p_{odd}(n)x^n=\prod_{\begin{aligned}
+i\geq 1\\i\ odd
+\end{aligned}}\frac{1}{1-x^i}$$
+$$G(x)=\sum_{n\geq 0}p_d(n)x^n=\prod_{i\geq 1}(1+x^i)=\prod_{i\geq 1}\frac{1-x^{2i}}{1-x^i}$$
+$G(x)$的分母是奇数才会留下来，否则和分子可以进行约分。
+
+#### The Catalan Numbers
