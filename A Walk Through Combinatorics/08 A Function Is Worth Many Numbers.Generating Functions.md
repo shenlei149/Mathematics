@@ -7,7 +7,7 @@ $a_0=50,a_1=4a_0-100=100,\cdots$，很容易写出递归式$a_{n+1}=4a_n-100$，
 $$a_{n+1}=4a_n-100\tag{8.1}$$
 对$n\ge 0$都成立且初始值$a_0=50$。事实上上面的公式包含无穷个式子，从无穷个式子归纳出一个显式公式，就需要用到生成函数(`generating functions`)的概念。
 
-**Definition 8.1.** $\{f_n\}_{n\geq 0}$是实数序列。形式幂级数$F(x)=\sum_{n\geq 0}f_nx^n$称之为序列$\{f_n\}_{n\geq 0}$的普通生成函数(`ordinary generating function`)。
+**Definition 8.1.** $\{f_n\}_{n\geq 0}$是实数序列。形式幂级数(`formal power series`)$F(x)=\sum_{n\geq 0}f_nx^n$称之为序列$\{f_n\}_{n\geq 0}$的普通生成函数(`ordinary generating function`)。
 
 下面计算序列$\{a_n\}$的生成函数。对$(8.1)$两边同乘$x^{n+1}$然后对$n\geq 0$的$a_n$求和。得到
 $$\sum_{n\geq 0}a_{n+1}x^{n+1}=\sum_{n\geq 0}4a_nx^{n+1}-\sum_{n\geq 0}100x^{n+1}\tag{8.2}$$
@@ -186,7 +186,8 @@ $$xC(x)^2-C(x)+1=0$$
 根据求根公式知道上式有两个根，分别是
 $$\frac{1+\sqrt{1-4x}}{2x},\frac{1-\sqrt{1-4x}}{2x}$$
 已知第一项是1，带入$x=0$，得到
-TODO 
+> 关于带入$x=0$，可以参考[我提的问答](https://math.stackexchange.com/questions/3856176/why-can-we-substitute-x-0-into-frac1-sqrt1-4x2x)
+
 $$C(x)=\frac{1-\sqrt{1-4x}}{2x}$$
 **Example 4.16.** 求得$\sqrt{1-4x}=1-2x-2\sum_{n\geq 2}\frac{\begin{pmatrix}2n-2\\n-1\end{pmatrix}}{n}x^n$，所以
 $$C(x)=\sum_{n\geq 0}\frac{\begin{pmatrix}
@@ -196,3 +197,10 @@ $$C(x)=\sum_{n\geq 0}\frac{\begin{pmatrix}
 $c_n$称为卡特兰数(`Catalan numbers`)，以法国和比利时数学家`Eugène Catalan`命名。从0开始前几个卡特兰数是$1,1,2,5,14,42$。
 
 ### Compositions of Generating Functions
+**Definition 8.12.** 令$F(x)=\sum_{n\geq 0}f_nx^n$是形式幂级数，$G$是包含常数项0的形式幂级数，那么
+$$F(G(x))=\sum_{n\geq 0}f_n(G(x))^n=f_0+f_1G(x)+f_2(G(x))^2+\cdots$$
+
+**Theorem 8.13.** 令$a_n$是在$n$个元素的集合上构建某种结构的不同方式的个数，且$a_0=0$。令$h_n$是将集合$[n]$分成若干个不相交非空区间，然后在各个区间构建指定结构的个数，且$h_0=1$。$A(x)=\sum_{n\geq 0}a_nx^n$，$H(x)=\sum_{n\geq 0}h_nx^n$，那么
+$$H(x)=\frac{1}{1-A(x)}$$
+注意，这个和**Theorem 8.5.**不同的地方在于区间要非空，因为没有指定区间的个数，若允许非空，那么中间插入不同个数的空区间，那么结果是无穷大。  
+**Proof.**  
