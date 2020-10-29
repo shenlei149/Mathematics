@@ -48,7 +48,7 @@ $n$-排列$p$有$a_i$个长度为$i$的循环，那么$(a_1,a_2,\cdots,a_n)$是$
 
 **Definition 6.11.** 有$k$个循环的$n$-排列的个数称之为第一类无符号斯特林数(`signless Stirling number of the first kind`)，记作$c(n,k)$。$s(n,k)=(-1)^{n-k}c(n,k)$称之为第一类斯特林数(`Stirling number of the first kind`)。
 
-$n>0$时，$c(n,0)=0$因为非空的排列一定会有循环。习惯上，令$c(0,0)=0$，$c(n,k)=0,n<k$，以和第二类斯特林数保持一致。
+$n>0$时，$c(n,0)=0$因为非空的排列一定会有循环。习惯上，令$c(0,0)=1$，$c(n,k)=0,n<k$，以和第二类斯特林数保持一致。
 
 $c(n,k)$也满足一个简单的递归关系。  
 **Theorem 6.12.** $n$和$k$是正整数且$n\ge k$，有
