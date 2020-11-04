@@ -238,3 +238,28 @@ G(x)&=B(A(x))\\
 &=1+\sum_{n\geq 1}2\cdot 3^{n-1}x^n
 \end{aligned}$$
 所以$n\geq 1$时，有$2\cdot 3^{n-1}$种方式。
+
+## Exponential Generating Functions
+### Recurrence Relations and Exponential GeneratingFunctions
+不是所有的递归关系都能通过普通生成函数找到一个闭形式，其中一些是因为闭形式的公式不存在，有一些可以用其他形式的生成函数来求解。
+
+**Example 8.17.** 令$a_0=1; a_{n+1}=(n+1)(a_n-n+1), n\geq 0$。求$a_n$。  
+由于这个序列增长的太快了如果用普通生成函数求解，很快会遇到麻烦而无法给出一个闭形式的公式。需要利用下面这个概念。
+
+**Definition 8.18.** 令$\{f_n\}_{n\geq 0}$为一实数序列。幂级数$F(x)=\sum_{n\geq 0}f_n\frac{x^n}{n!}$称为序列$\{f_n\}_{n\geq 0}$的指数生成函数(`exponential generating function`)。  
+当$f_n=1$式，$F(x)=e^x$，这就是指数的含义。
+
+**Solution.** 令$A(x)=\sum_{n=0}^\infty a_n\frac{x^n}{n!}$是序列$\{a_n\}_{n\geq 0}$的指数生成函数。和用普通生成求解递归式一样，将递归式两边同乘$\frac{x^{n+1}}{(n+1)!}$，然后对$n\geq 0$求和
+$$\sum_{n=0}^\infty a_{n+1}\frac{x^{n+1}}{(n+1)!}=\sum_{n=0}^\infty a_n\frac{x^{n+1}}{n!}-\sum_{n=0}^\infty (n-1)\frac{x^{n+1}}{n!}$$
+左边是$A(x)-1$，右边第一项是$xA(x)$，所以
+$$A(x)-1=xA(x)-x^2e^x+xe^x$$
+$$A(x)=\frac{1}{1-x}+xe^x=\sum_{n\geq 0}x^n+\sum_{n\geq 0}\frac{x^{n+1}}{n!}$$
+第一项对于$x^n/n!$的系数是$n!$，第二项其系数是$n$，因为其被加数等价于$x^n/(n-1)!$。因此$a_n=n!+n$。
+
+**Example 8.19.** 令$f_0=0;f_{n+1}=2(n+1)f_n+(n+1)!,n\geq 0$。求显式的$f_n$。  
+**Solution.** 令$F(x)$是序列$f_n$的指数生成函数。两边同乘$\frac{x^{n+1}}{(n+1)!}$，然后对$n\geq 0$求和
+$$\sum_{n\geq 0} f_{n+1}\frac{x^{n+1}}{(n+1)!}=2x\sum_{n\geq 0}f_n\frac{x^n}{n!}+\sum_{n\geq 0}x^{n+1}$$
+$$F(x)=2xF(x)+\frac{x}{1-x}$$
+$$F(x)=\frac{x}{(1-x)(1-2x)}$$
+$$F(x)=\sum_{n\geq 0}(2^n-1)x^n$$
+所以$f_n=(2^n-1)n!$
