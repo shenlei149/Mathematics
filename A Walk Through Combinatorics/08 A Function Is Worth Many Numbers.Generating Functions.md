@@ -263,3 +263,54 @@ $$F(x)=2xF(x)+\frac{x}{1-x}$$
 $$F(x)=\frac{x}{(1-x)(1-2x)}$$
 $$F(x)=\sum_{n\geq 0}(2^n-1)x^n$$
 所以$f_n=(2^n-1)n!$
+
+#### Products of Exponential Generating Functions
+**Lemma 8.20.** 令$\{a_i\}, \{b_k\}$是两个序列，$A(x)=\sum_{i\geq 0}a_i\frac{x^i}{i!},B(x)=\sum_{k\geq 0}b_k\frac{x^k}{k!}$是其指数生成函数。那么$c_n=\sum_{i=0}^n\begin{pmatrix}n\\i\end{pmatrix}a_ib_{n-i}$对应的指数生成函数$C(x)$满足
+$$A(x)B(x)=C(x)$$
+也就是说$A(x)B(x)$中$x^n/n!$的系数是$c_n$。  
+**Proof.** 和证明**Lemma 8.4**类似，$A(x)$与$B(x)$相乘就是其每一项互乘。一般形式是
+$$a_i\frac{x^i}{i!}\cdot b_j\frac{x^j}{j!}=a_ib_j\cdot\frac{x^{i+j}}{i!j!}\cdot\frac{(i+j)!}{(i+j)!}=a_ib_j\cdot\frac{x^{i+j}}{(i+j)!}\cdot\begin{pmatrix}
+i+j\\i
+\end{pmatrix}$$
+当且仅当$i+j=n$时，其指数是$n$。
+
+**Theorem 8.21** (`Product formula, exponential version`). 在$n$个元素集合上构建某种结构有$a_n$种方式，在另一个$n$个元素集合上构建另外某种结构有$b_n$种方式。将集合$[n]$分成两个不相交集合$S,T(S\cup T)$，$c_n$表示在$S$上构建第一种结构并且在$T$上构建第二种结构的方式数。$A(x),B(x),C(x)$表示对应的生成函数，那么
+$$A(x)B(x)=C(x)$$
+和**Theorems 8.5**类似但有所不同，**Theorems 8.5**要求更高，$S,T$是两个区间，相当于将$n$个数排成一列，中间加一个隔板分成两个子集；但是**Theorem 8.21**没有这个要求，可以自由的分成任意两个子集。  
+**Proof.** $S$有$i$个元素，那么有$\begin{pmatrix}n\\i\end{pmatrix}$种方式来选取集合$S$，在其上构建第一种结构有$a_i$种方式，有$b_{n-i}$种方式在$T$上构建第二种结构，对$i,0\leq i\leq n$求和，那么$c_n=\sum_{i=0}^n\begin{pmatrix}n\\i\end{pmatrix}a_ib_{n-i}$，再使用**Lemma 8.20**即可。
+
+**Example 8.22.** 一个足球队$n$个人，分成两组，第一组可以穿橘黄色、白色或蓝色的T恤，第二组只能穿红色T恤，然后每组列队成一行。问有多少种方式？  
+**Solution.** 假设第一组有$k$个人，那么穿不同T恤的方式有$3^k$，站成一行有$k!$种，所以$a_k=k!3^k$，其指数生成函数是
+$$A(x)=\sum_{k\geq 0}k!3^k\frac{x^k}{k!}=\frac{1}{1-3x}$$
+第二组有$m$个人，那么$b_m=m!$，其指数生成函数是
+$$B(x)=\sum_{m\geq 0}m!\frac{x^m}{m!}=\frac{1}{1-x}$$
+那么
+$$\begin{aligned}
+C(x)&=A(x)B(x)\\
+&=\frac{1}{1-3x}\cdot\frac{1}{1-x}\\
+&=\frac{3}{2}\cdot\frac{1}{1-3x}-\frac{1}{2}\cdot\frac{1}{1-x}\\
+&=\frac{3}{2}\sum_{n\geq 0}3^nx^n-\frac{1}{2}\sum_{n\geq 0}x^n
+\end{aligned}$$
+对$n\geq 0$，$C(x)$中$x^n/n!$的系数$c_n=n!(3^{n+1}-1)/2$。
+
+**Example 8.23.** $k$是固定正整数，求第二类斯特林数$S(n,k)$的指数生成函数$S_k(x)=\sum_{n\geq k}S(n,k)x^n/n!$。  
+**Solution.** $[n]$分成$k$块，对于每一块，什么也不需要做，即一种方式。那么对于每一块，生成函数是
+$$A(x)=\sum_{k\geq 1}\frac{x^k}{k!}=e^x-1$$
+根据乘法公式，那么生成公式是$A(x)^k$，对于分成$k$部分，顺序不重要，所以
+$$S_k(x)=\frac{1}{k!}(e^x-1)^k$$
+$S_k(x)$中$x^n/n!$的系数就是$S(n,k)$。对上式使用二项式定理，可以得到和**Theorem 7.5**一样的结论。
+
+指数生成函数有一个很有用的性质。由$(\frac{x^{n+1}}{(n+1)^n})'=\frac{x^n}{n!}$可知
+$$(\sum_{n\geq 0}a_n\frac{x^n}{n!})'=\sum_{n\geq 0}a_{n+1}\frac{x^n}{n!}$$
+
+**Example 8.24.** 令$B(x)$是贝尔数$B(n)$的指数生成函数。求证$B(x)=e^{e^x-1}$。  
+**Solution.** 贝尔数递归性质是$B(n+1)=\sum_{i=0}^nB(i)\begin{pmatrix}n\\i\end{pmatrix}, n\geq 0$并且$B(0)=1$。递归式两边同乘$x^n/n!$并求和得到
+$$\sum_{n\geq 0}B(n+1)\frac{x^n}{n!}=\sum_{n\geq 0}\sum_{i=0}^nB(i)\begin{pmatrix}n\\i\end{pmatrix}\frac{x^n}{n!}$$
+左边是$B(x)'$，根据**Lemma 8.20**可知右侧是$B(x)e^x$，因此
+$$B'(x)=B(x)e^x$$
+$$\frac{B'(x)}{B(x)}=e^x$$
+$$\ln{B(x)}=e^x+C$$
+带入$x=0$，左侧是$\ln{1}=0$，因此$C=1$。那么
+$$\ln{B(x)}=e^x-1$$
+进而
+$$B(x)=e^{e^x-1}$$
