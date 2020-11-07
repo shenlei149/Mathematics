@@ -264,7 +264,7 @@ $$F(x)=\frac{x}{(1-x)(1-2x)}$$
 $$F(x)=\sum_{n\geq 0}(2^n-1)x^n$$
 所以$f_n=(2^n-1)n!$
 
-#### Products of Exponential Generating Functions
+### Products of Exponential Generating Functions
 **Lemma 8.20.** 令$\{a_i\}, \{b_k\}$是两个序列，$A(x)=\sum_{i\geq 0}a_i\frac{x^i}{i!},B(x)=\sum_{k\geq 0}b_k\frac{x^k}{k!}$是其指数生成函数。那么$c_n=\sum_{i=0}^n\begin{pmatrix}n\\i\end{pmatrix}a_ib_{n-i}$对应的指数生成函数$C(x)$满足
 $$A(x)B(x)=C(x)$$
 也就是说$A(x)B(x)$中$x^n/n!$的系数是$c_n$。  
@@ -314,3 +314,23 @@ $$\ln{B(x)}=e^x+C$$
 $$\ln{B(x)}=e^x-1$$
 进而
 $$B(x)=e^{e^x-1}$$
+
+### Compositions of Exponential Generating Functions
+**Theorem 8.25** (`The Exponential formula`). 令$a_n$是在$n$个元素的集合上构建某种结构的不同方式的个数，且$a_0=0$。令$h_n$是将集合$[n]$分成若干个非空子集，然后在各个区间构建指定结构的个数，且$h_0=1$。$A(x), H(x)$是对应的指数生成函数。那么
+$$H(x)=e^{A(x)}$$
+**Proof.** 和**Example 8.23.**类似，分成$k$个子集且不在意顺序，指数生成函数是$A(x)^k/k!$。对$k$求和得到$\sum_{k\geq 1}A(x)^k/k$，由于$a_0=0$并且幂级数$A(x)^k/k$中没有常数项，但$H(x)$有常数项1。因此
+$$H(x)=1+\sum_{k\geq 1}\frac{A(x)^k}{k!}=\sum_{k\geq 0}\frac{A(x)^k}{k!}=e^{A(x)}$$
+
+微积分中有下面这个等式
+$$\int\frac{1}{1-x}=\ln{\frac{1}{1-x}}$$
+另一方面
+$$\int\frac{1}{1-x}=\int\sum_{n\geq 0}x^ndx=\sum_{n\geq 0}\frac{x^{n+1}}{n+1}=\sum_{k\geq 1}\frac{x^k}{k}$$
+所以
+$$\sum_{k\geq 1}\frac{x^k}{k}=\ln{\frac{1}{1-x}}$$
+
+**Example 8.26.** 将$n$个人分成若干组，每组围着一组桌子坐。问多少种坐法？  
+**Solution.** $k$个人围着桌子坐有$(k-1)!$种坐法，$a_k=(k-1)!$，那么
+$$A(x)=\sum_{k\geq 1}(k-1)!\frac{x^k}{k!}=\sum_{k\geq 1}\frac{x^k}{k}=\ln{\frac{1}{1-x}}$$
+利用指数公式
+$$H(x)=e^{\ln{\frac{1}{1-x}}}=\frac{1}{1-x}=\sum_{n\geq 0}x^n=\sum_{n\geq 0}n!\cdot\frac{x^n}{n!}$$
+因此有$h_n=n!$种不同的坐法。
