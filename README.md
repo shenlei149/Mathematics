@@ -7,4 +7,7 @@ I did the following changes:
 * Fixed some typos, for instance, 3506 1.ii; maybe I introduced some new typos
 
 ## A Walk Through Combinatorics
-Book: A Walk Through Combinatorics - An Introduction to Enumeration and Graph Theory Fourth Edition
+内容来自[A Walk Through Combinatorics - An Introduction to Enumeration and Graph Theory Fourth Edition](https://www.amazon.com/Walk-Through-Combinatorics-Introduction-Enumeration/dp/9813237457/)，该书是[MIT 18.314](https://ocw.mit.edu/courses/mathematics/18-314-combinatorial-analysis-fall-2014/syllabus/)的指定参考书。  
+我基本意译了整本书的正文内容，且
+* 补充了留给读者的证明或者思考（非全部）
+* 对于个人不太懂得地方（证明、习题等），在[Mathematics Stack Exchange](https://math.stackexchange.com/users/761275/leo-shen)求助并做补充（非全部）
