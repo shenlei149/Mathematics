@@ -9,5 +9,6 @@ I did the following changes:
 ## A Walk Through Combinatorics
 内容来自[A Walk Through Combinatorics - An Introduction to Enumeration and Graph Theory Fourth Edition](https://www.amazon.com/Walk-Through-Combinatorics-Introduction-Enumeration/dp/9813237457/)，该书是[MIT 18.314](https://ocw.mit.edu/courses/mathematics/18-314-combinatorial-analysis-fall-2014/syllabus/)的指定参考书。  
 我基本意译了整本书的正文内容，且
-* 补充了留给读者的证明或者思考（非全部）
-* 对于个人不太懂得地方（证明、习题等），在[Mathematics Stack Exchange](https://math.stackexchange.com/users/761275/leo-shen)求助并做补充（非全部）
+* 补充了一些留给读者的证明或者思考
+* 对于一些作者认为显然而我花了些时间看明白的地方做了补充
+* 对于部分个人不太懂得地方（证明、习题等），在[Mathematics Stack Exchange](https://math.stackexchange.com/users/761275/leo-shen)求助并做补充
