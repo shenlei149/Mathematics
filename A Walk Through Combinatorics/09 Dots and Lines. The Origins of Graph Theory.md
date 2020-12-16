@@ -82,3 +82,5 @@ $$d_1+d_2+\cdots+d_n=2e$$
 令$Z$是满足$y_1z\in E(T)$的点的集合，那么对于所有$i\in [k],z\in Z$，有$y_iz\in E(T)$。由于$T$是强连通的，所以存在某条边$zt,z\in Z,t\notin Z$。$t\in C$和上一段假设矛盾，那么$t\notin C$。由于$t\notin Z$，所以$ty_1$是一条边。因此$zty_1y_2\cdots y_k$是更长的环。也矛盾。
 
 ## The Notion of Isomorphisms
+怎样的两个图是相同的呢？有很多种方式来定义相同，下面讨论两种。  
+
