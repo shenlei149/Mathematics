@@ -139,3 +139,47 @@ $$\det{A_0A_0^T}=\sum(\det{B})^2$$
 前者等于$\det{B}=1$的次数，也就是等于生成树的个数。
 
 **Theorem 10.20(`Matrix-Tree theorem`).** 
+$U$是简单无向图。定义一个$(n-1)\times (n-1)$的矩阵$L_0$
+$$l_{i,j}=\begin{cases}
+\text{the degree of }v_i\text{, if }i=j\\
+-1, \text{if }i\neq j\text{, and } v_i \text{ and } v_j \text{ are connected}\\
+0 \text{ otherwise}
+\end{cases}$$
+其中$1\leq i,j\leq n-1$。那么$U$有$\det{L_0}$个生成树。  
+$U$有$n$个顶点，但是$L_0$是$(n-1)\times (n-1)$的矩阵，没有行和列是属于顶点$v_n$的。但是矩阵$L_0$是包含了$v_n$的信息的，因为知道顶点$v_i$的度$l_{i,i}$，同时知道它和其他顶点是否连通，那么能够推算得到$v_i$和$v_n$是否连通。  
+**Proof.** 将$U$映射到有向图$G$，每条无向的边转化成两条不同方向的有向边。  
+令$A_0$是$G$的关联矩阵去掉最后一行的矩阵。接下来证明$A_0A_0^T=2L_0$。$A_0A_0^T$位置$(i,j)$的值是$A_0$第$i$行和第$j$行的乘积。  
+如果$i=j$，如果某条边的起点或终点是$v_i$，就会对乘积贡献1，所以位置$(i,j)$的值是$G$中点$v_i$的度，也就是$U$中点$v_i$的度的两倍。  
+如果$i\neq j$，某条边起点是$v_i$终点是$v_j$或者刚好相反，都会对乘积贡献-1。如果两者相连，那么对应位置的值是-2，否则，是0。  
+从上述可以得到$A_0A_0^T=2L_0$，那么$\det{A_0A_0^T}=2^{n-1}\det{L_0}$。注意，$U$的每个生成树都可以对应到$G$的$2^{n-1}$个不同的生成树，因为每条边可以选择一个方向，而生成树有$n-1$条边。  
+结合**Theorem 10.19**，证毕。
+
+接着看一个经典的例子，集合$[n]$上的树的个数。
+
+**Example 10.21.** $K_n$的生成树个数是$n^{n-2}$。  
+**Solution.** $K_n$的$L_0$是
+$$\begin{pmatrix}
+n-1&-1&\cdots &-1\\
+-1&n-1&\cdots &-1\\
+\cdots\\
+-1&-1&\cdots &n-1
+\end{pmatrix}$$
+将除第一行之外的各行都加到第一行
+$$\begin{pmatrix}
+1&1&\cdots &1\\
+-1&n-1&\cdots &-1\\
+\cdots\\
+-1&-1&\cdots &n-1
+\end{pmatrix}$$
+将第一行分别加到其余各行
+$$\begin{pmatrix}
+1&1&\cdots &1\\
+0&n&\cdots &0\\
+\cdots\\
+0&0&\cdots &n
+\end{pmatrix}$$
+所以$\det{L_0}=n^{n-2}$。
+
+再来看一个有趣的例子。
+
+**Example 10.22.** 
