@@ -182,4 +182,35 @@ $$\begin{pmatrix}
 
 再来看一个有趣的例子。
 
-**Example 10.22.** 
+**Example 10.22.** $A$表示$m$个点的集合，$B$表示$n$个点的集合。将$A$集合的每个点和$B$集合的每个点相连。用$K_{m,n}$表示这个图。求$K_{m,n}$的生成树的个数。  
+**Solution.** 图$K_{m,n}$被称为完全二分图(`complete bipartite graph`)。$A$内部和$B$内部是没有边的。  
+关联$K_{m,n}$的矩阵$L_0$是
+$$\begin{pmatrix}
+n&\cdots&0&-1&\cdots&-1\\
+\cdots\\
+0&\cdots&n&-1&\cdots&-1\\
+-1&\cdots&-1&m&\cdots&0\\
+\cdots\\
+-1&\cdots&-1&0&\cdots&m
+\end{pmatrix}$$
+前$m$行和后$n-1$行有点类似。把除第一行外的其他行加到第一行得到$\begin{pmatrix}1&\cdots&1&0&\cdots&0\end{pmatrix}$，然后把这一行加到后$n-1$行
+$$\begin{pmatrix}
+1&\cdots&1&0&\cdots&0\\
+\cdots\\
+0&\cdots&n&-1&\cdots&-1\\
+0&\cdots&0&m&\cdots&0\\
+\cdots\\
+0&\cdots&0&0&\cdots&m
+\end{pmatrix}$$
+左下角全0，所以$\det{L_0}=n^{m-1}m^{n-1}$。
+
+对于**Theorem 10.20**而言，选择谁作为$v_n$都是可以的，但是选择不同的点作为$v_n$会影响计算矩阵行列式的值。下面这个定理会绕开这个问题。
+
+**Theorem 10.23 (`Matrix-Tree theorem, eigenvalue version`).** 和**Theorem 10.20**类似，$U$是简单图，$L$定义和$L_0$类似，但是包含第$n$个点，也就是一个$n\times n$的矩阵。令$L$的特征值分别是$\lambda_1,\lambda_2,\cdots,\lambda_n,\lambda_n=0$，那么$U$的生成树的数量是
+$$\frac{1}{n}\lambda_1\cdot\lambda_2\cdots\lambda_{n-1}$$
+$L$各行相加等于0，说明其是线性相关的，那么一定有一个特征值是0。$L$是$U$的拉普拉斯算子(`Laplacian`)。
+
+其实没有什么通用的方法计算一个矩阵的特征值。但是针对一些特殊的图，可以利用一些小技巧来求解。比如$U$是一个$n$个点都有$d$条边与之相连的图，那么$dI-A=L$，其中$A$是$U$的邻接矩阵。如果$A$的特征值是$\alpha_1,\alpha_2,\cdots,\alpha_n$，那么$L$的特征值就是$d-\alpha_1,d-\alpha_2,\cdots,d-\alpha_n$。
+
+**Example 10.24.** 令$U=K_n$，那么邻接矩阵$A$的特征值分别是$n-1,-1,\cdots,-1$，进而$L$的特征值分别是$0,n,\cdots,n$，所以$K_n$的生成树个数是$n^{n-2}$。  
+**Solution.** $A+I=J$，其中$J$是元素都等于1的矩阵。很明显$J$的秩是1，那么其有$n-1$个特征值都是0，又因为$J$的迹是$n$，迹又等于特征值之和，所以$J$的非零特征值是$n$，$A=J-I$，所以$A$的特征值分别是$n-1,-1,\cdots,-1$。
