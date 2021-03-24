@@ -18,3 +18,20 @@ $\langle u - v\rangle$和$\langle v - u\rangle$表示的同一条边，其端点
 本章说的图就是简单图。  
 
 ## Sexual Demographics in America
+令$G$包含所有的的美国人，每个人是一个顶点$V$。我们将顶点分成两个子集$M,F$，前者包含所有的男人，后者包含所有的女人。如果两人是性伴侣，那么用一条边连接这连个点。如下图所示：  
+![](1202.png)  
+每一条边的一个端点一定在$M$集合，另一个端点在$F$集合，所以
+$$\sum_{x\in M}\deg(x)=\sum_{y\in F}\deg(y)$$
+两边同时除以$|M|\cdot |F|$
+$$\frac{\sum_{x\in M}\deg(x)}{|M|}\cdot\frac{1}{|F|}=\frac{\sum_{y\in F}\deg(y)}{|F|}\cdot\frac{1}{|M|}$$
+等式左边第一项就是男性平均异性伴侣数，右边的第一项是女性平均异性伴侣数。所以
+$$\text{Avg. deg in }M=\frac{|F|}{|M|}\text{Avg. deg in }F$$
+那么男性和女性的一性伴侣数之比只取决于男女人数比。根据现有数据，$|F|/|M|$之比大约是1.035，也就是说，男性平均异性伴侣数比女性高3.5%，那么引言提到的调查结果都是不准确的。
+
+### Handshaking Lemma
+**Lemma 12.2.1.** 顶点的度之和是边数的两倍。  
+**Proof.** 每一条边对顶点的度之和的贡献是2。
+
+上面的引理称呼为握手定理(`Handshaking Lemma`)：一个聚会上每个人握手的次数之和是握手发生次数的两倍。
+
+## Some Common Graphs
