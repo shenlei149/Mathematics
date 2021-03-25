@@ -35,3 +35,21 @@ $$\text{Avg. deg in }M=\frac{|F|}{|M|}\text{Avg. deg in }F$$
 上面的引理称呼为握手定理(`Handshaking Lemma`)：一个聚会上每个人握手的次数之和是握手发生次数的两倍。
 
 ## Some Common Graphs
+一些图出现的很频繁就给了命名了。完全图(`complete graph`)$K_n$有$n$个顶点，每两个顶点间都有一条边，共有$n(n-1)/2$条边。$K_5$如下图所示：  
+![](1203.png)
+
+空图(`empty graph`)表示没有任何边的图。五个顶点的空图如下图所示：  
+![](1204.png)
+
+包含$n$个顶点依序有$n-1$条边的图是线图(`line graph`)$L_n$。更正式的说，$L_n$有
+$$V(L_n)=\{v_1,v_2,\cdots,v_n\}$$
+$$E(L_n)=\{\langle v_1-v_2 \rangle,\langle v_2-v_2 \rangle,\cdots,\langle v_{n-1}-v_n \rangle\}$$
+$L_5$如下图所示  
+![](1205.png)  
+线图可以无穷长$L_\infty$，令顶点集合是非负整数集$\mathbb{N}$，那么边分别是$\langle k-(k+1) \rangle, k\in \mathbb{N}$。  
+如果我们添加一条边$\langle v_n-v_1 \rangle$到图$L_n$，那么长度为$n$的环(`cycle`)$C_n$。长度为5的环如下图所示：  
+![](1206.png)
+
+## Isomorphism
+两个图看起来不一样，但是某种形式上它们是相同的。比如下面两个图，都是有4个顶点和5条边，并且旋转$(a)$图90度就能得到$(b)$图。  
+![](1207.png)
