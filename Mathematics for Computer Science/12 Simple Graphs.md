@@ -156,3 +156,28 @@ $k=1$时，度是0，染色数是1，命题$P(1)$成立。
 ![](1213.png)
 
 ## Walks in Simple Graphs
+### Walks, Paths, Cycles
+简单图的走(`Walk`)和路径(`Path`)的定义和有向图类似。  
+**Definition 12.7.1.** 简单图中的`walk`是指从某点开始走到某个点，包含中间的边。`walk`的长度指的是边的个数。所以`walk`$v$可以记作
+$$v=v_0\langle v_0-v_1\rangle v_1\cdots v_{k-1}\langle v_{k-1}-v_k\rangle v_k$$
+其中$\langle v_i-v_{i+1}\rangle\in E(G),i\in[0,k)$。这个`walk`从$v_0$开始，终点是$v_k$，其长度$|v|$是$k$。`walk`是一个路径等价于所有的顶点都是不同的，也就是对于$i\neq j,v_i\neq v_j$。  
+`walk`的起点和终点是同一个点的话那么是`closed walk`。单独一个点是长度为0的`closed walk`，也是长度为0的路径。  
+环(`cycle`)是长度大于等于3、且除了起点和终点外都是不同点的`closed walk`。  
+和有向图不同的是，我们不把长度为2的`closed walk`作为作为环，因为在简单图中离开某个点再回来不重要，对此也不感兴趣。简单图也不包含长度为1的`closed walk`因为简单图没有自循环。  
+在有向图中，`walk`的长度是边的数量，比顶点数少一。简单图也是类似的。下图有长度为6的路径$abcdefg$，也是最长路径。还包含三个环，分别是$bhecb,cdec,bcdehb$。  
+![](1214.png)
+
+### Cycles as Subgraphs
+对于环，我们不去别起点。例如上图中的环$bcdehb$也可以表示成$dehbcd$，同时不关心方向，那么起点$d$的环也可以表示成$dcbhed$。可将环定义为与环图$C_n$同构的子图(`subgraph`)。  
+**Definition 12.7.2.** 如果$V(G)\subseteq V(H),E(G)\subseteq E(H)$，那么图$G$是图$H$的子图。  
+任意$n$个顶点的空图是$L_n$的的子图，同样地，$L_n$是$C_n$的子图，$C_n$是$K_n$的子图。  
+**Definition 12.7.3.** 对于$n\geq 3$，$C_n$有顶点$[0,n)$和边
+$$\langle0-1 \rangle,\langle1-2\rangle,\cdots\langle(n-2)-(n-1)\rangle,\langle(n-1)-0\rangle$$
+$G$的环是$G$的子图，且同构于$C_n,n\geq 3$。
+
+## Connectivity
+**Connectivity** 
+
+### Euler Tours
+你能走遍艺术博物馆的每一个门厅一次吗？门厅用顶点表示，如果联通就增加一条边，那么下图是一个可能的示例：  
+
