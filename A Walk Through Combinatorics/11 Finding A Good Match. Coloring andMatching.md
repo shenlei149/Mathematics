@@ -155,4 +155,18 @@ k\\2
 **Theorem 11.20 (Tutte's theorem).** 一个图$G$有完美匹配等价于对于$G$的所有顶点的子集$S$，不等式$c_o(G-S)\leq |S|$都成立。  
 从左往右这个方向的证明很简单，令$M$是某个完美匹配，那么奇数个顶点的连通分量$G-S$至少要包含一个$S$的点，那么$c_o(G-S)\leq |S|$。  
 如果一个图$G$没有完美匹配，但是添加任意新边就有完美匹配，那么我们称图$G$是`saturated non-factorizable graph`。  
-**Lemma 11.21.** 
+**Lemma 11.21.** 如果图$G$是`saturated non-factorizable graph`，又如果$S$中的每个点都与其他点相连，那么$G-S$的连通分量是完全图。  
+**Proof** 反证法。令$ab,bc$是$G-S$的边，假设$a,c$不相连。肯定存在$d$使得$b,d$不相连，否则$b\in S$。  
+由于$G$是`saturated non-factorizable graph`，那么$G\cup ac
+$有完美匹配$F_1$，又因为$G$没有完美匹配，那么$ac\in F_1$。类似地，$G\cup bd$有完美匹配$F_2$，且$bd\in F_2$。$F_1,F_2$的对称差是一个环，令$C_1,C_2$分别是包含$ac, bd$的环。下面分两种情况讨论。  
+1） 假设$C_1\neq C_2$。令$F_3=F_1\oplus C_1$。$ac\in (F_1\cap C_1)$，那么$ac\not \in F_3$，另一方面，$F_3$和$F_1$的边一样多，是一个匹配，所以是$G$的完美匹配，和命题中的条件矛盾。  
+2）假设$C_1=C_2$。沿着环从$b$到$d$再到$a,c$之一，比如$a$，令$b$到$a$的路径是$P$，又因为$ab\in G$，那么$P\cup ab$对于$F_2$而言是交替路径（实际是环）。令$F_4=F_2\oplus (P\cup ab)$，和1）类似，$F_4$和$F_2$一样的边数，且不包含$bd$因为$bd\in F_2\cap (P\cup ab)$，那么$F_4$是图$G$的完美匹配，矛盾。  
+综上，$ab,bc$是$G-S$的边，那么$ac$也是，所以$G-S$是完全图。
+
+**Theorem 11.22.** 图$G$是`saturated non-factorizable graph`等价于它有以下结构：
+* $G$有奇数个点且是完全图，或者
+* $G$有偶数个点并且有顶点不相交的完全子图$S_0,G_1,G_2,\cdots,G_k, k=|S_0|+2$组成，每个$G_i$有奇数个点，并且每个顶点都和$S_0$的每个顶点相连。
+
+**Proof.** 图$G$有奇数个点，那么没有完美匹配。也只有完全图满足`saturated non-factorizable`因为没法再增加边（`saturated non-factorizable`要求能增加一条边使之有完美匹配。）。  
+令$S_0=S$，其中$S$是**Lemma 11.21.**中的定义的$S$。
+
