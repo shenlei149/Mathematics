@@ -26,7 +26,7 @@ $$R(k,l)\leq R(k,l-1)+R(k-1,l)\tag{13.1}$$
 
 公式$(13.1)$是非常重要的结果，我们单独将它作为一个推论。  
 **Corollary 13.4.** 对所有的正整数$k\geq 2,l\geq 2$，下面的不等式都成立。
-$$R(k,l)\leq R(k,l-1)+R(k-1,l)\tag{13.1}$$
+$$R(k,l)\leq R(k,l-1)+R(k-1,l)\tag{13.2}$$
 
 **Theorem 13.2**告诉我们`Ramsey number` $R(k,l)$一定存在，但是没有告诉我们是多少。下面使用这个理论找最小的我们还没有讨论的`Ramsey number` $R(4,3)$。根据上面的推论
 $$R(4,3)\leq R(4,2)+R(3,3)=4+6=10$$
@@ -46,4 +46,27 @@ $$R(4,4)\leq R(4,3)+R(3,4)=9+9=18$$
 
 我们已经看到$R(2,2)=1,R(3,3)=6,R(4,4)=18$，但是$R(k,k),k\geq 5$的值我们不知道。这个问题也很困难，`Paul Erdos`说过，如果恶魔要人类计算$R(5,5)$，要不就毁灭人类，那么所有的数学家和计算机学家一起来找答案；如果是要求人类计算$R(6,6)$，我们最好在他毁灭我们之前毁灭恶魔。  
 那么我们能找到对称`Ramsey numbers`$R(k,k)$的边界吗？下面是**Corollary 13.4**推到的结果。  
-**Theorem 13.7.** 
+**Theorem 13.7.** 令$k,l$是大于1的正整数，那么有
+$$R(k,l)\leq\begin{pmatrix}
+k+l-2\\k-1
+\end{pmatrix}\tag{13.3}$$
+**Proof.** 和证明**Theorem 13.2**类似。如果$k=2$，那么$R(2,l)\leq\begin{pmatrix}l\\1\end{pmatrix}=l$，显然成立。对称地，如果$l=2$也成立。  
+假设$R(k,l-1),R(k-1,l)$也都成立。现在证明$R(k,l)$。根据**Corollary 13.4**有
+$$\begin{aligned}
+R(k,l)&\leq R(k,l-1)+R(k-1,l)\\
+&\leq\begin{pmatrix}
+k+l-3\\k-1
+\end{pmatrix}+\begin{pmatrix}
+k+l-3\\k-2
+\end{pmatrix}\\
+&=\begin{pmatrix}
+k+l-2\\k-1
+\end{pmatrix}
+\end{aligned}$$
+
+**Corollary 13.8.** 对所有整数$k\geq 2$，不等式$R(k,k)\leq 4^{k-1}$成立。  
+**Proof.** 根据**Theorem 13.7**，
+$$R(k,k)\leq\begin{pmatrix}
+2k-2\\k-1
+\end{pmatrix}\leq 4^{k-1}$$
+`Ramsey numbers`的下界会在十五章介绍。
