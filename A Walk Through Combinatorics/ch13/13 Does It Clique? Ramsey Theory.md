@@ -87,4 +87,14 @@ $$R(k,k)\leq\begin{pmatrix}
 **Theorem 13.11.** 我们对$K_n$的子图$K_r$染成$1,2,\cdots,k$中的一个颜色。令$n_1,n_2,\cdots,n_k$是正整数，存在一个最小正整数$N=R_r(n_1,n_2,\cdots,n_k)$，如果$n>N$，那么存在一个$i\in[k]$，$K_n$包含一个子图$K_{n_i}$，它的子图$K_r$都是颜色$r$。
 
 下面是**Theorem 13.11**的一个应用。  
-**Theorem 13.12 (The Erdos-Szekeres theorem).**
+**Theorem 13.12 (The Erdos-Szekeres theorem).** 令$n$是正整数。存在一个（最小）正整数$ES(n)$，如果$N\geq ES(n)$个点落在平面上，且没有三点共线，那么可以找出$n$个点，组成一个凸$n$边形。  
+**Proof.** $R_3(n,n)$是满足条件的正整数（没有必要最小）。$R_3(n,n)$个顶点组成的完全图，我们从1到$R_3(n,n)$对各个点标号，如果从最小点到中间点再到最大点的路径是顺时针的，染红色，否则，染蓝色。  
+**Theorem 13.11**告诉我们存在一个子图$K_n$包含的三角形都是单色的三角形。$K_n$就是我们要找的凸$n$边形。这就是要证明任意四个点，不存在一个点在其他三个点组成的三角形里面。换句话说，下图是不存在的。  
+![](1302.png)  
+不失一般性，令$A<B<C$，这个$K_4$都是红色的边。如果$A<D<B$，是蓝色三角形，不可能。$A<B<D$也是不可能的，因为如果$D<C$，那么$DCB$是蓝色三角形，如果$D>C$，那么$ACD$是蓝色的三角形，所以红色三角形$DAB$必须是$D<A<B$。但是，这样子三角形$DAC$还是蓝色三角形，矛盾。
+
+上述证明非常巧妙，但是并没有告诉我们太多信息说明$ES(n)$是多大。` Paul Erdos`和`George Szekeres`证明了$ES(n)\leq\begin{pmatrix}2n-4\\n-2\end{pmatrix}+1$。斯特林公式表明$\begin{pmatrix}2n-4\\n-2\end{pmatrix}+1\thicksim c\frac{4^n}{\sqrt{n}}$，其中$c$是常量。  
+接下来的几十年，数学家仅仅提高了$c$的精度。直到2016年，`Andrew Suk`找到一个更好的上界。如果$n$充分大，$ES(n)\leq 2^{n+4n^{4/5}}$。  
+`Erdos`和`Szekeres`证明的下届是$ES(n)\geq 2^{n-2}+1$，他们猜测事实上$ES(n)= 2^{n-2}+1$。对于$n\leq 6$是成立的。对于$n=6$的证明，借助计算机验证了大量的情况。
+
+## Ramsey Theory in Geometry
