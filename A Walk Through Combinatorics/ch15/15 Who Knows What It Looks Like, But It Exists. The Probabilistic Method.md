@@ -41,3 +41,44 @@ $$\frac{365\cdot 364\cdots 343}{365^{23}}<\frac{1}{2}$$
 **Theorem 15.5.** 对所有正整数$k\geq 3$，不等式$R(k,k)>2^{k/2}$都成立。  
 **Proof.** 令$G=K_n$，对$G$按照如下方式染色：对于每条边而言，通过掷硬币的方式，如果正面向上染成红色，否则染成蓝色，每条边是红色或者蓝色的概率都是二分之一。我们将会证明没有同色完全子图$K_k$的概率是大于0的。$p=\frac{|F|}{|\Omega |}$，$\Omega$是$n$个顶点的完全图进行二染色的集合，$p>0$意味着至少有一个二染色的完全图$K_n$不包含同色完全子图$K_k$。  
 我们会通过证明$1-p<1$来证明$p>0$。前者的意思是对$G$随机染色，至少有一个同色完全子图的概率。  
+将$K_n$中的$K_k$子图二颜色的方式有$2^{\begin{pmatrix}k\\2\end{pmatrix}}$，其中有两个是同色的。所以随机对其染色是同色的概率是
+$$\frac{2}{2^{\begin{pmatrix}k\\2\end{pmatrix}}}=2^{1-{\begin{pmatrix}k\\2\end{pmatrix}}}$$
+$K_n$有$\begin{pmatrix}n\\k\end{pmatrix}$个$K_k$。每一个都有可能包含同色的子图。根据**Proposition 15.2**这些子图中至少有一个同色子图的概率最多是这些可能性之和。如果用$A_S$表示$G$的$K_k$子图$S$是同色的，那么
+$$P(\bigcup_S A_S)\leq \sum_S P(A_S)=\begin{pmatrix}
+n\\k
+\end{pmatrix}2^{1-{\begin{pmatrix}k\\2\end{pmatrix}}}\tag{15.1}$$
+代入$n\leq 2^{k/2},k\geq 3$
+$$\begin{pmatrix}
+n\\k
+\end{pmatrix}2^{1-{\begin{pmatrix}k\\2\end{pmatrix}}}<\frac{n^k}{k!}2^{1-{\begin{pmatrix}k\\2\end{pmatrix}}}\leq\frac{2\cdot 2^{k^2/2}}{k!2^{\begin{pmatrix}
+k\\2
+\end{pmatrix}}}=2\cdot\frac{2^{k/2}}{k!}<1$$
+最后一步使用递归法很容易证明。
+
+第十三章证明了$R(k,k)\leq 4^k$，这里证明了$\sqrt{2}^k<R(k,k)$。基本上这是已知的`Ramsey numbers`最好的范围了。
+
+**Theorem 15.6.** 令$m,n$是大于1的正整数，并且$m\geq 2\log_2 n$。对$K_{n,n}$进二染色，没有同色边的$K_{m,m}$是可能的。  
+**Proof.** 对$K_{m,m}$进行二颜色的方式有$2^{m^2}$种，其中两种是单色的。那么至少有一个同色子图的概率最多是$\begin{pmatrix}n\\m\end{pmatrix}^2 2^{1-m^2}$，我们需要证明
+$$\begin{pmatrix}n\\m\end{pmatrix}^2 2^{1-m^2}$$
+也就是
+$$2\begin{pmatrix}n\\m\end{pmatrix}^2<2^{m^2}$$
+插入两个中间表达式
+$$2\begin{pmatrix}n\\m\end{pmatrix}^2<n^{2m}\leq (2^{m/2})^{2m}=2^{m^2}$$
+中间的不等式用到的就是题目中$m,n$的关系。
+
+可以从另一个角度来解读这个问题。如果$m\geq 2\log_2 n$，那么存在一个元素是零或一的$n\times n$的矩阵，没有$m\times m$的子矩阵只包含零或者只包含一。  
+事实上，前面的证明只是存在性，没有找到这么一个染色，对应到这里，我们不知道怎么构造这个矩阵来满足要求。换句话说，知道是可能的和知道怎么到之间有巨大的鸿沟。目前已知的当$m=c\sqrt{n}$时来构造满足要求的矩阵。但这距离我们证明为真的命题$m=2\log_2 n$之间也就很大的距离。
+
+## Independent Events
+### The Notion of Independence and Bayes' Theorem
+扔两个骰子。$A$表示第一个骰子是六这个事件，$B$表示第二个骰子是六这个事件，那么$P(A)=P(B)=1/6, P(A\cap B)=1/36$，可以看出来$P(A)\cdot P(B)=P(A\cap B)$，这是个巧合吗？从$[12]$中任选一个数，$C$表示该数能被2整除，$D$表示概述能被3整除，$F$表示该数能被4整除。那么$P(C)=1/2,P(D)=1/3,P(F)=1/4$，接着可以计算得到$P(C\cap D)=1/6,P(D\cap F)=1/12$，看似乘积关系依旧成立。但是$P(C\cap F)=P(F)=1/4\neq P(C)P(F)$。  
+为什么有时$P(A)\cdot P(B)=P(A\cap B)$但是有时$P(A)\cdot P(B)\neq P(A\cap B)$？因为有的时候$A$的发生增加或者减少了$B$发生的概率，有的时候$A$对$B$没有影响。回到前面从12个数中选择一个的问题。能被2整除增加了能被4整除的概率。全集从12个减少为6个，但是能被4整除的结果集个数没有变化。相反，能被2整除对能否被3整除没有影响。全集从12个减少到了6个，同时，能被3整数的结果集的个数也有相应的减少（从4个到2个）。
+
+**Definition 15.7.** 如果事件$A,B$来自同一样本空间$\Omega$，有$P(A)\cdot P(B)=P(A\cap B)$，那么$A,B$称为独立事件(`independent events`)，否则是非独立事件(`dependent`)。
+
+**Definition 15.8.** 令事件$A,B$来自同一样本空间，且假设$P(B)>0$，有
+$$P(A|B)=\frac{P(A\cap B)}{P(B)}$$
+$P(A|B)$是条件概率(`conditional probability`)，表示给定事件$B$发生的前提下$A$发生的概率。
+
+**Proposition 15.9.** 事件$A,B$是独立事件等价于$P(A|B)=P(A)$成立。  
+换句话说，事件$A,B$是独立的等价于$B$的发生不会使得$A$更容易或更不容以发生。
