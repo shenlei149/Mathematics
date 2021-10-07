@@ -149,4 +149,10 @@ $$P(A_1|B)=\frac{\frac{1}{2}\cdot\frac{1}{3}}{\frac{1}{2}\cdot\frac{1}{3}+0\cdot
 选择不变只有1/3的几率得到大奖，所以选择改变选择比较好。
 
 ## Expected Values
+随机变量(`random variable`)是定义在样本空间$\Omega$上的函数(`function`)，范围是实数的一个集合。比如，$\Omega$是所有$n$个带标签的点组成的图的集合，我们可以通过令$X(G)$是$G$的边的数量来定义随机变量$X$，也可以通过令$Y(G)$是$G$的连通分量的个数来定义随机变量$Y$。  
+在同一个样本空间上，我们可以定义随机变量的和与积，$(X+Y)(u)=X(u)+Y(u),(X\cdot Y)(u)=X(u)\cdot Y(u)$。  
+或许最有用的随机变量参数是期望值(`expected value`)，也被称为期望(`expectation`)，平均值(`average value` or `mean`)。
+
+**Definition 15.17.** 令$X:\Omega\to R$是随机变量那么集合$S=\{X(u)|u\in\Omega\}$是有限的，也就是说$X$只能取有限多的值。那么
+$$$$
 $$E(X)=\frac{1}{|\Omega |\sum_{u\in\Omega}X(u)}$$
