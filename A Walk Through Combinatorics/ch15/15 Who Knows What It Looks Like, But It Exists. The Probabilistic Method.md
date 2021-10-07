@@ -154,5 +154,18 @@ $$P(A_1|B)=\frac{\frac{1}{2}\cdot\frac{1}{3}}{\frac{1}{2}\cdot\frac{1}{3}+0\cdot
 或许最有用的随机变量参数是期望值(`expected value`)，也被称为期望(`expectation`)，平均值(`average value` or `mean`)。
 
 **Definition 15.17.** 令$X:\Omega\to R$是随机变量那么集合$S=\{X(u)|u\in\Omega\}$是有限的，也就是说$X$只能取有限多的值。那么
-$$$$
+$$E(x)=\sum_{i\in S}i\cdot P(X=i)$$
+是期望值，或被称为$X$在$\Omega$上的期望。  
+这里$P(X=i)$是事件$X(u)=i$的概率，即
+$$P(X=i)=\frac{|\{u\in\Omega|X(u)=i\}|}{|\Omega|}$$
+换句话说，$E(X)$是$X$所有取值的加权平均数，这里的权重是$X$取对应值的概率。  
+这就蕴含了
 $$E(X)=\frac{1}{|\Omega |\sum_{u\in\Omega}X(u)}$$
+注意：一些随机变量可以定义在许多不同的样本空间上。比如之前的例子，图的边数，可以定义在所有$n$个顶点的图上，也可以是所有$n$个顶点的连通图上，甚至可以是所有至多$3n$个顶点的图上，等等。对于每个例子，$S=\{X(u)|u\in\Omega\}$是不同的，那么$X$的期望也是不同的。因此，如果有含糊的可能性，我们写作$E_\Omega(X)$以示区别，否则简写作$E(X)$。  
+有时我们一句话同时说明$X,\Omega$，比如，令$X(G)$是随机选择一个$n$个顶点的连通图的边数。这里的$\Omega$是所有$n$个顶点的连通图，$X(G)$是任意一个图$G\in\Omega$的边数。  
+当$S=\{X(u)|u\in\Omega\}$是无穷集合时，在某些情况下也能定义$X$的期望。如果$S$是可数无限集，只要无穷求和存在，就可以定义$E(X)=\sum_{i\in S}i\cdot P(X=i)$。如果$S$不可数，需要用积分替代求和。
+
+**Definition 15.18.** 对所有的$s,t$，随机变量$X,Y$是独立的(`independent`)，那么下面等式成立。
+$$P(X=s,Y=t)=P(X=s)P(Y=t)$$
+
+### Linearity of Expectation
