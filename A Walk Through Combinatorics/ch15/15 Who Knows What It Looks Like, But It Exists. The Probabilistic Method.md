@@ -213,3 +213,11 @@ $$E(Y_i)=\frac{1}{3}\cdot 1\frac{2}{3}\cdot 0=\frac{1}{3}$$
 定义$Y=Y_2+Y_3+\cdots +Y_{n-1}$，那么$Y$表示$p$的谷的个数。
 $$E(Y)=\sum_{i=2}^{n-1} E(Y_i)=(n-2)E(Y_1)=\frac{n-2}{3}$$
 类似于随机变量$Y_i$，如果某个事件发生则指为1，否则为0，被称为指示随机变量(`indicator (random) variables`)。
+**Theorem 15.21.** 随机选择一个$n$排列的固定点的个数的期望值是1。  
+**Proof.** 定义$n$个随机变量$X_1,X_2,\cdots,X_n$。对于一个$n$排列$p$，令$X_i(p)=1$如果$p_i=i$，即$p$在位置$i$处有一个固定点，否则$X_i(p)=0$。  
+$p_i$是随机的从$[n]$选取一个值，所以有$1/n$的可能性它的值是$i$。因此
+$$E(X_i)=\frac{1}{n}\cdot 1+\frac{n-1}{n}\cdot 0=\frac{1}{n}$$
+定义$X=X_1+X_2+\cdots+X_n$，那么$X(p)$就表示$p$的固定点的个数。应用**Theorem 15.19**求期望
+$$E(X)=\sum_{i=1}^nE(X_i)=n\cdot E(X_1)=n\cdot\frac{1}{n}=1$$
+
+### Existence Proofs Using Expectation
