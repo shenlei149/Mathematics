@@ -160,7 +160,7 @@ $$E(x)=\sum_{i\in S}i\cdot P(X=i)$$
 $$P(X=i)=\frac{|\{u\in\Omega|X(u)=i\}|}{|\Omega|}$$
 换句话说，$E(X)$是$X$所有取值的加权平均数，这里的权重是$X$取对应值的概率。  
 这就蕴含了
-$$E(X)=\frac{1}{|\Omega |\sum_{u\in\Omega}X(u)}$$
+$$E(X)=\frac{1}{|\Omega|}\sum_{u\in\Omega}X(u)\tag{15.5}$$
 注意：一些随机变量可以定义在许多不同的样本空间上。比如之前的例子，图的边数，可以定义在所有$n$个顶点的图上，也可以是所有$n$个顶点的连通图上，甚至可以是所有至多$3n$个顶点的图上，等等。对于每个例子，$S=\{X(u)|u\in\Omega\}$是不同的，那么$X$的期望也是不同的。因此，如果有含糊的可能性，我们写作$E_\Omega(X)$以示区别，否则简写作$E(X)$。  
 有时我们一句话同时说明$X,\Omega$，比如，令$X(G)$是随机选择一个$n$个顶点的连通图的边数。这里的$\Omega$是所有$n$个顶点的连通图，$X(G)$是任意一个图$G\in\Omega$的边数。  
 当$S=\{X(u)|u\in\Omega\}$是无穷集合时，在某些情况下也能定义$X$的期望。如果$S$是可数无限集，只要无穷求和存在，就可以定义$E(X)=\sum_{i\in S}i\cdot P(X=i)$。如果$S$不可数，需要用积分替代求和。
@@ -169,3 +169,47 @@ $$E(X)=\frac{1}{|\Omega |\sum_{u\in\Omega}X(u)}$$
 $$P(X=s,Y=t)=P(X=s)P(Y=t)$$
 
 ### Linearity of Expectation
+对于任意实数$c$，通过令$cX(u)=c(X(u)),u\in\Omega$来定义随机变量$cX$。在计数组合学中，下面这个看似普通的定理非常有用。
+
+**Theorem 15.19.**  
+(1) 令$\Omega$上有两个随机变量$X,Y$，那么
+$$E(X+Y)=E(X)+E(Y)$$
+(2) 令$X$是一个随机变量，$c$实数，那么
+$$E(cX)=cE(X)$$
+所以“取期望值”是线性操作。这个定理不要求$X,Y$是独立的。不管它们之间多么交错复杂，不管它们多么难以计算，$X+Y$的期望值都能通过这个简单的公式计算得到。这也是为什么这个定理是最用的期望相关的属性，同时可以用于很多问题。  
+**Proof.**  
+(1) 根据$(15.5)$，
+$$\begin{aligned}
+E(X+Y)&=\frac{1}{|\Omega|}\sum_{u\in\Omega}(X+Y)(u)\\
+&=\frac{1}{|\Omega|}\sum_{u\in\Omega}X(u)+\frac{1}{|\Omega|}\sum_{u\in\Omega}Y(u)\\
+&=E(X)+E(Y)
+\end{aligned}$$
+(2) 类似地，
+$$\begin{aligned}
+E(cX)&=\frac{1}{|\Omega|}\sum_{u\in\Omega}cX(u)\\
+&=c\frac{1}{|\Omega|}\sum_{u\in\Omega}X(u)\\
+&=cE(X)
+\end{aligned}$$
+这个证明依赖于公式$(15.5)$，要求$\Omega$的每个事件是等概率的。但是**Theorem 15.19**是不要依赖这个条件的。  
+**Proof.**  
+(1) 令随机变量$X$有正数概率的值有$x_1,x_2,\cdots,x_n$，$Y$有正数概率的值有$y_1,y_2,\cdots,y_m$，那么
+$$\begin{aligned}
+E(X+Y)&=\sum_{i=1}^n\sum_{j=1}^m (x_i+y_j)P(X=x_i,Y=y_j)\\
+&=\sum_{i=1}^n\sum_{j=1}^m x_iP(X=x_i,Y=y_j)+\sum_{i=1}^n\sum_{j=1}^m y_jP(X=x_i,Y=y_j)\\
+&=\sum_{i=1}^n x_iP(X=x_i)+\sum_{j=1}^m y_jP(Y=y_j)\\
+&=E(X)+E(Y)
+\end{aligned}$$
+(2) 令$r\in\Omega$，根据定义$(cX)(r)=cX(r)$，$X$取值$x_1,x_2,\cdots,x_n$，那么$P(cX=cx_i)=P(X=x_i)$。因此
+$$\begin{aligned}
+E(cX)&=\sum_{i=1}^n cx_iP(cX=cx_i)\\
+&=c\sum_{i=1}^n x_iP(X=x_i)\\
+&=cE(X)
+\end{aligned}$$
+令$p=p_1p_2\cdots p_n$是$n$排列，如果$p_i<p_{i-1},p_i<p_{i+1},2\leq i\leq n-1$，即$p_i$小于两边的元素，那么称之为谷(`valley`)。  
+**Theorem 15.20.** 令$n\geq 2$，随机选择一个长度为$n$的排列，平均而言，有$(n-2)/3$个谷。  
+如果不使用**Theorem 15.19**，我们必须要对于每个$j$计算有$j$个谷的$n$排列数量$v(j)$（这一步是困难的），然后计算$\sum_j j\cdot\frac{v(j)}{n!}$。而应用**Theorem 15.19**的话，小菜一碟。  
+**Proof.** 取$n-2$个随机变量$Y_2,Y_3,\cdots,Y_{n-1}$。对某个$n$排列$p$，如果$i$是谷的话，$Y_i(p)=1$，否则$Y_i(p)=0$。对于每一个$p_i$而言，有三分之一的几率是谷，即$p_i$是集合$\{p_{i-1},p_i,p_{i+1}\}$中最小的。所以
+$$E(Y_i)=\frac{1}{3}\cdot 1\frac{2}{3}\cdot 0=\frac{1}{3}$$
+定义$Y=Y_2+Y_3+\cdots +Y_{n-1}$，那么$Y$表示$p$的谷的个数。
+$$E(Y)=\sum_{i=2}^{n-1} E(Y_i)=(n-2)E(Y_1)=\frac{n-2}{3}$$
+类似于随机变量$Y_i$，如果某个事件发生则指为1，否则为0，被称为指示随机变量(`indicator (random) variables`)。
