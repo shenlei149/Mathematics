@@ -221,3 +221,26 @@ $$E(X_i)=\frac{1}{n}\cdot 1+\frac{n-1}{n}\cdot 0=\frac{1}{n}$$
 $$E(X)=\sum_{i=1}^nE(X_i)=n\cdot E(X_1)=n\cdot\frac{1}{n}=1$$
 
 ### Existence Proofs Using Expectation
+平均数不会比集合中最大的数大，同理，加权平均值也不会比集合中的最大值大。  
+**Theorem 15.22.** 令$X:\Omega\to R$是随机变量，集合$S=\{X(u)|u\in\Omega\}$是有限集合，$j$是$S$中最大的元素，那么
+$$j\geq E(X)$$
+**Proof.** 运用$E(X)$定义
+$$\begin{aligned}
+E(X)&=\sum_{i\in S}i\cdot P(X=i)\\
+&\leq j\sum_{i\in S}P(X=i)\\
+&=j
+\end{aligned}$$
+**Theorem 15.23.** 令$G$是简单图，$n$个顶点$[n]$，$m$条边。$G$包含一个超过$m/2$条边的二分图。  
+**Proof.** 令$G$分成两个不相交的非空子集$A,B$。移除$A,B$内部的边，生成一个二分图$H$。通过这种方式，$\Omega$有$2^{n-1}-1$种不同的二分图。令$X(H)$表示$H$中的边数。  
+边$i$的两个顶点一个在$A$中一个在$B$中，那么$X_i=1$，否则$X_i=0$。  
+$P(X_i=1)$是多少呢？$i$的顶点分别属于$A,B$，那么剩余$n-2$个顶点可以随意放，共$2^{n-2}$。因此$P(X_i=1)=\frac{2^{n-2}}{2^{n-1}-1}, P(X_i=0)=\frac{2^{n-2}-1}{2^{n-1}-1}$.
+$$\begin{aligned}
+E(X_i)&=0\cdot P(X_i=0)+1\cdot P(X_i=1)\\
+&=\frac{2^{n-2}}{2^{n-1}-1}\\
+&>\frac{1}{2}
+\end{aligned}$$
+对所有的边重复这个事情，即$X=X_1+X_2+\cdots+X_m$。根据**Theorem 15.19**
+$$E(X)=\sum_{i=1}^mE(X_i)=mE(X_1)>\frac{m}{2}$$
+所有$G$的二分子图的边的个数的期望值大于$m/2$，那么必然包含一个边数大于$m/2$的二分子图。
+
+下面是复杂理论(`complexity theory`)中一个很有名的问题———中间性问题(`Betweenness problem`)。
