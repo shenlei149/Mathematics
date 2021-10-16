@@ -243,4 +243,10 @@ E(X_i)&=0\cdot P(X_i=0)+1\cdot P(X_i=1)\\
 $$E(X)=\sum_{i=1}^mE(X_i)=mE(X_1)>\frac{m}{2}$$
 所有$G$的二分子图的边的个数的期望值大于$m/2$，那么必然包含一个边数大于$m/2$的二分子图。
 
-下面是复杂理论(`complexity theory`)中一个很有名的问题———中间性问题(`Betweenness problem`)。
+下面是复杂理论(`complexity theory`)中一个很有名的问题———中间性问题(`Betweenness problem`)。  
+**Example 15.24.** 给定有序三元组$L_i=(a_i,b_i,c_i)$的列表$L=(L_1,L_2,\cdots ,L_k)$，对于任意$i$，$a_i,b_i,c_i$都是不同的数。不同下标$i,j$对应的$L$中包含的数可以相同。  
+令$p=p_1p_2\cdots p_n$是$n$排列。如果$p$中有元素$b_i$大小介于$a_i,c_i$之间，就说$p$满足$L_i$。这里和顺序无关，这三个元素在$p$中可以是$a_ib_ic_i$也可以是$c_ib_ia_i$。  
+存在一个排列$p$满足任意给定的$L$中至少三分之一的$L_i$。  
+**Solution.** 随机变量$Y_i$表示随机选取一个$n$排列是否满足$L_i$。那么$P(Y_i=1)=\frac{1}{3}$，即有三分之一的概率$b_i$在$a_i,c_i$之间，所以$E(Y_i)=\frac{1}{3}$。根据**Theorem 15.19**
+$$E(Y)=\sum_{i=1}^k E(Y_i)=\frac{k}{3}$$
+根据**Theorem 15.22**可以推出存在性。
