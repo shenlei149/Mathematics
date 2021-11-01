@@ -294,3 +294,12 @@ $n$趋于无穷时，$a^n$趋于0。
 $$E(X) = E(X|A)P(A) + E(X|\bar{A})P(\bar{A}) = E(X|A)P(A)$$
 $$E(Y) = E(Y|B)P(B) + E(Y|\bar{B})P(\bar{B}) = E(Y|B)P(B)$$
 由于$E(X)=E(Y)$，那么$E(X|A)P(A)=E(Y|B)P(B)$，又有$P(A)>P(B)$，所以$E(Y|B)>E(X|A)$。
+
+(18) 令$X(p)$是随机选择的$n$排列$p$的固定点个数。求证$\text{Var}(X)=1$。  
+**Solution.** $E(X)=1$，又有$\text{Var}(X)=E(X^2)-E(X)^2$，那么需要证明的就是$E(X^2)=2$。  
+和**Theorem 15.21**一样定义指示随机变量$X_i$，那么
+$$E(X^2)=E((\sum_{i=1}^n X_i)^2)=\sum_{i=1}^n E(X_i^2)+2\sum_{i<j}E(X_iX_j)$$
+$X_i$只能是零和一，那么$X_i=X_i^2$，所以$E(X_i^2)=E(X_i)=1/n$。如果$p$是随机选择的$n$排列，那么对于$i<j$，有$1/n(n-1)$的几率有$p_i=i,p_j=j$，所以$E(X_iX_j)=\frac{1}{n(n-1)}$。所以
+$$E(X^2)=n\cdot\frac{1}{n}+\begin{pmatrix}
+n\\2
+\end{pmatrix}\cdot\frac{1}{n(n-1)}=1+1=2$$
