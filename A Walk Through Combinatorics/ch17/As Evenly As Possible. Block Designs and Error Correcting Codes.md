@@ -65,4 +65,9 @@
 如果一个设计每个块都包含$k$个顶点，那么称为均匀的(`uniform`, `k-uniform`)。简单图是一个2均匀的例子，每条边是一块，包含两个顶点。如果每个顶点出现在$r$个块中，那么称为规则的(`regular`, `r-regular`)。  
 如果一个$k$均匀、$r$规则的不完全设计$(S,\mathcal{B})$，每一对恰好出现在$\lambda$块，我们成为平衡不完全块设计(`balanced incomplete block design`,`BIBD`)，参数记作$(b,v,r,k,\lambda)$。（这里更多的时候中文称作平衡不完全区组设计）。有时，我们简称这样的设计为$(b,v,r,k,\lambda)$设计，因为这里参数$r,k,\lambda$表明$(S,\mathcal{B})$是规则的、均匀的、平衡的，如果$k<v$，那么$(S,\mathcal{B})$是不完全的。
 
-**Example 17.3.** 
+**Example 17.3.** **Example 17.31**的设计是一个平衡不完全块设计，参数是$(20,16,5,4,1)$，也就是说有20个块，16个顶点，每个顶点出现在5个块中，每个块4个顶点，每个对仅出现在1个块中。  
+**Example 17.4.** **Example 17.2**的设计是参数为$(7,7,3,3,1)$的平衡不完全块设计，有7个块，7个顶点，每个顶点出现在3个块中，每个块3个顶点，每个对仅出现在1个块中。  
+**Example 17.5.** 令$S=\{a,b,c\}, \mathcal{B}=\{\{a,b\},\{b,c\},\{a,c\}\}$，那么$(S,\mathcal{B})$是参数为$(3,3,2,2,1)$的平衡不完全块设计。  
+**Example 17.6.** 令$1<k<n$，那么集合$[n]$的所有$k$个元素的子集组成集合是BIBD，参数是$(\begin{pmatrix}n\\k\end{pmatrix},n,\begin{pmatrix}n-1\\k-1\end{pmatrix},k,\begin{pmatrix}n-2\\k-2\end{pmatrix}$。
+
+有些BIBD比另一些更具有对称性。比如**Example 17.2**和**Example 17.5**中$b=v,r=k$。如果一个BIBD满足$b=v$或$r=k$（下面会证明这两者是等价的）的话，称其为对称的。所有**Example 17.2**和**Example 17.5**是对称的，而其他的例子则不是。
