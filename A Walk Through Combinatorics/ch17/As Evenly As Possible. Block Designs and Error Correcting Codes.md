@@ -105,3 +105,36 @@ $$A_{i,j}=\begin{cases}
 1&&\text{if }v_i\in B_j\\
 0&&\text{if }v_i\notin B_j
 \end{cases}$$
+
+**Example 17.12.** 令$\mathcal{D}$是块是$[4]$两元素子集的设计，那么$\mathcal{D}$的关联矩阵是
+$$\begin{aligned}
+&&&&&\{1,2\}\{1,3\}\{1,4\}\{2,3\}\{2,4\}\{3,4\}
+\end{aligned}\\
+A=\begin{aligned}
+1\\2\\3\\4
+\end{aligned}\begin{pmatrix}
+1&&1&&1&&0&&0&&0\\
+1&&0&&0&&1&&1&&0\\
+0&&1&&0&&1&&0&&1\\
+0&&0&&1&&0&&1&&1
+\end{pmatrix}$$
+
+**Definition 17.13.** 令$\mathcal{D}$是设计，其关联矩阵$A$。那么$\mathcal{D}$的对偶是$\mathcal{D}^d$，其关联矩阵是$A^T$。
+
+**Example 17.14.** **Example 17.12**的对偶设计$\mathcal{D}^d$及其关联矩阵如下
+$$\begin{aligned}
+&&&&&&\{a,b,c\}\{a,d,e\}\{b,d,f\}\{c,e,f\}
+\end{aligned}\\
+A=\begin{aligned}
+a\\b\\c\\d\\e\\f
+\end{aligned}\begin{pmatrix}
+1&&&1&&&0&&&0\\
+1&&&0&&&1&&&0\\
+1&&&0&&&0&&&1\\
+0&&&1&&&1&&&0\\
+0&&&1&&&0&&&1\\
+0&&&0&&&1&&&1
+\end{pmatrix}$$
+上面例子中$\mathcal{D}^d$不是BIBD，因为它不是平衡的。这是因为$\mathcal{D}$中有的块中的对是相交的，有的不是，那么$\mathcal{D}^d$的点组成的对有的能出现在同一块，有的不能。
+
+关联矩阵是一种在线性代数中证明设计相关命题很有用、很有影响的工具。我们下面从一些简单的观察入手。
