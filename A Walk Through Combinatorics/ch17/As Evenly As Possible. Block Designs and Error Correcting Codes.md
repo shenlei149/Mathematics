@@ -65,7 +65,7 @@
 如果一个设计每个块都包含$k$个顶点，那么称为均匀的(`uniform`, `k-uniform`)。简单图是一个2均匀的例子，每条边是一块，包含两个顶点。如果每个顶点出现在$r$个块中，那么称为规则的(`regular`, `r-regular`)。  
 如果一个$k$均匀、$r$规则的不完全设计$(S,\mathcal{B})$，每一对恰好出现在$\lambda$块，我们成为平衡不完全块设计(`balanced incomplete block design`,`BIBD`)，参数记作$(b,v,r,k,\lambda)$。（这里更多的时候中文称作平衡不完全区组设计）。有时，我们简称这样的设计为$(b,v,r,k,\lambda)$设计，因为这里参数$r,k,\lambda$表明$(S,\mathcal{B})$是规则的、均匀的、平衡的，如果$k<v$，那么$(S,\mathcal{B})$是不完全的。
 
-**Example 17.3.** **Example 17.31**的设计是一个平衡不完全块设计，参数是$(20,16,5,4,1)$，也就是说有20个块，16个顶点，每个顶点出现在5个块中，每个块4个顶点，每个对仅出现在1个块中。  
+**Example 17.3.** **Example 17.1**的设计是一个平衡不完全块设计，参数是$(20,16,5,4,1)$，也就是说有20个块，16个顶点，每个顶点出现在5个块中，每个块4个顶点，每个对仅出现在1个块中。  
 **Example 17.4.** **Example 17.2**的设计是参数为$(7,7,3,3,1)$的平衡不完全块设计，有7个块，7个顶点，每个顶点出现在3个块中，每个块3个顶点，每个对仅出现在1个块中。  
 **Example 17.5.** 令$S=\{a,b,c\}, \mathcal{B}=\{\{a,b\},\{b,c\},\{a,c\}\}$，那么$(S,\mathcal{B})$是参数为$(3,3,2,2,1)$的平衡不完全块设计。  
 **Example 17.6.** 令$1<k<n$，那么集合$[n]$的所有$k$个元素的子集组成集合是BIBD，参数是$(\begin{pmatrix}n\\k\end{pmatrix},n,\begin{pmatrix}n-1\\k-1\end{pmatrix},k,\begin{pmatrix}n-2\\k-2\end{pmatrix}$。
@@ -80,3 +80,28 @@
 **Proposition 17.8.** 如果一个$(b,v,r,k,\lambda)$设计存在，那么$r(k-1)=\lambda(v-1)$。  
 **Proof.** 令$x\in V$是一个固定点，和上面的论证一样，对$(w,B)$计数，其中$x,w$都属于块$B$且$x\neq w$。左边先选择$r$个块，其中包含$x$，然后有$k-1$方式来选择点$w$。右边先选择$w$，有$v-1$种方式，然后$x,w$同时存在在$\lambda$个块中。  
 注意上面两个命题还可以说明BIBD中的$v,k,\lambda$三个参数能决定另外两个参数，所以也可以写作$(v,k,\lambda)$设计。使用这种写法，**Example 17.1**是$(16,4,1)$设计，**Example 17.2**是$(7,3,1)$设计。
+
+## New Designs From Old
+有若干中方法从已有的设计中演变成新的设计。其中最简单的方法是互补性设计(`complementary design`)。对于两个集合$X,Y$来说，$X\setminus Y$表示某个元素在$X$但不在$Y$中。
+
+**Definition 17.9.** 令$\mathcal{D}=(S,\mathcal{B})$是一个设计。$(S,\mathcal{B})$互补性设计$\mathcal{D}^c$的顶点集合是$S$，块是$\mathcal{B}$中的块的补集。也就是说$B$是$\mathcal{D}^c$的块，当且仅当$S\setminus B$是$D$的块。
+
+**Example 17.10.** 如果$D$是**Example 17.2**的设计，那么$\mathcal{D}^c$是在顶点集$\{A,B,C,D,E,F,G\}$上包含如下块
+```
+{C, E, F, G},
+{A, D, F, G}
+{B, D, E, G},
+{B, C, D, F},
+{A, C, D, E},
+{A, B, E, F},
+{A, B, C, G}.
+```
+上面的例子是均匀、规则设计的，原来的设计也是均匀、规则设计。这对于任意均匀、规则设计都成立。简单说来，$(b,v,r,k)$设计，转化成了$(b,v,b-r,v-k)$。更进一步，如果一个设计是BIBD，那么互补性设计也是BIBD。练习5要求给与一个证明。简单说来，$(b,v,r,k,\lambda)$设计，转化成了$(b,v,b-r,v-k,b-2r+\lambda)$，关于最后一个参数，假定一对$(A,B)$，在$\mathcal{D}^c$出现的次数等于$\mathcal{D}$中不包含$A,B$的块的个数。
+
+下面一个方法是采用关联矩阵(`incidence matrix`)。
+
+**Definition 17.11.** $\mathcal{D}$设计的块是$B_1,B_2,\cdots,B_b$，顶点是$v_1,v_2,\cdots,v_v$。关联矩阵是一个定义如下的$v\times b$的矩阵
+$$A_{i,j}=\begin{cases}
+1&&\text{if }v_i\in B_j\\
+0&&\text{if }v_i\notin B_j
+\end{cases}$$
