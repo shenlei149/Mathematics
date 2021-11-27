@@ -138,3 +138,15 @@ a\\b\\c\\d\\e\\f
 上面例子中$\mathcal{D}^d$不是BIBD，因为它不是平衡的。这是因为$\mathcal{D}$中有的块中的对是相交的，有的不是，那么$\mathcal{D}^d$的点组成的对有的能出现在同一块，有的不能。
 
 关联矩阵是一种在线性代数中证明设计相关命题很有用、很有影响的工具。我们下面从一些简单的观察入手。
+
+**Proposition 17.15.** 令$A$是参数$(b,v,r,k,\lambda)$的设计$\mathcal{D}$的关联矩阵，那么
+$$AA^T=(r-\lambda)I_v+\lambda J_v$$
+其中$I_v$是$v\times v$的单位矩阵，$J_v$是$v\times v$的全1矩阵。  
+**Proof.** 如果$i\neq j$，那么$AA^T$中第$(i,j)$项的值是$A$中第$i$行和第$j$行的点积。只有两个点在同一块的时候对应的值才同时为1，乘积是1，否则是0。有$\lambda$个这样的块。如果$i=j$，也就是同一行自己点积，那么有$r$个1。
+
+如果非零向量$\boldsymbol{x}$和$m$满足$M\boldsymbol{x}=m\boldsymbol{x}$，那么$m$是特征矩阵，$\boldsymbol{x}$是特征向量。特征向量生成的空间是特征空间。
+
+**Corollary 17.16.** 令$A$是参数$(b,v,r,k,\lambda)$的BIBD的关联矩阵，那么$AA^T$的特征值是$v-1$个$r-\lambda$和$r+\lambda(v-1)=rk$。由于没有特征值0，那么$\det{AA^T}\neq 0$。  
+**Proof.** 大致能看明白论证过程，但是细节还是不连贯。复习完线性代数回来补充？TODO
+
+**Example 17.14**的例子说明BIBD的对偶不一定是BIBD。但是满足如下条件的话，那么对偶也是BIBD。设计$\mathcal{D}$的任意两个块$B_i,B_j$
