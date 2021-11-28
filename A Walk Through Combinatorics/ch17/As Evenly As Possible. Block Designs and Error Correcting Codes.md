@@ -140,7 +140,7 @@ a\\b\\c\\d\\e\\f
 关联矩阵是一种在线性代数中证明设计相关命题很有用、很有影响的工具。我们下面从一些简单的观察入手。
 
 **Proposition 17.15.** 令$A$是参数$(b,v,r,k,\lambda)$的设计$\mathcal{D}$的关联矩阵，那么
-$$AA^T=(r-\lambda)I_v+\lambda J_v$$
+$$AA^T=(r-\lambda)I_v+\lambda J_v\tag{17.1}$$
 其中$I_v$是$v\times v$的单位矩阵，$J_v$是$v\times v$的全1矩阵。  
 **Proof.** 如果$i\neq j$，那么$AA^T$中第$(i,j)$项的值是$A$中第$i$行和第$j$行的点积。只有两个点在同一块的时候对应的值才同时为1，乘积是1，否则是0。有$\lambda$个这样的块。如果$i=j$，也就是同一行自己点积，那么有$r$个1。
 
@@ -149,4 +149,18 @@ $$AA^T=(r-\lambda)I_v+\lambda J_v$$
 **Corollary 17.16.** 令$A$是参数$(b,v,r,k,\lambda)$的BIBD的关联矩阵，那么$AA^T$的特征值是$v-1$个$r-\lambda$和$r+\lambda(v-1)=rk$。由于没有特征值0，那么$\det{AA^T}\neq 0$。  
 **Proof.** 大致能看明白论证过程，但是细节还是不连贯。复习完线性代数回来补充？TODO
 
-**Example 17.14**的例子说明BIBD的对偶不一定是BIBD。但是满足如下条件的话，那么对偶也是BIBD。设计$\mathcal{D}$的任意两个块$B_i,B_j$
+**Example 17.14**的例子说明BIBD的对偶不一定是BIBD。但是满足如下条件的话，那么对偶也是BIBD。设计$\mathcal{D}$的任意两个块$B_i,B_j$，其交集$B_i\cap B_j=l$是固定整数，该整数独立于块的选择。这时设计$\mathcal{D}$是链接的(`linked`)BIBD。如果$\mathcal{D}$是链接的，那么$\mathcal{D}^d$也会是平衡的，因为任意两个会一起出现在$l$块。
+
+**Proposition 17.17.** 所有的对称BIBD是链接的。  
+**Proof.** 令$\mathcal{D}$是参数$(v,k,\lambda)$对称的设计，那么$\mathcal{D}$的关联矩阵$A$是方阵，所以$A^TA$是存在的。$A^T$是$\mathcal{D}^d$的关联矩阵。后面会证明$A^TA=AA^T$，那么$AA^T$非对角线上的项都是$\lambda$，这就说明$A$中的任意两个块有$\lambda=l$个点的交集。（这里$A^TA=AA^T$的作用是把**Proposition 17.15**中的点和这里需要的块联系起来，是等价的）。  
+很明显，$AJ=JA$，其中$J$是$v\times v$的全1矩阵。由**Corollary 17.16**可知，$A^{-1}$是存在的，否则$\det{AA^T}=0$。那么将$(17.1)$左边乘$A^{-1}$，右边乘$A$
+$$\begin{aligned}
+A^TA&=A^{-1}((r-\lambda)I)A+\lambda A^{-1}JA\\
+&=(r-\lambda)I+\lambda J\\
+&=AA^T
+\end{aligned}$$
+
+对称BIBD是链接的，那么对偶设计也是BIBD。下面的定理告诉我们它的反面也成立。也就是BIBD的对偶是BIBD的话，那么BIBD是对称的。
+
+**Theorem 17.18 (Fisher’s inequality).** 如果$\mathcal{D}$是有$v$点$b$块的BIBD，那么$v\leq b$。  
+**Proof.** 
