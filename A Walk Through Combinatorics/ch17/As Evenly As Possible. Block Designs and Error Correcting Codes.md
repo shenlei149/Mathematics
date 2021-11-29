@@ -163,4 +163,17 @@ A^TA&=A^{-1}((r-\lambda)I)A+\lambda A^{-1}JA\\
 对称BIBD是链接的，那么对偶设计也是BIBD。下面的定理告诉我们它的反面也成立。也就是BIBD的对偶是BIBD的话，那么BIBD是对称的。
 
 **Theorem 17.18 (Fisher’s inequality).** 如果$\mathcal{D}$是有$v$点$b$块的BIBD，那么$v\leq b$。  
-**Proof.** 
+**Proof.** $\mathcal{D}$的关联矩阵$A$，由**Proposition 17.15**得知$\det{AA^T}\neq 0$，$c\times v$的秩是$v$。另外两个矩阵的乘积的秩不会大于任意一个，所以
+$$v=\text{rank}(AA^T)\leq \text{rand}(A)$$
+任意矩阵的秩不能大于独立行的数量，所以
+$$\text{rank}(A)\leq b$$
+
+下面的结果提供了另外一些关于对称BIBD存在的必要条件。  
+**Theorem 17.19.** 如果$\mathcal{D}$是参数为$(v,r,\lambda)$的对称BIBD，并且$v$是偶数，那么$r-\lambda$是完全平方数。  
+**Proof.** **Corollary 17.16**给出了特征向量，那么
+$$\det{AA^T}=(r+(v-1)\lambda)\cdot(r-\lambda)^{v-1}$$
+左边是$\det{A}^2$，是平方数，$(r+(v-1)\lambda)=r+r(k-1)=rk=r^2$，也是平方数，那么$(r-\lambda)^{v-1}$是平方数，$v$是偶数，那么$v-1$是奇数，所以$r-\lambda$是完全平方数。
+
+有一个和上面定理类似$v$是奇数的情况，证明比较难，所以下面只给出结论。  
+**Theorem 17.20.** 如果$\mathcal{D}$是参数为$(v,r,\lambda)$的对称BIBD，并且$v$是奇数，那么存在不全等于零的整数$x,y,z$，有
+$$x^2=(k-\lambda)y^2+(-1)^{(v-1)/2}\cdot\lambdaz^2$$
