@@ -63,3 +63,41 @@ $$\begin{aligned}
 | $\tan\theta$ | $0$ | $1$ |  | $-1$ | $0$ | $\frac{\sqrt{3}}{3}$ | $1$ | $\sqrt{3}$ |  | $-\sqrt{3}$ | $-1$ | $\frac{-\sqrt{3}}{3}$ | $0$ |  | $0$ |
 
 ### 三角函数的周期和图像
+当角度为$\theta$的角和角度为$\theta+2\pi$的角都放到标准位置的时候，终止边恰好重合。因此这两个角的三角函数值是相同的：$\sin(\theta+2\pi)=\sin\theta,\cos(\theta+2\pi)=\cos\theta,\tan(\theta+2\pi)=\tan\theta$等等。类似的$\sin(\theta-2\pi)=\sin\theta,\cos(\theta-2\pi)=\cos\theta$等等。我们称这六种基本三角函数是周期函数。
+
+**定义** 如果函数$f(x)$对于任意$x$都有一个正整数$p$使得$f(x+p)=f(x)$，那么函数是周期函数。这个最小的$p$称为函数$f$的周期（`period`）。
+
+当我们画三角函数的时候，往往使用$x$代替$\theta$。下图是六种三角函数的图像。正切函数和余切函数的周期是$\pi$，其他四种函数周期是$2\pi$。余弦函数和正割函数是偶函数，其余四种是奇函数。  
+![](030.090.png)
+
+### 三角恒等变换
+平面上的任意点$P(x,y)$能够用该点到原点的距离$r$和$OP$与$x$正半轴的夹角$\theta$来表示。如下图所示。因为$x/r=\cos\theta,y/r=\sin\theta$，可以得到
+$$x=r\cos\theta,y=r\sin\theta$$
+![](030.100.png)  
+当$r=1$时，应用毕达哥拉斯定理可以得到
+$$\cos^2\theta+\sin^2\theta=1\tag{3}$$
+对于所有的$\theta$，这个方程都成立，并且是三角函数最常用的恒等式。上式两边同除$\cos^2\theta,\sin^2\theta$得到
+$$1+\tan^2\theta=\sec^2\theta$$
+$$1+\cot^2\theta=\csc^2\theta$$
+下面两个公式也是对所有的$A,B$都成立（和）
+$$\begin{aligned}
+\cos(A+B)=\cos A\cos B-\sin A\sin B\\
+\sin(A+B)=\sin A\cos B+\cos A\sin B
+\end{aligned}\tag{4}$$
+对于差$\cos(A-B),\sin(A-B)$有类似的公式。其实可以利用三角函数的奇偶性将上式的$B$换成$-B$得到差的公式。  
+本书所有的三角恒等变换都能从公式$(3)(4)$推导出来。比如用$\theta$替换$A,B$可以得到倍角公式
+$$\begin{aligned}
+\cos 2\theta=\cos^2\theta-\sin^2\theta\\
+\sin 2\theta=2\sin\theta\cos\theta
+\end{aligned}\tag{5}$$
+将下面两个等式
+$$\cos^2\theta+\sin^2\theta=1,\cos^2\theta-\sin^2\theta=\cos 2\theta$$
+相加得到
+$$2\cos^2\theta=1+\cos 2\theta$$
+第一个式子减去第二个式子等到
+$$2\sin^2\theta=1-\cos 2\theta$$
+进而可以得到非常有用的半角公式
+$$\cos^2\theta=\frac{1+\cos 2\theta}{2}\tag{6}$$
+$$\sin^2\theta=\frac{1-\cos 2\theta}{2}\tag{7}$$
+
+### 余弦定理
