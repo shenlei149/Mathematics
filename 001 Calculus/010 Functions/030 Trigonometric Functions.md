@@ -101,3 +101,34 @@ $$\cos^2\theta=\frac{1+\cos 2\theta}{2}\tag{6}$$
 $$\sin^2\theta=\frac{1-\cos 2\theta}{2}\tag{7}$$
 
 ### 余弦定理
+三角形$ABC$三边长$abc$，且$\theta$对的边是$c$（也就是说$\theta$是角$C$），那么
+$$c^2=a^2+b^2-2ab\cos\theta\tag{8}$$
+上面的方程就是余弦定理（`law of cosines`）。  
+我们把点$C$放到原点，$x$正半轴沿着角$C$的一条边把三角形放到坐标系中。如下图所示。那么很容易得到$A(b,0),B(a\cos\theta,a\sin\theta)$，$AB$之间距离的平方就是
+$$\begin{aligned}
+c^2&=(a\cos\theta-b)^2+(a\sin\theta)^2\\
+&=a^2(\cos^2\theta+\sin^2\theta)+b^2-2ab\cos\theta\\
+&=a^2+b^2-2ab\cos\theta
+\end{aligned}$$
+![](030.110.png)  
+余弦定理是毕达哥拉斯定理的泛化形式。如果$\theta=\pi/2$，那么$\cos\theta=0$，得到$c^2=a^2+b^2$。
+
+### 两个特殊的不等式
+对于任意用弧度表示的角$\theta$，正弦和余弦函数满足
+$$-|\theta|\leq\sin\theta\leq |\theta|$$
+$$-|\theta|\leq 1-\cos\theta\leq |\theta|$$
+如下图我们画了一个非零的角在标准位置，圆是单位圆。那么$|\theta|$的长度就是弧$AP$的长度，小于$|\theta|$。  
+![](030.120.png)  
+三角形$APQ$是直角三角形，两个直角边长度是
+$$QP=|\sin\theta|,AQ=1-\cos\theta$$
+根据毕达哥拉斯定理和$AP<|\theta|$有
+$$\sin^2\theta+(1-\cos\theta)^2=(AP)^2\leq\theta^2\tag{9}$$
+上面公式左边的两项都是非零项，所以
+$$\sin^2\theta\leq\theta^2, (1-\cos\theta)^2\leq\theta^2$$
+取平方根，得到不等式
+$$|\sin\theta|\leq|\theta|, |1-\cos\theta|\leq|\theta|$$
+所以
+$$-|\theta|\leq\sin\theta\leq |\theta|,-|\theta|\leq 1-\cos\theta\leq |\theta|$$
+这两个公式在下一章会非常有用。
+
+### 
