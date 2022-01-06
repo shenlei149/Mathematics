@@ -131,4 +131,10 @@ $$|\sin\theta|\leq|\theta|, |1-\cos\theta|\leq|\theta|$$
 $$-|\theta|\leq\sin\theta\leq |\theta|,-|\theta|\leq 1-\cos\theta\leq |\theta|$$
 这两个公式在下一章会非常有用。
 
-### 
+### 三角函数图像变换
+下图是函数图像的平移、伸缩、翻转等规则的描述，同样适用于三角函数。  
+![](030.130.png)  
+应用这些变换规则可以得到一般地正弦函数
+$$f(x)=A\sin(\frac{2\pi}{B}(x-C))+D$$
+其中$|A|$是振幅（`amplitude`），$|B|$是周期（`period`），$C$是水平偏移（`horizontal shift`），$D$是垂直偏移（`vertical shift`）。图像如下所示：  
+![](030.140.png)
