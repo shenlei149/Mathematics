@@ -138,3 +138,27 @@ $$-|\theta|\leq\sin\theta\leq |\theta|,-|\theta|\leq 1-\cos\theta\leq |\theta|$$
 $$f(x)=A\sin(\frac{2\pi}{B}(x-C))+D$$
 其中$|A|$是振幅（`amplitude`），$|B|$是周期（`period`），$C$是水平偏移（`horizontal shift`），$D$是垂直偏移（`vertical shift`）。图像如下所示：  
 ![](030.140.png)
+
+### 习题
+习题中有两个是很常见且很有用的公式和定理。  
+55. 两个角的正切值公式如下：
+$$\tan(A+B)=\frac{\tan A+\tan B}{1-\tan A\tan B}$$
+证明：
+$$\begin{aligned}
+\tan(A+B)&=\frac{\cos(A+B)}{\sin(A+B)}\\
+&=\frac{\sin A\cos B+\cos A\sin B}{\cos A\cos B-\sin A\sin B}\\
+&=\frac{\tan A+\tan B}{1-\tan A\tan B}
+\end{aligned}$$
+
+65. 正弦定理 三角形$ABC$对应边分别是$a,b,c$，那么
+$$\frac{\sin A}{a}=\frac{\sin B}{b}=\frac{\sin C}{c}$$
+证明：$ABC$三者是平等的，所以下面证明等式的后半部分，前半部分同理可得。  
+角$C$可能是锐角、钝角和直角。  
+直角最简单，此时$\sin C=1,\sin B=\frac{b}{c}$，得证。  
+锐角和钝角的情况如下图所示：  
+![](030.150.png)  
+锐角情况
+$$h=c\sin B=b\sin C$$
+钝角情况
+$$h=c\sin B=b\sin(\pi-C)=b\sin C$$
+$\sin(\pi-C)=\sin C$很容易通过两角之和公式证明。
