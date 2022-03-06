@@ -188,4 +188,4 @@ $$\lim_{x\to 0}u(x)=1$$
 $$\lim_{\theta\to 0}\sin\theta=0$$
 （b）1.3节我们知道$0\leq 1-\cos\theta \leq|\theta|$，又有$\lim_{\theta\to 0}(1-\cos\theta)=0$，所以
 $$\lim_{\theta\to 0}\cos\theta=\lim_{\theta\to 0}1-(1-\cos\theta)=1-\lim_{\theta\to 0}(1-\cos\theta)=1-0=1$$
-（c）因为$-|f(x)|\leq f(x)\leq |f(x)|$，并且$x\to c$时，$-|f(x)|,|f(x)|$的极限是0，那么$\lim_{x\to c}f(x)=0$。  
+（c）因为$-|f(x)|\leq f(x)\leq |f(x)|$，并且$x\to c$时，$-|f(x)|,|f(x)|$的极限是0，那么$\lim_{x\to c}f(x)=0$。
