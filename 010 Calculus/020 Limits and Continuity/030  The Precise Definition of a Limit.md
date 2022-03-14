@@ -111,3 +111,48 @@ $$\sqrt{4-\epsilon}+<x<\sqrt{4+\epsilon}$$
 如果$\epsilon\geq 4$呢？那么区间是$(0, \sqrt{4+\epsilon})$，那么$\delta=\min\{2,\sqrt{4+\epsilon}-2\}=2$。
 
 ### 使用定义证明定理
+我们通常不利用定义来求极限，更多的是使用定义来证明定理。
+
+例6 给定$\lim_{x\to c}f(x)=L, \lim_{x\to c}g(x)=M$，求证
+$$\lim_{x\to c}(f(x)+g(x))=L+M$$
+证明：令$\epsilon>0$，我们需要找到一个正数$\delta$，有
+$$|f(x)+g(x)-(L+M)|<\epsilon, \text{ whenever } 0<|x-c|<\delta$$
+那么
+$$\begin{aligned}
+|f(x)+g(x)-(L+M)|&=|(f(x)-L)+(g(x)-M)|\\
+&\leq |f(x)-L|+|g(x)-M|
+\end{aligned}$$
+由于$\lim_{x\to c}f(x)=L$，那么存在$\delta_1 >0$有
+$$|f(x)-L|<\epsilon/2, \text{ whenever } 0<|x-c|<\delta_1$$
+类似的，由于$\lim_{x\to c}g(x)=M$，那么存在$\delta_2 >0$有
+$$|g(x)-M|<\epsilon/2, , \text{ whenever } 0<|x-c|<\delta_2$$
+令$\delta=\min\{\delta_1,\delta_2\}$。如果$0<|x-c|<\delta$那么$|x-c|<\delta_1$，所以$|f(x)-L|<\epsilon/2$，同理有$|g(x)-M|<\epsilon/2$。因此
+$$|f(x)+g(x)-(L+M)|<\frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon$$
+这就证明了$\lim_{x\to c}(f(x)+g(x))=L+M$。
+
+证明了加法规则，减法规则只需要将$g(x)$替换成$-g(x)$即可。常数倍的规则是$g(x)=k$的特例，下面证明乘法规则。
+
+例7 证明乘法规则。  
+证明：我们需要存在$\delta>0$，对于任何$\epsilon>0$和任意属于$f,g$的定义域交集的$x$都有
+$$|f(x)g(x)-LM|<\epsilon, \text{ whenever } 0<|x-c|<\delta$$
+重写
+$$f(x)=L+(f(x)-L), g(x)=M+(g(x)-M)$$
+那么
+$$\begin{aligned}
+f(x)g(x)-LM&=(L+(f(x)-L))(M+(g(x)-M))-LM\\
+&=LM+L(g(x)-M)+M(f(x)-L)+(f(x)-L)(g(x)-M)-LM\\
+&=L(g(x)-M)+M(f(x)-L)+(f(x)-L)(g(x)-M)
+\end{aligned}$$
+$x\to c$时，$f,g$的极限分别是$L,M$，所以存在$\delta_1,\delta_2,\delta_3,\delta_4$分别满足
+$$\begin{aligned}
+&|f(x)-L|<\sqrt{\epsilon/3}&&\text{ whenever }&&0<|x-c|<\delta_1\\
+&|g(x)-M|<\sqrt{\epsilon/3}&&\text{ whenever }&&0<|x-c|<\delta_2\\
+&|f(x)-L|<\epsilon/(3(1+|M|))&&\text{ whenever }&&0<|x-c|<\delta_3\\
+&|g(x)-M|<\epsilon/(3(1+|L|))&&\text{ whenever }&&0<|x-c|<\delta_4
+\end{aligned}$$
+取四个最小值作为我们要求的$\delta$，那么有
+$$\begin{aligned}
+|f(x)g(x)-LM|&\leq |L||(g(x)-M)|+|M||(f(x)-L)|+|(f(x)-L)||(g(x)-M)|\\
+&\leq (1+|L|)|(g(x)-M)|+(1+|M|)|(f(x)-L)|+|(f(x)-L)||(g(x)-M)|\\
+&\leq \frac{\epsilon}{3}+\frac{\epsilon}{3}+\sqrt{\frac{\epsilon}{3}}\sqrt{\frac{\epsilon}{3}}=\epsilon
+\end{aligned}$$
