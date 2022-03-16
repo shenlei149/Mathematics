@@ -156,3 +156,29 @@ $$\begin{aligned}
 &\leq (1+|L|)|(g(x)-M)|+(1+|M|)|(f(x)-L)|+|(f(x)-L)||(g(x)-M)|\\
 &\leq \frac{\epsilon}{3}+\frac{\epsilon}{3}+\sqrt{\frac{\epsilon}{3}}\sqrt{\frac{\epsilon}{3}}=\epsilon
 \end{aligned}$$
+
+例8 证明除法规则。  
+证明：如果能证明$\lim_{x\to c}\frac{1}{g(x)}=\frac{1}{M}$，那么使用乘法规则就能完成证明。  
+给定$\epsilon>0$，需要证明存在$\delta>0$
+$$\bigg|\frac{1}{g(x)}-\frac{1}{M}\bigg|<\epsilon, \text{ whenever } 0<|x-c|<\delta$$
+由于$x\to c$时$\lim_{x\to c}g(x)=M$，那么存在一个正数$\delta_1$满足
+$$|g(x)-M|<\frac{M}{2}, \text{ whenever } 0<|x-c|<\delta_1$$
+由三角不等式$|A|-|B|\leq |A-B|,|B|-|A|\leq |A-B|$可以得到$||A|-|B||\leq |A-B|$，那么
+$$||g(x)|-|M||< |g(x)-M|$$
+那么
+$$||g(x)|-|M||< \frac{|M|}{2}$$
+$$-\frac{|M|}{2}< |g(x)|-|M|<\frac{|M|}{2}$$
+$$\frac{|M|}{2}< |g(x)|<\frac{3|M|}{2}$$
+$$|M|< 2|g(x)|< 3|M|$$
+$$\frac{1}{|g(x)|}<\frac{2}{|M|}<\frac{3}{|g(x)|}$$
+当$0<|x-c|<\delta_1$时，
+$$\begin{aligned}
+\bigg|\frac{1}{g(x)}-\frac{1}{M}\bigg|&=\bigg|\frac{M-g(x)}{Mg(x)}\bigg|\\
+&\leq \frac{1}{|M|}\frac{1}{|g(x)|}\cdot |M-g(x)|\\
+&<\frac{1}{|M|}\frac{2}{|M|}\cdot |M-g(x)|
+\end{aligned}$$
+所以问题转化为$\frac{1}{|M|}\frac{2}{|M|}\cdot |M-g(x)|<\epsilon\Rightarrow |M-g(x)|<\epsilon|M|^2/2$
+根据极限定义，存在$0<|x-c|<\delta_2$有
+$$|g(x)-M|<\epsilon|M|^2/2, \text{ whenever } 0<|x-c|<\delta_2$$
+取$\delta=\min\{\delta_1,\delta_2\}$，有
+$$\bigg|\frac{1}{g(x)}-\frac{1}{M}\bigg|<\epsilon, \text{ whenever } 0<|x-c|<\delta$$
