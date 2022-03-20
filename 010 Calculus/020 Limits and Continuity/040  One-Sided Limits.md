@@ -25,8 +25,44 @@ $$\lim_{x\to -2}f(x)=0, \lim_{x\to 2}f(x)=0$$
 
 2.2节的定理1对单侧极限也成立。两个函数的右极限的和是两个函数和的右极限，等等。夹逼定理也是成立的。单侧极限和极限有如下内在关系。
 
+**定理6** 假设$f$在包含$c$的开区间有定义，$c$本身可以除外，那么$f(x)$在$c$处有极限等价于存在左极限和右极限且二者相等。
+$$\lim_{x\to c} f(x)=L \lrArr \lim_{x\to c^-}f(x)=L \text{ and } \lim_{x\to c^+}f(x)=L$$
+在端点处，只要单侧极限存在那么极限就存在。
 
+例2 如下图函数：  
+![](040.040.png)  
+$x=0$处，$\lim_{x\to 0^-}f(x)$不存在，$\lim_{x\to 0^+}f(x)=\lim_{x\to 0}f(x)=1$；  
+$x=1$处，$\lim_{x\to 1^-}f(x)=0, \lim_{x\to 1^+}f(x)=1$，$\lim_{x\to 0}f(x)$不存在；  
+$x=2$处，$\lim_{x\to 2^-}f(x)=\lim_{x\to 2^+}f(x)=\lim_{x\to 2}f(x)=1$；  
+$x=3$，$\lim_{x\to 3^-}f(x)=\lim_{x\to 3^+}f(x)=\lim_{x\to 3}f(x)=f(3)=2$；  
+$x=4$，$\lim_{x\to 4^-}f(x)=1$，$\lim_{x\to 4^+}f(x)$不存在，$\lim_{x\to 4}f(x)=1$。  
+在$[0,4]$的其余各点，$f(x)$的极限时$f(c)$。
 
 ### 单侧极限的精确定义
+**定义** 假设$f$在$c$右侧区间$(c,d)$上有定义。如果对于任意$\epsilon>0$，存在相应的$\delta>0$有
+$$|f(x)-L|<\epsilon \text{ whenever } c<x<x+\delta$$
+那么$f(x)$在$c$点右极限时$L$，写作
+$$\lim_{x\to c^+}f(x)=L$$
+假设$f$在$c$左侧区间$(b,c)$上有定义。如果对于任意$\epsilon>0$，存在相应的$\delta>0$有
+$$|f(x)-L|<\epsilon \text{ whenever } c-\delta<x<x$$
+
+如下图所示：  
+![](040.050.png)  
+![](040.060.png)
+
+例3 证明
+$$\lim_{x\to 0^+}=0$$
+证明：令$\epsilon>0$。这里$c=0,L=0$，我们需要找到$\delta>0$满足
+$$|\sqrt{x}-0|<\epsilon, \text{ whenever } 0<x<\delta$$
+那么
+$$\sqrt{x}<\epsilon, \text{ whenever } 0<x<\delta$$
+两边同时平方得到
+$$x<\epsilon^2, \text{ if } 0<x<\delta$$
+我们取$\delta=\epsilon^2$完成证明。示意图如下：  
+![](040.070.png)
+
+例4 证明$y=\sin(1/x)$在$x$从任意一边趋于0时极限都不存在。如下图所示：  
+![](040.080.png)  
+解：
 
 ### $(\sin\theta)/\theta$的极限
