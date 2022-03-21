@@ -63,6 +63,34 @@ $$x<\epsilon^2, \text{ if } 0<x<\delta$$
 
 例4 证明$y=\sin(1/x)$在$x$从任意一边趋于0时极限都不存在。如下图所示：  
 ![](040.080.png)  
-解：
+解：随着$x$趋于0，$1/x$趋于无穷，$\sin(1/x)$重复的从-1到1循环，那么函数值不会稳定低接近某个值$L$。上述分析对$x$是接近0的正值和负值都成立，即这个函数既没有左极限也没有右极限。
 
 ### $(\sin\theta)/\theta$的极限
+用弧度表示的话，当$\theta\to 0$时，$(\sin\theta)/\theta$的极限是1。如下图所示。我们会应用夹逼定理来证明。3.5节会说明这个极限非常有用。  
+![](040.090.png)
+
+**定理7** 当$\theta\to 0$时，$(\sin\theta)/\theta$的极限是
+$$\lim_{\theta\to 0}\frac{\sin\theta}{\theta}=1\tag{1}$$
+
+证明：应用夹逼定理证明左右极限都是1，那么极限就是1。  
+我们从$\theta<\frac{\pi}{2}$开始来证明右极限是1。如下图所示  
+![](040.100.png)  
+注意三个区域的面积有如下关系
+$$S_{\triangle OAP}<S_{\text{sector } OAP}<S_{\triangle OAT}$$
+使用$\theta$表示它们的面积
+$$S_{\triangle OAP}=\frac{1}{2}(1)\sin\theta=\frac{\sin\theta}{2}$$
+$$S_{\text{sector } OAP}=\frac{1}{2}r^2\theta=\frac{\theta}{2}$$
+$$S_{\triangle OAT}=\frac{1}{2}(1)\tan\theta=\frac{\tan\theta}{2}$$
+所以
+$$\frac{\sin\theta}{2}<\frac{\theta}{2}<\frac{\tan\theta}{2}$$
+由于$0<\theta<\pi/2$，那么$\sin\theta/2$是正数，两边同除得到
+$$1<\frac{\theta}{\sin\theta}<\frac{1}{\cos\theta}$$
+取倒数得到
+$$1>\frac{\sin\theta}{\theta}>\cos\theta$$
+2.2节得到$\lim_{\theta\to 0^+}\cos\theta=1$，由夹逼定理得到
+$$\lim_{\theta\to 0^+}\frac{\sin\theta}{\theta}=1$$
+现在考虑左极限。由于$\sin\theta,\theta$都是奇函数，那么$f(\theta)=\sin\theta/\theta$是偶函数，关于$y$轴对称。所以
+$$\lim_{\theta\to 0^-}\frac{\sin\theta}{\theta}=1$$
+证毕。
+
+例5 
