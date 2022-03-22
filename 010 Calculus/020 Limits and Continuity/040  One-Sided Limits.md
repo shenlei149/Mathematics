@@ -93,4 +93,49 @@ $$\lim_{\theta\to 0^+}\frac{\sin\theta}{\theta}=1$$
 $$\lim_{\theta\to 0^-}\frac{\sin\theta}{\theta}=1$$
 证毕。
 
-例5 
+例5 证明  
+（a）$\lim_{y\to 0}\frac{\cos y-1}{y}=0$  
+（b）$\lim_{x\to 0}\frac{\sin 2x}{5x}=\frac{2}{5}$  
+证明：  
+（a）使用半角公式$\cos y=1-2\sin^2(y/2)$，那么
+$$\begin{aligned}
+\lim_{y\to 0}\frac{\cos y-1}{y}&=\lim_{y\to 0}-\frac{2\sin^2(y/2)}{y}\\
+&=-\lim_{\theta\to 0}\frac{\sin\theta}{\theta}\sin\theta\\
+&=-(1)(0)
+\end{aligned}$$
+（b）分子分母同乘$2/5$，那么
+$$\begin{aligned}
+\lim_{x\to 0}\frac{\sin 2x}{5x}&=\lim_{x\to 0}\frac{2/5\sin 2x}{(2/5)5x}\\
+&=\frac{2}{5}\lim_{x\to 0}\frac{\sin 2x}{2x}\\
+&=\frac{2}{5}(1)=\frac{2}{5}
+\end{aligned}$$
+
+例6 求$\lim_{t\to 0}\frac{\tan t\sec 2t}{3t}$  
+解：
+$$\begin{aligned}
+\lim_{t\to 0}\frac{\tan t\sec 2t}{3t}&=\lim_{t\to 0}\frac{1}{3}\frac{1}{t}\frac{\sin t}{\cos t}\frac{1}{\cos 2t}\\
+&=\frac{1}{3}\lim_{t\to 0}\frac{\sin t}{t}\frac{1}{\cos t}\frac{1}{\cos 2t}\\
+&=\frac{1}{3}(1)(1)(1)\\
+&=\frac{1}{3}
+\end{aligned}$$
+
+例7 证明对于非零常量$A,B$有
+$$\lim_{\theta\to 0}\frac{\sin A\theta}{\sin B\theta}=\frac{A}{B}$$
+证明：
+$$\begin{aligned}
+\lim_{\theta\to 0}\frac{\sin A\theta}{\sin B\theta}&=\lim_{\theta\to 0}\frac{\sin A\theta}{A\theta}A\theta\frac{B\theta}{\sin B\theta}\frac{1}{B\theta}\\
+&=\lim_{\theta\to 0}\frac{\sin A\theta}{A\theta}\frac{B\theta}{\sin B\theta}\frac{A}{B}\\
+&=(1)(1)\frac{A}{B}\\
+&=\frac{A}{B}
+\end{aligned}$$
+
+### 证明夹逼定理
+首先证明左极限。由于$\lim_{x\to c^+}g(x)=\lim_{x\to c^+}h(x)=L$，那么对于任意$\epsilon>0$都存在$\delta>0$在区间$(c,c+\delta)$上有
+$$L-\epsilon<g(x)<L+\epsilon,L-\epsilon<h(x)<L+\epsilon$$
+由于总是有$g(x)\leq f(x)\leq h(x)$，所以
+$$L-\epsilon<g(x)\leq f(x)\leq h(x)<L+\epsilon$$
+$$L-\epsilon<f(x)<L+\epsilon$$
+$$-\epsilon<f(x)-L<\epsilon$$
+因此当$c<x<c+\delta$时，有$|f(x)-L|<\epsilon$。  
+接着证明右极限。和上面类似，唯一的不同是这里$x\in (c-\delta,c)$。  
+如果$\lim_{x\to c}g(x)=\lim_{x\to c}h(x)=L$，当$x\to c^-$和$x\to c^+$时，$g(x), h(x)$的极限均为$L$，根据上面的论证有$\lim_{x\to c^-}f(x)=\lim_{x\to c^+}f(x)=L$，那么$\lim_{x\to c}=L$。
