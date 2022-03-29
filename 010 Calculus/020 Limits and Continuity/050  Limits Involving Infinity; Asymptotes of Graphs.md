@@ -30,7 +30,33 @@ $$\bigg|\frac{1}{x}-0\bigg|=\bigg|\frac{1}{x}\bigg|<\epsilon, \text{ whenever } 
 
 **定理8** 定理1的所有法则对$x\to\infty,x\to-\infty$时同样适用。
 
-例2
+例2 计算下面两个极限值。  
+（a）
 $$\begin{aligned}
-
+\lim_{x\to\infty}(5+\frac{1}{x})&=\lim_{x\to\infty}5+\lim_{x\to\infty}\frac{1}{x}
+\\&=5+0=5
 \end{aligned}$$
+（b）
+$$\begin{aligned}
+\lim_{x\to -\infty}\frac{\pi\sqrt{3}}{x^2}&=\lim_{x\to -\infty}\pi\sqrt{3}\frac{1}{x}\frac{1}{x}\\
+&=\lim_{x\to -\infty}\pi\sqrt{3}\cdot\lim_{x\to -\infty}\frac{1}{x}\cdot\lim_{x\to -\infty}\frac{1}{x}\\
+&=\pi\sqrt{3}\cdot 0\cdot 0\\
+&=0
+\end{aligned}$$
+
+### 实数函数在无穷处的极限
+为了计算$x\to\plusmn\infty$时实数函数的极限，首先分子分母除以分母的最高次幂。结果就取决于多项式的幂次。
+
+例3 按照上述方法计算下面两个函数的极限。  
+（a）如下图所示
+$$\begin{aligned}
+\lim_{x\to\infty}\frac{5x^2+8x-3}{3x^2+2}&=\lim_{x\to\infty}\frac{5+(8/x)-(3/x^2)}{3+(2/x^2)}\\
+&=\frac{5+0-0}{3+0}\\
+&=\frac{5}{3}
+\end{aligned}$$
+（b）
+$$\begin{aligned}
+\lim_{x\to -\infty}\frac{11x+2}{2x^3-1}&=\lim_{x\to -\infty}\frac{(11/x^2)+(2/x^3)}{2-(1/x^3)}\\
+&=\frac{0+0}{2-0}=0
+\end{aligned}$$
+![](050.030.png)
