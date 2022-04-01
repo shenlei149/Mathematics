@@ -54,9 +54,69 @@ $$\begin{aligned}
 &=\frac{5+0-0}{3+0}\\
 &=\frac{5}{3}
 \end{aligned}$$
+![](050.030.png)  
 （b）
 $$\begin{aligned}
 \lim_{x\to -\infty}\frac{11x+2}{2x^3-1}&=\lim_{x\to -\infty}\frac{(11/x^2)+(2/x^3)}{2-(1/x^3)}\\
 &=\frac{0+0}{2-0}=0
 \end{aligned}$$
-![](050.030.png)
+![](050.040.png)
+
+### 渐近线
+图像上一个点随着距离原点越来越远，它距离某固定线的距离接近于零，我们称这个图像渐近接近这条线，这条直线是图像的渐近线（`asymptote`）。  
+$x$轴是$f(x)=1/x$图像的渐近线因为
+$$\lim_{x\to\infty}\frac{1}{x}=0$$
+且
+$$\lim_{x\to -\infty}\frac{1}{x}=0$$
+我们称$x$轴是水平渐近线（`horizontal asymptote`）。
+
+**定义** 如果
+$$\lim_{x\to\infty}f(x)=b$$
+或
+$$\lim_{x\to -\infty}f(x)=b$$
+那么$y=b$是$f(x)$的水平渐近线。
+
+函数图像可能有零、一、二个水平线，这取决于随着$x\to\infty$或$x\to -\infty$时函数的极限。  
+图 2.36 的函数
+$$f(x)=\frac{5x^2+8x-3}{3x^2+2}$$
+的渐近线是$y=5/3$因为
+$$\lim_{x\to\infty}f(x)=\frac{5}{3},\lim_{x\to -\infty}f(x)=\frac{5}{3}$$
+
+例4 求下面函数图像的水平渐近线
+$$f(x)=\frac{x^3-2}{|x|^3+1}$$
+解：求$x\to\plusmn\infty$时函数极限  
+$x\geq 0$时
+$$\lim_{x\to\infty}\frac{x^3-2}{|x|^3+1}=\lim_{x\to\infty}\frac{x^3-2}{x^3+1}=\lim_{x\to\infty}\frac{1-2/(x^3)}{1+1/(x^3)}=1$$
+$x<0$时
+$$\lim_{x\to\infty}\frac{x^3-2}{|x|^3+1}=\lim_{x\to\infty}\frac{x^3-2}{(-x)^3+1}=\lim_{x\to\infty}\frac{1-2/(x^3)}{-1+1/(x^3)}=-1$$
+那么水平渐近线是$y=1,y=-1$，如下图所示：  
+![](050.040.png)
+
+例5 $x$轴是函数$y=e^x$的水平渐近线因为
+$$\lim_{x\to -\infty}e^x=0$$
+下面进行证明。令$\epsilon>0$，我们必须找到一个常量$N$使得
+$$|e^x-0|<\epsilon, \text{ whenever } x<N$$
+由于$|e^x-0|=e^x$，那么当$x<N$时，需满足条件
+$$e^x<\epsilon$$
+由于$e^x$是递增函数，那么$e^N=\epsilon,N=\ln \epsilon$或者更小能满足上述条件。如下图所示  
+![](050.050.png)
+
+例6 求  
+（a）$\lim_{x\to\infty}\sin(1/x)$  
+（b）$\lim_{x\to\plusmn\infty}x\sin(1/x)$  
+解：  
+（a）令$t=1/x$，那么$x\to\infty$等价于$t\to 0^+$。因此
+$$\lim_{x\to\infty}\sin(1/x)=\lim_{t\to 0^+}\sin t=0$$
+（b）现在计算$x\to\infty,x\to -\infty$
+$$\lim_{x\to\infty}x\sin(1/x)=\lim_{t\to 0^+}\frac{\sin t}{t}=1$$
+$$\lim_{x\to -\infty}x\sin(1/x)=\lim_{t\to 0^-}\frac{\sin t}{t}=1$$
+如下图所示  
+![](050.060.png)  
+类似的，通过研究$y=f(t),t\to\plusmn\infty$，可以知道函数$y=f(1/x),x\to 0$的行为。
+
+例7 求
+$$\lim_{x\to 0^-}e^{1/x}$$
+解：令$t=1/x$，那么$x\to 0^-$等价于$t\to -\infty$，因此
+$$\lim_{x\to 0^-}e^{1/x}=\lim_{t\to -\infty}e^t=0$$
+如下图所示：  
+![](050.070.png)
