@@ -120,3 +120,57 @@ $$\lim_{x\to 0^-}e^{1/x}$$
 $$\lim_{x\to 0^-}e^{1/x}=\lim_{t\to -\infty}e^t=0$$
 如下图所示：  
 ![](050.070.png)
+
+夹逼定理对$x\to\plusmn\infty$也成立。  
+例8 使用夹逼定理求下面函数的水平渐近线
+$$y=2+\frac{\sin x}{x}$$
+解：因为
+$$0\leq \bigg|\frac{\sin x}{x}\bigg|\leq\bigg|\frac{1}{x}\bigg|$$
+因为
+$$\lim_{x\to\plusmn\infty}|\frac{1}{x}|=0$$
+所以根据夹逼定理
+$$\lim_{x\to\plusmn\infty}\frac{\sin x}{x}=0$$
+因此
+$$\lim_{x\to\plusmn\infty}(2+\frac{\sin x}{x})=2+0=2$$
+那么$y=2$是水平渐近线。如下图所示：  
+![](050.080.png)  
+这个例子也说明一条曲线可以和它的水平渐近线相交许多次（无限次）。
+
+例9 求
+$$\lim_{x\to\infty}(x-\sqrt{x^2+16})$$
+解：$x\to\infty$时，$x$和$\sqrt{x^2+16}$都趋于无穷大，那么极限是无法确定的，因为$\infty$是个记号而不是实数，不能做减法。这种情况，分子分母同乘其共轭表达式
+$$\begin{aligned}
+\lim_{x\to\infty}(x-\sqrt{x^2+16})&=\lim_{x\to\infty}(x-\sqrt{x^2+16})\frac{x+\sqrt{x^2+16}}{x+\sqrt{x^2+16}}\\
+&=\lim_{x\to\infty}\frac{x^2-(x^2+16)}{x+\sqrt{x^2+16}}\\
+&=\lim_{x\to\infty}\frac{-16}{x+\sqrt{x^2+16}}
+\end{aligned}$$
+那么当$x\to\infty$时，分母趋于无穷大，所以极限值是0。
+
+### 斜渐近线
+如果一个实数函数的分子的度恰好比分母的度大1，那么图像有斜渐近线（`oblique or slant line asymptote`）。计算斜渐近线的方式是用分子除以分母，得到一个线性函数加上一个当$x\to\plusmn\infty$时极限是0的余数。
+
+例10 求下面函数的斜渐近线
+$$f(x)=\frac{x^2-3}{2x-4}$$
+图像如下图所示  
+![](050.090.png)  
+解：通过除法我们可以得到
+$$f(x)=\frac{x}{2}+1+\frac{1}{2x-4}$$
+余数$\frac{1}{2x-4}$表示函数$f(x)$和直线$\frac{x}{2}+1$的垂直距离。当$x\to\plusmn\infty$时，余数的极限是0。所以
+$$g(x)=\frac{x}{2}+1$$
+是渐近线。向左和向右的渐近线都是这一条直线。
+
+### 无穷极限
+回顾函数$f(x)1/x$。当$x\to 0^+$时，$f$的值无限增长。给定任意实数$B$，$f$总有值能够比$B$还大。如下图所示：  
+![](050.100.png)  
+因此$f$在$x\to 0^+$时没有极限。然而，为了描述函数$f$在$x\to 0^+$时的行为，我们称$f(x)$趋于无穷$\infty$。记作
+$$\lim_{x\to 0^+}f(x)=\lim_{x\to 0^+}\frac{1}{x}=\infty$$
+这么写的目的不是说极限是存在的，也不是说$\infty$是某个实数。这个式子只是在描述函数的行为：当$x\to 0^+$，$\lim_{x\to 0^+}\frac{1}{x}$的极限不存在且函数值任意大。  
+$x\to 0^-$时类似，不再赘述。
+
+例11 求
+$$\lim_{x\to 1^+}\frac{1}{x-1},\lim_{x\to 1^-}\frac{1}{x-1}$$
+解：从几何角度分析，函数$\frac{1}{x-1}$是函数$\frac{1}{x}$向有平移一个单位，那么它在1附近的行为和$\frac{1}{x}$在0附近的行为一致，那么
+$$\lim_{x\to 1^+}\frac{1}{x-1}=\infty,\lim_{x\to 1^-}\frac{1}{x-1}=\infty$$
+如下图所示：  
+![](050.110.png)  
+用分析的方法着手，当$x\to 1^+$时，$(x-1)\to 0^+$，那么$1/(x-1)\to\infty$。$x\to 1^-$时类似。
