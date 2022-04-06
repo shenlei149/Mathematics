@@ -174,3 +174,58 @@ $$\lim_{x\to 1^+}\frac{1}{x-1}=\infty,\lim_{x\to 1^-}\frac{1}{x-1}=\infty$$
 如下图所示：  
 ![](050.110.png)  
 用分析的方法着手，当$x\to 1^+$时，$(x-1)\to 0^+$，那么$1/(x-1)\to\infty$。$x\to 1^-$时类似。
+
+例12 讨论下面函数在$x\to 0$时的行为
+$$f(x)=\frac{1}{x^2}$$
+解：当$x$从左右两边趋于零时，$1/x^2$的值是正的，且任意大，这意味着
+$$\lim_{x\to 0}f(x)=\lim_{x\to 0}\frac{1}{x^2}=\infty$$
+如下图所示  
+![](050.120.png)  
+函数$y=1/x$在$x\to 0$时行为不一致，当$x\to 0^+$时$1/x\to\infty$，但是当$x\to 0^-$时$1/x\to -\infty$，所以说$\lim_{x\to 0}(1/x)$不存在。函数$y=1/x^2$不一样，$x$从两边趋于零行为一致。
+
+例13 下面的例子说明实数函数在分母为零的附近行为能够多变。  
+（a）
+$$\lim_{x\to 2}\frac{(x-2)^2}{x^2-4}=\lim_{x\to 2}\frac{x-2}{x+2}=0$$
+（b）
+$$\lim_{x\to 2}\frac{x-2}{x^2-4}=\lim_{x\to 2}\frac{1}{x+2}=\frac{1}{4}$$
+（c）
+$$\lim_{x\to 2^+}\frac{x-3}{x^2-4}=-\infty$$
+（d）
+$$\lim_{x\to 2^-}\frac{x-3}{x^2-4}=\infty$$
+（e）下面函数的极限不存在
+$$\lim_{x\to 2}\frac{x-3}{x^2-4}$$
+（f）
+$$\lim_{x\to 2}\frac{2-x}{(x-2)^3}=\lim_{x\to 2}\frac{-1}{(x-2)^2}=-\infty$$
+
+例14 求
+$$\lim_{x\to -\infty}\frac{2x^5-6x^4+1}{3x^2+x-7}$$
+解：要求$x\to -\infty$时的极限，我们分子分母同时除以分母的最高次幂$x^2$
+$$\lim_{x\to -\infty}\frac{2x^5-6x^4+1}{3x^2+x-7}=\lim_{x\to -\infty}\frac{2x^3-6x^2+x^{-2}}{3+x^{-1}-7x^{-2}}=-\infty$$
+$x\to -\infty$时分子趋于$-\infty$而分母趋于3。
+
+### 无穷极限的精确定义
+**定义**  
+（1）如果对于任意正数$B$都存在一个$\delta>0$使得
+$$f(x)>B \text{ whenever } 0<|x-c|<\delta$$
+那么我们说$x$接近$c$时，$f(x)$趋于正无穷，写作
+$$\lim_{x\to c}f(x)=\infty$$
+（2）如果对于任意负数$-B$都存在一个$\delta>0$使得
+$$f(x)<-B \text{ whenever } 0<|x-c|<\delta$$
+那么我们说$x$接近$c$时，$f(x)$趋于正无穷，写作
+$$\lim_{x\to c}f(x)=-\infty$$
+
+下面两个图解释了定义：  
+![](050.130.png)  
+![](050.140.png)
+
+例15 求证$\lim_{x\to 0}\frac{1}{x^2}=\infty$。  
+证明：给定任意$B>0$，需要找到$\delta>0$使得
+$$\frac{1}{x^2}>B  \text{ whenever } 0<|x-0|<\delta$$
+那么
+$$\frac{1}{x^2}>B\lrArr x^2<\frac{1}{B}\lrArr |x|<\frac{1}{\sqrt{B}}$$
+我们选择$\delta=1/\sqrt{B}$或者更小的正数，那么就有
+$$|x|<\delta \rArr \frac{1}{x^2}>\frac{1}{\delta^2}\geq B$$
+因此，根据定义有
+$$\lim_{x\to 0}\frac{1}{x^2}=\infty$$
+
+### 
