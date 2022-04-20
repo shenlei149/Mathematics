@@ -125,3 +125,29 @@ $$|f(x)-b|<\delta_1, \text{ whenever } 0<|x-c|<\delta$$
 $$|y-b|<\delta_1, \text{ whenever } 0<|x-c|<\delta$$
 这就蕴涵着当$0<|x-c|<\delta$，有$|g(y)-g(b)|=|g(f(x))-g(b)|<\epsilon$。从极限的定义可知$\lim_{x\to c}g(f(x))=g(b)$。  
 这个证明过程得到$c$是$f$的定义域的内点是成立的。如果$c$是端点，只需要把上述证明过程中的极限换成合适的单边极限即可。
+
+例9 定理11的应用。  
+（1）
+$$\begin{aligned}
+\lim_{x\to \pi/2}\cos(2x+\sin(\frac{3\pi}{2}+x))&=\cos(\lim_{x\to \pi/2}2x+\lim_{x\to \pi/2}\sin(\frac{3\pi}{2}+x))\\
+&=\cos(\pi+\sin 2\pi)\\
+&=\cos\pi=-1
+\end{aligned}$$
+（2）
+$$\begin{aligned}
+\lim_{x\to 1}\sin^{-1}(\frac{1-x}{1-x^2})&=\sin^{-1}(\lim_{x\to 1}\frac{1-x}{1-x^2})\\
+&=\sin^{-1}(\lim_{x\to 1}\frac{1}{1+x})\\
+&=\sin^{-1}\frac{1}{2}\\
+&=\frac{\pi}{6}
+\end{aligned}$$
+（3）
+$$\lim_{x\to 0}\sqrt{x+1}e^{\tan x}=\lim_{x\to 0}\sqrt{x+1}\exp(\lim_{x\to 0}\tan x)=1\cdot e^0=1$$
+
+### 连续函数的中间值定理
+**定理12** 连续函数的中间值定理（`The Intermediate Value Theorem`）  
+如果函数$f$在闭区间$[a, b]$是连续函数，$y_0$是介于$f(a),f(b)$的任意值，那么存在$c\in [a,b]$使得$y_0=f(c)$。  
+![](060.100.png)
+
+定理12是说在有限闭区间上的连续函数有中间值这个属性。从几何角度看，介于$f(a),f(b)$之间的水平线$y=y_0$和$f$在区间$[a,b]$上至少相交一次。  
+这个定理的证明需要实数的完备性。实数完备性蕴涵着实数没有“洞”或者“间隙”。相反，如果是定义在有理数集合上的函数不满足完备性，那么也不满足中间值定理。  
+$f$的连续性也是定理12的基本要素。如果$f$不连续，那么定理就可能不成立。如下图所示，$y_0$取2，3之间的话，就不存在$c$。  
