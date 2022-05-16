@@ -46,7 +46,67 @@ $$\frac{d}{dx}x^n=nx^{n-1}$$
 解：  
 （1）$\frac{d}{dx}(x^3)=3x^{3-1}=3x^2$  
 （2）$\frac{d}{dx}(x^{2/3})=\frac{2}{3}x^{2/3-1}=\frac{2}{3}x^{-1/3}$  
-（3）  
-（4）  
-（5）  
-（6）
+（3）$\frac{d}{dx}(x^{\sqrt{2}})=\sqrt{2}x^{\sqrt{2}-1}$  
+（4）$\frac{d}{dx}(\frac{1}{x^4})=\frac{d}{dx}(x^{-4})=-4x^{-5}=-\frac{4}{x^5}$  
+（5）$\frac{d}{dx}(x^{-4/3})=-\frac{4}{3}x^{-(4/3)-1}=-\frac{4}{3}x^{-7/3}$  
+（6）$\frac{d}{dx}(\sqrt{x^{2+\pi}})=\frac{d}{dx}(x^{1+(\pi/2)})=(1+\frac{\pi}{2})x^{1+(\pi/2)-1}=\frac{1}{2}(2+\pi)\sqrt{x^\pi}$
+
+下一个定律告诉我们可导函数乘以常数，导数等于原函数的导数乘以该常数。
+
+**导数的常数倍定律**  
+如果$u$是$x$的可导函数，$c$是常数，那么
+$$\frac{d}{dx}(cu)=c\frac{du}{dx}$$
+
+证明：
+$$\begin{aligned}
+\frac{d}{dx}cu&=\lim_{h\to 0}\frac{cu(x+h)-cu(x)}{h}\\
+&=c\lim_{h\to 0}\frac{u(x+h)-u(x)}{h}\\
+&=c\frac{du}{dx}
+\end{aligned}$$
+
+例2  
+（1）下式
+$$\frac{d}{dx}(3x^2)=3\cdot 2x=6x$$
+告诉我们如果把$y=x^2$沿$y$轴乘以3倍，那么斜率也乘了3倍。如下图所示：  
+![](030.020.png)  
+（2）函数的负数  
+上面定律代入常数$C=-1$，得到
+$$\frac{d}{dx}(-u)=\frac{d}{dx}(-1\cdot u)=-1\cdot\frac{d}{dx}u=-\frac{du}{dx}$$
+
+下一个定律告诉我们两个可导函数的和的导数是它们导数的和。
+
+**导数的和定律**  
+如果$u,v$是$x$的可导函数，那么函数$u+v$在$u,v$都可导的点上可导，且在这些点处有
+$$\frac{d}{dx}(u+v)=\frac{du}{dx}+\frac{dv}{dx}$$
+
+证明：令$f(x)=u(x)+v(x)$
+$$\begin{aligned}
+\frac{d}{dx}[u(x)+v(x)]&=\lim_{h\to 0}\frac{[u(x+h)+v(x+h)]-[u(x)+v(x)]]}{h}\\
+&=\lim_{h\to 0}[\frac{u(x+h)-u(x)}{h}+\frac{v(x+h)-v(x)}{h}]\\
+&=\lim_{h\to 0}\frac{u(x+h)-u(x)}{h}+\lim_{h\to 0}\frac{v(x+h)-v(x)}{h}\\
+&=\frac{du}{dx}+\frac{dv}{dx}
+\end{aligned}$$
+
+结合常数倍定律和和定律可以推出导数的差定律，即两个可导函数的差的导数等于它们导数的差：
+$$\frac{d}{dx}(u-v)=\frac{d}{dx}[u+(-1)v]=\frac{du}{dx}+(-1)\frac{dv}{dx}=\frac{du}{dx}-\frac{dv}{dx}$$
+和定律可以拓展到两个以上有限多个函数。如果$u_1,u_2,\cdots,u_n$在$x$处可导，那么函数$u_1+u_2+\cdots+u_n$也可导，并且
+$$\frac{d}{dx}(u_1+u_2+\cdots+u_n)=\frac{du_1}{dx}+\frac{du_1}{dx}+\cdots+\frac{du_n}{dx}$$
+我们看一下三个函数的和：
+$$\begin{aligned}
+\frac{d}{dx}(u_1+u_2+u_3)&=\frac{d}{dx}((u_1+u_2)+u_3)\\
+&=\frac{d}{dx}(u_1+u_2)+\frac{du_3}{dx}\\
+&=\frac{du_1}{dx}+\frac{du_2}{dx}+\frac{du_3}{dx}
+\end{aligned}$$
+完整的证明需要使用递归法。
+
+例3 求多项式$y=x^3+\frac{4}{3}x^2-5x+1$的导数。  
+解：
+$$\begin{aligned}
+\frac{dy}{dx}&=\frac{d}{dx}x^3+\frac{d}{dx}(\frac{4}{3}x^2)-\frac{d}{dx}(5x)+\frac{d}{dx}(1)\\
+&=3x^2+\frac{4}{3}\cdot 2x-5+0\\
+&=3x^2+\frac{8}{3}x-5
+\end{aligned}$$
+我们可以按照例3的方式对多项式逐项求导。所有的多项式在任意$x$处都是可导的。
+
+例4 曲线$y=x^4-2x^2+2$有水平切线吗？如果有，在哪些点处？  
+解：
