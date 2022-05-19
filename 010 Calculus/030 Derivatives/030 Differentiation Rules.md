@@ -174,3 +174,22 @@ $$\begin{aligned}
 \end{aligned}$$
 （b）
 $$\frac{d}{dx}(e^{2x})=\frac{d}{dx}(e^x\cdot e^x)=e^x\frac{de^x}{dx}+\frac{de^x}{dx}e^x=e^xe^x+e^xe^x=2e^xe^x=2e^{2x}$$
+
+证明导数的乘法法则。  
+$$\frac{d}{dx}(uv)=\lim_{h\to 0}\frac{u(x+h)v(x+h)-u(x)v(x)}{h}$$
+分子减去再加上$u(x+h)v(x)$
+$$\begin{aligned}
+\frac{d}{dx}(uv)&=\lim_{h\to 0}\frac{u(x+h)v(x+h)-u(x+h)v(x)+u(x+h)v(x)-u(x)v(x)}{h}\\
+&=\lim_{h\to 0}[u(x+h)\frac{v(x+h)-v(x)}{h}+v(x)\frac{u(x+h)-u(x)}{h}]\\
+&=\lim_{h\to 0}u(x+h)\lim_{h\to 0}\frac{v(x+h)-v(x)}{h}+v(x)\lim_{h\to 0}\frac{u(x+h)-u(x)}{h}
+\end{aligned}$$
+$h$趋于零时，由于$u$在$x$处可导，所以$u(x+h)$趋于$u(x)$。根据定义，两个加数的后半部分恰好是$dv/dx,du/dx$，所以
+$$\frac{d}{x}(uv)=u\frac{dv}{dx}+v\frac{du}{dx}$$
+
+**导数的除法法则**  
+如果$u,v$在$x$处可导且$v(x)\neq 0$，$u/v$的导数是
+$$\frac{d}{dx}(\frac{u}{v})=\frac{v\frac{du}{dx}-u\frac{dv}{dx}}{v^2}$$
+使用函数记号是
+$$\frac{d}{dx}[\frac{f(x)}{g(x)}]=\frac{f'(x)g(x)-f(x)g'(x)}{g^2(x)}$$
+
+例7 
