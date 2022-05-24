@@ -192,4 +192,56 @@ $$\frac{d}{dx}(\frac{u}{v})=\frac{v\frac{du}{dx}-u\frac{dv}{dx}}{v^2}$$
 使用函数记号是
 $$\frac{d}{dx}[\frac{f(x)}{g(x)}]=\frac{f'(x)g(x)-f(x)g'(x)}{g^2(x)}$$
 
-例7 
+例7 求下面函数的导数
+（a）$y=\frac{t^2-1}{t^3+1}$  
+（b）$y=e^{-x}$  
+解：  
+（a）
+$$\begin{aligned}
+\frac{dy}{dx}&=\frac{(t^3+1)(2t)-(t^2-1)(3t^2)}{(t^3+1)^2}\\
+&=\frac{2t^4+2t-3t^4+3t^2}{(t^3+1)^2}\\
+&=\frac{-t^4+3t^2+2t}{(t^3+1)^2}
+\end{aligned}$$
+（b）
+$$\begin{aligned}
+\frac{d}{dx}(e^{-x})&=\frac{d}{dx}\frac{1}{e^x}\\
+&=\frac{e^x\cdot 0-1\cdot e^x}{(e^x)^2}\\
+&=\frac{-e^x}{(e^x)^2}\\
+&=\frac{-1}{e^x}=-e^{-x}
+\end{aligned}$$
+
+证明导数的除法法则。  
+$$\begin{aligned}
+\frac{d}{dx}\frac{u}{v}&=\lim_{h\to 0}\frac{\frac{u(x+h)}{v(x+h)}-\frac{u(x)}{v(x)}}{h}\\
+&=\lim_{h\to 0}\frac{v(x)u(x+h)-u(x)v(x+h)}{hv(x+h)v(x)}
+\end{aligned}$$
+类似证明乘法法则，我们在分子上减去再加上$v(x)u(x)$
+$$\begin{aligned}
+\frac{d}{dx}\frac{u}{v}&=\lim_{h\to 0}\frac{v(x)u(x+h)-v(x)u(x)+v(x)u(x)-u(x)v(x+h)}{hv(x+h)v(x)}\\
+&=\lim_{h\to 0}\frac{v(x)\frac{u(x+h)-u(x)}{h}-u(x)\frac{v(x+h)-v(x)}{h}}{v(x+h)v(x)}
+\end{aligned}$$
+求极限就是我们要证明的结果。
+
+选择哪一个法则来求导数可能会有不同的难度。  
+例8 求下面函数的导数
+$$y=\frac{(x-1)(x^2-2x)}{x^4}$$
+解：选择除法法则会很复杂，分子又需要用乘法法则，那么会有许多项需要处理。如果先简化函数
+$$\begin{aligned}
+y&=\frac{(x-1)(x^2-2x)}{x^4}\\
+&=\frac{x^3-3x^2+2x}{x^3}\\
+&=x^{-1}-3x^{-2}+2x^{-3}
+\end{aligned}$$
+那么使用加法法则就可以处理了
+$$\begin{aligned}
+\frac{dy}{dx}&=-x^{-2}+6x^{-3}-6x^{-4}\\
+&=-\frac{1}{x^2}+\frac{6}{x^3}-\frac{6}{x^4}
+\end{aligned}$$
+
+### 二阶导数和高阶导数
+如果$y=f(x)$是可导函数，那么导数$f'(x)$也是一个函数。如果$f'$也可导，那么对$f'$求导可以得到一个新的函数，记作$f''$，那么$f''=(f')'$。函数$f''$称为函数$f$的二阶导数（`second derivative`）。除此之外，还可以写作
+$$f''(x)=\frac{d^2y}{dx^2}=\frac{d}{dx}\frac{dy}{dx}=\frac{dy'}{dx}=y''=D^2(f)(x)=D_x^2f(x)$$
+其中$D^2$表示执行两次求导操作。  
+如果$y=x^6$，那么$y'=6x^5$，所以
+$$y''=\frac{dy'}{dx}=\frac{d}{dx}6x^5=30x^4$$
+因此$D^2(x^6)=30x^4$。  
+如果$y''$可导，
