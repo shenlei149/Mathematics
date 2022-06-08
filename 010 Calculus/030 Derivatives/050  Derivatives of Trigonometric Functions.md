@@ -70,6 +70,52 @@ $$v=\frac{ds}{dt}=-5\sin t$$
 $$a=\frac{dv}{dt}=-5\cos t$$
 从这个问题中，我们可以知道
 1. 随着时间的流逝，重物在$s=-5$和$s=5$之间上下运动。运动的振幅是5。周期是余弦函数的周期$2\pi$。
-2. 当$\cos t=0$时，速度$v=-5\sin t$达到最大值5。如下图所示。
+2. 当$\cos t=0$时，速度$v=-5\sin t$达到最大值5。如下图所示。速率，$|v|=5|\sin t|$，也是当$\cos t=0$取得最大值，此时$s=0$。$\sin t=0$时速度是零，此时$s=\plusmn 5$，也就是在两个端点处。  
    ![](050.030.png)
-3. 重物受到弹簧和重力的作用。
+3. 重物受到弹簧和重力的作用。当重物在平衡位置的下方时，合力往上拉；当在平衡位置上方时，合力向下拉。重物的加速度和离开平衡位置的距离成正比，这称作胡克定律（`Hooke's Law`），6.5节会深入研究。
+4. 在平衡位置，$\cos t=0$，合力为零，加速度$a=-5\cos t=0$。除了平衡位置之外，合力不为零所以加速度也不为零。加速度最大值是距离平衡位置最远的地方，此时$\cos t=\plusmn 1$。
+
+例4 上个例子中描述了简谐运动，加速度的变化率是
+$$j=\frac{da}{dt}=5\sin t$$
+其当$\sin t=\plusmn 1$时幅度最大，不是在端点而是在平衡位置，这里加速度变换了符号（方向）。
+
+### 其他三角函数的导数
+其余四个三角函数可以用$\sin x, \cos x$表示
+$$\tan x=\frac{\sin x}{\cos x}, \cot x=\frac{\cos x}{\sin x}, \sec x=\frac{1}{\cos x}, \csc x=\frac{1}{\sin x}$$
+通过导数的除法法则可以计算得到。
+
+**三角函数导数**
+$$\frac{d}{dx}\tan x=\sec^2 x$$
+$$\frac{d}{dx}\cot x=-\csc^2 x$$
+$$\frac{d}{dx}\sec x=\sec x\tan x$$
+$$\frac{d}{dx}\csc x=-\csc x\cot x$$
+
+下面证明正切函数的导数。  
+例5 求$d\tan x/dx$。  
+解：应用导数的除法法则
+$$\begin{aligned}
+\frac{d}{dx}&=\frac{d}{dx}\frac{\sin x}{\cos x}\\
+&=\frac{d}{dx}\frac{\cos x\cos x-\sin x(-\sin x)}{\cos^2 x}\\
+&=\frac{\cos^2 x+\sin^2 x}{\cos^2 x}\\
+&=\frac{1}{\cos^2 x}\\
+&=\sec^2 x
+\end{aligned}$$
+
+例6 求$y=\sec x$的二阶导。  
+解：首先一阶导是
+$$y'=\sec x\tan x$$
+$$\begin{aligned}
+y''&=\frac{d}{dx}\sec x\tan x\\
+&=\sec x\tan x\tan x+\sec x\sec^2 x\\
+&=\sec x\tan^2 x+\sec^3 x
+\end{aligned}$$
+
+三角函数在定义域上处处可导，那么定义域上处处连续。所以计算涉及三角函数的极限的时候可以直接代入即可。
+
+例7 三家函数的极限可以直接代入，不过要小心被除数为零的情况。
+$$\begin{aligned}
+\lim_{x\to 0}\frac{\sqrt{2+\sec x}}{\cos(\pi - \tan x)}&=\frac{\sqrt{2+\sec 0}}{\cos(\pi - \tan x)}\\
+&=\frac{\sqrt{2+1}}{\cos(\pi-0)}\\
+&=\frac{\sqrt{3}}{-1}\\
+&=-\sqrt{3}
+\end{aligned}$$
