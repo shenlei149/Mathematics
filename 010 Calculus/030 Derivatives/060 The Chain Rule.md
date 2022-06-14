@@ -41,3 +41,82 @@ $$\begin{aligned}
 &=\frac{dy}{du}\cdot\frac{du}{dx}
 \end{aligned}$$
 如果$g(x)$在$x$附近振荡，那么当$\Delta x\neq 0$时，$\Delta u$可能为零，那么之前说$\Delta u\neq 0$就不成立。3.11小节会给出另外一种证明方式来规避这个问题。
+
+例2 一个物体沿着$x$轴运动，任意$t\geq 0$时刻的位置是$x(t)=\cos(t^2+1)$，求速度。  
+解：位置函数可以看作是$x=\cos u,u=t^2+1$两个函数的组合。我们有
+$$\frac{dx}{du}=-\sin u$$
+$$\frac{du}{dt}=2t$$
+所以
+$$\begin{aligned}
+\frac{dx}{dt}&=\frac{dx}{du}\cdot\frac{du}{dt}\\
+&=-\sin u\cdot 2t\\
+&=-2t\sin(t^2+1)
+\end{aligned}$$
+
+例3 求$\sin(x^2+e^x)$的导数。  
+解：应用链式法则
+$$\frac{d}{dx}\sin(x^2+e^x)=\cos(x^2+e^x)\frac{d}{dx}(x^2+e^x)=\cos(x^2+e^x)(2x+e^x)$$
+
+例4 求$y=e^{\cos x}$的导数。  
+解：
+$$\frac{dy}{dx}=\frac{d}{dx}e^{\cos x}=e^{\cos x}\frac{d}{dx}\cos x=-e^{\cos x}\sin x$$
+一般地，有
+$$\frac{d}{dx}e^u=e^u\frac{du}{dx}$$
+比如,
+$$\frac{d}{dx}e^{kx}=e^{kx}\frac{d}{dx}kx=ke^{kx}$$
+或者
+$$\frac{d}{dx}e^{x^2}=e^{x^2}\frac{d}{dx}x^2=2xe^{x^2}$$
+
+### 重复使用链式法则
+通常，我们会使用二次或者更多次链式法则。
+
+例5 求$g(t)=\tan(5-\sin 2t)$的导数。  
+解：
+$$\begin{aligned}
+g'(t)&=\frac{d}{dt}\tan(5-\sin 2t)\\
+&=\sec^2(5-\sin 2t)\frac{d}{dt}(5-\sin 2t)\\
+&=\sec^2(5-\sin 2t)(0-\cos 2t\frac{d}{dt}2t)\\
+&=\sec^2(5-\sin 2t)(-\cos 2t\cdot 2)\\
+&=-2\cos 2t\sec^2(5-\sin 2t)
+\end{aligned}$$
+
+### 广义幂法则：幂法则和链式法则的结合
+如果$n$是任意实数并且$f$是幂函数$f(u)=u^n$，由幂法则得到$f'(u)=nu^{n-1}$。如果$u$是$x$的可导函数，那么应用链式法则可以得到广义幂法则
+$$\frac{d}{dx}u^n=nu^{n-1}\frac{du}{dx}$$
+
+例6 使用广义幂法则的示例。  
+（a）
+$$\begin{aligned}
+\frac{d}{dx}(5x^3-x^4)^7&=7(5x^3-x^4)^6\frac{d}{dx}(5x^3-x^4)\\
+&=7(5x^3-x^4)^6(15x^2-4x^3)
+\end{aligned}$$
+（b）
+$$\begin{aligned}
+\frac{d}{dx}\frac{1}{3x-2}&=\frac{d}{dx}(3x-2)^{-1}\\
+&=-(3x-2)^{-2}\frac{d}{dx}(3x-2)\\
+&=-3(3x-2)^{-2}\\
+&=-\frac{3}{(3x-2)^2}
+\end{aligned}$$
+（c）
+$$\begin{aligned}
+\frac{d}{dx}\sin^5x&=5\sin^4x\frac{d}{dx}\sin x\\
+&=5\sin^4x\cos x
+\end{aligned}$$
+（d）
+$$\begin{aligned}
+\frac{d}{dx}e^{\sqrt{3x+1}}&=e^{\sqrt{3x+1}}\frac{d}{dx}\sqrt{3x+1}\\
+&=e^{\sqrt{3x+1}}\frac{1}{2}(3x+1)^{-1/2}\frac{d}{dx}(3x+1)\\
+&=\frac{3}{2\sqrt{3x+1}}e^{\sqrt{3x+1}}
+\end{aligned}$$
+
+例7 3.2中的例4证明了绝对值函数$y=|x|$在$x=0$处不可导。但是这个函数在其他地方是可导的。由$|x|=\sqrt{x^2}$可以求其他值的导数。
+$$\begin{aligned}
+\frac{d}{dx}|x|&=\frac{d}{dx}\sqrt{x^2}\\
+&=\frac{1}{2\sqrt{x^2}}\frac{d}{dx}x^2\\
+&=\frac{1}{2|x|}2x\\
+&=\frac{x}{|x|},x\neq 0\\
+&=\begin{cases}
+1,&&x>0\\
+-1,&&x<0
+\end{cases}
+\end{aligned}$$
