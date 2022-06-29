@@ -62,3 +62,63 @@ e^y\frac{dy}{dx}&=1\\
 $$\frac{d}{dx}\ln x=\frac{1}{x},x>0$$
 应用链式法则可以得到任意正函数$u(x)$的对数函数的导数
 $$\frac{d}{dx}\ln u=\frac{1}{u}\frac{du}{dx},u>0$$
+
+例3  
+（a）
+$$\frac{d}{dx}\ln 2x=\frac{1}{2x}\frac{d}{dx}2x=\frac{1}{2x}(2)=\frac{1}{x}$$
+（b）
+$$\frac{d}{dx}\ln(x^2+3)=\frac{1}{x^2+3}\cdot 2x=\frac{2x}{x^2+3}$$
+（c）
+$$\begin{aligned}
+\frac{d}{dx}\ln |x|&=\frac{1}{|x|}\frac{d}{dx}|x|\\
+&=\frac{1}{|x|}\cdot\frac{x}{|x|}\\
+&=\frac{x}{x^2}\\
+&=\frac{1}{x}
+\end{aligned}$$
+$x>0$时，$\ln x$的导数是$1/x$；$x<0$时，$\ln(-x)$的导数也是$1/x$。
+
+（a）说明$y=\ln 2x$和$y=\ln x$的导数是一样的。对于任意常数$b$，如果$bx>0$，都有
+$$\frac{d}{dx}\ln bx=\frac{1}{bx}\cdot b=\frac{1}{x}$$
+
+例4 一条穿过原点的直线是$y=\ln x$的切线，斜率是$m$。求$m$。  
+解：假设切点在$x=a>0$处，那么切点是$(a,\ln a)$，那么直线的斜率是
+$$m=\frac{\ln a-0}{a-0}=\frac{\ln a}{a}$$
+如下图所示：  
+![](080.050.png)  
+该点的导数是$1/a$，所以
+$$\begin{aligned}
+\frac{\ln a}{a}&=\frac{1}{a}\\
+\ln a&=1\\
+a&=e\\
+m&=\frac{1}{e}
+\end{aligned}$$
+
+### $a^u,\log_a u$的导数
+我们从求$a^x$的导数开始。$a^x=e^{\ln(a^x)}=e^{x\ln a}$，那么
+$$\begin{aligned}
+\frac{d}{dx}a^x&=\frac{d}{dx}e^{x\ln a}\\
+&=e^{x\ln a}\frac{d}{dx}x\ln a\\
+&=a^x\ln a
+\end{aligned}$$
+因此，如果$a>0$，函数$a^x$是可导的，且
+$$\frac{d}{dx}a^x=a^x\ln a$$
+这个推导过程说明为什么微积分中偏爱$e^x$。如果$a=e$，那么$\ln a=1$，所以
+$$\frac{d}{dx}e^x=e^x\ln e=e^x$$
+应用链式法则，我们可以得到更一般的结论。
+
+如果$a>0$，$u$是关于$x$的可导函数，那么$a^u$是可导函数，且
+$$\frac{d}{dx}a^u=a^u\ln a\frac{du}{dx}$$
+
+例5  
+（a）
+$$\frac{d}{dx}3^x=3^x\ln 3$$
+（b）
+$$\frac{d}{dx}3^{-x}=3^{-x}\ln 3\frac{d}{dx}(-x)=-3^{-x}\ln 3$$
+（c）
+$$\frac{d}{dx}3^{\sin x}=3^{\sin x}\ln 3\frac{d}{dx}\sin x=3^{\sin x}\ln 3\cos x$$
+
+3.3节中，我们研究了指数函数$f(x)=a^x$的导数$f'(0)$。$f'(0)$是极限$\lim_{h\to 0}(a^h-1)/h$，且表示点$(0,1)$处的曲线斜率。现在我们知道这个斜率的值
+$$\lim_{h\to 0}\frac{a^h-1}{h}=\ln a$$
+如果$a=e$，那么
+$$\lim_{h\to 0}\frac{e^h-1}{h}=\ln e=1$$
+但是我们还没有充分论证这些极限是存在的。指数函数、对数函数的导数的推导的前提就是这些极限存在。第七章会论证这些。
