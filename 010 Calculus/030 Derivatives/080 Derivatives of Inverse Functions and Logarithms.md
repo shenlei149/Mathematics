@@ -122,3 +122,93 @@ $$\lim_{h\to 0}\frac{a^h-1}{h}=\ln a$$
 如果$a=e$，那么
 $$\lim_{h\to 0}\frac{e^h-1}{h}=\ln e=1$$
 但是我们还没有充分论证这些极限是存在的。指数函数、对数函数的导数的推导的前提就是这些极限存在。第七章会论证这些。
+
+现在我们对于任意底数$a>0,a\neq 1$，求函数$\log_a u$求导。通过换底公式有
+$$\log_a x=\frac{\ln x}{\ln a}$$
+两边同时求导
+$$\begin{aligned}
+\frac{d}{dx}\log_a x&=\frac{d}{dx}(\frac{\ln x}{\ln a})\\
+&=\frac{1}{\ln a}\frac{d}{dx}\ln x\\
+&=\frac{1}{\ln a}\frac{1}{x}\\
+&=\frac{1}{x\ln a}
+\end{aligned}$$
+如果$u$是$x$的可导函数，且$u>0$，那么根据链式法则
+对$a>0,a\neq 1$，有
+$$\frac{d}{dx}\log_a u=\frac{1}{u\ln a}\frac{du}{dx}$$
+
+### 对数求导法
+对于只涉及乘法、除法和幂次的正函数求导，我们可以在求导前对两边取自然对数。这使得我们可以简化求导过程。这种方法称为对数求导法（`logarithmic differentiation`）。
+
+例6 求下面函数的导数
+$$y=\frac{(x^2+1)(x+3)^{1/2}}{x-1},x>1$$
+解：两边取自然对数可以简化函数
+$$\begin{aligned}
+\ln y&=\ln\frac{(x^2+1)(x+3)^{1/2}}{x-1}\\
+&=\ln((x^2+1)(x+3)^{1/2})-\ln(x-1)\\
+&=\ln(x^2+1)+\ln(x+3)^{1/2}-\ln(x-1)\\
+&=\ln(x^2+1)+\frac{1}{2}\ln(x+3)-\ln(x-1)
+\end{aligned}$$
+两边同时求导
+$$\frac{1}{y}\frac{dy}{dx}=\frac{1}{x^2+1}\cdot 2x+\frac{1}{2}\frac{1}{x+3}-\frac{1}{x-1}$$
+那么
+$$\frac{dy}{dx}=y(\frac{2x}{x^2+1}+\frac{1}{2x+6}-\frac{1}{x-1})=\frac{(x^2+1)(x+3)^{1/2}}{x-1}(\frac{2x}{x^2+1}+\frac{1}{2x+6}-\frac{1}{x-1})$$
+如果使用导数的乘法法则、除法法则和幂次法则求解的话，推导过程会长的多。
+
+### 无理指数和幂次法则
+第七章我们会给出自然对数和指数函数的精确定义。我们可以用指数函数定义指数函数，那么可以拓展任意正整数次幂到任意实数次幂。
+
+对任意$x>0$和任意实数$n$，有
+$$x^n=e^{n\ln x}$$
+上面公式使得$n$不必只是正整数或者有理数，可以是任意实数。下面是更一般的幂次法则：  
+对任意$x>0$和任意实数$n$，有
+$$\frac{d}{dx}x^n=nx^{n-1}$$
+如果$x\leq 0$，如果$x^n,x^{n-1}$存在的话，那么这个公式也成立。  
+证明：对指数函数的公式两边同时求导
+$$\begin{aligned}
+\frac{d}{dx}x^n&=\frac{d}{dx}e^{n\ln x}\\
+&=e^{n\ln x}\frac{d}{dx}n\ln x\\
+&=x^n\cdot\frac{x}{x}\\
+&=nx^{n-1}
+\end{aligned}$$
+如果$x>0$，那么直接就有
+$$\frac{d}{dx}x^n=nx^{n-1}$$
+如果$x<0$，令$y=x^n$，如果$y',x^{n-1}$存在，那么
+$$\ln|y|=\ln|x|^n=n\ln|x|$$
+利用隐式求导和例3（c）中的结论得到
+$$\frac{y'}{y}=\frac{n}{x}$$
+所以
+$$y'=n\frac{y}{x}=n\frac{x^n}{x}=nx^{n-1}$$
+当$x=0,n\geq 1$时，从定义出发
+$$\lim_{h\to 0}\bigg|_{x=0}=\lim_{h\to 0}\frac{(x+h)^n-x^n}{h}=\lim_{h\to 0}\frac{\begin{pmatrix}
+n\\1
+\end{pmatrix}hx^{n-1}+\cdots}{h}=0$$
+
+例7 求$f(x)=x^x,x>0$的导数。  
+解：由$f(x)=e^{x\ln x}$可以得到
+$$\begin{aligned}
+f'(x)&=\frac{d}{dx}(e^{x\ln x})\\
+&=e^{x\ln x}\frac{d}{dx}x\ln x\\
+&=x\ln x(\ln x+x\frac{1}{x})\\
+&=x\ln x(\ln x+1)
+\end{aligned}$$
+对$y=x^x$使用对数求导法也可以方便的得到同样的结果。
+
+### 使用极限表示$e$
+1.4节我们给出了$e$的定义，一组$y=a^x$曲线，恰好有一底数$a$使得在$y$轴交点$(0,1)$处的斜率是1，这个$a$就是$e$，满足
+$$\lim_{h\to 0}\frac{e^h-1}{h}=\ln e=1$$
+我们可以把$e$表示成极限的形式：
+$$e=\lim_{x\to 0}(1+x)^{1/x}$$
+证明：如果$f(x)=\ln x$，那么$f'(x)=1/x$，且$f'(1)=1$。根据极限定义
+$$\begin{aligned}
+f'(1)&=\lim_{h\to 0}\frac{f(1+h)-f(1)}{h}\\
+&=\lim_{x\to 0}\frac{f(1+x)-f(1)}{x}\\
+&=\lim_{x\to 0}\frac{\ln (1+x)-\ln 1}{x}\\
+&=\lim_{x\to 0}\frac{1}{x}\ln (1+x)\\
+&=\lim_{x\to 0}\ln (1+x)^{1/x}\\
+&=\ln [\lim_{x\to 0}(1+x)^{1/x}]=1
+\end{aligned}$$
+两边求自然对数
+$$\lim_{x\to 0}(1+x)^{1/x}=e$$
+如下图所示：  
+![](080.060.png)  
+根据极限表达式可以得到近似值$e\approx 2.718281828459045$。
