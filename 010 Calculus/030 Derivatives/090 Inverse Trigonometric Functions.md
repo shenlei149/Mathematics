@@ -17,7 +17,7 @@ $$\tan^{-1}(-x)=-\tan^{-1}x$$
 注意：对于如何定义$\sec^{-1} x$中$x$为负数的情况，没有统一的意见。这里选择$\pi/2$到$\pi$，使得$\sec^{-1} x=\cos^{-1}(1/x)$，也使得在各个区间是递增函数。但是有的书对于负数部分的选择是$[-\pi,-\pi/2)$或者是$[\pi,3\pi/2)$，如下图所示。  
 ![](090.020.png)  
 这样选择可以简化导数的公式，但是不能满足$\sec^{-1} x=\cos^{-1}(1/x)$。从这个公式出发可以得到
-$$\sec^{-1}x=\cos^{-1}x=\frac{\pi}{2}-\sin^{-1}\frac{1}{x}$$
+$$\sec^{-1}x=\cos^{-1}(\frac{1}{x})=\frac{\pi}{2}-\sin^{-1}\frac{1}{x}$$
 
 例1 求图中$\tan^{-1}x$的值。  
 ![](090.030.png)  
@@ -79,5 +79,37 @@ $$\frac{d}{dx}\sec^{-1}x=\begin{cases}
 -\frac{1}{x\sqrt{x^2-1}},x<-1
 \end{cases}$$
 那么我们可以用绝对值重写这个公式
+$$\frac{d}{dx}\sec^{-1}x=\frac{1}{|x|\sqrt{x^2-1}}$$
+如果$u$是可导函数，且$|u|>1$，那么
+$$\frac{d}{dx}\sec^{-1}u=\frac{1}{|u|\sqrt{u^2-1}}\frac{du}{dx},|u|>1$$
 
+例3 使用链式法则求如下反正割函数的导数
+$$\begin{aligned}
+\frac{d}{dx}\sec^{-1}(5x^4)&=\frac{1}{|5x^4|\sqrt{(5x^4)^2-1}}\frac{d}{dx}(5x^4)\\
+&=\frac{1}{5x^4\sqrt{25x^8-1}}(20x^3)\\
+&=\frac{4}{x\sqrt{25x^8-1}}
+\end{aligned}$$
 
+### 其他三个反三角函数的导数
+我们可以用以上的方法继续得到反余弦、反余切、反余割的导数，不过也可以从恒等函数入手。
+
+$$\cos^{-1}x=\pi/2-\sin^{-1}x$$
+$$\cot^{-1}x=\pi/2-\tan^{-1}x$$
+$$\csc^{-1}x=\pi/2-\sec^{-1}x$$
+
+第一个恒等关系在1.5节出现的，其余两个公式的推导类似。有了这些关系，很容易求导了。比如反余弦的导数
+$$\begin{aligned}
+\frac{d}{dx}\cos^{-1}x&=\frac{d}{dx}(\pi/2-\sin^{-1}x)\\
+&=-\frac{d}{dx}\sin^{-1}x\\
+&=-\frac{1}{\sqrt{1-x^2}}
+\end{aligned}$$
+
+以下是所有反三角函数的导数
+$$\begin{aligned}
+\frac{d(\sin^{-1}u)}{dx}&=\frac{1}{\sqrt{1-u^2}}\frac{du}{dx},|u|<1\\
+\frac{d(\cos^{-1}u)}{dx}&=-\frac{1}{\sqrt{1-u^2}}\frac{du}{dx},|u|<1\\
+\frac{d(\tan^{-1}u)}{dx}&=\frac{1}{1+u^2}\frac{du}{dx}\\
+\frac{d(\cot^{-1}u)}{dx}&=-\frac{1}{1+u^2}\frac{du}{dx}\\
+\frac{d(\sec^{-1}u)}{dx}&=\frac{1}{|u|\sqrt{u^2-1}}\frac{du}{dx},|u|>1\\
+\frac{d(\csc^{-1}u)}{dx}&=-\frac{1}{|u|\sqrt{u^2-1}}\frac{du}{dx},|u|>1\\
+\end{aligned}$$
