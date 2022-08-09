@@ -160,4 +160,40 @@ $\sin(\pi/6+0.01)$的真实值（六位小数）是0.508635。
 $$\Delta f=f(a+\Delta x)-f(x)$$
 微分估算是
 $$df=f'(a)\Delta x$$
-用$df$近似$\Delta f$有多好呢？
+用$df$近似$\Delta f$有多好呢？  
+$\Delta f$减去$df$得到了近似估计的误差
+$$\begin{aligned}
+\text{error}&=\Delta f-df\\
+&=\Delta f-f'(a)\Delta x\\
+&=f(a+\Delta x)-f(a)-f'(a)\Delta x\\
+&=(\frac{f(a+\Delta x)-f(a)}{\Delta x}-f'(a))\Delta x\\
+&=\epsilon \Delta x
+\end{aligned}$$
+当$\Delta x\to 0$时，
+$$\frac{f(a+\Delta x)-f(a)}{\Delta x}$$
+趋于$f'(a)$（这就是$f'(a)$的定义）。所以上面公式括号内的差值也趋于零，用$\epsilon$表示。也就是说$\Delta x\to 0$时$\epsilon\to 0$。当$\Delta x$很小的时候，近似估计误差$\epsilon\Delta x$更小。  
+虽然我们不知道精确的误差，但是$\epsilon\Delta x$是二阶小量。对于许多函数，$\Delta x$很小时，误差都更小。
+
+如果$y=f(x)$在$x=a$处可导，$x$从$a$变化到$a+\Delta x$，那么$f$的变化$\Delta y$是
+$$\Delta y=f'(a)\Delta x+\epsilon\Delta x$$
+其中当$\Delta x\to 0$时$\epsilon\to 0$。
+
+例6 中有
+$$\Delta A=\pi(10.1)^2-\pi(10)^2=2.01\pi=(2\pi+0.01\pi)$$
+前者是$dA=2\pi$，后者$\epsilon\Delta r=0.01\pi$是误差，那么$\epsilon=0.01\pi/\Delta r=0.01\pi/0.1=0.1\pi$。
+
+### 链式法则的证明
+目标是证明$f(u)$是$u$的可导函数，$g(x)$是$x$的可导函数，那么组合函数$y=f(g(x))$是$x$的可导函数。函数可导等价于在定义域内任一点都可导，必须证明$g$在任一点$x_0$是可导的，$f$在任一点$g(x_0)$上是可导的，那么组合函数在$x_0$处可导，且导数满足
+$$\frac{dy}{dx}\bigg|_{x=x_0}=f'(g(x_0))g'(x_0)$$
+令$\Delta x$是$x$的增加量，$\Delta u,\Delta y$分别是$u,y$的变化量。运用上一节得到的公式有
+$$\Delta u=g'(x_0)\Delta x+\epsilon_1\Delta x=(g'(x_0)+\epsilon_1)\Delta x$$
+其中，当$\Delta x\to 0$时$\epsilon_1\to 0$。同样
+$$\Delta y=f'(u_0)\Delta u+\epsilon_2\Delta u=(f'(u_0)+\epsilon_2)\Delta u$$
+其中，当$\Delta u\to 0$时$\epsilon_2\to 0$。我们还可以得到$\Delta x\to 0$时有$\Delta u\to 0$。联合上面两个方程有
+$$\Delta y=(f'(u_0)+\epsilon_2)(g'(x_0)+\epsilon_1)\Delta x$$
+那么
+$$\frac{\Delta y}{\Delta x}=f'(u_0)g'(x_0)+\epsilon_2g'(x_0)+f'(u_0)\epsilon_1+\epsilon_2\epsilon_1$$
+当$\Delta x$趋于零时，$\epsilon_1,\epsilon_2$都趋于零，那么取极限后上式后面三项都是零了，那么有
+$$\frac{dy}{dx}\bigg|_{x=x_0}=\lim_{\Delta x\to 0}\frac{\Delta y}{\Delta x}f'(g(x_0))g'(x_0)$$
+
+### 变化灵敏度
