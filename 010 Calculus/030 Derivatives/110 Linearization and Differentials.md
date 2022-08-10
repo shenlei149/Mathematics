@@ -197,3 +197,36 @@ $$\frac{\Delta y}{\Delta x}=f'(u_0)g'(x_0)+\epsilon_2g'(x_0)+f'(u_0)\epsilon_1+\
 $$\frac{dy}{dx}\bigg|_{x=x_0}=\lim_{\Delta x\to 0}\frac{\Delta y}{\Delta x}f'(g(x_0))g'(x_0)$$
 
 ### 变化灵敏度
+方程$df=f'(x)dx$告诉我们$f$的变化对$x$变化的灵敏度。$f'$越大，给定$dx$，函数变化也越大。当我们从$a$移动到$a+dx$时，可以用三种方式描述$f$的变化：绝对值，相对值，百分比。
+|  | True | Estimated |
+|--|--|--|
+| 绝对变化 | $\Delta f=f(a+dx)-f(a)$ | $df=f'(a)dx$ |
+| 相对变化 | $\frac{\Delta f}{f(a)}$ | $\frac{df}{f(a)}$ |
+| 变化百分比 | $\frac{\Delta f}{f(a)}\times 100$ | $\frac{df}{f(a)}\times 100$ |
+
+例8 通过扔石头估算水井的深度，公式为$s=4.9t^2$。时间测量误差是0.1s，测量深度的变化有多大呢？  
+解：$ds$的大小是
+$$ds=9.8tdt$$
+所以灵敏度依赖于时间$t$。如果$t=2, dt=0.1$，那么
+$$ds=9.8(2)(0.1)=1.96m$$
+如果$t=5$，那么
+$$ds=9.8(5)(0.1)=4.9m$$
+如果时间越大，深度的测量误差越大。
+
+例9 牛顿第二定律
+$$F=\frac{d}{dt}(mv)=m\frac{dv}{dt}=ma$$
+假设质量是不变的，但是相对论告诉我们质量随速度变化而变化
+$$m=\frac{m_0}{\sqrt{1-v^2/c^2}}$$
+其中$m_0$是静止质量，$c$是光速。使用近似公式
+$$\frac{1}{\sqrt{1-x^2}}\approx 1+\frac{1}{2}x^2$$
+来估计随速度$v$变化是$\Delta m$的变化？  
+解：当$v$和光速$c$相比很小时，$v^2/c^2$趋于零，可以使用近似公式
+$$\frac{1}{1-v^2/c^2}\approx 1+\frac{1}{2}(\frac{v^2}{c^2}）$$
+那么
+$$m=\frac{m_0}{\sqrt{1-v^2/c^2}}\approx m_0+\frac{1}{2}m_0v^2(\frac{1}{c^2})$$
+上式的后者这就是质量的增加量。  
+牛顿物理中，$(1/2)m_)v^2$是一个物体的动能（`kinetic energy, KE`），那么改写上面的方程
+$$(m-m_0)c^2\approx \frac{1}{2}m_0v^2$$
+那么
+$$(m-m_0)c^2\approx \frac{1}{2}m_0v^2=\frac{1}{2}m_0v^2-\frac{1}{2}m_0(0)^2=\Delta KE$$
+所以一个物体速度从零到$v$，动能的变化近似是$\Delta m c^2$，由于$c\approx 3\times 10^8m/s$，质量变化很小，能量就很大。
