@@ -1,0 +1,3 @@
+- [Home](/)
+- [010 Calculus](/010-Calculus/)
+  - [040 Applications of Derivatives](/010-Calculus/040-Applications-of-Derivatives/)
