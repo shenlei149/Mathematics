@@ -5,3 +5,4 @@
   - [020 The Mean Value Theorem.md](/010-Calculus/040-Applications-of-Derivatives/020-The-Mean-Value-Theorem.md)
   - [030 Monotonic Functions and the First Derivative Test](/010-Calculus/040-Applications-of-Derivatives/030-Monotonic-Functions-and-the-First-Derivative-Test.md)
   - [040 Concavity and Curve Sketching](/010-Calculus/040-Applications-of-Derivatives/040-Concavity-and-Curve-Sketching.md)
+  - [050  Indeterminate Forms and L'Hôpital's Rule](/010-Calculus/040-Applications-of-Derivatives/050-Indeterminate-Forms-and-L-Hopital-Rule.md)
