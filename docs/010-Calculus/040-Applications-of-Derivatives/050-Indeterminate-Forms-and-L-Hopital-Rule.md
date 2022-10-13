@@ -49,3 +49,104 @@ $$\lim_{x\to 0^+}\frac{\sin x}{x^2}=\lim_{x\to 0^+}\frac{\cos x}{2x}=\infty$$
 $$\lim_{x\to 0^-}\frac{\sin x}{x^2}=\lim_{x\to 0^-}\frac{\cos x}{2x}=-\infty$$
 
 ### $\infty/\infty,\infty\cdot 0,\infty-\infty$型不定式
+首先考虑$\infty/\infty$的形式。  
+需要更多微积分的知识才能证明这种形式。不过洛必达法则是类似的。  
+如果$x\to a$时$f(x)\to\pm\infty,g(x)\to\pm\infty$，那么
+$$\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f'(x)}{g'(x)}$$
+成立的前提是后者存在。记号$x\to a$中的$a$可以是有限值也可以是$\infty$，甚至可以是单边极限$x\to a^+,x\to a^-$。
+
+例4 求$\infty/\infty$型的极限值。  
+（a）
+$$\lim_{x\to \pi/2}\frac{\sec x}{1+\tan x}$$
+分子分母在$x=\pi/2$处均不连续，所以需要考察单边极限。我们可以应用洛必达法则在一个以$x=\pi/2$为端点的开区间上。
+$$\lim_{x\to(\pi/2)^-}\frac{\sec x}{1+\tan x}=\lim_{x\to(\pi/2)^-}\frac{\sec x\tan x}{\sec^2 x}=\lim_{x\to(\pi/2)^-}\sin x=1$$
+右极限类似，是$-\infty/-\infty$，因此双边极限都是1。  
+（b）
+$$\lim_{x\to\infty}\frac{\ln x}{2\sqrt{x}}=\lim_{x\to\infty}\frac{1/x}{1/\sqrt{x}}=\lim_{x\to\infty}\frac{1}{\sqrt{x}}=0$$
+（c）
+$$\lim_{x\to\infty}\frac{e^x}{x^2}=\lim_{x\to\infty}\frac{e^x}{2x}=\lim_{x\to\infty}\frac{e^x}{2}=\infty$$
+
+现在考虑不定式$\infty\cdot 0$和$\infty-\infty$，很多时候可以把它们转化成$0/0,\infty/\infty$型。这里并不是说$\infty\cdot 0, \infty-\infty$是一个数。它们只是考虑函数极限时的一种行为。
+
+例5 求$\infty\cdot 0$型的极限。  
+（a）
+$$\lim_{x\to\infty}(x\frac{1}{\sin x})=\lim_{h\to 0^+}(\frac{1}{h}\sin h)=1$$
+（b）
+$$\begin{aligned}
+\lim_{x\to 0^+}\sqrt{x}\ln x&=\lim_{x\to 0^+}\frac{\ln x}{1/\sqrt{x}}\\
+&=\lim_{x\to 0^+}\frac{1/x}{-1/2 x^{3/2}}\\
+&=\lim_{x\to 0^+}(-2x^{1/2})\\
+&=0
+\end{aligned}$$
+
+例6 求$\infty-\infty$型的极限。
+$$\lim_{x\to 0}(\frac{1}{\sin x}-\frac{1}{x})$$
+解：如果$x\to 0^+$，那么$\sin x\to 0^+$，并且
+$$\frac{1}{\sin x}-\frac{1}{x}\to \infty-\infty$$
+类似的，$x\to 0^-$，那么$\sin x\to 0^-$，并且
+$$\frac{1}{\sin x}-\frac{1}{x}\to (-\infty)-(\infty)=-\infty+\infty$$
+我们仍旧无法知道极限。  
+应用洛必达法则
+$$\begin{aligned}
+\lim_{x\to 0}(\frac{1}{\sin x}-\frac{1}{x})&=\lim_{x\to 0}\frac{x-\sin x}{x\sin x}\\
+&=\lim_{x\to 0}\frac{1-\cos x}{\sin x+x\cos x}\\
+&=\lim_{x\to 0}\frac{\sin x}{2\cos x-x\sin x}\\
+&=\frac{0}{2}=0
+\end{aligned}$$
+
+### 指数不定式
+处理指数形式的不定式$1^\infty,0^0,\infty^0$，可以先求对数。使用洛必达法则先求处对数表达式的极限，然后通过极限的指数找到原函数的极限。这个过程依赖于指数函数的连续性和2.6节的定理10。下面是公式化这个过程（对单边极限也成立）。
+
+如果
+$$\lim_{x\to a}\ln f(x)=L$$
+那么
+$$\lim_{x\to a}f(x)=\lim_{x\to a}e^{\ln f(x)}=e^L$$
+这里的$a$可以有限也可以是$\infty$。
+
+例7 应用洛必达法则证明
+$$\lim_{x\to 0^+}(1+x)^{1/x}=e$$
+证明：这个极限是$1^\infty$不定型。令$f(x)=(1+x)^{1/x}$，求$\lim_{x\to 0^+}\ln f(x)$的极限。
+因为
+$$\ln f(x)=\ln (1+x)^{1/x}=\frac{1}{x}\ln (1+x)$$
+那么
+$$\begin{aligned}
+\lim_{x\to 0^+}\ln f(x)&=\lim_{x\to 0^+}\frac{\ln(x+1)}{x}\\
+&=\lim_{x\to 0^+}\frac{1/(1+x)}{1}\\
+&=\frac{1}{1}\\
+&=1
+\end{aligned}$$
+因此
+$$\lim_{x\to 0^+}(1+x)^{1/x}=\lim_{x\to 0^+}f(x)=\lim_{x\to 0^+}e^{\ln f(x)}=e^1=e$$
+
+例8 求
+$$\lim_{x\to\infty}x^{1/x}$$
+解：这个极限是$\infty^0$型。令$f(x)=x^{1/x}$，那么求$\lim_{x\to\infty}\ln f(x)$。因为
+$$\ln f(x)=\ln x^{1/x}=\frac{\ln x}{x}$$
+应用洛必达法则
+$$\begin{aligned}
+\lim_{x\to\infty}\ln f(x)&=\lim_{x\to\infty}\frac{\ln x}{x}\\
+&=\lim_{x\to\infty}\frac{1/x}{1}\\
+&=\frac{0}{1}\\
+&=0
+\end{aligned}$$
+因此
+$$\lim_{x\to\infty}x^{1/x}=\lim_{x\to\infty}e^{\ln f(x)}=e^0=1$$
+
+### 证明洛必达法则
+在证明之前，我们先从几何视角分析合理性。考虑两个连续可导函数$f(x),g(x)$，满足$f(a)=g(a)=0,g'(a)=0$。$f(x),g(x)$的图像如下所示，它们的线性近似分别是$y=f'(a)(x-a),y=g'(a)(x-a)$。  
+![](050.010.png)  
+在$x=a$附近，线性近似足够好。本质上
+$$f(x)=f'(a)(x-a)+\epsilon_1(x-a),g(x)=g'(a)(x-a)+\epsilon_2(x-a)$$
+随着$a\to 0$，那么$\epsilon_1\to 0,\epsilon_2\to 0$。那么
+$$\begin{aligned}
+\lim_{x\to a}\frac{f(x)}{g(x)}&=\lim_{x\to a}\frac{f'(a)(x-a)+\epsilon_1(x-a)}{g'(a)(x-a)+\epsilon_2(x-a)}\\
+&=\lim_{x\to a}\frac{f'(a)+\epsilon_1}{g'(a+\epsilon_2)}\\
+&=\lim_{x\to a}\frac{f'(a)}{g'(a)}
+\end{aligned}$$
+这里的证明要求$g'(a)\neq 0$。  
+洛必达法则的证明基于柯西中值定理，后者是涉及两个函数的中值定理。
+
+**定理7 柯西中值定理（）**  
+假设函数$f,g$在$[a,b]$上连续，在$(a,b)$上可导，且在$(a,b)$上都有$g'(x)\neq 0$。那么在$(a,b)$区间内存在一个数$c$，有
+$$\frac{f'(c)}{g'(c)}=\frac{f(b)-f(a)}{g(b)-g(a)}$$
+证明：应用4.2节的中值定理两次。首先我们要证明$g(b)\neq g(a)$。
