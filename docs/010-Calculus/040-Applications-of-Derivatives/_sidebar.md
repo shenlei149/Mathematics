@@ -6,3 +6,4 @@
   - [030 Monotonic Functions and the First Derivative Test](/010-Calculus/040-Applications-of-Derivatives/030-Monotonic-Functions-and-the-First-Derivative-Test.md)
   - [040 Concavity and Curve Sketching](/010-Calculus/040-Applications-of-Derivatives/040-Concavity-and-Curve-Sketching.md)
   - [050 不定式和洛必达法则 Indeterminate Forms and L'Hôpital's Rule](/010-Calculus/040-Applications-of-Derivatives/050-Indeterminate-Forms-and-L-Hopital-Rule.md)
+  - [060 应用优化 Applied Optimization](/010-Calculus/040-Applications-of-Derivatives/060-Applied-Optimization.md)
