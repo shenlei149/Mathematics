@@ -8,3 +8,4 @@
   - [050 不定式和洛必达法则 Indeterminate Forms and L'Hôpital's Rule](/010-Calculus/040-Applications-of-Derivatives/050-Indeterminate-Forms-and-L-Hopital-Rule.md)
   - [060 应用优化 Applied Optimization](/010-Calculus/040-Applications-of-Derivatives/060-Applied-Optimization.md)
   - [070 牛顿法 Newton's Method](/010-Calculus/040-Applications-of-Derivatives/070-Newton-Method.md)
+  - [080 反导数 Antiderivatives](/010-Calculus/040-Applications-of-Derivatives/080-Antiderivatives.md)
