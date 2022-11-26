@@ -44,7 +44,7 @@ $$F(x)=x^3-2$$
 | $e^{kx}$ | $\frac{1}{k}e^{kx}+C$ |
 | $\frac{1}{x}$ | $\ln |x|+C,x\neq 0$ |
 | $\frac{1}{\sqrt{1-k^2x^2}}$ | $\frac{1}{k}\sin^{-1}kx+C$ |
-| $\frac{1}{\sqrt{1+k^2x^2}}$ | $\frac{1}{k}\tan^{-1}kx+C$ |
+| $\frac{1}{1+k^2x^2}$ | $\frac{1}{k}\tan^{-1}kx+C$ |
 | $\frac{1}{x\sqrt{k^2x^2-1}}$ | $\sec^{-1}kx+C,kx>1$ |
 | $a^{kx}$ | $(\frac{1}{k\ln a})a^{kx}+C,a>0,a\neq 1$ |
 
