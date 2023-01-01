@@ -1,3 +1,4 @@
 - [Home](/)
 - [010 Calculus](/010-Calculus/)
   - [040 Applications of Derivatives](/010-Calculus/040-Applications-of-Derivatives/)
+  - [050 Integrals](/010-Calculus/050-Integrals/)
