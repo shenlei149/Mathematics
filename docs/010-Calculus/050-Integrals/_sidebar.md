@@ -2,4 +2,5 @@
 - [010 Calculus](/010-Calculus/)
 - [050 Integrals](/010-Calculus/050-Integrals/)
   - [010 面积与有限和的估算 Area and Estimating with Finite Sums](/010-Calculus/050-Integrals/010-Area-and-Estimating-with-Finite-Sums.md)
-  - [020 西格玛符号和有限和的极限  Sigma Notation and Limits of Finite Sums](/010-Calculus/050-Integrals/020-Sigma-Notation-and-Limits-of-Finite-Sums.md)
+  - [020 西格玛符号和有限和的极限 Sigma Notation and Limits of Finite Sums](/010-Calculus/050-Integrals/020-Sigma-Notation-and-Limits-of-Finite-Sums.md)
+  - [030 定积分 The Definite Integral](/010-Calculus/050-Integrals/030-The-Definite-Integral.md)
