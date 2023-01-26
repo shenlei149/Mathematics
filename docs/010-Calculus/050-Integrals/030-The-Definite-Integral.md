@@ -38,3 +38,48 @@ $$L=\sum_{k=1}^nf(c_k)\Delta x_k=\sum_{k=1}^n 0\Delta x_k=0$$
 所以上和和下和收敛于不同值，也就是选择不同的 $c_k$，黎曼和有不同的极限值。根据定义，定积分不存在。
 
 ### 定积分的属性
+我们定义 $\int_a^b f(x)dx$ 作为 $\sum_{k=1}^n f(c_k)\Delta x_k$ 的极限，从左往右扫过区间 $[a,b]$。如果从右向左呢？从 $x_0=b$ 开始到 $x_n=a$？黎曼和中的每一个 $\Delta x_k$ 的符号都发生了改变，选择同样的 $c_k$，那么黎曼和的符号改变了，那么极限值、定积分也都一样。那么我们得到定义
+$$\int_a^bf(x)dx=-\int_b^af(x)dx$$
+尽管一般情况下区间 $[a,b]$ 有 $a<b$，不过很容易得到 $a=b$ 的情况。因为 $\Delta x=0$，不管 $f(a)$ 的值是多少，乘积都为零。那么
+$$\int_a^af(x)dx=0$$
+下面给出一些定积分的运算法则。前两个就是上述的定义。后面几个需要严格证明。我们后面会给出法则 6 的证明，其余是类似的。
+$$\begin{aligned}
+\int_a^bf(x)dx&=-\int_b^af(x)dx\\
+\int_a^af(x)dx&=0\\
+\int_a^bkf(x)dx&=k\int_a^bf(x)dx\\
+\int_a^b(f(x)\pm g(x))dx&=\int_a^bf(x)dx\pm \int_a^bg(x)dx\\
+\int_a^bf(x)dx+\int_b^cf(x)dx&=\int_a^cf(x)dx\\
+(\text{min } f)(b-a)&\leq \int_a^bf(x)dx\leq (\text{max }f)(b-a)\\
+\int_a^bf(x)dx&\geq\int_a^bg(x)dx \text{ , if } f(x)\geq g(x)\\
+\int_a^bf(x)dx&\geq 0 \text{ , if }f(x)\geq 0
+\end{aligned}$$
+下面的图像是法则二到七的几何解释。图像中的函数都是正值，不过法则具有普适性，函数值可正可负。  
+![](030.010.png)
+
+证明法则六：规则六是说，$f$ 在 $[a,b]$ 上的积分不会小于最小值乘以区间长度，不会大于最大值乘以区间长度。在 $[a,b]$ 上的任意分区任意选取 $c_k$ 都有
+$$\begin{aligned}
+(\text{min } f)(b-a)&\leq (\text{min } f)\sum_{k=1}^n\Delta x_k\\
+&=\sum_{k=1}^n (\text{min } f) \Delta x_k\\
+&\leq\sum_{k=1}^n f(c_k)\Delta x_k\\
+&\leq\sum_{k=1}^n (\text{max } f) \Delta x_k\\
+&=(\text{max } f)\sum_{k=1}^n\Delta x_k\\
+&=(\text{max } f)(b-a)
+\end{aligned}$$
+也就是说，所有的黎曼和都满足不等式
+$$(\text{min } f)(b-a)\leq \sum_{k=1}^n f(c_k)\Delta x_k\leq (\text{max } f)(b-a)$$
+因此，黎曼和的极限，即定积分，也满足这个不等式。
+
+例2 假设
+$$\int_{-1}^1f(x)dx=5,\int_1^4f(x)dx=-2,\int_{-1}^1h(x)dx=7$$
+运用上述法则可以得到下列结果
+$$\int_4^1f(x)dx=-\int_1^4f(x)dx=-(-2)=2$$
+$$\begin{aligned}
+\int_{-1}^1[2f(x)+3h(x)]dx&=2\int_{-1}^1f(x)dx+3\int_{-1}^1h(x)dx\\
+&=2(5)+3(7)\\
+&=31
+\end{aligned}$$
+$$\begin{aligned}
+\int_{-1}^4f(x)dx&=\int_{-1}^1f(x)dx+\int_1^4f(x)dx\\
+&=5+(-2)\\
+&=3
+\end{aligned}$$
