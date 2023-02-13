@@ -66,3 +66,68 @@ $$\begin{aligned}
 &=\tan u+C\\
 &=\tan(5x+1)+C
 \end{aligned}$$
+
+例4 求 $\int\cos(7\theta+3)d\theta$。  
+解：令 $u=7\theta+3$，那么 $du=7d\theta$，而原积分中没有因数 7，所以需要整个积分要额外除以 7。
+$$\begin{aligned}
+\int\cos(7\theta+3)d\theta&=\frac{1}{7}\int\cos(7\theta+3) 7d\theta\\
+&=\frac{1}{7}\int\cos udu\\
+&=\frac{1}{7}\sin u+C\\
+&=\frac{1}{7}\sin(7\theta+3)+C
+\end{aligned}$$
+另外一种方式是通过 $du=7d\theta$ 得到 $d\theta=(1/7)du$，代入
+$$\begin{aligned}
+\int\cos(7\theta+3)d\theta&=\int\cos u\cdot\frac{1}{7}du\\
+&=\frac{1}{7}\sin u+C\\
+&=\frac{1}{7}\sin(7\theta+3)+C
+\end{aligned}$$
+
+例5 有时，积分式中出现了 $x$ 的幂次比另外一个函数的参数中 $x$ 幂次少一的情况。这就提示我们试图替换敲高阶的 $x$ 的幂次。下面的例子 $x^3$ 是一个因式的指数，另一个因式是 $x^2$，那么可以尝试令 $u=x^3$。
+$$\begin{aligned}
+\int x^2e^{x^3}dx&=\int e^{x^3}\cdot x^2dx\\
+&=\int e^u\cdot\frac{1}{3}du\\
+&=\frac{1}{3}\int e^udu\\
+&=\frac{1}{3}e^u+C\\
+&=\frac{1}{3}e^{x^3}+C
+\end{aligned}$$
+
+例6 有时当我们使用 $u=g(x)$ 做替换的时候，额外有一个 $x$ 因式，那么需要解方程 $u=g(x)$，使用 $u$ 表示 $x$，进而进行积分。比如
+$$\int x\sqrt{2x+1}dx$$
+解：根据例2 的经验，令 $u=2x+1$，那么 $du=2dx$，所以
+$$\sqrt{2x+1}dx=\frac{1}{2}\sqrt{u}du$$
+但是被积分的式子多了一个 $x$，通过 $u=2x+1$ 可以得到 $x=(u-1)/2$，所以
+$$x\sqrt{2x+1}dx=\frac{1}{2}(u-1)\frac{1}{2}\sqrt{u}du$$
+所以积分就是
+$$\begin{aligned}
+\int x\sqrt{2x+1}dx&=\frac{1}{4}\int (u-1)\sqrt{u}du\\
+&=\frac{1}{4}\int(u^{3/2}-u^{1/2})du\\
+&=\frac{1}{4}(\frac{2}{5}u^{5/2}-\frac{2}{3}u^{3/2})du+C\\
+&=\frac{1}{10}(2x+1)^{5/2}-\frac{1}{6}(2x+1)^{3/2}+C
+\end{aligned}$$
+
+例7 有时，我们需要使用三角函数恒定变化变换积分式，使得可以使用换元法。  
+（a）
+$$\begin{aligned}
+\int\sin^2x dx&=\int\frac{1-\cos 2x}{2}dx\\
+&=\frac{1}{2}\int(1-\cos 2x)dx\\
+&=\frac{1}{2}x-\frac{1}{2}\frac{\sin 2x}{2}+C\\
+&=\frac{1}{2}x-\frac{\sin 2x}{4}+C
+\end{aligned}$$
+（b）
+$$\begin{aligned}
+\int\cos^xdx&=\int\frac{1+\cos 2x}{2}dx\\
+&=\frac{x}{2}+\frac{\sin 2x}{4}+C
+\end{aligned}$$
+（c）
+$$\begin{aligned}
+\int\tan xdx&=\int\frac{\sin x}{\cos x}dx\\
+&=\int\frac{-du}{u}du\\
+&=-\ln |u|+C\\
+&=-\ln |\cos x|+C\\
+&=\ln\frac{1}{|\cos x|}+C\\
+&=\ln|\sec x|+C
+\end{aligned}$$
+
+例8 有时被积函数需要进行一些代数运算使之可以使用换元法。下面两个例子分子分母同乘某个因式后再使用换元法。
+（a）
+（b）
