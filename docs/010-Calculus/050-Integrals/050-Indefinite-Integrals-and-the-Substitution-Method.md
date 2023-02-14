@@ -128,6 +128,43 @@ $$\begin{aligned}
 &=\ln|\sec x|+C
 \end{aligned}$$
 
-例8 有时被积函数需要进行一些代数运算使之可以使用换元法。下面两个例子分子分母同乘某个因式后再使用换元法。
+例8 有时被积函数需要进行一些代数运算使之可以使用换元法。下面两个例子分子分母同乘某个因式后再使用换元法。  
 （a）
+$$\begin{aligned}
+\int\frac{dx}{e^x+e^{-x}}&=\int\frac{e^xdx}{e^{2x}+1}\\
+&=\int\frac{du}{u^2+1}\\
+&=\tan^{-1}u+C\\
+&=\tan^{-1}(e^x)+C
+\end{aligned}$$
 （b）
+$$\begin{aligned}
+\int\sec xdx&=\int\sec x\frac{\sec x+\tan x}{\sec x+\tan x}dx\\
+&=\int\frac{\sec^2x+\sec x\tan x}{\sec x+\tan x}dx\\
+&=\int\frac{du}{u}\\
+&=\ln|u|+C\\
+&=\ln|\sec x+\tan x|+C
+\end{aligned}$$
+类似上面两个例子，我们可以得到 $\cot x,\csc x$ 的不定积分。现在总结如下：
+$$\int\tan xdx=\ln|\sec x|+C$$
+$$\int\cot xdx=\ln|\sin x|+C$$
+$$\int\sec xdx=\ln|\sec x+\tan x|+C$$
+$$\int\csc xdx=-\ln|\csc x+\cot x|+C$$
+
+### 尝试不同换元法
+根据经验，找到正确的替换函数是解决积分的关键步骤。如果第一次尝试失败了，没有关系，尝试其他的替换函数。有时需要配合代数和三角函数变换操作。
+
+例9 求 $\int\frac{2zdz}{\sqrt[3]{z^2+1}}$。  
+解：我们通常替换整个被积函数中最复杂的部分，然后尝试看是否能够解决。我们尝试令 $u=z^2+1$ 和 $u=\sqrt[3]{z^2+1}$ 两种替换。这个例子中都是可以的。对于其他题目，如果一种方式行不通，另一种方法可能就能奏效。  
+（1）令 $u=z^2+1$
+$$\begin{aligned}
+\int\frac{2zdz}{\sqrt[3]{z^2+1}}&=\int\frac{du}{u^{1/3}}\\
+&=\frac{3}{2}u^{2/3}+C\\
+&=\frac{3}{2}(z^2+1)^{2/3}+C
+\end{aligned}$$
+（2）令 $u=\sqrt[3]{z^2+1}$
+$$\begin{aligned}
+\int\frac{2zdz}{\sqrt[3]{z^2+1}}&=\int\frac{3u^2}{u}du\\
+&=3\int udu\\
+&=\frac{3}{2}u^2+C\\
+&=\frac{3}{2}(z^2+1)^{2/3}+C
+\end{aligned}$$
