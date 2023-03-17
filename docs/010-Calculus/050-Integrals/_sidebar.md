@@ -6,3 +6,4 @@
   - [030 定积分 The Definite Integral](/010-Calculus/050-Integrals/030-The-Definite-Integral.md)
   - [040 微积分基本定理 The Fundamental Theorem of Calculus](/010-Calculus/050-Integrals/040-The-Fundamental-Theorem-of-Calculus.md)
   - [050 不定积分和换元法 Indefinite Integrals and the Substitution Method](/010-Calculus/050-Integrals/050-Indefinite-Integrals-and-the-Substitution-Method.md)
+  - [060 定积分换元法和曲线间面积 Definite Integral Substitutions and the Area Between Curves](/010-Calculus/050-Integrals/060-Definite-Integral-Substitutions-and-the-Area-Between-Curves.md)
