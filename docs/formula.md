@@ -25,4 +25,4 @@ $$\int\cot xdx=\ln|\sin x|+C$$
 $$\int\sec xdx=\ln|\sec x+\tan x|+C$$
 $$\int\csc xdx=-\ln|\csc x+\cot x|+C$$
 $$\int\sin^2x dx=\frac{x}{2}-\frac{\sin 2x}{4}+C$$
-$$\int\cos^xdx=\frac{x}{2}+\frac{\sin 2x}{4}+C$$
+$$\int\cos^2x dx=\frac{x}{2}+\frac{\sin 2x}{4}+C$$
