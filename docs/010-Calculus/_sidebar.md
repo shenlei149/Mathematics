@@ -2,3 +2,4 @@
 - [010 Calculus](/010-Calculus/)
   - [040 Applications of Derivatives](/010-Calculus/040-Applications-of-Derivatives/)
   - [050 积分 Integrals](/010-Calculus/050-Integrals/)
+  - [060 定积分的应用 Applications of Definite Integrals](/010-Calculus/060-Applications-of-Definite-Integrals/)
