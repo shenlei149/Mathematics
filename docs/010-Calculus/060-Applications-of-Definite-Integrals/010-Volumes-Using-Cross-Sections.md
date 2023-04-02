@@ -54,4 +54,74 @@ V&=\int_a^bA(x)dx\\
 这很容易用体积的定义定积分证明。高度一样的意思是积分的上下界一样，横截面一样那么被积函数 $A(x)$ 一样。
 
 ### 旋转体：圆盘法
+沿着某个轴旋转一个平面区域得到的立体图形是旋转体（`solid of revolution`）。如下图所示。  
+![](010.080.png)  
+为了求体积，我们观察横截面的面积 $A(x)$ 是半径为 $R(x)$ 的圆盘，其中 $R(x)$ 是旋转轴到边缘的距离。因此
+$$A(x)=\pi[R(x)]^2$$
+那么体积是
+$$V=\int_a^bA(x)dx=\int_a^b\pi[R(x)]^2dx$$
 
+例4 曲线 $y=\sqrt{x},0\leq x\leq 4$ 与 $x$ 轴的区域绕 $x$ 轴得到一个立体图形。求体积。  
+解：如上图所示。代入上面的公式
+$$\begin{aligned}
+V&=\int_a^b\pi[R(x)]^2dx\\
+&=\int_0^4\pi[\sqrt{x}]^2dx\\
+&=\pi\int_0^4xdx\\
+&=\pi\frac{x^2}{2}\bigg|_0^4\\
+&=8\pi
+\end{aligned}$$
+
+例5 圆
+$$x^2+y^2=a^2$$
+绕 $x$ 轴旋转得到球体。求体积。  
+解：如下图所示。  
+![](010.090.png)  
+横截面面积是
+$$A(x)=\pi y^2=\pi(a^2-x^2)$$
+因此体积是
+$$\begin{aligned}
+V&=\int_{-a}^aA(x)dx\\
+&=\int_{-a}^a\pi(a^2-x^2)dx\\
+&=\pi\bigg[a^2x-\frac{x^3}{3}\bigg]_{-a}^a\\
+&=\frac{4}{3}\pi a^3
+\end{aligned}$$
+
+例6 一个图形的边界是 $y=\sqrt{x},y=1,x=4$，沿着 $y=1$ 旋转。求体积。  
+解：如下图所示。  
+![](010.100.png)  
+$$\begin{aligned}
+V&=\int_1^4\pi[R(x)]^2dx\\
+&=\int_1^4\pi[\sqrt{x}-1]^2dx\\
+&=\pi\int_1^4[x-2\sqrt{x}+1]dx\\
+&=\pi\bigg[\frac{x^2}{2}-2\frac{2}{3}x^{3/2}+x\bigg]_1^4\\
+&=\frac{7\pi}{6}
+\end{aligned}$$
+
+如果平面区域是曲线 $y=R(y),c\leq y\leq d$ 和 $y$ 轴确定的，其沿着 $y$ 轴旋转。那么我们用 $y$ 替代 $x$ 即可求得对应的体积。横截面面积是
+$$A(y)=\pi[R(y)]^2$$
+那么体积是
+$$V=\int_c^dA(y)dy=\int_c^d\pi[R(y)]^2dy$$
+
+例7 求由 $y$ 和 $x=2/y,1\leq y\leq 4$ 围成的区域沿着 $y$ 轴旋转得到的立体图形的体积。  
+解：图形如下所示。  
+![](010.110.png)  
+$$\begin{aligned}
+V&=\int_1^4\pi[R(y)]^2dy\\
+&=\int_1^4\pi(\frac{y}{2})^2dy\\
+&=\pi\int_1^4\frac{4}{y^2}dy\\
+&=4\pi\bigg[-\frac{1}{y}\bigg]_1^4\\
+&=3\pi
+\end{aligned}$$
+
+例8 求由抛物线 $x=y^2+1$ 和直线 $x=3$ 围成的图形沿着 $x=3$ 旋转得到的旋转体的体积。  
+解：这个图形如下图所示。  
+![](010.120.png)  
+$$\begin{aligned}
+V&=\int_{-\sqrt{2}}^{\sqrt{2}}\pi[R(y)]^2dy\\
+&=\int_{-\sqrt{2}}^{\sqrt{2}}\pi[2-y^2]^2dy\\
+&=\pi\int_{-\sqrt{2}}^{\sqrt{2}}4-4y^2+y^4dy\\
+&=\pi\bigg[4y-\frac{4}{3}y^3+\frac{y^5}{5}\bigg]_{-\sqrt{2}}^{\sqrt{2}}\\
+&=\frac{64\pi\sqrt{2}}{15}
+\end{aligned}$$
+
+### 旋转体：旋转法
