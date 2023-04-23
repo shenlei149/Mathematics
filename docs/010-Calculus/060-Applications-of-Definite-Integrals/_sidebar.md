@@ -4,3 +4,4 @@
   - [010 横截面计算体积 Volumes Using Cross-Sections](/010-Calculus/060-Applications-of-Definite-Integrals/010-Volumes-Using-Cross-Sections.md)
   - [020 利用圆柱形壳计算体积 Volumes Using Cylindrical Shells](/010-Calculus/060-Applications-of-Definite-Integrals/020-Volumes-Using-Cylindrical-Shells.md)
   - [030 弧长 Arc Length](/010-Calculus/060-Applications-of-Definite-Integrals/030-Arc-Length.md)
+  - [040 旋转体的表面积](/010-Calculus/060-Applications-of-Definite-Integrals/040-Areas-of-Surfaces-of-Revolution.md)
