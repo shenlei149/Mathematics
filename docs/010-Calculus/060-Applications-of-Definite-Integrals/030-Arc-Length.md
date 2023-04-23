@@ -131,3 +131,33 @@ s(x)&=\int_1^x\sqrt{1+[f'(t)]^2}dt\\
 利用这个公式可以计算点 $A=(1,13/12)$ 到点 $B=(4,67/12)$ 的弧长
 $$s(4)=\frac{64}{12}-\frac{1}{4}+\frac{11}{12}=6$$
 与例2 答案一致。
+
+### 习题
+13. 求函数图像
+$$y=\frac{3}{2}x^{2/3}+1,\frac{1}{8}\leq x\leq 1$$
+的弧长。  
+解：求导
+$$\begin{aligned}
+\begin{aligned}
+y'&=x^{-1/3}\\
+y'^2&=x^{-2/3}\\
+1+y'^2&=1+x^{-2/3}
+\end{aligned}
+\end{aligned}$$
+那么弧长是
+$$\begin{aligned}
+L&=\int_{1/8}^1\sqrt{1+f'^2}dx\\
+&=\int_{1/8}^1\sqrt{1+x^{-2/3}}dx\\
+&=\int_{1/8}^1\frac{\sqrt{x^{2/3}+1}}{|x^{1/3}|}dx\\
+&=\int_{1/8}^1\frac{\sqrt{x^{2/3}+1}}{x^{1/3}}dx
+\end{aligned}$$
+令
+$$u=1+x^{2/3}$$
+那么
+$$du=\frac{2}{3}x^{-1/3}dx$$
+所以
+$$\begin{aligned}
+L&=\frac{3}{2}\int_{5/4}^2\sqrt{u}du\\
+&=\frac{3}{2}\cdot\frac{2}{3}u^{3/2}\bigg|_{5/4}^2\\
+&=2^{3/2}-(5/4)^{3/2}
+\end{aligned}$$
