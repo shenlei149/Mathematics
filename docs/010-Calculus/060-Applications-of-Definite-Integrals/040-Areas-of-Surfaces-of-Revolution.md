@@ -28,4 +28,40 @@ $$\int_a^b2\pi f(x)\sqrt{1+(f'(c_k))^2}dx$$
 **定义** 如果函数 $y=f(x)$ 在 $[a,b]$ 上连续地可导，那么将其绕 $x$ 轴得到的图形的表面积是
 $$S=\int_a^b2\pi y\sqrt{1+(\frac{dy}{dx})^2}dx=\int_a^b2\pi f(x)\sqrt{1+(f'(c_k))^2}dx$$
 
-例1 
+例1 求曲线 $y-\sqrt{x},1\leq x\leq 2$ 绕 $x$ 轴旋转得到的图形的面积。如下图所示。  
+![](040.060.png)  
+解：根据题意，公式中量分别是
+$$a=1,b=2,y=2\sqrt{x},\frac{dy}{dx}=\frac{1}{\sqrt{x}}$$
+首先求被积函数
+$$\begin{aligned}
+\sqrt{1+(\frac{dy}{dx})^2}&=\sqrt{1+(\frac{1}{\sqrt{x}})^2}\\
+&=\sqrt{1+\frac{1}{x}}\\
+&=\frac{\sqrt{x+1}}{\sqrt{x}}
+\end{aligned}$$
+因此面积是
+$$\begin{aligned}
+S&=\int_1^22\pi\cdot 2\sqrt{x}\frac{\sqrt{x+1}}{\sqrt{x}}dx\\
+&=4\pi\int_1^2\sqrt{x+1}dx\\
+&=4\pi\cdot\frac{2}{3}(x+1)^{3/2}\bigg|_1^2\\
+&=\frac{8\pi}{3}(3\sqrt{3}-2\sqrt{2})
+\end{aligned}$$
+
+### 绕 $y$ 轴旋转
+对于绕 $y$ 轴旋转，只需要交换公式中的 $x$ 和 $y$ 即可。
+
+如果 $x=g(y)\geq 0$ 在 $[a,b]$ 上连续地可导，那么曲线绕 $y$ 轴旋转生成的面的面积是
+$$S=\int_c^d2\pi x\sqrt{1+(\frac{dx}{dy})^2}dy=\int_c^d2\pi g(y)\sqrt{1+[g'(y)]^2}dy$$
+
+例2 求线段 $x=1-y,0\leq y\leq 1$ 绕 $y$ 轴旋转得到的面的面积，不包括底。如下图所示。  
+解：可以使用几何法。
+$$A=\frac{1}{2}\text{base circumference}\times\text{height}=\pi\sqrt{2}$$
+下面使用公式，所以
+$$c=0,d=1,x=1-y,\frac{dx}{dy}=-1$$
+$$\sqrt{1+(\frac{dx}{dy})^2}=\sqrt{1+(-1)^2}=\sqrt{2}$$
+所以面积是
+$$\begin{aligned}
+S&=\int_c^d2\pi x\sqrt{1+(\frac{dx}{dy})^2}dy\\
+&=\int_0^12\pi(1-y)\sqrt{2}dy\\
+&=2\pi\sqrt{2}(y-\frac{y^2}{2})\bigg|_0^1\\
+&=\pi\sqrt{2}
+\end{aligned}$$
