@@ -22,7 +22,7 @@ $$\begin{aligned}
 如果一条细线不均匀。  
 ![](060.030.png)  
 其中很短的一段长度 $\Delta x$，质量是 $\Delta m$，线密度是
-$$\delta(x)=\lim_{n\to\infty}\frac{\Delta x}{\Delta x}$$
+$$\delta(x)=\lim_{n\to\infty}\frac{\Delta m}{\Delta x}$$
 这里就不再给出具体推导。质量、矩和质心分别是
 $$M=\int_a^b\delta(x)dx$$
 $$M_0=\int_a^bx\delta(x)dx$$
@@ -166,7 +166,7 @@ $$M_y=\int xdm=\int_a^b x\delta[f(x)-g(x)]dx$$
 关于 $x$ 轴的矩是
 $$\begin{aligned}
 M_x&=\int ydm\\
-&=\int_a^b\frac{1}{2}[f(x)-g(x)]\cdot\delta[f(x)-g(x)]dx\\
+&=\int_a^b\frac{1}{2}[f(x)+g(x)]\cdot\delta[f(x)-g(x)]dx\\
 &=\int_a^b\frac{\delta}{2}[f^2(x)-g^2(x)]dx
 \end{aligned}$$
 所以质心的坐标是
