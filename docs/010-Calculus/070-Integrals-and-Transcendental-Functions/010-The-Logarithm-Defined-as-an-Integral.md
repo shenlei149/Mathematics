@@ -51,3 +51,63 @@ $$\begin{aligned}
 $$\ln 2>\frac{1}{2}$$
 进而可以得到
 $$\ln 2^n=n\ln 2>n(\frac{1}{2})=\frac{n}{2}$$
+这也告诉我们当 $n\to\infty$ 时有 $\ln (2^n)\to\infty$。由于 $\ln x$ 是递增函数，所以
+$$\lim_{x\to\infty}\ln x=\infty$$
+同时
+$$\lim_{x\to 0^-}\ln x=\lim_{t\to\infty}\ln t^{-1}=\lim_{t\to\infty}(-\ln t)=-\infty$$
+我们定义 $y=\ln x,x>0$，所以其定义域是所有正实数。根据上述的讨论和中值定理，其值域是整个实数集。
+
+### 积分 $\int 1/udu$
+如果 $u$ 是可导函数且值域不为零，那么
+$$\int\frac{1}{u}du=\ln|u|+C$$
+上式要求 $u\neq 0$。形如 $\int\frac{du}{u}$ 的积分结果是对数函数。当 $u=f(x)$ 可导且不会为零时，我们有 $du=f'(x)dx$，所以
+$$\int\frac{f'(x)}{f(x)}dx=\ln|f(x)|+C$$
+
+例1 形如 $\int\frac{du}{u}$ 的积分
+$$\begin{aligned}
+\int_{-\pi/2}^{\pi/2}\frac{4\cos\theta}{3+2\sin\theta}d\theta&=\int_1^5\frac{2}{u}du\\
+&=2\ln|u|\bigg|_1^5\\
+&=2\ln 5-2\ln 1\\
+&=2\ln 5
+\end{aligned}$$
+其中 $u=3+2\sin\theta$ 在$[-\pi/2,\pi/2]$ 上总是正数。
+
+### $\ln x$ 的反函数和数 $e$
+函数 $\ln x$ 的定义域是 $(0,\infty)$ 值域是 $(-\infty,\infty)$，那么其反函数 $\ln^{-1} x$ 的定义域是 $(-\infty,\infty)$ 值域是 $(0,\infty)$。两个函数的图像关于 $y=x$ 对称。如下图所示。  
+![](010.030.png)  
+$$\lim_{x\to\infty}\ln^{-1}x=\infty$$
+$$\lim_{x\to-\infty}\ln^{-1}x=0$$
+我们用 $\exp x$ 表示 $\ln^{-1} x$，注意这时我们还没有说 $\exp x$ 是指数函数，只是自然对数函数的反函数。  
+数 $e$ 的定义是满足 $\ln e=1$ 的数，所以 $e=\exp(1)$。使用代数，可以得到实数 $r$ 对应的 $e^r$
+$$e^2=e\cdot e,e^{-2}=\frac{1}{e^2},e^{1/2}=\sqrt{e},e^{2/3}=\sqrt[3]{e^2}$$
+由于 $e$ 是正数，那么 $e^r$ 也是正数，那么 $e^r$ 存在对数。所以对所有实数 $r$ 有
+$$\ln e^r=r\ln e=r$$
+两边同时应用函数 $\ln^{-1}$
+$$e^r=\exp r$$
+这时，才有 $\exp r$ 是指数函数，底是 $e$。不过还没有给出 $x$ 是无理数时的 $e^x$ 定义。从 $\exp x$，即 $\ln^{-1} x$ 的定义域是整体实数，可以得到上面的式子对任意实数都是成立的。所以对任意实数 $x$，自然之数函数的定义就是
+$$e^x=\exp x$$
+由于 $\ln x$ 和 $e^x$ 互为反函数，所以
+$$e^{\ln x}=x, x>0$$
+$$\ln e^x=x,x\in(-\infty,\infty)$$
+
+### $e^x$ 的积分和微分
+因为指数函数的反函数可导，且导数不为零，所以指数函数也可导。根据 3.8 节的定理 3 和 $\ln x$ 的导数推导 $e^x$ 的导数。已知
+$$f(x)=\ln x,y=e^x=\ln^{-1}x=f^{-1}(x)$$
+那么
+$$\begin{aligned}
+\frac{dy}{dx}&=\frac{d}{dx}e^x\\
+&=\frac{d}{dx}\ln^{-1}x\\
+&=\frac{d}{dx}f^{-1}(x)\\
+&=\frac{1}{f'(f^{-1}(x))}\\
+&=\frac{1}{f'(e^x)}\\
+&=\frac{1}{\frac{1}{e^x}}\\
+&=e^x
+\end{aligned}$$
+所以自然指数函数的导数是其自身。下一节我们会证明满足这个性质的函数只有 $e^x$ 的常数倍。根据链式法则，我们可以得到更一般的规则。如果 $u$ 是 $x$ 的可导函数，那么
+$$\frac{d}{dx}e^u=e^u\frac{du}{dx}$$
+由于 $e^x$ 始终大于零，所以它的导数也是正数，那么它在定义域上都是递增函数，那么
+$$\lim_{x\to -\infty}e^x=0,\lim_{x\to\infty}e^x=\infty$$
+所以 $x$ 轴是水平渐近线。  
+由上面的公式可以得到 $e^u$ 的积分
+$$\int e^udu=e^u+C$$
+如果 $f(x)=e^x$，那么 $f'(0)=e^0=1$，也就是说，当 $x=0$ 时，即和 $y$ 轴的交点上，其斜率是 1。这和 3.3 节得到的结论一致。
