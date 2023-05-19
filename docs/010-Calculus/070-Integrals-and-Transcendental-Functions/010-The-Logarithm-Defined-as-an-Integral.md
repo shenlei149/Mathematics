@@ -111,3 +111,98 @@ $$\lim_{x\to -\infty}e^x=0,\lim_{x\to\infty}e^x=\infty$$
 由上面的公式可以得到 $e^u$ 的积分
 $$\int e^udu=e^u+C$$
 如果 $f(x)=e^x$，那么 $f'(0)=e^0=1$，也就是说，当 $x=0$ 时，即和 $y$ 轴的交点上，其斜率是 1。这和 3.3 节得到的结论一致。
+
+### 指数法则
+由 $e^x$ 是 $\ln x$ 的反函数和对数法则可以得到下列指数法则。下一节会给出证明。
+$$\begin{aligned}
+e^{x_1}\cdot e^{x_2}&=e^{x_1+x_2}\\
+e^{-x}&=\frac{1}{e^x}\\
+\frac{e^{x_1}}{e^{x_2}}&=e^{x_1-x_2}\\
+(e^{x_1})^{x_2}&=e^{x_1x_2}=(e^{x_2})^{x_1}
+\end{aligned}$$
+
+### 指数函数 $a^x$
+任意正数 $a$ 可以写作 $a=e^{\ln a}$，所以我们可以通过 $(e^{\ln a})^x=e^{x\ln a}$ 来表示 $a^x$。
+
+**定义** 对于任意数 $a>0$ 和 $x$，底为 $a$ 的指数函数是
+$$a^x=e^{x\ln a}$$
+
+当 $a=e$ 时，由定义有
+$$a^x=e^{x\ln a}=e^{x\ln e}=e^x$$
+类似的，任意正数 $x$ 的幂函数 $f(x)=x^r$ 也可以写作 $x^r=e^{r\ln x}$，对于所有实数 $r$ 都成立。  
+上面的指数法则对 $a^x$ 也都成立。比如
+$$\begin{aligned}
+a^{x_1}\cdot a^{x_2}&=e^{x_1\ln a}\cdot e^{x_2\ln a}\\
+&=e^{x_1\ln a+x_2\ln a}\\
+&=e^{(x_1+x_2)\ln a}\\
+&=a^{x_1+x_2}
+\end{aligned}$$
+从定义出发，我们可以得到导数
+$$\frac{d}{dx}a^x=\frac{d}{dx}e^{x\ln a}=\ln ae^{x\ln a}=a^x\ln a$$
+通过对数微分法也可以得到相同结果。
+$$\begin{aligned}
+y&=a^x\\
+\ln y&=x\ln a\\
+\frac{1}{y}\frac{dy}{dx}&=\ln a\\
+\frac{dy}{dx}&=y\ln a=a^x\ln a
+\end{aligned}$$
+通过链式法则，可以得到下面的结论。
+
+如果 $a>0$ 且 $u$ 是 $x$ 的可导函数，那么 $a^u$ 也是 $x$ 的可导函数。
+$$\frac{d}{dx}a^u=a^u\ln a\frac{du}{dx}$$
+积分结果是
+$$\int a^udu=\frac{a^u}{\ln a}+C$$
+
+### 底为 $a$ 的对数函数
+如果 $a$ 是 1 以外的正数，那么函数 $a^x$ 是一个一对一的、任一点都可导且导数不为零。所以它有一个可导的反函数。
+
+**定义** 对任意正数 $a\neq 1$，底为 $a$ 的 $x$ 的对数函数记作 $\log_a x$，是 $a^x$ 的反函数。
+
+$y=a^x$ 图像沿着 $y=x$ 对称就得到了 $y=\log_a x$ 的图像。如下图所示。  
+![](010.040.png)  
+当 $a=e$ 时，$\log_e x$ 是 $e^x$ 的反函数，即 $\ln x$。因为 $a^x$ 和 $\log_a^x$ 互为反函数，所以
+$$\begin{aligned}
+a^{\log_a x}&=x,x>0\\
+\log_a a^x&=a
+\end{aligned}$$
+正如 1.5 节所述，函数 $\log_a x$ 是 $\ln x$ 的若干倍。
+$$\begin{aligned}
+y&=\log_a x\\
+a^y&=x\\
+\ln a^y&=\ln x\\
+y\ln a&=\ln x\\
+y&=\frac{\ln x}{\ln a}\\
+\log_a x&=\frac{\ln x}{\ln a}
+\end{aligned}$$
+对数法则也适用于 $\log_a x$，因为将对数法则两边同时除以 $\ln a$ 即可。
+$$\begin{aligned}
+\ln xy&=\ln x+\ln y\\
+\frac{\ln xy}{\ln a}&=\frac{\ln x}{\ln a}+\frac{\ln y}{\ln a}\\
+\log_a xy&=\log_a x+\log_a y
+\end{aligned}$$
+四条法则如下。
+$$\begin{aligned}
+\log_a xy&=\log_a x+\log_a y\\
+\log_a \frac{x}{y}&=\log_a x-\log_a y\\
+\log_a \frac{1}{y}&=-\log_a y\\
+\log_a x^y&=y\log_a x
+\end{aligned}$$
+
+### 涉及 $\log_a x$ 的微分和积分
+为了找到底为 $a$ 的对数函数的微分和积分，我们把它转化为自然对数函数。如果$u$ 是 $x$ 的正的可导函数，那么
+$$\begin{aligned}
+\frac{d}{dx}(\log_a u)&=\frac{d}{dx}\frac{\ln u}{\ln a}\\
+&=\frac{1}{\ln a}\frac{d}{dx}\ln u\\
+&=\frac{1}{\ln a}\frac{1}{u}\frac{du}{dx}
+\end{aligned}$$
+
+例2 求下面式子的微分和积分。  
+（a）
+$$\frac{d}{dx}\log_{10}(3x+1)=\frac{1}{\ln 10}\frac{1}{3x+1}\frac{d}{dx}(3x+1)=\frac{3}{(\ln 10)(3x+1)}$$
+（b）
+$$\begin{aligned}
+\int\frac{\log_2 x}{x}dx&=\frac{1}{\ln 2}\int\frac{\ln x}{x}dx\\
+&=\frac{1}{\ln 2}\int udu\\
+&=\frac{1}{\ln 2}\frac{u^2}{2}+C\\
+&=\frac{(\ln x)^2}{2\ln 2}+C
+\end{aligned}$$
