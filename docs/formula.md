@@ -27,7 +27,7 @@ $$\int\csc xdx=-\ln|\csc x+\cot x|+C$$
 $$\int\sin^2x dx=\frac{x}{2}-\frac{\sin 2x}{4}+C$$
 $$\int\cos^2x dx=\frac{x}{2}+\frac{\sin 2x}{4}+C$$
 
-# 双曲函数
+# 双曲函数及其反函数
 
 ## 定义
 参考 [7.3 小节](/010-Calculus/070-Integrals-and-Transcendental-Functions/030-Hyperbolic-Functions.md)
@@ -47,6 +47,9 @@ $$\cosh^2 x=\frac{\cosh 2x+1}{2}$$
 $$\sinh^2 x=\frac{\cosh 2x-1}{2}$$
 $$\tanh^2 x=1-\operatorname{sech}^2 x$$
 $$\coth^2 x=1+\operatorname{csch}^2 x$$
+$$\operatorname{sech}^{-1}x=\cosh^{-1}\frac{1}{x}$$
+$$\operatorname{csch}^{-1}x=\sinh^{-1}\frac{1}{x}$$
+$$\coth^{-1}x=\tanh^{-1}\frac{1}{x}$$
 
 ## 微分
 参考 [7.3 小节](/010-Calculus/070-Integrals-and-Transcendental-Functions/030-Hyperbolic-Functions.md)
@@ -56,6 +59,12 @@ $$\frac{d}{dx}\tanh u=\operatorname{sech}^2 u\frac{du}{dx}$$
 $$\frac{d}{dx}\coth u=-\operatorname{csch}^2 u\frac{du}{dx}$$
 $$\frac{d}{dx}\operatorname{sech} u=-\operatorname{sech} u\tanh u\frac{du}{dx}$$
 $$\frac{d}{dx}\operatorname{csch} u=-\operatorname{csch} u\coth u\frac{du}{dx}$$
+$$\frac{d}{dx}\sinh^{-1}u=\frac{1}{\sqrt{1+u^2}}\frac{du}{dx}$$
+$$\frac{d}{dx}\cosh^{-1}u=\frac{1}{\sqrt{u^2-1}}\frac{du}{dx},u>1$$
+$$\frac{d}{dx}\tanh^{-1}u=\frac{1}{1-u^2}\frac{du}{dx},|u|<1$$
+$$\frac{d}{dx}\coth^{-1}u=\frac{1}{1-u^2}\frac{du}{dx},|u|>1$$
+$$\frac{d}{dx}\operatorname{sech}^{-1}u=-\frac{1}{u\sqrt{1-u^2}}\frac{du}{dx},0<u<1$$
+$$\frac{d}{dx}\operatorname{csch}^{-1}u=-\frac{1}{|u|\sqrt{1+u^2}}\frac{du}{dx},u\neq 0$$
 
 ## 积分
 参考 [7.3 小节](/010-Calculus/070-Integrals-and-Transcendental-Functions/030-Hyperbolic-Functions.md)
@@ -65,3 +74,11 @@ $$\int\operatorname{sech}^2 udu=\tanh u+C$$
 $$\int\operatorname{csch}^2 udu=-\coth u+C$$
 $$\int\operatorname{sech} u\tanh udu=-\operatorname{sech} u+C$$
 $$\int\operatorname{csch} u\coth udu=-\operatorname{csch} u+C$$
+$$\int\frac{du}{\sqrt{a^2+u^2}}=\sinh^{-1}\frac{u}{a}+C,a>0$$
+$$\int\frac{du}{\sqrt{u^2-a^2}}=\cosh^{-1}\frac{u}{a}+C,0<a<u$$
+$$\int\frac{du}{a^2-u^2}=\begin{cases}
+\frac{1}{a}\tanh^{-1}\frac{u}{a}+C,u^2<a^2\\
+\frac{1}{a}\coth^{-1}\frac{u}{a}+C,u^2>a^2
+\end{cases}$$
+$$\int\frac{du}{u\sqrt{a^2-u^2}}=-\frac{1}{a}\operatorname{sech}^{-1}\frac{u}{a}+C,0<u<a$$
+$$\int\frac{du}{u\sqrt{a^2+u^2}}=-\frac{1}{a}\operatorname{csch}^{-1}\bigg|\frac{u}{a}\bigg|+C,u\neq 0,a>0$$
