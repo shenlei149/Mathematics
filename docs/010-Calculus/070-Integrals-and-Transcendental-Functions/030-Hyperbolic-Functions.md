@@ -88,3 +88,83 @@ $$\begin{aligned}
 &=(e^{2\ln 2}-2\ln 2)-(e^0-0)\\
 &=3-2\ln 2
 \end{aligned}$$
+
+### 反双曲函数
+第八章中讲阐述六个双曲函数的反函数在积分领域是很有用的。由于 $d(\sinh x)/dx=\cosh x>0$，所以双曲正弦是 $x$ 的递增函数。我们将其反函数记作
+$$y=\sinh^{-1}x$$
+双曲余弦及其反函数图像如下图（a）所示。  
+![](030.041.png)  
+由于不能通过水平测试，所以 $y=\cosh x$ 不是一对一函数。限制定义域的函数 $y=\cosh x,x\geq 0$ 是一对一函数，有反函数
+$$y=\cosh^{-1}x$$
+其定义域是 $x\geq 1$。双曲余弦及其反函数图像如上图（b）所示。  
+类似 $y=\cosh x$，$y=\operatorname{sech} x=\frac{1}{\cosh x}$ 也不是一对一函数，不过将定义域限制在非负数时，是一对一函数，其反函数记作
+$$y=\operatorname{sech}^{-1}x$$
+其定义域是 $(0,1]$。双曲正割及其反函数图像如上图（c）所示。  
+其余双曲函数，双曲正切、双曲余切和双曲余割都是一对一函数，其反函数记作
+$$y=\tanh^{-1}x$$
+$$y=\coth^{-1}x$$
+$$y=\operatorname{csch}^{-1}x$$
+图像如下图所示。  
+![](030.042.png)
+
+### 有用的恒等式
+下面三个公式展示了反双曲函数之间的某种关系。
+$$\operatorname{sech}^{-1}x=\cosh^{-1}\frac{1}{x}$$
+$$\operatorname{csch}^{-1}x=\sinh^{-1}\frac{1}{x}$$
+$$\coth^{-1}x=\tanh^{-1}\frac{1}{x}$$
+这些恒等式可以从定义直接推导得到。比如 $0<x\leq 1$ 时，那么
+$$\begin{aligned}
+\operatorname{sech}(\cosh^{-1}\frac{1}{x})&=\frac{1}{\cosh(\cosh^{-1}\frac{1}{x})}\\
+&=\frac{1}{\frac{1}{x}}\\
+&=x
+\end{aligned}$$
+因为 $\operatorname{sech}(\operatorname{sech}^{-1}x)=x$，且双曲正割在 $(0,1]$ 上存在反函数，所以
+$$\cosh^{-1}\frac{1}{x}=\operatorname{sech}^{-1}x$$
+
+### 反双曲函数的微分
+下面是反双曲函数的微分公式。注意，很多公式后面有适用范围。
+$$\frac{d}{dx}\sinh^{-1}u=\frac{1}{\sqrt{1+u^2}}\frac{du}{dx}$$
+$$\frac{d}{dx}\cosh^{-1}u=\frac{1}{\sqrt{u^2-1}}\frac{du}{dx},u>1$$
+$$\frac{d}{dx}\tanh^{-1}u=\frac{1}{1-u^2}\frac{du}{dx},|u|<1$$
+$$\frac{d}{dx}\coth^{-1}u=\frac{1}{1-u^2}\frac{du}{dx},|u|>1$$
+$$\frac{d}{dx}\operatorname{sech}^{-1}u=-\frac{1}{u\sqrt{1-u^2}}\frac{du}{dx},0<u<1$$
+$$\frac{d}{dx}\operatorname{csch}^{-1}u=-\frac{1}{|u|\sqrt{1+u^2}}\frac{du}{dx},u\neq 0$$
+下面的例子将阐述其中第二个公式是如何推导的，其余的类似。
+
+例2 证明如果 $u$ 是 $x$ 的可导函数且值大于 1，那么
+$$\frac{d}{dx}\cosh^{-1}u=\frac{1}{\sqrt{u^2-1}}\frac{du}{dx}$$
+证明：这里使用 3.8 节的定理3，是反函数与原函数导数的关系。这里 $f(x)=\cosh x,f^{-1}(x)=\cosh^{-1}x$
+$$\begin{aligned}
+(f^{-1})'(x)&=\frac{1}{f'(f^{-1}(x))}\\
+&=\frac{1}{\sinh(\cosh^{-1}x)}&&&&f'(x)=\sinh x\\
+&=\frac{1}{\sqrt{\cosh^2(\cosh^{-1}x)-1}}&&&&\begin{aligned}
+&\cosh^2 x-\sinh^2 x=1\\
+&\sinh x=\sqrt{\cosh^2 x-1}
+\end{aligned}\\
+&=\frac{1}{\sqrt{x^2-1}}
+\end{aligned}$$
+使用链式法则就可以得到
+$$\frac{d}{dx}\cosh^{-1}u=\frac{1}{\sqrt{u^2-1}}\frac{du}{dx}$$
+通过合适的替换，微分公式可以得到如下积分公式。每一个公式可以从右边开始进行微分来验证。
+$$\int\frac{du}{\sqrt{a^2+u^2}}=\sinh^{-1}\frac{u}{a}+C,a>0$$
+$$\int\frac{du}{\sqrt{u^2-a^2}}=\cosh^{-1}\frac{u}{a}+C,0<a<u$$
+$$\int\frac{du}{a^2-u^2}=\begin{cases}
+\frac{1}{a}\tanh^{-1}\frac{u}{a}+C,u^2<a^2\\
+\frac{1}{a}\coth^{-1}\frac{u}{a}+C,u^2>a^2
+\end{cases}$$
+$$\int\frac{du}{u\sqrt{a^2-u^2}}=-\frac{1}{a}\operatorname{sech}^{-1}\frac{u}{a}+C,0<u<a$$
+$$\int\frac{du}{u\sqrt{a^2+u^2}}=-\frac{1}{a}\operatorname{csch}^{-1}\bigg|\frac{u}{a}\bigg|+C,u\neq 0,a>0$$
+
+例3 求
+$$\int_0^1\frac{2dx}{\sqrt{3+4x^2}}$$
+解：不定积分是
+$$\begin{aligned}
+\int\frac{2dx}{\sqrt{3+4x^2}}&=\int\frac{dx}{\sqrt{\frac{3}{4}+x^2}}\\
+&=\sinh^{-1}\frac{2x}{\sqrt{3}}+C
+\end{aligned}$$
+因此
+$$\begin{aligned}
+\int_0^1\frac{2dx}{\sqrt{3+4x^2}}&=\sinh^{-1}\frac{2x}{\sqrt{3}}\bigg|_0^1\\
+&=\sinh^{-1}\frac{2}{\sqrt{3}}-\sinh^{-1}0\\
+&=\sinh^{-1}\frac{2}{\sqrt{3}}
+\end{aligned}$$
