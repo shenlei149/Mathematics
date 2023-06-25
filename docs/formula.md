@@ -37,6 +37,12 @@ $$\tanh x=\frac{\sinh x}{\cosh x}=\frac{e^x-e^{-x}}{e^x+e^{-x}}$$
 $$\coth x=\frac{\cosh x}{\sinh x}=\frac{e^x+e^{-x}}{e^x-e^{-x}}$$
 $$\operatorname{sech} x=\frac{1}{\cosh x}=\frac{2}{e^x+e^{-x}}$$
 $$\operatorname{csch} x=\frac{1}{\sinh x}=\frac{2}{e^x-e^{-x}}$$
+$$\sinh^{-1}x=\ln(x+\sqrt{x^2+1}),-\infty<x<\infty$$
+$$\cosh^{-1}x=\ln(x+\sqrt{x^2-1}),x\geq 1$$
+$$\tanh^{-1}x=\frac{1}{2}\ln\frac{1+x}{1-x},|x|<1$$
+$$\coth^{-1}x=\frac{1}{2}\ln\frac{x+1}{x-1},|x|>1$$
+$$\operatorname{sech}^{-1}x=\ln\bigg(\frac{1+\sqrt{1-x^2}}{x}\bigg),0<x\leq 1$$
+$$\operatorname{csch}^{-1}x=\ln\bigg(\frac{1}{x}+\frac{\sqrt{1+x^2}}{|x|}\bigg),x\neq 0$$
 
 ## 恒等式
 参考 [7.3 小节](/010-Calculus/070-Integrals-and-Transcendental-Functions/030-Hyperbolic-Functions.md)
@@ -51,10 +57,16 @@ $$\operatorname{sech}^{-1}x=\cosh^{-1}\frac{1}{x}$$
 $$\operatorname{csch}^{-1}x=\sinh^{-1}\frac{1}{x}$$
 $$\coth^{-1}x=\tanh^{-1}\frac{1}{x}$$
 
+## 和差倍半
+$$\sinh(x+y)=\sinh x\cosh y+\cosh x\sinh y$$
+$$\cosh(x+y)=\cosh x\cosh y+\sinh x\sinh y$$
+$$\sinh 2x=2\sinh x\cosh x$$
+$$\cosh 2x=\cosh^2x+\sinh^2x$$
+
 ## 微分
 参考 [7.3 小节](/010-Calculus/070-Integrals-and-Transcendental-Functions/030-Hyperbolic-Functions.md)
 $$\frac{d}{dx}\sinh u=\cosh u\frac{du}{dx}$$
-$$\frac{d}{dx}\cosh u=\sinh y\frac{du}{dx}$$
+$$\frac{d}{dx}\cosh u=\sinh u\frac{du}{dx}$$
 $$\frac{d}{dx}\tanh u=\operatorname{sech}^2 u\frac{du}{dx}$$
 $$\frac{d}{dx}\coth u=-\operatorname{csch}^2 u\frac{du}{dx}$$
 $$\frac{d}{dx}\operatorname{sech} u=-\operatorname{sech} u\tanh u\frac{du}{dx}$$
@@ -74,6 +86,8 @@ $$\int\operatorname{sech}^2 udu=\tanh u+C$$
 $$\int\operatorname{csch}^2 udu=-\coth u+C$$
 $$\int\operatorname{sech} u\tanh udu=-\operatorname{sech} u+C$$
 $$\int\operatorname{csch} u\coth udu=-\operatorname{csch} u+C$$
+$$\int\operatorname{sech}udu=\tan^{-1}(\sinh u)+C$$
+$$\int\operatorname{sech}udu=\sin^{-1}(\tanh u)+C$$
 $$\int\frac{du}{\sqrt{a^2+u^2}}=\sinh^{-1}\frac{u}{a}+C,a>0$$
 $$\int\frac{du}{\sqrt{u^2-a^2}}=\cosh^{-1}\frac{u}{a}+C,0<a<u$$
 $$\int\frac{du}{a^2-u^2}=\begin{cases}
