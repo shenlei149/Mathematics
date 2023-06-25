@@ -33,7 +33,7 @@ $$\cosh^2 u-\sinh^2 u=1$$
 ### 双曲函数的微分和积分
 六个双曲函数，是可导函数 $e^x,e^{-x}$ 的有理组合，所以在定义域上处处可导。如下所示。这些结论与三角函数类似。
 $$\frac{d}{dx}\sinh u=\cosh u\frac{du}{dx}$$
-$$\frac{d}{dx}\cosh u=\sinh y\frac{du}{dx}$$
+$$\frac{d}{dx}\cosh u=\sinh u\frac{du}{dx}$$
 $$\frac{d}{dx}\tanh u=\operatorname{sech}^2 u\frac{du}{dx}$$
 $$\frac{d}{dx}\coth u=-\operatorname{csch}^2 u\frac{du}{dx}$$
 $$\frac{d}{dx}\operatorname{sech} u=-\operatorname{sech} u\tanh u\frac{du}{dx}$$
