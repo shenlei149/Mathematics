@@ -20,5 +20,58 @@ $$\lim_{x\to\infty}\frac{f(x)}{g(x)}=L$$
 $$\lim_{x\to\infty}\frac{2x}{x}=2$$
 这里极限是正数且有限。脱离口语化的表达，这里 $f$ 比 $g$ 增长的更快意思是当 $x$ 变得充分大的时候，$g$ 相比 $f$ 可以忽略。
 
-例1 
+例1  
+（a）$e^x$ 比 $x^2$ 增长更快是因为
+$$\lim_{x\to\infty}\frac{e^x}{x^2}=\lim_{x\to\infty}\frac{e^x}{2x}=\lim_{x\to\infty}\frac{e^x}{2}=\infty$$
+（b）$3^x$ 比 $2^x$ 增长更快是因为
+$$\lim_{x\to\infty}\frac{3^x}{2^x}=\lim_{x\to\infty}(\frac{3}{2})^x=\infty$$
+（c）$x^2$ 比 $\ln x$ 增长更快是因为
+$$\lim_{x\to\infty}\frac{x^2}{\ln x}=\lim_{x\to\infty}\frac{2x}{1/x}=\lim_{x\to\infty}2x^2=\infty$$
+（d）$\ln x$ 比 $x^{1/n}$ 增长更慢是因为
+$$\lim_{x\to\infty}\frac{\ln x}{x^{1/n}}=\lim_{x\to\infty}\frac{1/x}{(1/n)x^{1/n-1}}=\lim_{x\to\infty}\frac{n}{x^{1/n}}=0$$
+（e）根据（b），不同的底的指数函数增长速度不同。如果 $a>b>0$，因为 $(a/b)>1$，那么 $a^x$ 增长比 $b^x$ 更快。
+$$\lim_{x\to\infty}\frac{a^x}{b^x}=\lim_{x\to\infty}(\frac{a}{b})^x=\infty$$
+（f）与指数函数不同，不同底 $a>1,b>1$ 的对数函数增长速度一样。
+$$\lim_{x\to\infty}\frac{\log_a x}{\log_b x}=\lim_{x\to\infty}\frac{\ln x/\ln a}{\ln x/\ln b}=\frac{\ln a}{\ln b}$$
+其极限有限且不为零。
 
+当 $x\to\infty$ 时，$f$ 和 $g$ 增长速率一样，$g$ 与 $h$ 增长速率一样，那么 $f$ 和 $h$ 增长速率一样。原因是
+$$\lim_{x\to\infty}\frac{f}{g}=L_1,\lim_{x\to\infty}\frac{g}{h}=L_2$$
+意味着
+$$\lim_{x\to\infty}=\frac{f}{h}=\lim_{x\to\infty}\frac{f}{g}\frac{g}{h}=L_1L_2$$
+而 $L_1,L_2$ 非零且有限，所以 $L_1L_2$ 非零且有限。
+
+例2 证明当 $x\to\infty$ 时 $\sqrt{x^2+5}$ 与 $(2\sqrt{x}-1)^2$ 增长速率一样。  
+证明：我们证明这两个函数都与 $g(x)=x$ 增长速率一样。
+$$\lim_{x\to\infty}\frac{\sqrt{x^2+5}}{x}=\lim_{x\to\infty}\sqrt{1+\frac{5}{x^2}}=1$$
+$$\lim_{x\to\infty}\frac{(2\sqrt{x}-1)^2}{x}=\lim_{x\to\infty}(\frac{2\sqrt{x}-1}{\sqrt{x}})^2=\lim_{x\to\infty}(2-\frac{1}{\sqrt{x}})^2=4$$
+
+### 阶与记号$O$
+数论研究人员在一百多年前发明了大 $O$ 与小 $o$ 记号，现在广泛用于数学分析与计算机科学。根据定义，当 $x\to\infty$ 时，$f=o(g)$ 意思是 $f$ 比 $g$ 增长慢。
+
+**定义** 当 $x\to\infty$ 时，如果
+$$\lim_{x\to\infty}\frac{f(x)}{g(x)}=0$$
+我们称 $f$ 的阶比 $g$ 小，是低阶函数。记作
+$$f=o(g)$$
+
+例3 小 $o$ 记号的例子。  
+（a）由于
+$$\lim_{x\to\infty}\frac{\ln x}{x}=0$$
+所以有
+$$\ln x=o(x),x\to\infty$$
+（b）由于
+$$\lim_{x\to\infty}\frac{x^2}{x^3+1}=0$$
+所以有
+$$x^2=o(x^3+1),x\to\infty$$
+
+**定义** 对于充分大的 $x$，$f(x),g(x)$ 都是正数。如果存在一个正数 $M$ 使得当 $x\to\infty$ 时有
+$$\frac{f(x)}{g(x)}=M$$
+那么 $f$ 至多与 $g$ 同阶。记作
+$$f=O(g)$$
+
+例4 大 $O$ 记号的例子。  
+（a）由于 $x$ 充分大时有
+$$\frac{x+\sin x}{x}\leq 2$$
+所以有
+$$x+\sin x=O(x),x\to\infty$$
+（b）
