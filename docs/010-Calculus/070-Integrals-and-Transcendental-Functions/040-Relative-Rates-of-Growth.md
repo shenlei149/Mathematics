@@ -74,4 +74,13 @@ $$f=O(g)$$
 $$\frac{x+\sin x}{x}\leq 2$$
 所以有
 $$x+\sin x=O(x),x\to\infty$$
-（b）
+（b）当 $x\to\infty$ 时有
+$$\frac{e^x+x^2}{e^x}\to 1$$
+所以当 $x\to\infty$ 时
+$$e^x+x^2=O(e^x)$$
+（c）当 $x\to\infty$ 时有
+$$\frac{x}{e^x}\to 0$$
+所以当 $x\to\infty$ 时
+$$x=O(e^x)$$
+
+对于充分大的 $x$，$f=o(g)$ 隐含着 $f=O(g)$。如果 $f,g$ 增长速率相同，那么 $f=O(g),g=O(f)$。
