@@ -4,3 +4,4 @@
   - [050 积分 Integrals](/010-Calculus/050-Integrals/)
   - [060 定积分的应用 Applications of Definite Integrals](/010-Calculus/060-Applications-of-Definite-Integrals/)
   - [070 积分和超越函数 Integrals and Transcendental Functions](/010-Calculus/070-Integrals-and-Transcendental-Functions/)
+  - [080 积分技术 Techniques of Integration](/010-Calculus/080-Techniques-of-Integration/)
