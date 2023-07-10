@@ -2,3 +2,4 @@
 - [010 Calculus](/010-Calculus/)
 - [080 积分技术 Techniques of Integration](/010-Calculus/080-Techniques-of-Integration/)
   - [010 应用基本的积分公式 Using Basic Integration Formulas](/010-Calculus/080-Techniques-of-Integration/010-Using-Basic-Integration-Formulas.md)
+  - [020 分部积分法 Integration by Parts](/010-Calculus/080-Techniques-of-Integration/020-Integration-by-Parts.md)
