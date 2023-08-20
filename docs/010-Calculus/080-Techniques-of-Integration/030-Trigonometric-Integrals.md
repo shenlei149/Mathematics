@@ -60,3 +60,34 @@ $$\begin{aligned}
 \end{aligned}$$
 代入原始的式子可以得到
 $$\int\sin^2 x\cos^4 xdx=\frac{1}{16}(x-\frac{1}{4}\sin 4x+\frac{1}{3}\sin^3 2x)+C$$
+
+### 消除平方根
+下面这个例子使用恒等式 $\cos^2\theta=(1+\cos 2\theta)/2$ 消除平方运算。
+
+例4 求
+$$\int_0^{\pi/4}\sqrt{1+\cos 4x}dx$$
+解：利用
+$$\cos^2\theta=\frac{(1+\cos 2\theta)}{2}$$
+消除平方根。令 $\theta=2x$，那么
+$$1+\cos 4x=2\cos^2 2x$$
+所以
+$$\begin{aligned}
+
+\end{aligned}$$
+
+### 正弦和余弦的积
+许多涉及周期的应用会出现下面的积分式
+$$\int\sin mx\sin nxdx, \int\sin mx\cos nxdx, \int\cos mx\cos nxdx$$
+可以使用分布积分法，不过需要使用两次。更简单的方式是利用如下恒等式
+$$\sin mx\sin nx=\frac{1}{2}[\cos(m-n)x-\cos(m+n)x]$$
+$$\sin mx\cos nx=\frac{1}{2}[\sin(m-n)x+\sin(m+n)x]$$
+$$\cos mx\cos nx=\frac{1}{2}[\cos(m-n)x+\cos(m+n)x]$$
+
+例8 求
+$$\int\sin 3x\cos 5xdx$$
+解：
+$$\begin{aligned}
+\int\sin 3x\cos 5xdx&=\frac{1}{2}\int[\sin(-2x)+\sin(8x)]dx\\
+&=\frac{1}{2}\int(\sin 8x-\sin 2x)dx\\
+&=-\frac{\cos 8x}{16}+\frac{\cos 2x}{4}+C
+\end{aligned}$$

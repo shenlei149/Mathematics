@@ -1,5 +1,11 @@
 # 三角函数与反三角函数
 
+## 恒等式
+参考 [1.3 小节](/010-Calculus/010-Functions/030-Trigonometric-Functions.md)
+$$\sin mx\sin nx=\frac{1}{2}[\cos(m-n)x-\cos(m+n)x]$$
+$$\sin mx\cos nx=\frac{1}{2}[\sin(m-n)x+\sin(m+n)x]$$
+$$\cos mx\cos nx=\frac{1}{2}[\cos(m-n)x+\cos(m+n)x]$$
+
 ## 三角函数导数
 参考 [3.5 小节](/010-Calculus/030-Derivatives/050-Derivatives-of-Trigonometric-Functions.md)
 $$\frac{d}{dx}\sin x=\cos x$$
