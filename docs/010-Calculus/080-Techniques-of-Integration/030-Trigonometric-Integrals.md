@@ -1,6 +1,6 @@
 三角函数的积分涉及六个基本三角函数的代数运算。一般地，我们通过恒等变形，将被积分的式子转化成更容易积分的式子。
 
-### 正弦和余弦的幂的积
+### 正弦和余弦的幂的积分
 我们从形如
 $$\int\sin^m x\cos^n xdx$$
 的积分开始，其中 $m,n$ 是非负整数。根据 $m,n$ 的奇偶性可以分成三种情况。
@@ -72,10 +72,60 @@ $$\cos^2\theta=\frac{(1+\cos 2\theta)}{2}$$
 $$1+\cos 4x=2\cos^2 2x$$
 所以
 $$\begin{aligned}
-
+\int_0^{\pi/4}\sqrt{1+\cos 4x}dx&=\int_0^{\pi/4}\sqrt{2\cos^2 2x}dx\\
+&=\sqrt{2}\int_0^{\pi/4}|\cos 2x|dx\\
+&=\sqrt{2}\int_0^{\pi/4}\cos 2xdx\\
+&=\sqrt{2}\bigg[\frac{\sin 2x}{2}\bigg]_0^{\pi/4}\\
+&=\frac{\sqrt{2}}{2}
 \end{aligned}$$
 
-### 正弦和余弦的积
+### 正切和正割的幂的积分
+涉及正切和正割的幂的积分，我们利用恒等式 $\tan^2 x=\sec^2 x-1,\sec^2 x=\tan^2 x+1$ 和部分积分来降低幂的次。
+
+例5 求
+$$\int\tan^4 xdx$$
+解：
+$$\begin{aligned}
+\int\tan^4 xdx&=\int\tan^2 x\tan^2 xdx\\
+&=\int\tan^2 x(\sec^2 x-1)dx\\
+&=\int\tan^2 x\sec^2 xdx-\int\tan^2 xdx\\
+&=\int\tan^2 x\sec^2 xdx-\int(\sec^2 x-1)dx\\
+&=\int\tan^2 x\sec^2 xdx-\int\sec^2 x+\int dx
+\end{aligned}$$
+对于第一项，令
+$$u=\tan x,du=\sec^2 xdx$$
+有
+$$\int u^2du=\frac{1}{3}u^3+C$$
+所以
+$$\int\tan^4 xdx=\frac{1}{3}\tan^3 x-\tan x+x+C$$
+
+例6 求
+$$\int\sec^3 xdx$$
+解：部分积分法，令
+$$u=\sec x,dv=\sec^2 xdx,du=\sec x\tan xdx,v=\tan x$$
+所以
+$$\begin{aligned}
+\int\sec^3 xdx&=\sec x\tan x-\int\tan x(\sec x\tan x)dx\\
+&=\sec x\tan x-\int(\sec^2 x-1)\sec xdx\\
+&=\sec x\tan x+\int\sec xdx-\int\sec^3 xdx
+\end{aligned}$$
+简单地调整一下顺序
+$$2\int\sec^3 xdx=\sec x\tan x+\int\sec xdx$$
+所以
+$$\int\sec^3 xdx=\frac{1}{2}\sec x\tan x+\frac{1}{2}\ln|\sec x+\tan x|+C$$
+
+例7 求
+$$\int\tan^4 x\sec^4 xdx$$
+解：
+$$\begin{aligned}
+\int\tan^4 x\sec^2 xdx&=\int\tan^4 x(1+\tan^2 x)\sec^2 xdx\\
+&=\int(\tan^6 x+\tan^4 x)\sec^2 xdx\\
+&=\int(u^6+u^4)du\\
+&=\frac{u^7}{7}+\frac{u^5}{5}+C\\
+&=\frac{\tan^7 x}{7}+\frac{\tan^5 x}{5}+C
+\end{aligned}$$
+
+### 正弦和余弦的积分
 许多涉及周期的应用会出现下面的积分式
 $$\int\sin mx\sin nxdx, \int\sin mx\cos nxdx, \int\cos mx\cos nxdx$$
 可以使用分布积分法，不过需要使用两次。更简单的方式是利用如下恒等式
