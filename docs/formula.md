@@ -5,6 +5,7 @@
 $$\sin mx\sin nx=\frac{1}{2}[\cos(m-n)x-\cos(m+n)x]$$
 $$\sin mx\cos nx=\frac{1}{2}[\sin(m-n)x+\sin(m+n)x]$$
 $$\cos mx\cos nx=\frac{1}{2}[\cos(m-n)x+\cos(m+n)x]$$
+$$\tan^2 x=\sec^2 x-1$$
 
 ## 三角函数导数
 参考 [3.5 小节](/010-Calculus/030-Derivatives/050-Derivatives-of-Trigonometric-Functions.md)

@@ -101,7 +101,7 @@ $$\int\tan^4 xdx=\frac{1}{3}\tan^3 x-\tan x+x+C$$
 
 例6 求
 $$\int\sec^3 xdx$$
-解：部分积分法，令
+解：分部积分法，令
 $$u=\sec x,dv=\sec^2 xdx,du=\sec x\tan xdx,v=\tan x$$
 所以
 $$\begin{aligned}
