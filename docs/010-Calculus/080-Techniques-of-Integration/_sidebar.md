@@ -5,3 +5,4 @@
   - [020 分部积分法 Integration by Parts](/010-Calculus/080-Techniques-of-Integration/020-Integration-by-Parts.md)
   - [030 三角函数的积分 Trigonometric Integrals](/010-Calculus/080-Techniques-of-Integration/030-Trigonometric-Integrals.md)
   - [040 三角函数代换 Trigonometric Substitutions](/010-Calculus/080-Techniques-of-Integration/040-Trigonometric-Substitutions.md)
+  - [050 部分分数法求有理函数积分 Integration of Rational Functions by Partial Fractions](/010-Calculus/080-Techniques-of-Integration/050-Integration-of-Rational-Functions-by-Partial-Fractions.md)
