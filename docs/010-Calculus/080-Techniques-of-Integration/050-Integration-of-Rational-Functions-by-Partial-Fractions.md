@@ -31,4 +31,137 @@ $$\frac{B_1x+C_1}{(x^2+px+q)}+\frac{B_2x+C_2}{(x^2+px+q)^2}+\cdots+\frac{B_nx+C_
 
 例1 求
 $$\int\frac{x^2+4x+1}{(x-1)(x+1)(x+3)}dx$$
+解：每个因子的幂次都是 1，那么分解的形式如下
+$$\frac{x^2+4x+1}{(x-1)(x+1)(x+3)}=\frac{A}{x-1}+\frac{B}{x+1}+\frac{C}{x+3}$$
+上面的方程可以写作
+$$\begin{aligned}
+x^2+4x+1&=A(x+1)(x+3)+B(x-1)(x+3)+C(x-1)(x+1)\\
+&=A(x^2+4x+3)+B(x^2+2x-3)+C(x^2-1)\\
+&=(A+B+C)x^2+(4A+2B)x+(3A-3B-C)
+\end{aligned}$$
+对应系数相等
+$$\begin{aligned}
+A&+B&+C&=1\\
+4A&+2B&&=4\\
+3A&-3B&-C&=1
+\end{aligned}$$
+解这个三元一次方程组得到
+$$A=\frac{3}{4},B=\frac{1}{2},C=-\frac{1}{4}$$
+那么
+$$\begin{aligned}
+\int\frac{x^2+4x+1}{(x-1)(x+1)(x+3)}dx&=\int[\frac{3}{4}\frac{1}{x-1}+\frac{1}{2}\frac{1}{x+1}-\frac{1}{4}\frac{1}{x+3}]dx\\
+&=\frac{3}{4}\ln|x-1|+\frac{1}{2}\ln|x+1|-\frac{1}{4}\ln|x+3|+K
+\end{aligned}$$
+这里使用 $K$ 表示任意常数的原因是避免和待定系数 $C$ 混淆。
+
+例2 求
+$$\int\frac{6x+7}{(x+2)^2}dx$$
+解：首先改写为包含待定系数的部分分数之和的形式
+$$\frac{6x+7}{(x+2)^2}=\frac{A}{(x+2)}+\frac{B}{(x+2)^2}$$
+两边同乘 $(x+2)^2$
+$$6x+7=A(x+2)+B=Ax+2A+B$$
+所以
+$$A=6,B=-5$$
+那么
+$$\begin{aligned}
+\int\frac{6x+7}{(x+2)^2}dx&=\int(\frac{6}{x+2}-\frac{5}{(x+2)^2})dx\\
+&=6\int\frac{1}{x+2}-5\int(x+2)^{-2}dx\\
+&=6\ln|x+2|+5\frac{1}{x+2}+C
+\end{aligned}$$
+
+下面的例子说明如何处理 $f(x)/g(x)$ 是假分数的情况，即 $f$ 的最高次幂比 $g$ 大。
+
+例3 求
+$$\int\frac{2x^3-4x^2-x-3}{x^2-2x-3}dx$$
+解：首先分子除以分母得到一个多项式和一个真分数
+$$2x^3-4x^2-x-3=2x(x^2-2x-3)+(5x-3)$$
+所以
+$$\frac{2x^3-4x^2-x-3}{x^2-2x-3}=2x+\frac{5x-3}{x^2-2x-3}$$
+对于最后一项真分数使用部分分数法即可，因此得到
+$$\begin{aligned}
+\int\frac{2x^3-4x^2-x-3}{x^2-2x-3}dx&=\int 2xdx+\int\frac{5x-3}{x^2-2x-3}dx\\
+&=\int 2xdx+\int\frac{2}{x+1}dx+\int\frac{3}{x-3}dx\\
+&=x^2+2\ln|x+1|+3\ln|x-3|+C
+\end{aligned}$$
+
+例4 求
+$$\int\frac{-2x+4}{(x^2+1)(x-1)^2}dx$$
+解：分母有一个不可约的二次多项式 $x^2+1$ 和重复的线性因子 $(x-1)^2$，所以部分分式是
+$$\frac{-2x+4}{(x^2+1)(x-1)^2}=\frac{Ax+B}{x^2+1}+\frac{C}{x-1}+\frac{D}{(x-1)^2}$$
+消除分母得到
+$$\begin{aligned}
+-2x+4&=(Ax+B)(x-1)^2+C(x^2+1)(x-1)+D(x^2+1)\\
+&=(A+C)x^3+(-2A+B-C+D)x^2+(A-2B+C)x+(B-C+D)\\
+\end{aligned}$$
+对应系数相等
+$$\begin{aligned}
+0&=A+C\\
+0&=-2A+B-C+D\\
+-2&=A-2B+C\\
+4&=B-C+D
+\end{aligned}$$
+这个四元一次方程组比较容易解。
+
+第四个方程减第二个方程得到
+$$4=2A,A=2$$
+代入第一个方程得到
+$$C=-2$$
+第一个方程减第三个方程得到
+$$2=2B,B=1$$
+用第四个方程得到
+$$D=1$$
+所以
+$$\frac{-2x+4}{(x^2+1)(x-1)^2}=\frac{2x+1}{x^2+1}-\frac{2}{x-1}+\frac{1}{(x-1)^2}$$
+最后求积分
+$$\begin{aligned}
+\int\frac{-2x+4}{(x^2+1)(x-1)^2}dx&=\int(\frac{2x+1}{x^2+1}-\frac{2}{x-1}+\frac{1}{(x-1)^2})dx\\
+&=\int(\frac{2x}{x^2+1}+\frac{1}{x^2+1}-\frac{2}{x-1}+\frac{1}{(x-1)^2})dx\\
+&=\ln(x^2+1)+\tan^{-1}x-2\ln|x-1|-\frac{1}{x-1}+K
+\end{aligned}$$
+
+例5 求
+$$\int\frac{dx}{x(x^2+1)^2}$$
+解：被积分式子分解成
+$$\frac{1}{x(x^2+1)^2}=\frac{A}{x}+\frac{Bx+C}{x^2+1}+\frac{Dx+E}{(x^2+1)^2}$$
+两边同乘 $x(x^2+1)^2$
+$$\begin{aligned}
+1&=A(x^2+1)^2+(Bx+C)x(x^2+1)+(Dx+E)x\\
+&=A(x^4+2x^2+1)+B(x^4+x^2)+C(x^3+x)+Dx^2+Ex\\
+&=(A+B)x^4+Cx^3+(2A+B+D)x^2+(C+E)x+A
+\end{aligned}$$
+对应系数相等
+$$A+B=0,C=0,2A+B+D=0,C+E=0,A=1$$
+所以
+$$A=1,B=-1,C=0,D=-1,E=0$$
+因此
+$$\begin{aligned}
+\int\frac{dx}{x(x^2+1)^2}&=\int\bigg[\frac{1}{x}-\frac{x}{x^2+1}-\frac{x}{(x^2+1)^2}\bigg]dx\\
+&=\int\frac{dx}{x}-\int\frac{xdx}{x^2+1}-\int\frac{xdx}{(x^2+1)^2}\\
+&=\int\frac{dx}{x}-\frac{1}{2}\int\frac{du}{u}-\frac{1}{2}\int\frac{du}{u^2}\\
+&=\ln|x|-\frac{1}{2}\ln|u|+\frac{1}{2u}+K\\
+&=\ln|x|-\frac{1}{2}\ln(x^2+1)+\frac{1}{2(x^2+1)}+K\\
+&=\ln\frac{|x|}{x^2+1}+\frac{1}{2(x^2+1)}+K
+\end{aligned}$$
+
+当 $f(x)$ 的最高幂次比 $g(x)$ 低且 $g(x)$ 只有幂次为 1 的线性因子
+$$g(x)=(x-r_1)(x-r_2)\cdots(x-r_n)$$
+有快捷的方式将 $f(x)/g(x)$ 写作部分分数。
+
+例6 求下面方程的待定系数 $A,B,C$
+$$\frac{x^2+1}{(x-1)(x-2)(x-3)}=\frac{A}{x-1}+\frac{B}{x-2}+\frac{C}{x-3}$$
+解：两边同时乘以 $x-1$
+$$\frac{x^2+1}{(x-2)(x-3)}=A+\frac{B(x-1)}{x-2}+\frac{C(x-1)}{x-3}$$
+代入 $x=1$ 得到
+$$\frac{1^2+1}{(-1)(-2)}=A$$
+这就得到了 $A=1$。同样的，两边同乘 $(x-2)$ 并代入 $x=2$ 可以得到
+$$\frac{2^2+1}{(1)(-1)}=B$$
+所以 $B=-5$。最后两边同乘 $(x-3)$ 并代入 $x=3$ 得到
+$$\frac{3^2+1}{(2)(1)}=C$$
+所以 $C=5$。
+
+### 求解待定系数的其他方法
+使用微分，同时也可以使用代入特定的 $x$ 值。
+
+例7 求下面方程的待定系数 $A,B,C$
+$$\frac{x-1}{(x+1)^3}=\frac{A}{x+1}+\frac{B}{(x+1)^2}+\frac{C}{(x+1)^3}$$
 解：
