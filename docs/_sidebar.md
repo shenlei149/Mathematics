@@ -1,3 +1,3 @@
 - [Home](/)
 - [010 Calculus](/010-Calculus/)
-- [公式](/formula.md)
+- [公式](/Formula/)
