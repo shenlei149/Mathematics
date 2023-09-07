@@ -107,6 +107,72 @@ $$\int\frac{dx}{(a^2+x^2)^2}=\frac{x}{2a^2(a^2+x^2)}+\frac{1}{2a^3}\tan^{-1}\fra
 $$\int\frac{dx}{\sqrt{a^2+x^2}}=\sinh^{-1}\frac{x}{a}+C=\ln(x+\sqrt{a^2+x^2})+C$$
 
 35.
+$$\int\sqrt{a^2+x^2}dx=\frac{x}{2}\sqrt{a^2+x^2}+\frac{a^2}{2}\ln(x+\sqrt{a^2+x^2})+C$$
+
+36.
+$$\int x^2\sqrt{a^2+x^2}dx=\frac{x}{8}(a^2+2x^2)\sqrt{a^2+x^2}-\frac{a^4}{8}\ln(x+\sqrt{a^2+x^2})+C$$
+
+37.
+$$\int\frac{\sqrt{a^2+x^2}}{x}dx=\sqrt{a^2+x^2}-a\ln\bigg|\frac{a+\sqrt{a^2+x^2}}{x}\bigg|+C$$
+
+38.
+$$\int\frac{\sqrt{a^2+x^2}}{x^2}dx=\ln(x+\sqrt{a^2+x^2})-\frac{\sqrt{a^2+x^2}}{x}+C$$
+
+39.
+$$\int\frac{x^2}{\sqrt{a^2+x^2}}dx=-\frac{a^2}{2}\ln(x+\sqrt{a^2+x^2})+\frac{x\sqrt{a^2+x^2}}{2}+C$$
+
+40.
+$$\int\frac{dx}{x\sqrt{a^2+x^2}}=-\frac{1}{a}\ln\bigg|\frac{a+\sqrt{a^2+x^2}}{x}\bigg|+C$$
+
+41.
+$$\int\frac{dx}{x^2\sqrt{a^2+x^2}}=-\frac{\sqrt{a^2+x^2}}{a^2x}+C$$
+
+## Forms Involving $a^2-x^2$
+42.
+$$\int\frac{dx}{a^2-x^2}=\frac{1}{2a}\ln\bigg|\frac{x+a}{x-1}\bigg|+C$$
+
+43.
+$$\int\frac{dx}{(a^2-x^2)^2}=\frac{x}{2a^2(a^2-x^2)}+\frac{1}{4a^3}\ln\bigg|\frac{x+a}{x-a}\bigg|+C$$
+
+44.
+$$\int\frac{dx}{\sqrt{a^2-x^2}}=\sin^{-1}\frac{x}{a}+C$$
+
+45.
+$$\int\sqrt{a^2-x^2}dx=\frac{x}{2}\sqrt{a^2-x^2}+\frac{a^2}{2}\sin^{-1}\frac{x}{a}+C$$
+
+46.
+$$\int x^2\sqrt{a^2-x^2}dx=\frac{a^4}{8}\sin^{-1}\frac{x}{a}-\frac{1}{8}x\sqrt{a^2-x^2}(a^2-2x^2)+C$$
+
+47.
+$$\int\frac{\sqrt{a^2-x^2}}{x}dx=\sqrt{a^2-x^2}-a\ln\bigg|\frac{a+\sqrt{a^2-x^2}}{x}\bigg|+C$$
+
+48.
+$$\int\frac{\sqrt{a^2-x^2}}{x^2}dx=-\sin^{-1}\frac{x}{a}-\frac{\sqrt{a^2-x^2}}{x}+C$$
+
+49.
+$$\int\frac{x^2}{\sqrt{a^2-x^2}}dx=\frac{a^2}{2}\sin^{-1}\frac{x}{a}-\frac{1}{2}x\sqrt{a^2-x^2}+C$$
+
+50.
+$$\int\frac{dx}{x\sqrt{a^2-x^2}}=-\frac{1}{a}\ln\bigg|\frac{a+\sqrt{a^2-x^2}}{x}\bigg|+C$$
+
+51.
+$$\int\frac{dx}{x^2\sqrt{a^2-x^2}}=-\frac{\sqrt{a^2-x^2}}{a^2x}+C$$
+
+## Forms Involving $x^2-a^2$
+52.
+$$\int\frac{dx}{\sqrt{x^2-a^2}}=\ln|x+\sqrt{x^2-a^2}|+C$$
+
+53.
+$$\int\sqrt{x^2-a^2}dx=\frac{x}{2}\sqrt{x^2-a^2}-\frac{a^2}{2}\ln|x+\sqrt{x^2-a^2}|+C$$
+
+54.
+$$\int(\sqrt{x^2-a^2})^ndx=\frac{x(\sqrt{x^2-a^2})^n}{n+1}-\frac{na^2}{n+1}\int(\sqrt{x^2-a^2})^{n-2}dx,n\neq -1$$
+
+55.
+$$\int\frac{dx}{(\sqrt{x^2-a^2})^n}=\frac{x(\sqrt{x^2-a^2})^{2-n}}{(2-n)a^2}-\frac{n-3}{(n-2)a^2}\int\frac{dx}{(\sqrt{x^2-a^2})^{n-2}},n\neq 2$$
+
+56.
+$$\int x(\sqrt{x^2-a^2})^ndx=\frac{(\sqrt{x^2-a^2})^{n+2}}{n+2}+C$$
+
+57.
 $$\int$$
-
-
