@@ -84,10 +84,10 @@ $$\int(\sqrt{ax+b})^ndx=\frac{2}{a}\frac{(\sqrt{ax+b})^{n+2}}{n+2}+C,n\neq 2$$
 28.
 $$\int\frac{\sqrt{ax+b}}{x}dx=2\sqrt{ax+b}+b\int\frac{dx}{x\sqrt{ax+b}}$$
 
-29.a
+29.a.
 $$\int\frac{dx}{x\sqrt{ax+b}}=\frac{1}{\sqrt{b}}\ln\bigg|\frac{\sqrt{ax+b}-\sqrt{b}}{\sqrt{ax+b}+\sqrt{b}}\bigg|+C$$
 
-29.b
+29.b.
 $$\int\frac{dx}{x\sqrt{ax-b}}=\frac{2}{\sqrt{b}}\tan^{-1}\sqrt{\frac{ax-b}{b}}+C$$
 
 30.
@@ -175,4 +175,102 @@ $$\int\frac{dx}{(\sqrt{x^2-a^2})^n}=\frac{x(\sqrt{x^2-a^2})^{2-n}}{(2-n)a^2}-\fr
 $$\int x(\sqrt{x^2-a^2})^ndx=\frac{(\sqrt{x^2-a^2})^{n+2}}{n+2}+C$$
 
 57.
+$$\int x^2\sqrt{x^2-a^2}dx=\frac{x}{8}(2x^2-a^2)\sqrt{x^2-a^2}-\frac{a^4}{8}\ln|x+\sqrt{x^2-a^2}|+C$$
+
+58.
+$$\int\frac{\sqrt{x^2-a^2}}{a}dx=\sqrt{x^2-a^2}-a\sec^{-1}\bigg|\frac{x}{a}\bigg|+C$$
+
+59.
+$$\int\frac{\sqrt{x^2-a^2}}{x^2}dx=\ln|x+\sqrt{x^2-a^2}|-\frac{\sqrt{x^2-a^2}}{x}+C$$
+
+60.
+$$\int\frac{x^2}{\sqrt{x^2-a^2}}dx=\frac{a^2}{2}\ln|x+\sqrt{x^2-a^2}|+\frac{x}{2}\sqrt{x^2-a^2}+C$$
+
+61.
+$$\int\frac{dx}{x\sqrt{x^2-a^2}}=\frac{1}{a}\sec^{-1}\bigg|\frac{x}{a}\bigg|+C=\frac{1}{a}\cos^{-1}\bigg|\frac{a}{x}\bigg|+C$$
+
+62.
+$$\int\frac{dx}{x^2\sqrt{x^2-a^2}}=\frac{\sqrt{x^2-a^2}}{a^2x}+C$$
+
+## Trigonometric Forms
+63.
+$$\int\sin axdx=-\frac{1}{a}\cos ax+C$$
+
+64.
+$$\int\cos axdx=\frac{1}{a}\sin ax+C$$
+
+65.
+$$\int\sin^2 axdx=\frac{x}{2}-\frac{\sin 2ax}{4a}+C$$
+
+66.
+$$\int\cos^2 axdx=\frac{x}{2}+\frac{\sin 2ax}{4a}+C$$
+
+67.
+$$\int\sin^n axdx=-\frac{\sin^{n-1}ax\cos ax}{na}+\frac{n-1}{n}\int\sin^{n-2} axdx$$
+
+68.
+$$\int\cos^n axdx=\frac{\cos^{n-1}ax\sin ax}{na}+\frac{n-1}{n}\int\cos^{n-2} axdx$$
+
+69.a.
+$$\int\sin ax\cos bxdx=-\frac{\cos(a+b)x}{2(a+b)}-\frac{\cos(a-b)x}{2(a-b)}+C,a^2\neq b^2$$
+
+69.b.
+$$\int\sin ax\sin bxdx=\frac{\sin(a-b)x}{2(a-b)}-\frac{\sin(a+b)x}{2(a+b)}+C,a^2\neq b^2$$
+
+69.c.
+$$\int\cos ax\cos bxdx=\frac{\sin(a-b)x}{2(a-b)}+\frac{\sin(a+b)x}{2(a+b)}+C,a^2\neq b^2$$
+
+70.
+$$\int\sin ax\cos axdx=-\frac{\cos 2ax}{4a}+C$$
+
+71.
+$$\int\sin^n ax\cos axdx=\frac{\sin^{n+1}ax}{(n+1)a}+C,n\neq -1$$
+
+72.
+$$\int\frac{\cos ax}{\sin ax}dx=\frac{1}{a}\ln|\sin ax|+C$$
+
+73.
+$$\int\cos^n ax\sin axdx=-\frac{\cos^{n+1}ax}{(n+1)a}+C,n\neq -1$$
+
+74.
+$$\int\frac{\sin ax}{\cos ax}dx=-\frac{1}{a}\ln|\cos ax|+C$$
+
+75.
+$$\int\sin^n ax\cos^m axdx=-\frac{\sin^{n-1} ax\cos^{m+1} ax}{a(m+n)}+\frac{n-1}{m+n}\int\sin^{n-2} ax\cos^m axdx,n\neq -m$$
+
+76.
+$$\int\sin^n ax\cos^m axdx=\frac{\sin^{n+1} ax\cos^{m11} ax}{a(m+n)}+\frac{m-1}{m+n}\int\sin^n ax\cos^{m-2} axdx,n\neq -m$$
+
+77.
+$$\int\frac{dx}{b+c\sin ax}=\frac{-2}{a\sqrt{b^2-c^2}}\tan^{-1}\bigg[\sqrt{\frac{b-c}{b+c}}\tan\bigg(\frac{\pi}{4}-\frac{ax}{2}\bigg)\bigg]+C,b^2>c^2$$
+
+78.
+$$\int\frac{dx}{b+c\sin ax}=\frac{-1}{a\sqrt{c^2-b^2}}\ln\bigg|\frac{c+b\sin ax+\sqrt{c^2-a^2}\cos ax}{b+c\sin ax}\bigg|+C,b^2<c^2$$
+
+79.
+$$\int\frac{dx}{1+\sin ax}=-\frac{1}{a}\tan\bigg(\frac{\pi}{4}-\frac{ax}{2}\bigg)+C$$
+
+80.
+$$\int\frac{dx}{1-\sin ax}=\frac{1}{a}\tan\bigg(\frac{\pi}{4}+\frac{ax}{2}\bigg)+C$$
+
+81.
+$$\int\frac{dx}{b+c\cos ax}=\frac{2}{a\sqrt{b^2-c^2}}\tan^{-1}\bigg[\sqrt{\frac{b-c}{b+c}}\tan\bigg(\frac{ax}{2}\bigg)\bigg]+C,b^2>c^2$$
+
+82.
+$$\int\frac{dx}{b+c\cos ax}=\frac{1}{a\sqrt{c^2-b^2}}\ln\bigg|\frac{c+b\cos ax+\sqrt{c^2-a^2}\sin ax}{b+c\cos ax}\bigg|+C,b^2<c^2$$
+
+83.
+$$\int\frac{dx}{1+\cos ax}=\frac{1}{a}\tan\bigg(\frac{ax}{2}\bigg)+C$$
+
+84.
+$$\int\frac{dx}{1-\cos ax}=-\frac{1}{a}\cot\bigg(\frac{ax}{2}\bigg)+C$$
+
+85.
+$$\int x\sin axdx=\frac{1}{a^2}\sin ax-\frac{x}{a}\cos ax+C$$
+
+86.
+$$\int x\cos axdx=\frac{1}{a^2}\cos ax+\frac{x}{a}\sin ax+C$$
+
+87.
 $$\int$$
+
