@@ -272,5 +272,107 @@ $$\int x\sin axdx=\frac{1}{a^2}\sin ax-\frac{x}{a}\cos ax+C$$
 $$\int x\cos axdx=\frac{1}{a^2}\cos ax+\frac{x}{a}\sin ax+C$$
 
 87.
+$$\int x^n\sin axdx=-\frac{x^n}{a}\cos ax+\frac{n}{a}\int x^{n-1}\cos axdx$$
+
+88.
+$$\int x^n\cos axdx=\frac{x^n}{a}\sin ax-\frac{n}{a}\int x^{n-1}\sin axdx$$
+
+89.
+$$\int\tan ax dx=\frac{1}{a}\ln|\sec ax|+C$$
+
+90.
+$$\int\cot axdx=\frac{1}{a}\ln|\sin ax|+C$$
+
+91.
+$$\int\tan^2 axdx=\frac{1}{a}\tan ax-x+C$$
+
+92.
+$$\int\cot^2 axdx=-\frac{1}{a}\cot ax-x+C$$
+
+93.
+$$\int\tan^n axdx=\frac{\tan^{n-1}ax}{a(n-1)}-\int\tan^{n-2} axdx,n\neq 1$$
+
+94.
+$$\int\cot^n axdx=-\frac{\cot^{n-1}ax}{a(n-1)}-\int\cot^{n-1} axdx,n\neq 1$$
+
+95.
+$$\int\sec axdx=\frac{1}{a}\ln|\sec ax+\tan ax|+C$$
+
+96.
+$$\int\csc axdx=-\frac{1}{a}\ln|\csc ax+\cot ax|+C$$
+
+97.
+$$\int\sec^2 axdx=\frac{1}{a}\tan ax+C$$
+
+98.
+$$\int\csc^2 axdx=-\frac{1}{a}\cot ax+C$$
+
+99.
+$$\int\sec^n axdx=\frac{\sec^{n-2}ax\tan ax}{a(n-1)}+\frac{n-2}{n-1}\int\sec^{n-2}axdx,n\neq 1$$
+
+100.
+$$\int\csc^n axdx=-\frac{\csc^{n-2}ax\cot ax}{a(n-1)}+\frac{n-2}{n-1}\int\csc^{n-2}axdx,n\neq 1$$
+
+101.
+$$\int\sec^n ax\tan axdx=\frac{\sec^n ax}{na}+C$$
+
+102.
+$$\int\csc^n ax\cot axdx=-\frac{\csc^n ax}{na}+C$$
+
+## Inverse Trigonometric Forms
+103.
+$$\int\sin^{-1} axdx=x\sin^{-1} ax+\frac{1}{a}\sqrt{1-a^2x^2}+C$$
+
+104.
+$$\int\cos^{-1} axdx=x\cos^{-1} ax-\frac{1}{a}\sqrt{1-a^2x^2}+C$$
+
+105.
+$$\int\tan^{-1} axdx=x\tan^{-1} ax-\frac{1}{2a}\ln(1+a^2x^2)+C$$
+
+106.
+$$\int x^n\sin^{-1} axdx=\frac{x^{n+1}}{n+1}\sin^{-1} ax-\frac{a}{n+1}\int\frac{x^{n+1}dx}{\sqrt{1-a^2x^2}},n\neq -1$$
+
+107.
+$$\int x^n\cos^{-1} axdx=\frac{x^{n+1}}{n+1}\cos^{-1} ax-\frac{a}{n+1}\int\frac{x^{n+1}dx}{\sqrt{1-a^2x^2}},n\neq -1$$
+
+108.
+$$\int x^n\tan^{-1} axdx=\frac{x^{n+1}}{n+1}\tan^{-1} ax-\frac{a}{n+1}\int\frac{x^{n+1}dx}{1+a^2x^2},n\neq -1$$
+
+## Exponential and Logarithmic Forms
+109.
+$$\int e^{ax}dx=\frac{1}{a}e^{ax}+C$$
+
+110.
+$$\int b^{ax}dx=\frac{1}{a}\frac{b^{ax}}{\ln b}+C$$
+
+111.
+$$\int xe^{ax}dx=\frac{e^{ax}}{a^2}(ax-1)+C,b\neq 1$$
+
+112.
+$$\int x^ne^{ax}dx=\frac{1}{a}x^ne^{ax}-\frac{n}{a}\int x^{n-1}e^{ax}dx$$
+
+113.
+$$\int x^nb^{ax}dx=\frac{x^nb^{ax}}{a\ln b}\int x^{n-1}b^{ax},b>0,b\neq 1$$
+
+114.
+$$\int e^{ax}\sin bxdx=\frac{e^{ax}}{a^2+b^2}(a\sin bx-b\cos bx)+C$$
+
+115.
+$$\int e^{ax}\cos bxdx=\frac{e^{ax}}{a^2+b^2}(a\cos bx+b\sin bx)+C$$
+
+116.
+$$\int\ln axdx=x\ln ax-x+C$$
+
+117.
+$$\int x^n(\ln ax)^mdx=\frac{x^{n+1}(\ln ax)^m}{n+1}-\frac{m}{n+1}\int x^n(\ln ax)^{m-1}dx,n\neq -1$$
+
+118.
+$$\int x^{-1}(\ln ax)^m=\frac{(\ln ax)^{m+1}}{m+1}+C,m\neq -1$$
+
+119.
+$$\int\frac{dx}{x\ln ax}=\ln|\ln ax|+C$$
+
+## Forms Involving $\sqrt{2ax-x^2},a>0$
+120.
 $$\int$$
 
