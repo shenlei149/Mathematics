@@ -79,7 +79,7 @@ $$\int x(ax+b)^{-2}dx=\frac{1}{a^2}\bigg[\ln|ax+b|+\frac{b}{ax+b}\bigg]+C$$
 $$\int\frac{dx}{x(ax+b)}=\frac{1}{b}\ln\bigg|\frac{x}{ax+b}\bigg|+C$$
 
 27.
-$$\int(\sqrt{ax+b})^ndx=\frac{2}{a}\frac{(\sqrt{ax+b})^{n+2}}{n+2}+C,n\neq 2$$
+$$\int(\sqrt{ax+b})^ndx=\frac{2}{a}\frac{(\sqrt{ax+b})^{n+2}}{n+2}+C,n\neq -2$$
 
 28.
 $$\int\frac{\sqrt{ax+b}}{x}dx=2\sqrt{ax+b}+b\int\frac{dx}{x\sqrt{ax+b}}$$
@@ -380,7 +380,7 @@ $$\int\frac{dx}{\sqrt{2ax-x^2}}=\sin^{-1}\bigg(\frac{x-a}{a}\bigg)+C$$
 $$\int\sqrt{2ax-x^2}dx=\frac{x-a}{2}\sqrt{2ax-x^2}+\frac{a^2}{2}\sin^{-1}\bigg(\frac{x-a}{a}\bigg)+C$$
 
 122.
-$$(\sqrt{2ax-x^2})^ndx=\frac{(x-a)(\sqrt{2ax-x^2})^n}{n+1}+\frac{na^2}{n+1}\int(\sqrt{2ax-x^2})^{n-2}dx$$
+$$\int(\sqrt{2ax-x^2})^ndx=\frac{(x-a)(\sqrt{2ax-x^2})^n}{n+1}+\frac{na^2}{n+1}\int(\sqrt{2ax-x^2})^{n-2}dx$$
 
 123.
 $$\int\frac{dx}{(\sqrt{2ax-x^2})^n}=\frac{(x-a)(\sqrt{2ax-x^2})^{2-n}}{(n-2)a^2}+\frac{n-3}{(n-1)a^2}\int\frac{dx}{(\sqrt{2ax-x^2})^{n-2}}$$
