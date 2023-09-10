@@ -374,5 +374,121 @@ $$\int\frac{dx}{x\ln ax}=\ln|\ln ax|+C$$
 
 ## Forms Involving $\sqrt{2ax-x^2},a>0$
 120.
-$$\int$$
+$$\int\frac{dx}{\sqrt{2ax-x^2}}=\sin^{-1}\bigg(\frac{x-a}{a}\bigg)+C$$
 
+121.
+$$\int\sqrt{2ax-x^2}dx=\frac{x-a}{2}\sqrt{2ax-x^2}+\frac{a^2}{2}\sin^{-1}\bigg(\frac{x-a}{a}\bigg)+C$$
+
+122.
+$$(\sqrt{2ax-x^2})^ndx=\frac{(x-a)(\sqrt{2ax-x^2})^n}{n+1}+\frac{na^2}{n+1}\int(\sqrt{2ax-x^2})^{n-2}dx$$
+
+123.
+$$\int\frac{dx}{(\sqrt{2ax-x^2})^n}=\frac{(x-a)(\sqrt{2ax-x^2})^{2-n}}{(n-2)a^2}+\frac{n-3}{(n-1)a^2}\int\frac{dx}{(\sqrt{2ax-x^2})^{n-2}}$$
+
+124.
+$$\int x\sqrt{2ax-x^2}dx=\frac{(x+a)(2x-3a)\sqrt{2ax-x^2}}{6}+\frac{a^3}{2}\sin^{-1}\bigg(\frac{x-a}{a}\bigg)+C$$
+
+125.
+$$\int\frac{\sqrt{2ax-x^2}}{x}dx=\sqrt{2ax-x^2}+a\sin^{-1}\bigg(\frac{x-a}{a}\bigg)+C$$
+
+126.
+$$\int\frac{\sqrt{2ax-x^2}}{x^2}dx=-2\sqrt{\frac{2a-x}{x}}-\sin^{-1}\bigg(\frac{x-a}{a}\bigg)+C$$
+
+127.
+$$\int\frac{xdx}{\sqrt{2ax-x^2}}=a\sin^{-1}\bigg(\frac{x-a}{a}\bigg)-\sqrt{2ax-x^2}+C$$
+
+128.
+$$\int\frac{dx}{x\sqrt{2ax-x^2}}=-\frac{1}{a}\sqrt{\frac{2a-x}{x}}+C$$
+
+
+## Hyperbolic Forms
+129.
+$$\int\sinh ax=\frac{1}{a}\cosh ax+C$$
+
+130.
+$$\int\cosh ax=\frac{1}{a}\sinh ax+C$$
+
+131.
+$$\int\sinh^2 axdx=\frac{\sinh 2ax}{4a}-\frac{x}{2}+C$$
+
+132.
+$$\int\cosh^2 axdx=\frac{\sinh 2ax}{4a}+\frac{x}{2}+C$$
+
+133.
+$$\int\sinh^n axdx=\frac{\sinh^{n-1} ax\cosh ax}{na}-\frac{n-1}{n}\int\sinh^{n-2} axdx,n\neq 0$$
+
+134.
+$$\int\cosh^n axdx=\frac{\cosh^{n-1} ax\sinh ax}{na}+\frac{n-1}{n}\int\cosh^{n-2} axdx,n\neq 0$$
+
+135.
+$$\int x\sinh axdx=\frac{x}{a}\cosh ax-\frac{1}{a^2}\sinh ax+C$$
+
+136.
+$$\int x\cosh axdx=\frac{x}{a}\sinh ax-\frac{1}{a^2}\cosh ax+C$$
+
+137.
+$$\int x^n\sinh axdx=\frac{x^n}{a}\cosh ax-\frac{n}{a}\int x^{n-1}\cosh axdx$$
+
+138.
+$$\int x^n\cosh axdx=\frac{x^n}{a}\sinh ax-\frac{n}{a}\int x^{n-1}\sinh axdx$$
+
+139.
+$$\int\tanh axdx=\frac{1}{a}\ln(\cosh ax)+C$$
+
+140.
+$$\int\coth axdx=\frac{1}{a}\ln|\sinh ax|+C$$
+
+141.
+$$\int\tanh^2 axdx=x-\frac{1}{a}\tanh ax+C$$
+
+142.
+$$\int\coth^2 axdx=x-\frac{1}{a}\coth ax+C$$
+
+143.
+$$\int\tanh^n axdx=-\frac{\tanh^{n-1} ax}{(n-1)a}+\int\tanh^{n-2} axdx,n\neq 1$$
+
+144.
+$$\int\coth^n axdx=-\frac{\coth^{n-1} ax}{(n-1)a}+\int\coth^{n-2} axdx,n\neq 1$$
+
+145.
+$$\int\operatorname{sech} axdx=\frac{1}{a}\sinh^{-1}(\tanh ax)+C$$
+
+146.
+$$\int\operatorname{csch} axdx=\frac{1}{a}\ln\bigg|\tanh\frac{ax}{2}\bigg|+C$$
+
+147.
+$$\int\operatorname{sech}^2 axdx=\frac{1}{a}\tanh ax+C$$
+
+148.
+$$\int\operatorname{csch}^2 axdx=-\frac{1}{a}\coth ax+C$$
+
+149.
+$$\int\operatorname{sech}^n axdx=\frac{\operatorname{sech}^{n-2}ax\tanh ax}{(n-1)a}+\frac{n-2}{n-1}\int\operatorname{sech}^{n-2}axdx,n\neq 1$$
+
+150.
+$$\int\operatorname{csch}^n axdx=-\frac{\operatorname{csch}^{n-2}ax\coth ax}{(n-1)a}-\frac{n-2}{n-1}\int\operatorname{csch}^{n-2}axdx,n\neq 1$$
+
+151.
+$$\int\operatorname{sech}^nax\tanh axdx=-\frac{\operatorname{sech}^n ax}{na}+C,n\neq 0$$
+
+152.
+$$\int\operatorname{csch}^nax\coth axdx=-\frac{\operatorname{csch}^n ax}{na}+C,n\neq 0$$
+
+153.
+$$\int e^{ax}\sinh bxdx=\frac{e^{ax}}{2}\bigg[\frac{e^{bx}}{a+b}-\frac{e^{-bx}}{a-b}\bigg]+C,a^2\neq b^2$$
+
+154.
+$$\int e^{ax}\cosh bxdx=\frac{e^{ax}}{2}\bigg[\frac{e^{bx}}{a+b}+\frac{e^{-bx}}{a-b}\bigg]+C,a^2\neq b^2$$
+
+## Some Definite Integrals
+155.
+$$\int_0^\infty x^{n-1}e^{-x}dx=\Gamma(n)=(n-1)!, n>0$$
+
+156.
+$$\int_0^\infty e^{-ax^2}dx=\frac{1}{2}\sqrt{\frac{\pi}{a}},a>0$$
+
+157.
+$$\int_0^{\pi/2}\sin^n xdx=\int_0^{\pi/2}\cos^n xdx=\begin{cases}
+\frac{1\cdot 3\cdot 5\cdots(n-1)}{2\cdot 4\cdot 6\cdots n}\cdot\frac{\pi}{2}, &\text{$n$ is an even integer} \geq 2\\
+\frac{2\cdot 4\cdot 6\cdots (n-1)}{3\cdot 5\cdot 7\cdots n}, &\text{$n$ is an odd integer} \geq 3
+\end{cases}$$
