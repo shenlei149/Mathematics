@@ -1,3 +1,4 @@
 - [Home](/)
 - [010 Calculus](/010-Calculus/)
+- [200 Discrete Mathematics and Its Applications ](/200-Discrete-Mathematics-and-Its-Applications/)
 - [公式](/Formula/)
