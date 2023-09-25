@@ -8,3 +8,4 @@
   - [050 部分分数法求有理函数积分 Integration of Rational Functions by Partial Fractions](/010-Calculus/080-Techniques-of-Integration/050-Integration-of-Rational-Functions-by-Partial-Fractions.md)
   - [060 积分表和计算机代数系统 Integral Tables and Computer Algebra Systems](/010-Calculus/080-Techniques-of-Integration/060-Integral-Tables-and-Computer-Algebra-Systems.md)
   - [070 数值积分法 Numerical Integration](/010-Calculus/080-Techniques-of-Integration/070-Numerical-Integration.md)
+  - [080 广义积分 Improper Integrals](/010-Calculus/080-Techniques-of-Integration/080-Improper-Integrals.md)
