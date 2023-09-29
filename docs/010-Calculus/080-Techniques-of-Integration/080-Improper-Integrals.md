@@ -174,6 +174,103 @@ $$\begin{aligned}
 所以
 $$\int_0^3\frac{dx}{(x-1)^{2/3}}=3+3\sqrt[3]{2}$$
 
+### 收敛性和发散性的判定
+有的时候我们无法直接计算广义积分，但是又想分析其是否收敛。下面介绍两种测试方法，分别是直接比较法和极限比较法。
+
+例6 下面的积分是收敛的吗？
+$$\int_1^\infty e^{-x^2}dx$$
+解：根据定义
+$$\int_1^\infty e^{-x^2}dx=\lim_{b\to\infty}\int_1^b e^{-x^2}dx$$
+这是一个非初等积分式，无法直接计算。不过可以证明当 $b\to\infty$ 其值是有限的。对于任意 $x\geq 1$，$e^{-x^2}\leq e^{-x}$，如下图所示。
+
 ![](080.080.png)
 
+所以
+$$\int_1^b e^{-x^2}dx\leq\int_1^b e^{-x}dx=-e^{-b}+e^{-1}<e^{-1}$$
+因此
+$$\int_1^\infty e^{-x^2}dx=\lim_{b\to\infty}\int_1^b e^{-x^2}dx$$
+收敛到某个值，虽然不知道精确值，但是可以肯定比 $e^{-1}$ 小。
+
+**定理2 直接比较法**
+令 $f,g$ 在 $[a,\infty)$ 上连续，且 $0\leq f(x)\leq g(x),x\geq a$，那么
+* 如果 $\int_a^\infty g(x)dx$ 收敛，那么 $\int_a^\infty f(x)dx$ 也收敛
+* 如果 $\int_a^\infty f(x)dx$ 发散，那么 $\int_a^\infty g(x)dx$ 也发散
+
+证明：如果 $0\leq f(x)\leq g(x),x\geq a$，那么根据 5.3 节定理 2 有
+$$\int_a^b f(x)dx\leq\int_a^b g(x)dx$$
+结论就显而易见了。
+
+这个定理以 I 型广义积分给出，不过其对 II 型广义积分也成立。
+
+例7 直接比较法的应用。
+
+（1）因为
+$$0\leq\frac{\sin^2 x}{x^2}\leq\frac{1}{x^2},x\geq 1$$
+且根据例3 有
+$$\int_1^\infty\frac{1}{x^2}dx$$
+收敛，所以
+$$\int_1^\infty\frac{\sin^2 x}{x^2}dx$$
+收敛。
+
+（2）因为
+$$\frac{1}{\sqrt{x^2-0.1}}\geq\frac{1}{x},x\geq 1$$
+且
+$$\int_1^\infty\frac{1}{x}dx$$
+发散，所以
+$$\int_1^\infty\frac{1}{\sqrt{x^2-0.1}}$$
+也发散。
+
+（3）因为
+$$0\leq\frac{\cos x}{\sqrt{x}}\leq\frac{1}{\sqrt{x}},x\in\bigg[0,\frac{\pi}{2}\bigg]$$
+且
+$$\begin{aligned}
+\int_0^{\pi/2}\frac{dx}{\sqrt{x}}&=\lim_{a\to 0^+}\int_a^{\pi/2}\frac{dx}{\sqrt{x}}\\
+&=\lim_{a\to 0^+}2\sqrt{x}\bigg|_0^{\pi/2}\\
+&=\lim_{a\to 0^+}(\sqrt{2\pi}-2\sqrt{a})\\
+&=\sqrt{2\pi}
+\end{aligned}$$
+是收敛的，所以
+$$\int_0^{\pi/2}\frac{\cos x}{\sqrt{x}}$$
+也是收敛的。
+
+**定理3 极限比较法**
+如果 $f,g$ 在 $[a,\infty)$ 上连续且是正函数，如果
+$$\lim_{x\to\infty}\frac{f(x)}{g(x)}=L,0<L<\infty$$
+那么
+$$\int_a^\infty f(x)dx,\int_a^\infty g(x)dx$$
+同时收敛或者同时发散。
+
+定理3 的证明和定理2 的证明类似。
+
+这个定理只说明两个函数的收敛性相同，但是并没有说积分必须一样。
+
+例8 证明
+$$\int_1^\infty\frac{dx}{1+x^2}$$
+收敛。提示，与 $\int_1^\infty(1/x^2)dx$ 比较。并比较二者的积分值。
+
+解：函数 $f(x)=1/x^2,g(x)=1/(1+x^2)$ 是正函数且在 $[1,\infty)$ 上连续。
+$$\begin{aligned}
+\lim_{x\to\infty}\frac{f(x)}{g(x)}&=\lim_{x\to\infty}\frac{1/x^2}{1/(1+x^2)}\\
+&=\lim_{x\to\infty}\frac{1+x^2}{x^2}\\
+&=\lim_{x\to\infty}(\frac{1}{x^2}+1)\\
+&=1
+\end{aligned}$$
+因此 $\int_1^\infty\frac{dx}{1+x^2}$ 与 $\int_1^\infty(1/x^2)dx$ 收敛性质相同，而后者收敛，所以前者也收敛。如下图所示。
+
 ![](080.090.png)
+
+根据例3
+$$\int_1^\infty\frac{dx}{x^2}=\frac{1}{2-1}=1$$
+而
+$$\begin{aligned}
+\int_1^\infty\frac{dx}{1+x^2}&=\lim_{b\to\infty}\int_1^b\frac{dx}{1+x^2}\\
+&=\lim_{b\to\infty}[\tan^{-1}b-\tan^{-1} 1]\\
+&=\frac{\pi}{2}-\frac{\pi}{4}\\
+&=\frac{\pi}{4}
+\end{aligned}$$
+
+例9 研究 $\int_1^\infty\frac{1-e^{-x}}{x}dx$ 的收敛性。
+
+解：令 $f(x)=\frac{1-e^{-x}}{x}dx$，可以与 $g(x)=1/x$ 比较。$g(x)$ 是发散的，而 $f(x)\leq g(x)$，通过直接比较法无法判定其收敛性。下面使用极限比较法。
+$$\lim_{x\to\infty}\frac{f(x)}{g(x)}=\lim_{x\to\infty}\frac{1-e^{-x}}{x}\cdot\frac{x}{1}=\lim_{x\to\infty}(1-e^{-x})=1$$
+所以 $f(x)$ 也发散。
