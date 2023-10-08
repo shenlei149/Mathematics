@@ -129,7 +129,7 @@ $$\int\frac{dx}{x^2\sqrt{a^2+x^2}}=-\frac{\sqrt{a^2+x^2}}{a^2x}+C$$
 
 ## Forms Involving $a^2-x^2$
 42.
-$$\int\frac{dx}{a^2-x^2}=\frac{1}{2a}\ln\bigg|\frac{x+a}{x-1}\bigg|+C$$
+$$\int\frac{dx}{a^2-x^2}=\frac{1}{2a}\ln\bigg|\frac{x+a}{x-a}\bigg|+C$$
 
 43.
 $$\int\frac{dx}{(a^2-x^2)^2}=\frac{x}{2a^2(a^2-x^2)}+\frac{1}{4a^3}\ln\bigg|\frac{x+a}{x-a}\bigg|+C$$
