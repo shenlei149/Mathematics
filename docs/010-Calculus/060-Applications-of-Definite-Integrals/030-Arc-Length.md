@@ -113,7 +113,7 @@ $$s(x)=\int_a^x\sqrt{1+[f'(x)]^2}dt$$
 新函数 $s(x)$ 是连续的，表示的是从点 $P_0(a,f(a))$ 到点 $Q(x,f(x))$ 的弧长，其中 $x\in [a,b]$。根据基本定理可知 $s$ 在 $(a,b)$ 上可微
 $$\frac{ds}{dx}=\sqrt{1+[f'(x)]^2}=\sqrt{1+(\frac{dy}{dx})^2}$$
 那么弧长的微分就是
-$$ds=\sqrt{1+(\frac{dy}{dx})^2}$$
+$$ds=\sqrt{1+(\frac{dy}{dx})^2}dx$$
 也可以写作
 $$ds=\sqrt{dx^2+dy^2}$$
 从这个角度看，所有的弧长公式可以简写为 $L=\int ds$。
