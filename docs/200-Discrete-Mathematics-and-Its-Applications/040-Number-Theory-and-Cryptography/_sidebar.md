@@ -4,3 +4,4 @@
   - [010 Divisibility and Modular Arithmetic](/200-Discrete-Mathematics-and-Its-Applications/040-Number-Theory-and-Cryptography/010-Divisibility-and-Modular-Arithmetic.md)
   - [020 Integer Representations and Algorithms](/200-Discrete-Mathematics-and-Its-Applications/040-Number-Theory-and-Cryptography/020-Integer-Representations-and-Algorithms.md)
   - [030 Primes and Greatest Common Divisors](/200-Discrete-Mathematics-and-Its-Applications/040-Number-Theory-and-Cryptography/030-Primes-and-Greatest-Common-Divisors.md)
+  - [040 Linear Congruences](/200-Discrete-Mathematics-and-Its-Applications/040-Number-Theory-and-Cryptography/040-Solving-Congruences.md)
