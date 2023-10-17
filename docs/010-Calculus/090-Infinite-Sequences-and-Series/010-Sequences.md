@@ -73,4 +73,173 @@ $$\{1,-1,1,-1,1,\cdots,(-1)^{n+1},\cdots\}$$
 这个题目中给定任意 $\varepsilon<1$ 均可。
 $$\tag*{$\blacksquare$}$$
 
-数列 $\sqrt{n}$ 也发散，但是原因是不同的。随着 $n$ 的增加，
+数列 $\sqrt{n}$ 也发散，但是原因是不同的。随着 $n$ 的增加，值比任意给定数都要大。数列的行为描述为
+$$\lim_{n\to\infty}\sqrt{n}=\infty$$
+极限写作无穷，不是随着 $n$ 的增加说 $a_n$ 与 $\infty$ 之间的差距越来越小，也不是说数列趋于某个无穷大的值。仅仅表示随着 $n$ 的增加 $a_n$ 最终会比任意给定的数都要打。如下图（a）所示。数列也可以趋于负无穷，如下图（b）所示。
+
+![](010.030.png)
+
+**定义**
+> 如果每一个数 $M$ 都存在一个整数 $N$ 使得对所有 $n>N$ 都有 $a_n>M$，那么数列 $\{a_n\}$ 发散到正无穷。记作
+> $$\lim_{n\to\infty}a_n=\infty,a_n\to\infty$$
+> 类似地，对于每一个数 $m$ 都存在一个整数 $N$ 使得对所有 $n>M$ 都有 $a_n<m$，那么数列 $\{a_n\}$ 发散到负无穷。记作
+> $$\lim_{n\to\infty}a_n= -\infty,a_n\to -\infty$$
+
+正如之前例 2 所示，有时发散数列并不趋于无穷。数列 $\{1,-2,3,-4,5,-6,7,\cdots\}$ 和 $\{1,0,2,0,3,0,\cdots\}$ 也是这样的例子。
+
+数列的前面若干项并不影响数列的收敛性。
+
+### 求数列的极限
+由于数列就是定义域是正整数的函数，所以函数的极限相关的定理也有数列的版本。
+
+**定理 1**
+> 令 $\{a_n\},\{b_n\}$ 是实数数列，$A,B$ 是实数。如果 $\lim_{n\to\infty}a_n=A,\lim_{n\to\infty}b_n=B$，那么
+> $$\lim_{n\to\infty}(a_n+b_n)=A+B$$
+> $$\lim_{n\to\infty}(a_n-b_n)=A-B$$
+> $$\lim_{n\to\infty}(k\cdot b_n)=k\cdot B$$
+> $$\lim_{n\to\infty}(a_n\cdot b_n)=A\cdot B$$
+> $$\lim_{n\to\infty}\frac{a_n}{b_n}=\frac{A}{B}$$
+
+证明和 2.2 节定理 1 类似，不再赘述。
+
+例3 结合定理 1 和例 1 我们有
+
+（a）
+$$\lim_{n\to\infty}(-\frac{1}{n})=-\lim_{n\to\infty}\frac{1}{n}=0$$
+（b）
+$$\lim_{n\to\infty}(\frac{n-1}{n})=\lim_{n\to\infty}(1-\frac{1}{n})=1-\lim_{n\to\infty}\frac{1}{n}=1$$
+（c）
+$$\lim_{n\to\infty}\frac{5}{n^2}=5\lim_{n\to\infty}\frac{1}{n}\lim_{n\to\infty}\frac{1}{n}=0$$
+（d）
+$$\lim_{n\to\infty}\frac{4-7n^6}{n^6+3}=\lim_{n\to\infty}\frac{(4/n^6-7)}{1+3/n^6}=-7$$
+$$\tag*{$\blacksquare$}$$
+
+使用定理 1 要小心。比如 $\{a_n+b_n\}$ 有极限不意味着 $\{a_n\},\{b_n\}$ 有极限，举个具体例子，$\{a_n\}=\{1,2,3,4,\cdots\}$ 和 $\{b_n\}=\{-1,-2,-3,-4,\cdots\}$ 都是发散的，但是和 $\{a_n+b_n\}=\{0,0,0,0,\cdots\}$ 收敛于零。
+
+定理 1 的一个推论是发散数列 $\{a_n\}$ 的非零倍数也是发散的。反证法。假定对某些 $c$ $\{ca_n\}$ 收敛，那么令 $k=1/c$，应用乘法规则，得到
+$$\bigg\{\frac{1}{c}\cdot ca_n\bigg\}=\{a_n\}$$
+$\{ca_n\}$ 不能收敛，否则的话 $\{a_n\}$ 是收敛的。
+
+**定理 2 数列的夹逼定理**
+> 令 $\{a_n\},\{b_n\},\{c_n\}$ 是实数数列。如果对于所有 $n>N$ 都有 $a_n\leq b_n\leq c_n$，且 $\lim_{n\to\infty} a_n=\lim_{n\to\infty} c_n=L$，那么 $\lim_{n\to\infty} b_n=L$。
+>
+> ![](010.040.png)
+
+定理 2 的一个直接推论是如果 $|b_n|\leq c_n$，且 $c_n\to 0$，由于 $-c_n\leq b_n\leq c_n$，所以 $b_n\to 0$。
+
+例4 由 $1/n\to 0$，可知
+
+（a）因为
+$$-\frac{1}{n}\leq\frac{\cos n}{n}\leq\frac{1}{n}$$
+那么
+$$\frac{\cos n}{n}\to 0$$
+（b）因为
+$$0\leq\frac{1}{2^n}\leq\frac{1}{n}$$
+所以
+$$\frac{1}{2^n}\to 0$$
+（c）因为
+$$-\frac{1}{n}\leq(-1)^n\frac{1}{n}\leq\frac{1}{n}$$
+所以
+$$(-1)^n\frac{1}{n}\to 0$$
+（d）因为
+$$-|a_n|\leq a_n\leq |a_n|$$
+所以如果 $|a_n|\to 0$ 那么
+$$a_n\to 0$$
+
+**定理 3 数列的连续函数定理**
+> 令 $\{a_n\}$ 是实数数列。如果 $a_n\to L$ 且 $f$ 是一个在 $L$ 处连续在所有 $a_n$ 上均有定义的函数，那么 $f(a_n)\to f(L)$
+
+例5 证明
+$$\sqrt{\frac{n+1}{n}}\to 1$$
+证明：我们知道 $(n+1)/n\to 1$，取 $f(x)=\sqrt{x},L=1$，根据定理 3 有$\sqrt{(n+1)/n}\to \sqrt{1}=1$。
+
+例6 数列 $\{1/n\}$ 趋于零。取 $a_n=1/n,f(x)=2^x,L=0$，根据定理 3 有 $2^{1/n}=f(1/n)\to f(L)=2^0=1$。所以数列 $\{2^{1/n}\}$ 收敛于 1。如下图所示。
+
+![](010.050.png)
+
+### 使用洛必达法则
+**定理 4**
+> 假设 $\{a_n\}$ 是实数数列，$f(x)$ 在所有 $x\geq n_0$ 上都有定义，且 $a_n=f(n)$，那么
+> $$\lim_{n\to\infty}a_n=L,\text{ whenever }\lim_{x\to\infty}f(x)=L$$
+
+证明：假定 $\lim_{x\to\infty}f(x)=L$，那么给定每一个数 $\varepsilon$ 都存在一个数 $M$ 满足
+$$|f(x)-L|<\varepsilon,x>M$$
+令 $N$ 大于 $M$ 且大于等于 $n_0$。由于 $a_n=f(n)$，那么对于所有 $n>N$ 都有
+$$|a_n-L|=|f(n)-L|<\varepsilon$$
+$$\tag*{$\blacksquare$}$$
+
+例7 求证
+$$\lim_{n\to\infty}\frac{\ln n}{n}=0$$
+证明：函数 $\frac{\ln x}{x}$ 在 $x\geq 1$ 上有定义，并且整数对应的值就是给定数列的项。根据定理4，$\lim_{n\to\infty}(\ln n)/n$ 就等于 $\lim_{x\to\infty}(\ln x)/x$，如果后者存在的话。这是无穷比无穷型，利用洛必达法则
+$$\lim_{x\to\infty}\frac{\ln x}{x}=\lim_{x\to\infty}\frac{1/x}{1}=\frac{0}{1}=0$$
+那么 $\lim_{n\to\infty}\frac{\ln n}{n}=0$。
+$$\tag*{$\blacksquare$}$$
+
+一般情况，我们将 $n$ 视为连续的实数变量且对 $n$ 可以直接微分，这样不必像上例这样在数列和函数之间反复转换。
+
+例8 数列
+$$a_n=(\frac{n+1}{n-1})^n$$
+收敛吗？如果收敛，求极限。
+
+解：这是 $1^\infty$ 型极限。可以利用对数法则转换成 $\infty\cdot 0$ 型。
+$$\ln a_n=\ln(\frac{n+1}{n-1})^n=n\ln(\frac{n+1}{n-1})$$
+那么
+$$\begin{aligned}
+\lim_{n\to\infty}\ln a_n&=\lim_{n\to\infty}n\ln(\frac{n+1}{n-1})\\
+&=\lim_{n\to\infty}\frac{\ln(\frac{n+1}{n-1})}{1/n}\\
+&=\lim_{n\to\infty}\frac{-2/(n^2-1)}{-1/n^2}\\
+&=\lim_{n\to\infty}\frac{-2n^2}{n^2-1}\\
+&=2
+\end{aligned}$$
+所以 $a_n\to 2$ 且 $f(x)=x$ 是连续的。根据定理 3 得到
+$$a_n=e^{\ln a_n}\to e^2$$
+
+### 常见数列极限
+**定理 5**
+> $$\lim_{n\to\infty}\frac{\ln n}{n}=0$$
+> $$\lim_{n\to\infty}\sqrt[n]{n}=1$$
+> $$\lim_{n\to\infty}x^{1/n}=1,x>0$$
+> $$\lim_{n\to\infty}x^n=0,|x|<1$$
+> $$\lim_{n\to\infty}(1+\frac{x}{n})^n=e^x$$
+> $$\lim_{n\to\infty}\frac{x^n}{n!}=0$$
+
+证明：第一个式子就是例7。
+
+第二个式子的 $a_n=n^{1/n}$，那么 $\ln a_n=\frac{\ln n}{n}$，根据第一个式子 $\ln a_n$ 的极限是 0，所以 $a_n$ 的极限是 1。
+
+第三个式子和第二个式子类似，$\ln a_n=\frac{\ln x}{n}$，$1/n$ 的极限是 0，乘以常数 $\ln x$ 还是 0，所以 $\ln a_n$ 的极限是 0，所以 $a_n$ 的极限是 1。
+
+$$\tag*{$\blacksquare$}$$
+
+例9 应用定理 5
+
+（a）
+$$\frac{\ln (n^2)}{n}=\frac{2\ln }{n}\to 2\cdot 0=0$$
+（b）
+$$\sqrt[n]{n^2}=n^{2/n}=(n^{1/n})^2\to 1^2=1$$
+（c）
+$$\sqrt[n]{3n}=3^{1/n}(n^{1/n})\to 1\cdot 1=1$$
+（d）
+$$(-\frac{1}{2})^n\to 0$$
+（e）
+$$(\frac{n-2}{n})^2=(1+\frac{-2}{n})^n\to e^{-n}$$
+（f）
+$$\frac{100^n}{n!}\to 0$$
+
+### 递归定义
+目前为止，我们直接定义 $a_n$，有些数列使用递归的方式来定义
+* 给出初始项的值
+* 一个规则，即递归公式，用于计算后面的项
+
+例10
+
+（1）$a_1,a_n=a_{n-1}+1,n>1$ 定义了正整数数列 $1,2,3,4,\cdots,n,\cdots$。
+
+（2）$a_1=1,a_n=n\cdot a_{n-1},n>1$ 定义了阶乘数列 $1,2,6,24,\cdots,n!,\cdots$。
+
+（3）$a_1,a_2=1,a_{n+1}=a_n+a_{n-1},n>2$ 定义了斐波那契数列 $1,1,2,3,5,\cdots$。
+
+（4）根据牛顿法定义了数列 $x_0=1,x_{n+1}=x_n-[(\sin x_n-x_n^2)/(\cos x_n-2x_n)]n>0$，其收敛于方程 $\sin x-x^2=0$ 的一个解。
+
+### 有界单调数列
+
