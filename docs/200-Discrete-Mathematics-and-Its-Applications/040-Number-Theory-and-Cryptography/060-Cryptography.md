@@ -108,3 +108,19 @@ $$(a^{k_1})^{k_2}\operatorname{mod}p=(a^{k_2})^{k_1}\operatorname{mod}p$$
 RSA 的一个重要应用就是数字签名（`digital signature`）。原理很简单，使用 RSA 的私有密钥加密信息，任何人可以用公开密钥解密，如果解密成功，那么说明发送者就是 RSA 公开密钥的发布者。
 
 ###  Homomorphic Encryption
+随着时代发展，现在很多人将加密信息保存到云端。如果在云端运行一个程序，解密数据，处理，再加密存储，可能会被其他人窃听导致数据被破解。人们提出完全同态加密（`fully homomorphic cryptosystem`）目的是能够在加密数据上做任意运算，使得无需解密即可处理数据。
+
+下面分析 RSA 不是完全同态加密，只能进行部分运算。
+
+例 令 $(n,e)$ 是 RSA 公钥，$M_1,M_2$ 是两个明文数据，满足 $0\leq M_1< n,0\leq M_2<n$ 那么
+$$\begin{aligned}
+E_{(n,e)}(M_1)E_{(n,e)}(M_2) \operatorname{mod} m &= (M^e_1 \operatorname{mod} m \cdot M^e_2 \operatorname{mod} m) \operatorname{mod} m\\
+&= (M_1M_2)^e \operatorname{mod} m\\
+&= E_{(n,e)}(M_1M_2)
+\end{aligned}$$
+所以 RSA 是乘法同态加密（`multiplicatively homomorphic`）。如果使用 RSA 加密，且需要对数据做乘法，那么无需解密可以直接对解密数据进行计算。
+
+但是 $E_{(n,e)}(M_1)+E_{(n,e)}(M_2)= E_{(n,e)}(M_1+M_2)$ 无法对所有 $M_1,M_2$ 成立，比如 $M_1=1$。事实上，我们从 $E_{(n,e)}(M_1),E_{(n,e)}(M_2)$ 得到 $E_{(n,e)}(M_1+M_2)$ 的值，所以 RSA 不是加法同态加密（`additively homomorphic`）。所以我们称 RSA 是部分同态加密（`partially
+homomorphic`）。
+
+2009 年，Craig Gentry 发明了完全同态加密，其基于格密码（`lattice-based cryptography`）。不过现在还没有使用的完全同态加密，因为现有的都需要消耗大量的 CPU 和内存。
