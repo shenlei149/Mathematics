@@ -3,3 +3,4 @@
 - [090 无穷数列与级数 Infinite Sequences and Series](/010-Calculus/090-Infinite-Sequences-and-Series/)
   - [010 数列 Sequences](/010-Calculus/090-Infinite-Sequences-and-Series/010-Sequences.md)
   - [020 无穷级数 Infinite Series](/010-Calculus/090-Infinite-Sequences-and-Series/020-Infinite-Series.md)
+  - [030 积分测试 The Integral Test](/010-Calculus/090-Infinite-Sequences-and-Series/030-The-Integral-Test.md)
