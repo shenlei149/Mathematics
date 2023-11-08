@@ -52,6 +52,89 @@ $$\int_1^{n+1}f(x)dx\leq a_1+a_2+\cdots+a_n\leq a_1+\int_1^n f(x)dx$$
 $$$$
 收敛，当 $p<1$ 时，级数发散。
 
-证明：
+证明：如果 $p>1$，那么 $f(x)=1/x^p$ 是 $x$ 的正的递减函数，那么
+$$\begin{aligned}
+\int_1^\infty\frac{1}{x^p}dx&=\int_1^\infty x^{-p}dx\\
+&=\lim_{b\to\infty}\bigg[\frac{x^{-p+1}}{-p+1}\bigg]_1^b\\
+&=\frac{1}{1-p}\lim_{b\to\infty}(\frac{1}{b^{p-1}}-1)\\
+&=\frac{1}{1-p}(0-1)\\
+&=\frac{1}{p-1}
+\end{aligned}$$
+根据积分测试级数收敛。但是，这不意味着 $p$ 级数收敛于 $1/(p-1)$，也就是说，级数收敛，但是不知道收敛值。
+
+如果 $p\leq 0$，第 $n$ 项不会收敛到 0，所以级数发散。
+
+如果 $0<p<1$，那么 $1-p>0$，所以
+$$\int_1^\infty\frac{1}{x^p}dx=\frac{1}{1-p}\lim_{b\to\infty}(b^{1-p}-1)=\infty$$
+所以极限发散。
+
+当 $p=1$ 时，$p$ 级数就是调和级数，发散。
 
 $$\tag*{$\blacksquare$}$$
+
+根据上述结论，调和级数刚刚开始发散，但凡 $p$ 大一点，比如 $1.000000001$，级数就开始收敛了。
+
+调和级数发散的速度相当慢，超过 178 百万项之和，调和级数的部分和才刚超过 20。
+
+例4 级数 $\sum_{n=1}^\infty(1/(n^2+1))$ 不是 $p$ 级数，但是可以通过积分测试得知其收敛。函数 $f(x)=1/x^2+1$ 在 $x\geq 1$ 上时正的、连续、递减函数，并且
+$$\begin{aligned}
+\int_1^\infty\frac{1}{x^2+1}dx&=\lim_{b\to\infty}(\arctan x\big|_1^b)\\
+&=\lim_{b\to\infty}(\arctan b-\arctan 1)\\
+&=\frac{\pi}{2}-\frac{\pi}{4}\\
+&=\frac{\pi}{4}
+\end{aligned}$$
+但是，这个积分式子并没有告诉我们级数收敛到 $\pi/4$ 或者其他值。
+
+例5 判定下面级数的收敛性。
+
+（a）
+$$\sum_{n=1}^\infty ne^{-n^2}$$
+（b）
+$$\sum_{n=1}^\infty\frac{1}{2^{\ln n}}$$
+解：
+（a）
+$$\begin{aligned}
+\int_1^\infty\frac{x}{e^{x^2}}dx&=\frac{1}{2}\int_1^\infty\frac{du}{e^u}&&u=x^2\\
+&=\frac{1}{2}\lim_{b\to\infty}\bigg[-e^{-u}\bigg]_1^b\\
+&=\frac{1}{2}\lim_{b\to\infty}(-\frac{1}{e^b}+\frac{1}{e})\\
+&=\frac{1}{2e}
+\end{aligned}$$
+所以级数收敛。
+
+（b）
+$$\begin{aligned}
+\int_1^\infty\frac{dx}{2^{\ln x}}&=\int_0^\infty\frac{e^udu}{2^u}&&u=\ln x\\
+&=\int_0^\infty(\frac{e}{2})^udu\\
+&=\lim_{b\to\infty}\frac{1}{\ln(\frac{e}{2})}((\frac{e}{2})^b-1)\\
+&=\infty
+\end{aligned}$$
+所以级数发散。
+
+### 误差估计
+有些级数，比如包括等比级数在内的很多例子，可以找到级数和的值。但是更多的级数无法求出值。这时，如果能知道前 $n$ 项和 $s_n$ 与级数和 $S$ 之间的误差也是极好的。假定这个误差是
+$$R_n=S-s_n=a_{n+1}+a_{n+2}+a_{n+3}+\cdots$$
+
+![](030.030.png)
+
+根据上图的（a），我们能够确定误差下界
+$$R_n\geq\int_{n+1}^\infty f(x)dx$$
+根据上图的（b），我们能够确定误差上界
+$$R_n\leq\int_n^\infty f(x)dx$$
+
+由于 $s_n+R_n=S$，所以可以得到
+$$s_n+\int_{n+1}^\infty f(x)dx\leq S\leq s_n+\int_n^\infty f(x)dx$$
+这样，我们知道估算的值与 $S$ 的误差不超过上述闭区间的长度。
+
+例6 使用 $n=10$ 估算级数 $\sum(1/n^2)$ 的和。
+
+解：
+$$\int_n^\infty\frac{1}{x^2}dx=\lim_{b\to\infty}-\frac{1}{x}\bigg|_n^b=\lim_{b\to\infty}(-\frac{1}{b}+\frac{1}{n})=\frac{1}{n}$$
+所以
+$$s_{10}+\frac{1}{11}\leq S\leq s_{10}+\frac{1}{10}$$
+很容易计算
+$$s_{10}=1+\frac{1}{4}+\frac{1}{9}+\frac{1}{16}+\cdots+\frac{1}{100}\approx 1.54977$$
+那么
+$$1.64068\leq S\leq 1.64977$$
+取中间值，得到估计值
+$$\sum_{n=1}^\infty\frac{1}{n^2}\approx 1.64523$$
+误差小于区间长度的一半，即误差小于 0.005。高等微积分中使用三角傅里叶级数可以得到 $S=\pi^2/6\approx 1.64493$
