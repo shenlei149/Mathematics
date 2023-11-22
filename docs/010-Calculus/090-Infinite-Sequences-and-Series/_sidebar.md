@@ -7,3 +7,4 @@
   - [040 比较测试 Comparison Tests](/010-Calculus/090-Infinite-Sequences-and-Series/040-Comparison-Tests.md)
   - [050 绝对收敛；比值测试和根测试 Absolute Convergence; The Ratio and Root Tests](/010-Calculus/090-Infinite-Sequences-and-Series/050-Absolute-Convergence-The-Ratio-and-Root-Tests.md)
   - [060 交错级数和条件收敛 Alternating Series and Conditional Convergence](/010-Calculus/090-Infinite-Sequences-and-Series/060-Alternating-Series-and-Conditional-Convergence.md)
+  - [070 幂级数 Power Series](/010-Calculus/090-Infinite-Sequences-and-Series/070-Power-Series.md)
