@@ -146,4 +146,89 @@ f(x)&=\frac{1}{1-x}\\
 \end{aligned}$$
 求 $f'(x),f''(x)$。
 
-解：
+解：逐项微分
+$$\begin{aligned}
+f'(x)&=\frac{1}{(1-x)^2}\\
+&=1+2x+3x^2+4x^3+\cdots+\cdots nx^{n-1}+\cdots\\
+&=\sum_{n=1}^\infty nx^{n-1},&-1<x<1
+\end{aligned}$$
+$$\begin{aligned}
+f''(x)&=\frac{2}{(1-x)^3}\\
+&=2+6x+12x^2+\cdots+n(n-1)x^{n-2}+\cdots\\
+&=\sum_{n=2}^\infty n(n-1)x^{n-2},&-1<x<1
+\end{aligned}$$
+
+逐项微分对其他级数不总是正确的。比如等比级数
+$$\sum_{n=1}^\infty\frac{\sin(n!x)}{n^2}$$
+对任意 $x$ 都收敛。但是逐项微分之和
+$$\sum_{n=1}^\infty\frac{n!\cos(n!x)}{n^2}$$
+对任意 $x$ 都发散。
+
+**定理 22 逐项积分**
+> 如果
+> $$f(x)=\sum_{n=0}^\infty c_n(x-a)^n$$
+> 在 $a-R<x<a+R,R>0$ 上收敛，那么
+> $$\sum_{n=0}^\infty c_n\frac{(x-a)^{n+1}}{n+1}$$
+> 在这个区间上也收敛，同时在这个区间上有
+> $$\int f(x)dx=\sum_{n=0}^\infty c_n\frac{(x-a)^{n+1}}{n+1}+C$$
+
+证明：简单起见，不妨令 $a=0$，那么 $f(x)=\sum_{n=0}^\infty c_nx^n$ 在区间 $-R<x<R$ 上收敛。
+
+令 $g(x)=\sum_{n=0}^\infty\frac{c_n}{n+1}x^{n+1}$。使用比值测试
+$$\lim_{n\to\infty}\frac{c_nx^{n+1}}{n+1}\cdot\frac{1}{c_nx^n}=\lim_{n\to\infty}\frac{x}{n+1}\to 0$$
+所以 $g(x)$ 在区间 $-R<x<R$ 上也收敛。
+
+应用定理 21，对 $g(x)$ 逐项微分，得到 $f(x)$ 且收敛区间一致，所以 $g'(x)=f(x)$，因此
+$$\int f(x)dx=g(x)+C$$
+
+例5 求函数
+$$f(x)=\sum_{n=0}^\infty\frac{(-1)^nx^{2n+1}}{2n+1}=x-\frac{x^3}{3}+\frac{x^5}{5}-\cdots,-1\leq x\leq 1$$
+解：对原始级数逐项微分
+$$f'(x)=1-x^2+x^4-x^6+\cdots,-1<x<1$$
+这是一个首项是 1 公比为 $-x^2$ 的等比数列，所以
+$$f'(x)=\frac{1}{1-(-x^2)}=\frac{1}{1+x^2}$$
+积分
+$$\int f'(x)dx=\int\frac{1}{1+x^2}dx=\tan^{-1}x+C$$
+当 $x=0$ 时，$f(x)=0$，所以 $C=0$。因此
+$$f(x)=\tan^{-1}x,-1<x<1$$
+对于端点处 $x\pm 1$，级数也收敛。
+$$\sum_{n=0}^\infty\frac{(-1)^n}{2n+1}=\tan^{-1}1=\frac{\pi}{4}$$
+这里忽略证明。
+
+例6 级数
+$$\frac{1}{1+t}=1-t+t^2-t^3+\cdots$$
+在区间 $-1<t<1$ 上收敛。因此
+$$\begin{aligned}
+\ln(1+x)&=\int_0^x\frac{1}{1+t}dt\\
+&=t-\frac{t^2}{2}+\frac{t^3}{3}-\frac{t^4}{4}+\cdots\bigg|_0^x\\
+&=x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\cdots
+\end{aligned}$$
+即
+$$\ln(1+x)=\sum_{n=1}^\infty\frac{(-1)^{n-1}x^n}{n},-1<x<1$$
+下面证明当 $x=1$ 时，级数收敛到 $\ln 2$，即
+$$\ln 2=\sum_{n=1}^\infty\frac{(-1)^{n-1}}{n}$$
+但是这并不是由定理 22 保证的，定理 21 和 定理 22 都是对开区间成立。
+
+令 $h_n$ 是调和级数前 $n$ 项和，$s_n$ 是交错调和级数的前 $n$ 项和。d
+当 $n=1$ 时，
+$$s_2=1-\frac{1}{2}=1+\frac{1}{2}-1=h_{2}-h_1$$
+假设对所有 $n$ 都有
+$$s_{2n}=h_{2n}-h_n$$
+当 $n+1$ 时
+$$\begin{aligned}
+s_{2n+2}&=s_{2n}+\frac{1}{2n+1}-\frac{1}{2n+2}\\
+&=h_{2n}-h_n+\frac{1}{2n+1}+\frac{1}{2n+2}-\frac{2}{2n+2}\\
+&=(h_{2n}+\frac{1}{2n+1}+\frac{1}{2n+2})-(h_n+\frac{1}{n+1})\\
+&=h_{2n+2}-h_{n+1}
+\end{aligned}$$
+根据归纳法，对于任意 $n$ 有
+$$s_{2n}=h_{2n}-h_n$$
+欧拉常数定理（TODO，证明 9.3 练习 63）是说当 $n\to\infty$ 时
+$$1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}-\ln n\to\gamma$$
+所以
+$$\lim_{n\to\infty}(h_n-\ln n)=\gamma$$
+$$\lim_{n\to\infty}(h_{2n}-\ln 2n)=\gamma$$
+那么
+$$\lim_{n\to\infty}(h_{2n}-\ln 2n-h_n+\ln n)=0=\lim_{n\to\infty}(s_{2n}-\ln 2)$$
+所以
+$$\lim_{n\to\infty}s_{2n}=\ln 2=\sum_{n=1}^\infty\frac{(-1)^{n+1}}{n}$$
