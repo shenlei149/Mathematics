@@ -9,3 +9,4 @@
   - [060 交错级数和条件收敛 Alternating Series and Conditional Convergence](/010-Calculus/090-Infinite-Sequences-and-Series/060-Alternating-Series-and-Conditional-Convergence.md)
   - [070 幂级数 Power Series](/010-Calculus/090-Infinite-Sequences-and-Series/070-Power-Series.md)
   - [080 泰勒级数和麦克劳林级数 Taylor and Maclaurin Series](/010-Calculus/090-Infinite-Sequences-and-Series/080-Taylor-and-Maclaurin-Series.md)
+  - [090 泰勒级数的收敛 Convergence of Taylor Series](/010-Calculus/090-Infinite-Sequences-and-Series/090-Convergence-of-Taylor-Series.md)
