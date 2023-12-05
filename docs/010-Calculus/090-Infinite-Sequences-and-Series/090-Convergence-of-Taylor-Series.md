@@ -43,3 +43,58 @@ $$e=\sum_{n=0}^\infty\frac{1}{n!}=1+1+\frac{1}{2!}+\cdots+\frac{1}{n!}+R_n(1)$$
 $$R_n(1)=e^c\frac{1}{(n+1)!}<\frac{3}{(n+1)!},c\in(0,1)$$
 
 ### 估算余数
+**定理 24 剩余估计定理**
+> 如果存在一个正整数 $M$ 使得对所有 $t\in [x,a]$ 都有 $|f^{(n+1)}(t)|<M$，那么泰勒定理中剩余 $R_n(x)$ 满足不等式
+> $$|R_n(x)|\leq M\frac{|x-a|^{n+1}}{(n+1)!}$$
+> 如果不等式对所有 $n$ 都成立且满足泰勒定理其他条件，那么级数收敛到 $f(x)$。
+
+例2 证明 $\sin x$ 在 $x=0$ 处的泰勒级数对所有 $x$ 都收敛。
+
+证明：函数及其导数是
+$$\begin{aligned}
+f(x)&=\sin x&&&f'(x)&=\cos x\\
+f''(x)&=-\sin x&&&f'''(x)&=-\cos x\\
+&\vdots&&&&\vdots\\
+f^{(2k)}(x)&=(-1)^k\sin x&&&f^{(2k+1)}(x)&=(-1)^k\cos x
+\end{aligned}$$
+所以
+$$f^{(2n)}(0)=0,f^{(2k+1)}(0)=(-1)^k$$
+因此泰勒级数是
+$$\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\cdots+\frac{(-1)^kx^{2k+1}}{(2k+1)!}+R_{2k+1}(x)$$
+函数 $\sin x$ 任意阶导数的绝对值都小于等于 1，令剩余估计定理中 $M=1$，得到
+$$|R_{2k+1}(x)|\leq\frac{|x|^{2k+2}}{(2k+2)!}$$
+不管 $x$ 值是多少，当 $k\to\infty$ 时，$(|x|^{2k+2}/(2k+2)!)\to 0$，所以 $R_{2k+1}\to 0$。对于任意 $x$，$\sin x$ 的麦克劳林级数都收敛到 $\sin x$。
+$$\sin x=\sum_{k=0}^\infty \frac{(-1)^kx^{2k+1}}{(2k+1)!}=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots$$
+
+例3 证明 $\cos x$ 在 $x=0$ 处的泰勒级数对所有 $x$ 都收敛。
+
+证明：借助 9.8 小节例 3 的推理过程，最后补上一个剩余项。
+$$\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\cdots+(-1)^k\frac{x^{2k}}{(2k)!}+R_{2k}(x)$$
+$\cos x$ 任意阶导数的绝对值都小于等于 1，令剩余估计定理中 $M=1$，得到
+$$|R_{2k}(x)|\leq\frac{|x|^{2k+1}}{(2k+1)!}$$
+不管 $x$ 值是多少，当 $k\to\infty$ 时，$R_{2k}(x)\to 0$。因此，对于任意 $x$，$\cos x$ 在 $x=0$ 处的泰勒级数都收敛到 $\cos x$。
+$$\cos x=\sum_{k=0}^\infty\frac{(-1)^kx^{2k}}{(2k)!}=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\cdots$$
+
+### 泰勒级数的应用
+由于泰勒级数是幂级数，那么在收敛区间的交集上，泰勒级数的加、减、乘操作都是有效的。
+
+例4 使用已知级数，求下面函数的泰勒级数。
+
+（a）$\frac{1}{3}(2x+x\cos x)$
+
+（b）$e^x\cos x$
+
+解：
+
+（a）
+$$\begin{aligned}
+\frac{1}{3}(2x+x\cos x)&=\frac{2}{3}x+\frac{1}{3}x(1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\cdots)\\
+&=\frac{2}{3}x+\frac{1}{3}x-\frac{x^3}{3!}+\frac{x^5}{3\cdots 4!}-\cdots\\
+&=x-\frac{x^3}{6}+\frac{x^5}{72}-\cdots
+\end{aligned}$$
+（b）
+$$\begin{aligned}
+e^x\cos x&=(1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\cdots)(1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\cdots)\\
+&=(1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\cdots)-(\frac{x^2}{2!}+\frac{}{})+()+\cdots
+\end{aligned}$$
+
