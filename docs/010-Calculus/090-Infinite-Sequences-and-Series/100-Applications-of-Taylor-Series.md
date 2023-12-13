@@ -149,4 +149,58 @@ $$\tan(\alpha+\beta)=\frac{\tan\alpha+\tan\beta}{1-\tan\alpha\tan\beta}=1=\tan\f
 $$\frac{\pi}{4}=\alpha+\beta=\tan^{-1}\frac{1}{2}+\tan^{-1}\frac{1}{3}$$
 将 $x=\frac{1}{2},x=\frac{1}{3}$ 代入公式估算 $\tan^{-1}(1/2),\tan^{-1}(1/3)$ 的值，进而得到 $\pi$ 的值。
 
-### 
+### 求不定式极限
+例5 求
+$$\lim_{x\to 1}\frac{\ln x}{x-1}$$
+解：将 $\ln x$ 表示为 $x-1$ 的幂次的泰勒级数。可以直接使用公式求 $\ln x$ 在 $x=1$ 处的泰勒级数，也可以利用 9.7 节例 6 的结论，用 $x$ 替代 $x-1$ 得到这里所需的泰勒级数。
+$$\ln x=(x-1)-\frac{1}{2}(x-1)^2+\cdots$$
+那么
+$$\lim_{x=1}\frac{\ln x}{x-1}=\lim_{x\to 1}(1-\frac{1}{2}(x-1)+\cdots)=1$$
+当然，这个极限可以使用洛必达法则求解。
+
+例6 求
+$$\lim_{x\to 0}\frac{\sin x-\tan x}{x^3}$$
+解：使用泰勒级数表示 $\sin x,\tan x$，
+$$\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\cdots$$
+$$\tan x=x+\frac{x^3}{3}+\frac{2x^5}{15}-\cdots$$
+相减
+$$\sin x-\tan x=-\frac{x^3}{2}-\frac{x^5}{8}-\cdots=x^3(-\frac{1}{2}-\frac{x^2}{8}-\cdots)$$
+两边除以 $x^3$，取极限
+$$\lim_{x\to 0}\frac{\sin x-\tan x}{x^3}=\lim_{x\to 0}(-\frac{1}{2}-\frac{x^2}{8}-\cdots)=-\frac{1}{2}$$
+
+例7 求
+$$\lim_{x\to 0}(\frac{1}{\sin x}-\frac{1}{x})$$
+解：泰勒级数表示 $\sin x$ 然后进行代数运算
+$$\begin{aligned}
+\frac{1}{\sin x}-\frac{1}{x}&=\frac{x-\sin x}{x\sin x}\\
+&=\frac{x-(x-\frac{x^3}{3!}+\frac{x^5}{5!}-\cdots)}{x(x-\frac{x^3}{3!}+\frac{x^5}{5!}-\cdots)}\\
+&=\frac{x^3(\frac{1}{3!}-\frac{x^2}{5!}+\cdots)}{x^2(1-\frac{x^2}{3!}+\cdots)}\\
+&=x\cdot\frac{\frac{1}{3!}-\frac{x^2}{5!}+\cdots}{1-\frac{x^2}{3!}+\cdots}
+\end{aligned}$$
+因此
+$$\lim_{x\to 0}(\frac{1}{\sin x}-\frac{1}{x})=\lim_{x\to 0}x\cdot\frac{\frac{1}{3!}-\frac{x^2}{5!}+\cdots}{1-\frac{x^2}{3!}+\cdots}=0$$
+从右边的商可以看出，如果 $|x|$ 很小，那么
+$$\frac{1}{\sin x}-\frac{1}{x}\approx x\cdot\frac{1}{3!}=\frac{x}{6}$$
+或者
+$$\csc x=\frac{1}{\sin x}\approx\frac{1}{x}+\frac{x}{6}$$
+
+### 欧拉恒等式
+复数的形式是 $a+bi$，其中 $a,b$ 是实数，$i=\sqrt{-1}$。使用如下关系
+$$i^2=-1,i^3=-i,i^4=1,i^5=i$$
+令 $x=i\theta$，$\theta$ 是实数，代入 $e^x$ 的泰勒级数
+$$\begin{aligned}
+e^{i\theta}&=1+\frac{i\theta}{1!}+\frac{i^2\theta^2}{2!}+\frac{i^3\theta^3}{3!}+\frac{i^4\theta^4}{4!}+\frac{i^5\theta^5}{5!}+\frac{i^6\theta^6}{6!}+\cdots\\
+&=(1-\frac{\theta^2}{2!}+\frac{\theta^5}{4!}-\frac{\theta^6}{6!}+\cdots)+i(\theta-\frac{\theta^3}{3!}+\frac{\theta^5}{5!}-\cdots)\\
+&=\cos\theta+i\sin\theta
+\end{aligned}$$
+这并不是证明 $e^{i\theta}=\cos\theta+i\sin\theta$，因为我们还没有定义 $e$ 的复数次幂是什么含义。这只是告诉我们如何定义 $$e^{i\theta}$$ 使得和实数的指数次幂的属性一致。
+
+**定义**
+> 对于任意实数 $\theta$，
+> $$e^{i\theta}=\cos\theta+i\sin\theta$$
+
+这就是欧拉恒等式。利用 $e^{a+bi}=e^a\cdot e^{bi}$ 可以得到
+$$e^{a+bi}=e^a(\cos b+i\sin b)$$
+这个恒等式的一个结论是
+$$e^{i\pi}=-1$$
+换一种写法得到 $e^{i\pi}+1=0$，这个式子包含数学中最重要的五个常量。

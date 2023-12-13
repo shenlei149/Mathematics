@@ -103,3 +103,12 @@ $$\int\frac{du}{a^2-u^2}=\begin{cases}
 \end{cases}$$
 $$\int\frac{du}{u\sqrt{a^2-u^2}}=-\frac{1}{a}\operatorname{sech}^{-1}\frac{u}{a}+C,0<u<a$$
 $$\int\frac{du}{u\sqrt{a^2+u^2}}=-\frac{1}{a}\operatorname{csch}^{-1}\bigg|\frac{u}{a}\bigg|+C,u\neq 0,a>0$$
+
+## 泰勒级数
+$$\frac{1}{1-x}=1+x+x^2+\cdots+x^n+\cdots=\sum_{n=0}^\infty x^n,|x|<1$$
+$$\frac{1}{1+x}=1-x+x^2-\cdots+(-x)^n+\cdots=\sum_{n=0}^\infty (-1)^nx^n,|x|<1$$
+$$e^x=1+x+\frac{x^2}{2!}+\cdots+\frac{x^n}{n!}+\cdots=\sum_{n=0}^\infty\frac{x^n}{n!},|x|<\infty$$
+$$\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\cdots+(-1)^n\frac{x^{2n+1}}{(2n+1)!}+\cdots=\sum_{n=0}^\infty\frac{(-1)^nx^{2n+1}}{(2n+1)!},|x|<\infty$$
+$$\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\cdots+(-1)^n\frac{x^{2n}}{(2n)!}+\cdots=\sum_{n=0}^\infty\frac{(-1)^nx^{2n}}{(2n)!},|x|<\infty$$
+$$\ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\cdots+(-1)^{n-1}\frac{x^n}{n}+\cdots=\sum_{n=0}^\infty\frac{(-1)^{n-1}x^n}{n},-1<x\leq 1$$
+$$\tan^{-1}x=x-\frac{x^3}{3}+\frac{x^5}{5}-\cdots+(-1)^n\frac{x^{2n+1}}{2n+1}+\cdots=\sum_{n=0}^\infty\frac{(-1)^nx^{2n+1}}{2n+1},|x|\leq 1$$
