@@ -21,9 +21,7 @@ f^{(k)}(x)&=m(m-1)(m-2)\cdots(m-k+1)x^{m-k}
 $$\bigg|\frac{u_{k+1}}{u_k}\bigg|=\bigg|\frac{m-k}{k+1}x\bigg|\to |x|$$
 这仅仅证明了 $(1+x)^m$ 的泰勒级数在 $|x|<1$ 时成立。下面证明其收敛于 $(1+x)^m$。
 
-令 $f(x)=1+\sum_{k=1}^\infty\begin{pmatrix}
-m\\k
-\end{pmatrix}x^k$，展开记作
+令 $f(x)=1+\sum_{k=1}^\infty\begin{pmatrix}m\\k\end{pmatrix}x^k$，展开记作
 $$\begin{aligned}
 f(x)=1+mx+\frac{m(m-1)}{2!}x^2&+\frac{m(m-1)(m-2)}{3!}x^3\cdots\\
 &+\frac{m(m-1)\cdots(m-k+2)}{(k-1)!}x^{k-1}\\
