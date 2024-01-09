@@ -20,4 +20,42 @@ $$x=\sec t,y=\tan t,-\frac{\pi}{2}<t<\frac{\pi}{2}$$
 
 ![](020.010.png)
 
-解：
+解：曲线在 $t$ 点的斜率是
+$$\frac{dy}{dx}=\frac{dy/dt}{dx/dt}=\frac{\sec^2 t}{\sec t\tan t}=\frac{\sec t}{\tan t}=\frac{1}{\sin t}$$
+当 $t=\pi/4$ 时
+$$\frac{dy}{dx}\bigg|_{t=\pi/4}=\frac{1}{\sin(\pi/4)}=\frac{1}{1/\sqrt{2}}=\sqrt{2}$$
+那么切线是
+$$\begin{aligned}
+y-1&\sqrt{2}(x-\sqrt{2})\\
+y&=\sqrt{2}x-1
+\end{aligned}$$
+
+例2 如果 $x=t-t^2,y=t-t^3$，求 $d^2y/dx^2$。
+
+解：用 $t$ 表示 $y'=dy/dx$
+$$y'=\frac{dy}{dx}=\frac{dy/dt}{dx/dt}=\frac{1-3t^2}{1-2t}$$
+对 $y'$ 求导
+$$\frac{dy'}{dt}=\frac{d}{dt}(\frac{1-3t^2}{1-2t})=\frac{2-6t+6t^2}{(1-2t)^2}$$
+$dy'/dt$ 除以 $dx/dt$
+$$\frac{d^2y}{dx^2}=\frac{dy'/dt}{dx/dt}=\frac{\frac{2-6t+6t^2}{(1-2t)^2}}{1-2t}=\frac{2-6t+6t^2}{(1-2t)^3}$$
+
+例3 求下面参数方程表示的星形线围城的面积。
+$$x=\cos^3 t,y=\sin^3 t,0\leq t\leq 2\pi$$
+
+![](020.020.png)
+
+解：根据定义，我们只需要计算第一象限的面积，即 $0\leq t\leq \pi/2$，然后乘以 4 即可。
+$$\begin{aligned}
+A&=4\int_0^1ydx\\
+&=4\int_0^{\pi/2}(\sin^3 t)(3\cos^2 t\sin t)dt\\
+&=12\int_0^{\pi/2}(\frac{1-\cos 2t}{2})^2(\frac{1+\cos 2t}{2})dt&&\sin^4 t=(\frac{1-\cos 2t}{2})^2\\
+&=\frac{3}{2}\int_0^{\pi/2}(1-2\cos 2t+\cos^2 2t)(1+\cos 2t)dt\\
+&=\frac{3}{2}\int_0^{\pi/2}(1-\cos 2t-cos^2 2t+\cos^3 2t)dt\\
+&=\frac{3}{2}[\int_0^{\pi/2}(1-\cos 2t)dt-\int_0^{\pi/2}cos^2 2tdt+\int_0^{\pi/2}\cos^3 2tdt]\\
+&=\frac{3}{2}[(t-\frac{1}{2}\sin 2t)-\frac{1}{2}(t+\frac{1}{4}\sin 2t)+\frac{1}{2}(\sin 2t-\frac{1}{3}\sin^3 2t)]_0^{\pi/2}\\
+&=\frac{3}{2}[(\frac{\pi}{2}-0-0-0)-\frac{1}{2}(\frac{\pi}{2}+0-0-0)+\frac{1}{2}(0-0-0+0)]\\
+&=\frac{3\pi}{8}
+\end{aligned}$$
+
+### 参数化曲线的长度
+
