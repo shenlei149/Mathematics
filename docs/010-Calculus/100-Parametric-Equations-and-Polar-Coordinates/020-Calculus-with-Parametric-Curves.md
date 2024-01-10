@@ -58,4 +58,92 @@ A&=4\int_0^1ydx\\
 \end{aligned}$$
 
 ### 参数化曲线的长度
+令 $C$ 是由下面参数方程定义的曲线
+$$x=f(t),y=g(t),a\leq t\leq b$$
+假定 $f,g$ 在区间 $[a,b]$ 上连续可导。还假设 $f'(t),g'(t)$ 不同时为零，这使得曲线 $C$ 没有拐点或者尖点。这样的曲线称为光滑曲线（`smooth curve`）。用点 $A=P_0,P_1,P_2,\cdots,P_n=B$ 曲线 $AB$ 分割成 $n$ 个弧线。如下图所示。这些点定义是 $P_k(f(t_k),g(t_k))$，其中 $t_k$ 是区间 $[a,b]$ 上的值，有 $a=t_0<t_1<t_2\cdots<t_n=b$。用线段连接这些点。
 
+![](020.030.png)
+
+线段的长度是
+$$L_k=\sqrt{(\Delta x_k)^2+(\Delta y_k)^2}=\sqrt{[f(t_k)-f(t_{k-1})]^2+[g(t_k)-g(t_{k-1})]^2}$$
+
+![](020.040.png)
+
+如果 $\Delta t_k$ 很小，$L_k$ 就近似弧 $P_{k-1}P_k$ 的长度。根据中值定理，区间 $[t_{k-1},t_k]$ 存在 $t_k^*,t_k^{**}$ 使得
+$$\Delta x_k=f(t_k)-f(t_{k-1})=f'(t_k^*)\Delta t_k$$
+$$\Delta y_k=g(t_k)-g(t_{k-1})=g'(t_k^{**})\Delta t_k$$
+
+假定随着 $t$ 从 $a$ 到 $b$，曲线恰好从 $A$ 到 $B$ 一次，没有原路返回，那么曲线 $AB$ 的长度就近似于 $L_k$ 的和。
+$$\begin{aligned}
+\sum_{k=1}^nL_k&=\sum_{k=1}^n\sqrt{(\Delta x_k)^2+(\Delta y_k)^2}\\
+&=\sum_{k=1}^n\sqrt{[f'(t_k^*)]^2+[g'(t_k^{**})]^2}\Delta t_k
+\end{aligned}$$
+尽管右边不是黎曼和（因为 $f',g'$ 在不同点求值），仍然能够证明当分区的模趋于零，$n$ 趋于无穷时，求和的极限是定积分
+$$\lim_{||p||\to 0}\sum_{k=1}^n\sqrt{[f'(t_k^*)]^2+[g'(t_k^{**})]^2}\Delta t_k=\int_a^b\sqrt{[f'(t)]^2+[g'(t)]^2}dt$$
+
+**定义**
+> 曲线 $C$ 由参数方程 $x=f(t),y=g(t),a\leq t\leq b$ 所定义，其中 $f',g'$ 连续且不同时为零，当 $t$ 从 $a$ 增加到 $b$ 时，$C$ 只遍历了一次，那么 $C$ 的长度是定积分
+> $$L=\int_a^b\sqrt{[f'(t)]^2+[g'(t)]^2}dt$$
+
+如果 $x=f(t),y=g(t)$，使用莱布尼茨记号表示
+$$L=\int_a^b\sqrt{[\frac{dx}{dt}]^2+[\frac{dy}{dt}]^2}dt$$
+
+由于在整个区间上都有 $(f')^2+(g')^2>0$，所以 $C$ 没有原路折返的点。如果存在这样的点，该点处不可导或者两个函数的导致都为零。第十二章将阐述这一点。
+
+对于 $C$，如果存在两个不同的参数方程，使用哪一个是无关紧要的。不过，选取的参数方程需要满足 $C$ 的长度的定义。
+
+例 4 根据定义，求半径为 $r$ 的圆的长度，参数方程如下
+$$x=r\cos t,y=r\sin t,0\leq t\leq 2\pi$$
+解：$t$ 从 $0$ 到 $2\pi$，圆只遍历一遍，那么
+$$L=\int_0^{2\pi}\sqrt{[\frac{dx}{dt}]^2+[\frac{dy}{dt}]^2}dt$$
+对 $x,y$ 求导
+$$\frac{dx}{dt}=-r\sin t,\frac{dy}{dt}=r\cos t$$
+那么
+$$\sqrt{[\frac{dx}{dt}]^2+[\frac{dy}{dt}]^2}=r^2(\sin^2 t+\cos^2 t)=r^2$$
+长度是
+$$L=\int_0^{2\pi}\sqrt{r^2}dt=r[t]_0^{2\pi}=2\pi r$$
+
+例5 求星形线的长度
+$$x=\cos^3 t,y=\sin^3 t,0\leq t\leq 2\pi$$
+解：由于曲线是对称的，那么长度是第一象限弧线长度的四倍。
+$$\begin{aligned}
+(\frac{dx}{dt})^2&=[3\cos^2 t(-\sin t)]^2=9\cos^4 t\sin^2 t\\
+(\frac{dy}{dt})^2&=[3\sin^2 t(\cos t)]^2=9\sin^4 t\cos^2 t\\
+\sqrt{(\frac{dx}{dt})^2+(\frac{dy}{dt})^2}&=\sqrt{9\cos^2 t\sin^2 t(\cos^2 t+\sin^2 t)}\\
+&=\sqrt{9\cos^2 t\sin^2 t}\\
+&=3|\cos t\sin t|\\
+&=3\cos t\sin t
+\end{aligned}$$
+那么
+$$\begin{aligned}
+L&=4\int_0^{\pi/2}3\cos t\sin tdt\\
+&=6\int_0^{\pi/2}\sin 2tdt\\
+&=-3\cos 2t\bigg|_0^{\pi/2}\\
+&=6
+\end{aligned}$$
+
+例6 求椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ 的周长。
+
+解：首先参数化。参数方程如下
+$$x=a\sin t,y=b\cos t,a>b,0\leq t\leq 2\pi$$
+那么
+$$\begin{aligned}
+(\frac{dx}{dt})^2+(\frac{dy}{dt})^2&=a^2\cos^2 t+b^2\sin^2 t\\
+&=a^2-(a^2-b^2)\sin^2 t\\
+&=a^2[1-e^2\sin^2 t]
+\end{aligned}$$
+其中 $e=\sqrt{1-\frac{b^2}{a^2}}$，并不是自然常数，10.7 会解释离心率 $e$ 的含义。
+
+因此，周长
+$$P=4a\int_0^{\pi/2}\sqrt{1-e^2\sin^2 t}dt$$
+这个积分是非初等积分，被称为第二类完全椭圆积分（`complete elliptic integral of the second kind`）。不过我们可以通过无穷级数来计算这个值。对 $\sqrt{1-x^2}$ 二项式展开
+$$\sqrt{1-e^2\sin^2 t}=1-\frac{1}{2}e^2\sin^2 t-\frac{1}{2\cdot 4}e^4\sin^4 t-\cdots$$
+使用 [积分表](/Formula/A-Brief-Table-of-Integrals.md) 的公式 157 计算 $\int_0^{\pi/2}\sin^n tdt$，那么
+$$\begin{aligned}
+P&=4a\int_0^{\pi/2}\sqrt{1-e^2\sin^2 t}dt\\
+&=4a[\frac{\pi}{2}-(\frac{1}{2}e^2)(\frac{1}{2}\frac{\pi}{2})-(\frac{1}{2\cdot 4}e^4)(\frac{1\cdot 3}{2\cdot 4}\frac{\pi}{2})-\cdots]\\
+&=2\pi a[1-(\frac{1}{2})^2e^2-(\frac{1\cdot 3}{2\cdot 4})^2\frac{e^4}{3}-\cdots]
+\end{aligned}$$
+由于 $e<1$，那么上面的无穷级数小于几何无穷级数 $\sum_{n=1}^\infty(e^2)^n$，所以上式是收敛的。我们不能直接得到 $P$，但是可以通过无穷级数的有限和任意精度逼近这个值。
+
+### 曲线 $y=f(x)$ 的长度
