@@ -79,13 +79,15 @@ $$\cos^2\theta+\sin^2\theta=1\tag{3}$$
 对于所有的$\theta$，这个方程都成立，并且是三角函数最常用的恒等式。上式两边同除$\cos^2\theta,\sin^2\theta$得到
 $$1+\tan^2\theta=\sec^2\theta$$
 $$1+\cot^2\theta=\csc^2\theta$$
-下面两个公式也是对所有的$A,B$都成立（和）
+下面两个公式也是对所有的 $A,B$ 都成立（和）
 $$\begin{aligned}
 \cos(A+B)=\cos A\cos B-\sin A\sin B\\
 \sin(A+B)=\sin A\cos B+\cos A\sin B
 \end{aligned}\tag{4}$$
-对于差$\cos(A-B),\sin(A-B)$有类似的公式。其实可以利用三角函数的奇偶性将上式的$B$换成$-B$得到差的公式。  
-本书所有的三角恒等变换都能从公式$(3)(4)$推导出来。比如用$\theta$替换$A,B$可以得到倍角公式
+对于差 $\cos(A-B),\sin(A-B)$ 有类似的公式。可以利用三角函数的奇偶性将上式的 $B$ 换成 $-B$ 得到差的公式。
+$$\cos(A - B) = \cos A\cos B + \sin A\sin B$$
+$$\sin(A - B) = \sin A\cos B - \cos A\sin B$$
+本书所有的三角恒等变换都能从公式 $(3)(4)$ 推导出来。比如用 $\theta$ 替换 $A,B$ 可以得到倍角公式
 $$\begin{aligned}
 \cos 2\theta=\cos^2\theta-\sin^2\theta\\
 \sin 2\theta=2\sin\theta\cos\theta
@@ -140,7 +142,8 @@ $$f(x)=A\sin(\frac{2\pi}{B}(x-C))+D$$
 ![](030.140.png)
 
 ### 习题
-习题中有两个是很常见且很有用的公式和定理。  
+习题中有两个是很常见且很有用的公式和定理。
+
 55. 两个角的正切值公式如下：
 $$\tan(A+B)=\frac{\tan A+\tan B}{1-\tan A\tan B}$$
 证明：
@@ -150,9 +153,10 @@ $$\begin{aligned}
 &=\frac{\tan A+\tan B}{1-\tan A\tan B}
 \end{aligned}$$
 
-65. 正弦定理 三角形$ABC$对应边分别是$a,b,c$，那么
+61. 正弦定理 三角形 $ABC$ 对应边分别是 $a,b,c$，那么
 $$\frac{\sin A}{a}=\frac{\sin B}{b}=\frac{\sin C}{c}$$
-证明：$ABC$三者是平等的，所以下面证明等式的后半部分，前半部分同理可得。  
+证明：$ABC$ 三者是平等的，所以下面证明等式的后半部分，前半部分同理可得。
+
 角$C$可能是锐角、钝角和直角。  
 直角最简单，此时$\sin C=1,\sin B=\frac{b}{c}$，得证。  
 锐角和钝角的情况如下图所示：  

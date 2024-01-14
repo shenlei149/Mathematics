@@ -15,6 +15,10 @@ $$\lim_{x\to -\infty}f(x)=L$$
 直观地，如果$\lim_{x\to\infty}f(x)=L$，那么当$x$移动的离原点越来越远，$f(x)$无限接近$L$。类似地，$\lim_{x\to-\infty}f(x)=L$，那么当$x$沿着负半轴移动的越来越远，$f(x)$无限接近$L$。  
 计算$x\to\infty$或$x\to-\infty$的极限的策略和2.2节类似，那一节中我们先找到$y=x,y=k$的极限，然后应用定理1进行拓展。这里我们也要先找到$y=1/x,y=k$的极限。  
 $$\lim_{x\to\plusmn\infty}k=k,\lim_{x\to\plusmn\infty}\frac{1}{x}=0\tag{1}$$
+例1 给了第二个式子的证明，下面证明第一个式子 $x\to\infty$ 的情况，$x\to -\infty$ 类似。
+根据定义，对任意 $\varepsilon>0$，任意 $M$ 都有
+$$|f(x)-L|=|k-k|=0<\varepsilon$$
+因此 $x\to\infty$ 时，$f(x)=k$ 的极限是 $k$。
 
 例1 证明  
 （a）$\lim_{x\to\infty}\frac{1}{x}=0$  
@@ -28,7 +32,7 @@ $$|\frac{1}{x}-0|=|\frac{1}{x}|<\epsilon, \text{ whenever } x>M$$
 $$\bigg|\frac{1}{x}-0\bigg|=\bigg|\frac{1}{x}\bigg|<\epsilon, \text{ whenever } x<N$$
 那么$N=-1/\epsilon$或者任意小于$1-\epsilon$的负数。
 
-**定理8** 定理1的所有法则对$x\to\infty,x\to-\infty$时同样适用。
+**定理8** 定理1的所有法则对 $x\to\infty,x\to-\infty$ 时同样适用。
 
 例2 计算下面两个极限值。  
 （a）
