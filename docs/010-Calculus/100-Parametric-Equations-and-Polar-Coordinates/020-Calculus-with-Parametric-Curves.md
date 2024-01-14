@@ -5,14 +5,14 @@ $$\frac{dy}{dt}=\frac{dy}{dx}\frac{dx}{dt}$$
 
 > $dy/dx$ 的参数公式
 > 如果三个导数都存在，且 $dx/dt\neq 0$，那么
-> $$\frac{dy}{dx}=\frac{dy/dt}{dx/dt}$$
+> $$\frac{dy}{dx}=\frac{dy/dt}{dx/dt}\tag{1}$$
 
 如果参数方程定义 $y$ 是 $x$ 二阶可微函数，令 $dy/dx=y'$，可以计算 $d^2y/dx^2$
 $$\frac{d^2y}{dx^2}=\frac{d}{dx}(y')=\frac{dy'/dt}{dx/dt}$$
 
 > $d^2y/dx^2$ 的参数公式
 > 如果方程 $x=f(t),y=g(t)$ 定义 $y$ 是 $x$ 二阶可微函数，在任意点处有 $dx/dt\neq 0$，且 $y'=dy/dx$，那么
-> $$\frac{d^2y}{dx^2}=\frac{dy'/dt}{dx/dt}$$
+> $$\frac{d^2y}{dx^2}=\frac{dy'/dt}{dx/dt}\tag{2}$$
 
 例1 求曲线
 $$x=\sec t,y=\tan t,-\frac{\pi}{2}<t<\frac{\pi}{2}$$
@@ -86,7 +86,7 @@ $$\lim_{||p||\to 0}\sum_{k=1}^n\sqrt{[f'(t_k^*)]^2+[g'(t_k^{**})]^2}\Delta t_k=\
 > $$L=\int_a^b\sqrt{[f'(t)]^2+[g'(t)]^2}dt$$
 
 如果 $x=f(t),y=g(t)$，使用莱布尼茨记号表示
-$$L=\int_a^b\sqrt{[\frac{dx}{dt}]^2+[\frac{dy}{dt}]^2}dt$$
+$$L=\int_a^b\sqrt{[\frac{dx}{dt}]^2+[\frac{dy}{dt}]^2}dt\tag{3}$$
 
 由于在整个区间上都有 $(f')^2+(g')^2>0$，所以 $C$ 没有原路折返的点。如果存在这样的点，该点处不可导或者两个函数的导致都为零。第十二章将阐述这一点。
 
@@ -147,3 +147,63 @@ P&=4a\int_0^{\pi/2}\sqrt{1-e^2\sin^2 t}dt\\
 由于 $e<1$，那么上面的无穷级数小于几何无穷级数 $\sum_{n=1}^\infty(e^2)^n$，所以上式是收敛的。我们不能直接得到 $P$，但是可以通过无穷级数的有限和任意精度逼近这个值。
 
 ### 曲线 $y=f(x)$ 的长度
+下面证明 6.3 节的弧长公式是方程 $(3)$ 的特例。给定一个连续可导函数 $y=f(x),a\leq x\leq b$，令 $x=t,y=f(t),a\leq t\leq b$ 是参数方程。那么
+$$\frac{dx}{dt}=1,\frac{dy}{dt}=f'(t)$$
+由公式 $(1)$ 可以得到
+$$\frac{dy}{dx}=\frac{dy/dt}{dx/dt}=f'(t)$$
+那么
+$$(\frac{dx}{dt})^2+(\frac{dy}{dt})^2=1+[f'(t)]^2=1+[f'(x)]^2$$
+代入公式 $(3)$ 就得到了 6.3 节的弧长公式。
+
+### 弧长微分
+和 6.3 节一样，我们可以定义参数化曲线 $x=f(t),y=g(t),a\leq t\leq b$ 的长度是
+$$s(t)=\int_a^t\sqrt{[f'(z)]^2+[g'(z)]^2}dz$$
+由微积分基本定理可得
+$$\frac{ds}{dt}=\sqrt{[f'(t)]^2+[g'(t)]^2}=\sqrt{(\frac{dx}{dt})^2+(\frac{dy}{dt})^2}$$
+弧长的微分是
+$$ds=\sqrt{(\frac{dx}{dt})^2+(\frac{dy}{dt})^2}dt\tag{4}$$
+方程 $(4)$ 往往简写为
+$$ds=\sqrt{dx^2+dy^2}$$
+
+例7 求例 5 中星形线在第一项的弧线的质心。
+
+解：令曲线的密度是 $\delta=1$ 并根据 6.6 节的方式计算质心。
+
+由于曲线关于 $y=x$ 对称，所以 $\bar{x}=\bar{y}$。如下图所示。
+
+![](020.050.png)
+
+根据例 5 我们可以得到
+$$dm=1\cdot ds=\sqrt{(\frac{dx}{dt})^2+(\frac{dy}{dt})^2}=3\cos t\sin tdt$$
+$$M=\int_0^{\pi/2}dm=\int_0^{\pi/2}3\cos t\sin tdt=\frac{3}{2}$$
+那么
+$$\begin{aligned}
+M_x&=\int\tilde{y}dm\\
+&=\int_0^{\pi/2}\sin^3t\cdot 3\cos t\sin tdt\\
+&=3\int_0^{\pi/2}\sin^4 t\cos tdt\\
+&=3\frac{\sin^5 t}{5}\bigg|_0^{\pi/2}\\
+&=\frac{3}{5}
+\end{aligned}$$
+所以
+$$\bar{y}=\frac{M_x}{M}=\frac{2}{5}$$
+那么质心是 $(2/5,2/5)$。
+
+例8 求无摩擦小球从顶部沿最速降线 $x=a(t-\sin t),y=a(1-\cos t),0\leq t\leq \pi$ 降到底部的时间 $T_c$。
+
+解：由 10.1 节的方程 $(3)$，这里要求的时间是
+$$T_c=\int_{t=0}^{t=\pi}\frac{ds}{\sqrt{2gy}}$$
+现在使用参数 $t$ 表示 $ds$。对最速降线
+$$dx/dt=a(1-\cos t),dy/dt=a\sin t$$
+那么
+$$\begin{aligned}
+ds&=\sqrt{(\frac{dx}{dt})^2+(\frac{dy}{dt})^2}dt\\
+&=\sqrt{a^2(1-2\cos t+\cos^2 t+\sin^2 t)}dt\\
+&=\sqrt{a^2(2-2\cos t)}
+\end{aligned}$$
+将 $ds,y$ 代入要求的积分式子
+$$\begin{aligned}
+T_c&=\int_0^\pi\sqrt{\frac{a^2(2-\cos t)}{2ga(1-\cos t)}}dt\\
+&=\int_0^\pi\sqrt{\frac{a}{g}}dt\\
+&=\pi\sqrt{\frac{a}{g}}
+\end{aligned}$$
+

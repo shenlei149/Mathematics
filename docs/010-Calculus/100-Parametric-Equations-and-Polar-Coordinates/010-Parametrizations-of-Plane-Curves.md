@@ -124,7 +124,7 @@ $$mgy=\frac{1}{2}mv^2-\frac{1}{2}m(0)^2$$
 因此此时速度为 $v=\sqrt{2gy}$，那么
 $$\frac{ds}{dT}=\sqrt{2gy}$$
 即
-$$dT=\frac{ds}{\sqrt{2gy}}=\frac{\sqrt{1+(dy/dx)^2}dx}{\sqrt{2gy}}$$
+$$dT=\frac{ds}{\sqrt{2gy}}=\frac{\sqrt{1+(dy/dx)^2}dx}{\sqrt{2gy}}\tag{3}$$
 小球沿某条曲线 $y=f(x)$ 从 $O$ 到 $B(a\pi,2a)$ 所花费的时间 $T_f$ 是
 $$T_f=\int_{x=0}^{x=a\pi}\sqrt{\frac{1+(dy/dx)^2}{2gy}}dx$$
 所以问题就是积分最小时曲线 $y=f(x)$ 是怎样的？
