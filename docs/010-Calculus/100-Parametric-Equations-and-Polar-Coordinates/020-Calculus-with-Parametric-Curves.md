@@ -207,3 +207,29 @@ T_c&=\int_0^\pi\sqrt{\frac{a^2(2-\cos t)}{2ga(1-\cos t)}}dt\\
 &=\pi\sqrt{\frac{a}{g}}
 \end{aligned}$$
 
+### 旋转的曲面表面积
+6.4 节我们分析一个曲线沿着坐标轴旋转得到的曲面表面积。如果绕着 $x$ 轴旋转，$S=\int 2\pi yds$，绕着 $y$ 轴旋转，$S=\int 2\pi xds$。这些对于参数化曲线也是成立的。
+
+**参数曲线旋转曲面的表面积**
+> 如果 $t$ 从 $a$ 到 $b$，光滑曲线 $x=f(t),y=g(t),a\leq t\leq b,f'(t)^2+g'(t)^2>0$ 只遍历一次，那么关于坐标轴旋转的表面积如下。
+> * 关于 $x$ 轴旋转（$y\geq 0$）
+> $$S=\int_a^b 2\pi y\sqrt{(\frac{dx}{dt})^2+(\frac{dy}{dt})^2}dt$$
+> * 关于 $y$ 轴旋转（$x\geq 0$）
+> $$S=\int_a^b 2\pi x\sqrt{(\frac{dx}{dt})^2+(\frac{dy}{dt})^2}dt$$
+
+和曲线的长度一样，选择参数方程对结果没有影响，所以一般选择方便计算的。
+
+例8 圆心位于 $(0,1)$ 点半径为 1 的圆的标准参数方程是
+$$x=\cos t,y=1+\sin t,0\leq t\leq 2\pi$$
+求圆绕 $x$ 轴旋转形成的曲面的面积。如下图所示。
+
+![](020.060.png)
+
+解：直接使用公式。
+$$\begin{aligned}
+S&=\int_a^b 2\pi y\sqrt{(\frac{dx}{dt})^2+(\frac{dy}{dt})^2}dt\\
+&=\int_0^{2\pi} 2\pi(1+\sin t)\sqrt{(-\sin t)^2+(\cos t)^2}dt\\
+&=2\pi\int_0^{2\pi}(1+\sin t)dt\\
+&=2\pi\bigg[t-\cos t\bigg]_0^{2\pi}\\
+&=4\pi^2
+\end{aligned}$$
