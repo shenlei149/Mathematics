@@ -90,3 +90,39 @@ r^2-6r\sin\theta&=0\\
 r=0 \text{ or } r-\sin\theta&=0\\
 r&=6\sin\theta
 \end{aligned}$$
+
+例6 将下面的极坐标方程替换为笛卡尔坐标方程，并描述其图像。
+
+（a）
+$$r\cos\theta=-4$$
+（b）
+$$r^2=4r\cos\theta$$
+（c）
+$$r=\frac{4}{2\cos\theta-\sin\theta}$$
+解：
+
+（a）
+$$\begin{aligned}
+r\cos\theta&=-4\\
+x&=-4
+\end{aligned}$$
+通过 $x=-4$ 垂直于 $x$ 轴的直线。
+
+（b）
+$$\begin{aligned}
+r^2&=4r\cos\theta\\
+x^2+y^2&=4x\\
+x^2-4x+y^2&=0\\
+(x-2)^2+y^2&=4
+\end{aligned}$$
+圆心位于 $(2,0)$ 半径为 2 的圆。
+
+（c）
+$$\begin{aligned}
+r&=\frac{4}{2\cos\theta-\sin\theta}\\
+r(2\cos\theta-\sin\theta)&=4\\
+2r\cos\theta-r\sin\theta&=4\\
+2x-y&=4\\
+y&=2x-4
+\end{aligned}$$
+斜率为 2 $y$ 轴截距为 -4 的直线。
