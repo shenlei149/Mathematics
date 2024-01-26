@@ -60,4 +60,75 @@ A&=\int_{-\pi/2}^{\pi/2}\frac{1}{2}(r_2^2-r_1^2)d\theta\\
 &=2-\frac{\pi}{4}
 \end{aligned}$$
 
-### 
+使用极坐标时，可以用不同的方式表示同一个点，所以要特别注意什么时候一个点在图像上，哪些点在极坐标图像的交点处。在笛卡尔坐标系，我们联立两个方程就能解出交点。但是对极坐标而言，一切都变了。联立方程能够发现一些交点，但不是全部，有时，找到所有交点是比较困难的。一种方式是画出图像辅助分析。
+
+例3 求曲线 $r=2\cos(\theta/3)$ 和圆心在原点半径为 $\sqrt{2}$ 的圆的所有交点。
+
+解：注意到，$r=2\cos(\theta/3)$ 可以取正值，也可以取负值。因此在寻找与圆的交点时，我们需要考虑到圆的方程可以表示为 $r=\sqrt{2},r=-\sqrt{2}$ 两种形式。
+
+联立方程 $2\cos(\theta/3)=\sqrt{2}$ 可以得到
+$$\begin{aligned}
+2\cos(\theta/3)&=\sqrt{2}\\
+\cos(\theta/3)&=\sqrt{2}/2\\
+\theta/3&=\pi/4\\
+\theta=3\pi/4
+\end{aligned}$$
+这样，得到了交点 $(\sqrt{2},3\pi/4)$。不过，正如下图所示，两条曲线有两个交点。
+
+![](050.060.png)
+
+我们联立方程 $2\cos(\theta/3)=-\sqrt{2}$
+$$\begin{aligned}
+2\cos(\theta/3)&=-\sqrt{2}\\
+\cos(\theta/3)&=-\sqrt{2}/2\\
+\theta/3&=3\pi/4\\
+\theta=9\pi/4
+\end{aligned}$$
+因此，得到另一个交点 $(-\sqrt{2},9\pi/4)$。一般情况下，我们简化一个点的表示方法，使得 $r$ 是正数 $\theta$ 在 $0$ 和 $2\pi$ 之间。在极坐标系中，将 $\theta$ 加上 $2\pi$ 的任意多倍表示的还是同一个点。如果将 $r$ 的符号反转，那么 $\theta$ 需要加上或者减去 $\pi$。那么点 $(-\sqrt{2},9\pi/4)$ 可以表示为 $(-\sqrt{2},\pi/4)$，也可以表示为 $(\sqrt{2},5\pi/4)$。
+
+### 曲线的长度
+我们通过参数化方式表示极坐标曲线 $r=f(\theta),\alpha\leq\theta\leq\beta$ 来得到其长度的公式
+$$x=r\cos\theta=f(\theta)\cos\theta,y=r\sin\theta=f(\theta)\sin\theta,\alpha\leq\theta\leq\beta\tag{2}$$
+从 10.2 的公式 $(3)$ 可以得到长度是
+$$L=\int_\alpha^\beta\sqrt{(\frac{dx}{d\theta})^2+(\frac{dy}{d\theta})^2}d\theta$$
+我们先将公式 $(2)$ 进行微分然后平方
+$$(\frac{dx}{d\theta})^2=(f'(\theta)\cos\theta-f(\theta)\sin\theta)^2=[f'(\theta)]^2\cos^2\theta+[f(\theta)]^2\sin^2\theta-2\sin\theta\cos\theta f'(\theta)f(\theta)$$
+$$(\frac{dy}{d\theta})^2=(f'(\theta)\sin\theta+f(\theta)\cos\theta)^2=[f'(\theta)]^2\sin^2\theta+[f(\theta)]^2\cos^2\theta+2\sin\theta\cos\theta f'(\theta)f(\theta)$$
+相加
+$$(\frac{dx}{d\theta})^2+(\frac{dy}{d\theta})^2=[f'(\theta)]^2+[f(\theta)]^2=(\frac{dr}{d\theta})^2+r^2$$
+因此
+$$L=\int_\alpha^\beta\sqrt{r^2+(\frac{dr}{d\theta})^2}d\theta$$
+
+**极坐标曲线长度**
+> 如果 $r=f(\theta)$ 一阶导在 $[\alpha,\beta]$ 区间上连续，当 $\theta$ 从 $\alpha$ 到 $\beta$，点 $P(r,\theta)$ 沿着 $r=f(\theta)$ 只遍历一次，那么曲线的长度是
+> $$L=\int_\alpha^\beta\sqrt{r^2+(\frac{dr}{d\theta})^2}d\theta\tag{3}$$
+
+例4 求心脏线 $r=1-\cos\theta$ 的长度。
+
+解：画出图像如下。
+
+![](050.070.png)
+
+$\theta$ 逆时针从 0 到 $2\pi$，$P(r,\theta)$ 只遍历曲线一次。
+
+由
+$$r=1-\cos\theta$$
+得到
+$$\frac{dr}{d\theta}=\sin\theta$$
+因此
+$$\begin{aligned}
+r^2+(\frac{dr}{d\theta})^2&=(1-\cos\theta)^2+(\sin\theta)^2\\
+&=1-2\cos\theta+\cos^2\theta+\sin^2\theta\\
+&=2-2\cos\theta
+\end{aligned}$$
+那么
+$$\begin{aligned}
+L&=\int_\alpha^\beta\sqrt{r^2+(\frac{dr}{d\theta})^2}d\theta\\
+&=\int_0^{2\pi}\sqrt{2-\cos\theta}d\theta\\
+&=\int_0^{2\pi}\sqrt{4\sin^2\frac{\theta}{2}}d\theta\\
+&=\int_0^{2\pi}2|\sin\frac{\theta}{2}|d\theta\\
+&=\int_0^{2\pi}2\sin\frac{\theta}{2}d\theta\\
+&=\bigg[-4\cos\frac{\theta}{2}\bigg]_0^{2\pi}\\
+&=4+4\\
+&=8
+\end{aligned}$$
