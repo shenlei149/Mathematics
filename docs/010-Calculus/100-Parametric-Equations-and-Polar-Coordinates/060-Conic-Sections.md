@@ -211,4 +211,24 @@ $$y-1=\pm\frac{1}{2}(x+1)$$
 对抛物线隐式求导
 $$2ydy=4pdx$$
 所以
-$$\frac{dy}{dx}=\frac{4p}{2y}$$
+$$\frac{dy}{dx}=\frac{4p}{2y}=\frac{2p}{y}$$
+那么点 $P$ 处的斜率
+$$\tan\beta=\frac{2p}{y_0}$$
+由正切定义
+$$\tan\phi=\frac{y_0}{x_0-p}$$
+由于 $L'$ 与 $x$ 轴平行，那么
+$$\phi=\alpha+\beta$$
+所以
+$$\begin{aligned}
+\tan\alpha&=\tan(\phi-\beta)\\
+&=\frac{\tan\phi-\tan\beta}{1+\tan\phi\tan\beta}\\
+&=\frac{\frac{y_0}{x_0-p}-\frac{2p}{y_0}}{1+\frac{2py_0}{y_0(x_0-p)}}\\
+&=\frac{y_0^2-2p(x_0-p)}{y_0x_0-y_0p+2py_0}\\
+&=\frac{4px_0-2px_0+2p^2}{x_0y_0+py_0}\\
+&=\frac{2p(x_0+p)}{y_0(x_0+p)}\\
+&=\frac{2p}{y_0}
+&=\tan\beta
+\end{aligned}$$
+因为 $\alpha,\beta$ 都是锐角且正切值相等，那么
+$$\alpha=\beta$$
+也就说，从 $F$ 到 $P$ 的光线会沿着 $L'$ 反射，反射出去的射线恰好平行于抛物线的轴。
