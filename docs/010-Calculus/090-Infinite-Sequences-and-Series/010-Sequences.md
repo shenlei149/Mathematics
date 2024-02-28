@@ -209,6 +209,38 @@ $$a_n=e^{\ln a_n}\to e^2$$
 
 第三个式子和第二个式子类似，$\ln a_n=\frac{\ln x}{n}$，$1/n$ 的极限是 0，乘以常数 $\ln x$ 还是 0，所以 $\ln a_n$ 的极限是 0，所以 $a_n$ 的极限是 1。
 
+第四个式子。我们需要证明对于任意一个 $\varepsilon$，都存在一个 $N$ 使得 $|x^n|<\varepsilon,n>N$。由于 $\varepsilon^{1/n}\to 1$，又因为 $|x|<1|$，所以存在 $N$ 使得 $\varepsilon^{1/N}>|x|$，因此
+$$|x^N|=|x|^N<\varepsilon$$
+这就是我们要寻找的 $N$，因为 $|x|<1$，那么
+$$|x^n|<|x^N|<\varepsilon$$
+
+第五个式子。令
+$$a_n=(1+\frac{x}{n})^n$$
+那么
+$$\ln a_n=\ln (1+\frac{x}{n})^n=n\ln(1+\frac{x}{n})\to x$$
+最后一步应用洛必达法则如下
+$$\begin{aligned}
+\lim_{n\to\infty}n\ln(1+\frac{x}{n})&=\lim_{n\to\infty}\frac{\ln (1+x/n)}{1/n}\\
+&=\lim_{n\to\infty}\frac{\frac{1}{1+x/n}-\frac{x}{n^2}}{-1/n^2}\\
+&=\lim_{n\to\infty}\frac{x}{1+x/n}\\
+&=x
+\end{aligned}$$
+应用定理 3，$f(x)=e^x$，得到结论。
+
+最后一个式子。先证明
+$$\frac{|x|^n}{n!}\to 0$$
+选择一个正数 $M>|x|$，那么 $|x|/M<1$，根据第四个式子，$(|x|<M)^n\to 0$，那么
+$$\begin{aligned}
+\frac{|x|^n}{n!}&=\frac{|x|^n}{1\cdot 2\cdots M\cdot (M+1)\cdots n}\\
+&\leq\frac{|x|^n}{M!M^{n-M}}\\
+&=\frac{|x|^nM^M}{M!M^n}\\
+&=\frac{M^M}{M!}(\frac{|x|}{M})^n
+\end{aligned}$$
+注意最后一个式子的第一项是常量，不随 $n$ 增大而改变，第二项 $(\frac{|x|}{M})^n\to 0$。根据夹逼定理，$\frac{|x|^n}{n!}\to 0$。
+回到要证明的式子 $\frac{x^n}{n!}$ 满足下面的式子
+$$-\frac{|x|^n}{n!}\leq\frac{x^n}{n!}\leq\frac{|x|^n}{n!}$$
+再次根据夹逼定理，得到结论。
+
 $$\tag*{$\blacksquare$}$$
 
 例9 应用定理 5
