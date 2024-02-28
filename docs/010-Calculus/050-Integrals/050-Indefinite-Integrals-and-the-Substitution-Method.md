@@ -105,7 +105,8 @@ $$\begin{aligned}
 &=\frac{1}{10}(2x+1)^{5/2}-\frac{1}{6}(2x+1)^{3/2}+C
 \end{aligned}$$
 
-例7 有时，我们需要使用三角函数恒定变化变换积分式，使得可以使用换元法。  
+例7 有时，我们需要使用三角函数恒定变化变换积分式，使得可以使用换元法。
+
 （a）
 $$\begin{aligned}
 \int\sin^2x dx&=\int\frac{1-\cos 2x}{2}dx\\
@@ -121,11 +122,18 @@ $$\begin{aligned}
 （c）
 $$\begin{aligned}
 \int\tan xdx&=\int\frac{\sin x}{\cos x}dx\\
-&=\int\frac{-du}{u}du\\
+&=\int\frac{-du}{u}\\
 &=-\ln |u|+C\\
 &=-\ln |\cos x|+C\\
 &=\ln\frac{1}{|\cos x|}+C\\
 &=\ln|\sec x|+C
+\end{aligned}$$
+（d）
+$$\begin{aligned}
+\int\cot xdx&=\int\frac{\cos x}{\sin x}dx\\
+&=\int\frac{du}{u}\\
+&=\ln|u|+C\\
+&=\ln|\sin x|+C
 \end{aligned}$$
 
 例8 有时被积函数需要进行一些代数运算使之可以使用换元法。下面两个例子分子分母同乘某个因式后再使用换元法。  
@@ -144,7 +152,16 @@ $$\begin{aligned}
 &=\ln|u|+C\\
 &=\ln|\sec x+\tan x|+C
 \end{aligned}$$
-类似上面两个例子，我们可以得到 $\cot x,\csc x$ 的不定积分。现在总结如下：
+（c）
+$$\begin{aligned}
+\int\csc xdx&=\int\csc x\frac{\csc x+\cot x}{\csc x+\cot x}dx\\
+&=\int\frac{\csc^2 x+\csc x\cot x}{\csc x+\cot x}dx\\
+&=\int\frac{-du}{u}\\
+&=-\ln|u|+C\\
+&=-\ln|\csc x+\cot x|+C
+\end{aligned}$$
+
+现在总结如下：
 $$\int\tan xdx=\ln|\sec x|+C$$
 $$\int\cot xdx=\ln|\sin x|+C$$
 $$\int\sec xdx=\ln|\sec x+\tan x|+C$$
