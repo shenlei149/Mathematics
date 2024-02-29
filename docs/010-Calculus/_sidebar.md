@@ -1,5 +1,7 @@
 - [Home](/)
 - [010 Calculus](/010-Calculus/)
+  - [010 函数 Functions](/010-Calculus/010-Functions/)
+  - [020 极限与连续 Limits and Continuity](/010-Calculus/020-Limits-and-Continuity/)
   - [040 导数的应用 Applications of Derivatives](/010-Calculus/040-Applications-of-Derivatives/)
   - [050 积分 Integrals](/010-Calculus/050-Integrals/)
   - [060 定积分的应用 Applications of Definite Integrals](/010-Calculus/060-Applications-of-Definite-Integrals/)

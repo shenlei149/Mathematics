@@ -68,10 +68,10 @@ y&=\sec^{-1}x\\
 \frac{dy}{dx}=\frac{1}{\sec y\tan y}
 \end{aligned}$$
 通过$\sec y=x$可以得到
-$$\tan y=\plusmn\sqrt{\sec^2 y-1}=\plusmn\sqrt{x^2-1}$$
+$$\tan y=\pm\sqrt{\sec^2 y-1}=\pm\sqrt{x^2-1}$$
 那么
-$$\frac{dy}{dx}=\plusmn\frac{1}{x\sqrt{x^2-1}}$$
-如何处理$\plusmn$呢？如下图所示，$y=\sec^{-1}x$的斜率总是正数  
+$$\frac{dy}{dx}=\pm\frac{1}{x\sqrt{x^2-1}}$$
+如何处理$\pm$呢？如下图所示，$y=\sec^{-1}x$的斜率总是正数  
 ![](090.050.png)  
 所以
 $$\frac{d}{dx}\sec^{-1}x=\begin{cases}

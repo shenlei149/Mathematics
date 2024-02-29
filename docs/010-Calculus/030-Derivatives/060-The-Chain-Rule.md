@@ -130,8 +130,8 @@ $$\begin{aligned}
 \end{aligned}$$
 在任意点，分子都不为零，斜率是大于零的。
 
-例9 $\sin x,\cos x$的导数公式单位是弧度。使用链式法则可以看出两者的区别。由于$180\degree=\pi$，那么$x\degree=\pi x/180$，那么
-$$\frac{d}{dx}\sin x\degree=\frac{d}{dx}\sin(\frac{\pi x}{180})=\frac{\pi}{180}\cos(\frac{\pi x}{180})=\frac{\pi}{180}\cos x\degree$$
-如下图所示。类似的$(\cos x\degree)'=-(\pi/180)\sin x^\degree$。  
+例9 $\sin x,\cos x$的导数公式单位是弧度。使用链式法则可以看出两者的区别。由于$180^\circ=\pi$，那么$x^\circ=\pi x/180$，那么
+$$\frac{d}{dx}\sin x^\circ=\frac{d}{dx}\sin(\frac{\pi x}{180})=\frac{\pi}{180}\cos(\frac{\pi x}{180})=\frac{\pi}{180}\cos x^\circ$$
+如下图所示。类似的$(\cos x^\circ)'=-(\pi/180)\sin x^^\circ$。  
 由于因子$\pi/180$会传染，且会重复多次，这也是使用弧度的有利之处。
 ![](060.030.png)

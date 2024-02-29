@@ -12,6 +12,7 @@ $$(cf)(x)=cf(x)$$
 $$f(x)=\sqrt{x},g(x)=\sqrt{1-x}$$
 定义域$D(f)=[0,\infty),D(g)=(-\infty,1]$，定义域的交集为$[0, 1]$
 下表总结了两个函数各种组合得到的函数及其定义域和公式
+
 | Function | Formula | Domain |
 |--|--|--|
 | $f+g$ | $(f+g)(x)=\sqrt{x}+\sqrt{1-x}$ | $[0, 1]$ |

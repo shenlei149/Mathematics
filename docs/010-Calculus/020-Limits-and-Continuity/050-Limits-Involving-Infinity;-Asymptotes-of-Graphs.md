@@ -1,4 +1,4 @@
-### $x\to\plusmn\infty$时的极限
+### $x\to\pm\infty$时的极限
 无穷符号$\infty$不表示任何一个实数。比如函数$f(x)=1/x,x\neq 0$的定义如下图。当$x$增大时，$1/x$减小。当$x$是负数且数值增加时类似。也就是说当$x\to\infty$或$x\to 0\infty$时，$f(x)=1/x$的极限是0。或者说0是$f(x)=1/x$在无穷处和负无穷处的极限。  
 ![](050.010.png)
 
@@ -14,7 +14,7 @@ $$\lim_{x\to -\infty}f(x)=L$$
 
 直观地，如果$\lim_{x\to\infty}f(x)=L$，那么当$x$移动的离原点越来越远，$f(x)$无限接近$L$。类似地，$\lim_{x\to-\infty}f(x)=L$，那么当$x$沿着负半轴移动的越来越远，$f(x)$无限接近$L$。  
 计算$x\to\infty$或$x\to-\infty$的极限的策略和2.2节类似，那一节中我们先找到$y=x,y=k$的极限，然后应用定理1进行拓展。这里我们也要先找到$y=1/x,y=k$的极限。  
-$$\lim_{x\to\plusmn\infty}k=k,\lim_{x\to\plusmn\infty}\frac{1}{x}=0\tag{1}$$
+$$\lim_{x\to\pm\infty}k=k,\lim_{x\to\pm\infty}\frac{1}{x}=0\tag{1}$$
 例1 给了第二个式子的证明，下面证明第一个式子 $x\to\infty$ 的情况，$x\to -\infty$ 类似。
 根据定义，对任意 $\varepsilon>0$，任意 $M$ 都有
 $$|f(x)-L|=|k-k|=0<\varepsilon$$
@@ -49,7 +49,7 @@ $$\begin{aligned}
 \end{aligned}$$
 
 ### 实数函数在无穷处的极限
-为了计算$x\to\plusmn\infty$时实数函数的极限，首先分子分母除以分母的最高次幂。结果就取决于多项式的幂次。
+为了计算$x\to\pm\infty$时实数函数的极限，首先分子分母除以分母的最高次幂。结果就取决于多项式的幂次。
 
 例3 按照上述方法计算下面两个函数的极限。  
 （a）如下图所示
@@ -88,7 +88,7 @@ $$\lim_{x\to\infty}f(x)=\frac{5}{3},\lim_{x\to -\infty}f(x)=\frac{5}{3}$$
 
 例4 求下面函数图像的水平渐近线
 $$f(x)=\frac{x^3-2}{|x|^3+1}$$
-解：求$x\to\plusmn\infty$时函数极限  
+解：求$x\to\pm\infty$时函数极限  
 $x\geq 0$时
 $$\lim_{x\to\infty}\frac{x^3-2}{|x|^3+1}=\lim_{x\to\infty}\frac{x^3-2}{x^3+1}=\lim_{x\to\infty}\frac{1-2/(x^3)}{1+1/(x^3)}=1$$
 $x<0$时
@@ -107,7 +107,7 @@ $$e^x<\epsilon$$
 
 例6 求  
 （a）$\lim_{x\to\infty}\sin(1/x)$  
-（b）$\lim_{x\to\plusmn\infty}x\sin(1/x)$  
+（b）$\lim_{x\to\pm\infty}x\sin(1/x)$  
 解：  
 （a）令$t=1/x$，那么$x\to\infty$等价于$t\to 0^+$。因此
 $$\lim_{x\to\infty}\sin(1/x)=\lim_{t\to 0^+}\sin t=0$$
@@ -116,7 +116,7 @@ $$\lim_{x\to\infty}x\sin(1/x)=\lim_{t\to 0^+}\frac{\sin t}{t}=1$$
 $$\lim_{x\to -\infty}x\sin(1/x)=\lim_{t\to 0^-}\frac{\sin t}{t}=1$$
 如下图所示  
 ![](050.060.png)  
-类似的，通过研究$y=f(t),t\to\plusmn\infty$，可以知道函数$y=f(1/x),x\to 0$的行为。
+类似的，通过研究$y=f(t),t\to\pm\infty$，可以知道函数$y=f(1/x),x\to 0$的行为。
 
 例7 求
 $$\lim_{x\to 0^-}e^{1/x}$$
@@ -125,17 +125,17 @@ $$\lim_{x\to 0^-}e^{1/x}=\lim_{t\to -\infty}e^t=0$$
 如下图所示：  
 ![](050.070.png)
 
-夹逼定理对$x\to\plusmn\infty$也成立。  
+夹逼定理对$x\to\pm\infty$也成立。  
 例8 使用夹逼定理求下面函数的水平渐近线
 $$y=2+\frac{\sin x}{x}$$
 解：因为
 $$0\leq \bigg|\frac{\sin x}{x}\bigg|\leq\bigg|\frac{1}{x}\bigg|$$
 因为
-$$\lim_{x\to\plusmn\infty}|\frac{1}{x}|=0$$
+$$\lim_{x\to\pm\infty}|\frac{1}{x}|=0$$
 所以根据夹逼定理
-$$\lim_{x\to\plusmn\infty}\frac{\sin x}{x}=0$$
+$$\lim_{x\to\pm\infty}\frac{\sin x}{x}=0$$
 因此
-$$\lim_{x\to\plusmn\infty}(2+\frac{\sin x}{x})=2+0=2$$
+$$\lim_{x\to\pm\infty}(2+\frac{\sin x}{x})=2+0=2$$
 那么$y=2$是水平渐近线。如下图所示：  
 ![](050.080.png)  
 这个例子也说明一条曲线可以和它的水平渐近线相交许多次（无限次）。
@@ -151,7 +151,7 @@ $$\begin{aligned}
 那么当$x\to\infty$时，分母趋于无穷大，所以极限值是0。
 
 ### 斜渐近线
-如果一个实数函数的分子的度恰好比分母的度大1，那么图像有斜渐近线（`oblique or slant line asymptote`）。计算斜渐近线的方式是用分子除以分母，得到一个线性函数加上一个当$x\to\plusmn\infty$时极限是0的余数。
+如果一个实数函数的分子的度恰好比分母的度大1，那么图像有斜渐近线（`oblique or slant line asymptote`）。计算斜渐近线的方式是用分子除以分母，得到一个线性函数加上一个当$x\to\pm\infty$时极限是0的余数。
 
 例10 求下面函数的斜渐近线
 $$f(x)=\frac{x^2-3}{2x-4}$$
@@ -159,7 +159,7 @@ $$f(x)=\frac{x^2-3}{2x-4}$$
 ![](050.090.png)  
 解：通过除法我们可以得到
 $$f(x)=\frac{x}{2}+1+\frac{1}{2x-4}$$
-余数$\frac{1}{2x-4}$表示函数$f(x)$和直线$\frac{x}{2}+1$的垂直距离。当$x\to\plusmn\infty$时，余数的极限是0。所以
+余数$\frac{1}{2x-4}$表示函数$f(x)$和直线$\frac{x}{2}+1$的垂直距离。当$x\to\pm\infty$时，余数的极限是0。所以
 $$g(x)=\frac{x}{2}+1$$
 是渐近线。向左和向右的渐近线都是这一条直线。
 
@@ -240,9 +240,9 @@ $$\lim_{x\to 0^+}\frac{1}{x}=\infty, \lim_{x\to 0^-}\frac{1}{x}=-\infty$$
 我们说$x=0$，也就是$y$轴是函数$f(x)=1/x$的图像的垂直渐近线（`vertical asymptote`）。注意$x=0$时函数是无定义的。
 
 **定义** 如果
-$$\lim_{x\to a^+}f(x)=\plusmn\infty$$
+$$\lim_{x\to a^+}f(x)=\pm\infty$$
 或
-$$\lim_{x\to a^-}f(x)=\plusmn\infty$$
+$$\lim_{x\to a^-}f(x)=\pm\infty$$
 其中，向一个方向无限增长即可，那么$x=a$是函数$y=f(x)$图像的垂直水平线。
 
 例16 求曲线
@@ -250,7 +250,7 @@ $$y=\frac{x+3}{x+2}$$
 的水平渐近线和垂直渐近线。  
 解：改写函数
 $$y=1+\frac{1}{x+2}$$
-当$x\to\plusmn\infty$时，极限是1，所以$y=1$是水平渐近线。$x\to -2$时，值正向或负向无限增长，$x=-2$是垂直渐近线。  
+当$x\to\pm\infty$时，极限是1，所以$y=1$是水平渐近线。$x\to -2$时，值正向或负向无限增长，$x=-2$是垂直渐近线。  
 从几何角度看，该曲线是$y=1/x$向上移动一个单位，向左移动两个单位，所以之前$x,y$轴是渐近线，现在是$y=1,x=-2$是渐近线。如下图所示：  
 ![](050.160.png)
 
@@ -284,13 +284,13 @@ $$f(x)=(\frac{x}{2}+1)+(\frac{1}{2x-4})$$
 $$f(x)\approx \frac{x}{2}+1$$
 在$x=2$附近时，后一项绝对值很大，那么
 $$f(x)\approx \frac{1}{2x-4}$$
-我们说$x\to\plusmn$时$(x/2)+1$占首要位置而$x\to 2$时$1/(2x-4)$占首要位置。主项（`dominant terms`）能够帮助我们预测函数的行为。
+我们说$x\to\pm$时$(x/2)+1$占首要位置而$x\to 2$时$1/(2x-4)$占首要位置。主项（`dominant terms`）能够帮助我们预测函数的行为。
 
-例20 令$f(x)=3x^4-2x^3+3x^2-5x+6,g(x)=3x^4$。证明尽管$f,g$在$x$不大时差异很大，但是当$|x|$很大时，两者基本一致，即$x\to\plusmn\infty$时比值趋于0。  
+例20 令$f(x)=3x^4-2x^3+3x^2-5x+6,g(x)=3x^4$。证明尽管$f,g$在$x$不大时差异很大，但是当$|x|$很大时，两者基本一致，即$x\to\pm\infty$时比值趋于0。  
 解：如下图所示，$x$很小时两者差异很大，但是$|x|$很大时两者就一样了。  
 ![](050.200.png)  
 $$\begin{aligned}
-\lim_{x\to\plusmn\infty}\frac{f(x)}{g(x)}&=\lim_{x\to\plusmn\infty}\frac{3x^4-2x^3+3x^2-5x+6}{3x^4}\\
-&=\lim_{x\to\plusmn\infty}(1-\frac{2}{3x}+\frac{1}{x^2}-\frac{5}{3x^3}+\frac{2}{x^4})\\
+\lim_{x\to\pm\infty}\frac{f(x)}{g(x)}&=\lim_{x\to\pm\infty}\frac{3x^4-2x^3+3x^2-5x+6}{3x^4}\\
+&=\lim_{x\to\pm\infty}(1-\frac{2}{3x}+\frac{1}{x^2}-\frac{5}{3x^3}+\frac{2}{x^4})\\
 &=1
 \end{aligned}$$
