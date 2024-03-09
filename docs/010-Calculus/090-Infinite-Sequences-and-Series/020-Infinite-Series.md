@@ -98,7 +98,7 @@ $$\sum_{n=1}^\infty\frac{n+1}{n}=\frac{2}{1}+\frac{3}{2}+\frac{4}{3}+\cdots+\fra
 $$\tag*{$\blacksquare$}$$
 
 下面证明当 $\sum_{n=1}^\infty a_n$ 收敛时 $\lim_{n\to\infty}a_n$ 必须等于零。令 $S$ 表示级数和且 $s_n=a_1+a_2+\cdots+a_n$ 表示前 $n$ 项和。当 $n$ 充分大时，$s_n,s_{n-1}$ 都趋于 $S$，两者的差值 $a_n$ 趋于零。
-$$a_n=s_n-s_{n-1}\rarr S-S=0$$
+$$a_n=s_n-s_{n-1}\rightarrow S-S=0$$
 
 **定理7**
 > 如果 $\sum_{n=1}^\infty a_n$ 收敛，那么 $a_n\to 0$。

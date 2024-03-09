@@ -117,13 +117,13 @@ $$\begin{aligned}
 如果$\lim_{x\to c}f(x)=b$，$g$在$b$处是连续的，那么
 $$\lim_{x\to c}g(f(x))=g(b)$$
 
-证明：令$\epsilon>0$。因为$g$在$b$点连续，那么存在$\delta_1>0$使得
-$$|g(y)-g(b)|<\epsilon, \text{ whenever } 0<|y-b|<\delta_1$$
+证明：令$\varepsilon>0$。因为$g$在$b$点连续，那么存在$\delta_1>0$使得
+$$|g(y)-g(b)|<\varepsilon, \text{ whenever } 0<|y-b|<\delta_1$$
 因为$\lim_{x\to c}f(x)=b$，那么存在$\delta>0$使得
 $$|f(x)-b|<\delta_1, \text{ whenever } 0<|x-c|<\delta$$
 令$y=f(x)$，有
 $$|y-b|<\delta_1, \text{ whenever } 0<|x-c|<\delta$$
-这就蕴涵着当$0<|x-c|<\delta$，有$|g(y)-g(b)|=|g(f(x))-g(b)|<\epsilon$。从极限的定义可知$\lim_{x\to c}g(f(x))=g(b)$。  
+这就蕴涵着当$0<|x-c|<\delta$，有$|g(y)-g(b)|=|g(f(x))-g(b)|<\varepsilon$。从极限的定义可知$\lim_{x\to c}g(f(x))=g(b)$。  
 这个证明过程得到$c$是$f$的定义域的内点是成立的。如果$c$是端点，只需要把上述证明过程中的极限换成合适的单边极限即可。
 
 例9 定理11的应用。  

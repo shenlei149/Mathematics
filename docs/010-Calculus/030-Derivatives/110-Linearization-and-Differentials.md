@@ -24,6 +24,7 @@ $$L(x)=f(a)+f'(a)(x-a)=1+\frac{x}{2}$$
 ![](110.040.png)
 
 下面的表展示了$\sqrt{1+x}\approx 1+(x/2)$的在0附近的精确度，如果离0很远的话，那么就不准确了。比如$x=2$，线性化的近似是2，实际值是$\sqrt{3}$，准确度差很远。
+
 | Approximation | True value | True value − approximation |
 |--|--|--|
 | $\sqrt{1.005}\approx 1+\frac{0.005}{2}=1.0025$ | $1.002497$ | $0.000003 < 10^{-5}$ |
@@ -58,9 +59,9 @@ $$(1+x)^k\approx 1+kx$$
 这个近似有广泛的应用。比如，当$x$很小时有
 $$\begin{aligned}
 \sqrt{1+x}&\approx 1+\frac{1}{2}x&&k=1/2\\
-\frac{1}{1-x}&= (1-x)^{-1}\approx 1+(-1)(-x)=1+x&&k=-1,x\larr -x\\
-\sqrt[3]{1+5x^4}&=(1+5x^4)^{1/3}\approx 1+\frac{1}{3}5x^4=1+\frac{5}{3}x^4&&k=1/3,x\larr 5x^4\\
-\frac{1}{\sqrt{1-x^2}}&=(1-x^2)^{-1/2}\approx 1+(-\frac{1}{2})(-x^2)=1+\frac{1}{2}x^2&&k=-1/2,x\larr -x^2
+\frac{1}{1-x}&= (1-x)^{-1}\approx 1+(-1)(-x)=1+x&&k=-1,x\leftarrow -x\\
+\sqrt[3]{1+5x^4}&=(1+5x^4)^{1/3}\approx 1+\frac{1}{3}5x^4=1+\frac{5}{3}x^4&&k=1/3,x\leftarrow 5x^4\\
+\frac{1}{\sqrt{1-x^2}}&=(1-x^2)^{-1/2}\approx 1+(-\frac{1}{2})(-x^2)=1+\frac{1}{2}x^2&&k=-1/2,x\leftarrow -x^2
 \end{aligned}$$
 
 ### 微分
@@ -167,20 +168,20 @@ $$\begin{aligned}
 &=\Delta f-f'(a)\Delta x\\
 &=f(a+\Delta x)-f(a)-f'(a)\Delta x\\
 &=(\frac{f(a+\Delta x)-f(a)}{\Delta x}-f'(a))\Delta x\\
-&=\epsilon \Delta x
+&=\varepsilon \Delta x
 \end{aligned}$$
 当$\Delta x\to 0$时，
 $$\frac{f(a+\Delta x)-f(a)}{\Delta x}$$
-趋于$f'(a)$（这就是$f'(a)$的定义）。所以上面公式括号内的差值也趋于零，用$\epsilon$表示。也就是说$\Delta x\to 0$时$\epsilon\to 0$。当$\Delta x$很小的时候，近似估计误差$\epsilon\Delta x$更小。  
-虽然我们不知道精确的误差，但是$\epsilon\Delta x$是二阶小量。对于许多函数，$\Delta x$很小时，误差都更小。
+趋于$f'(a)$（这就是$f'(a)$的定义）。所以上面公式括号内的差值也趋于零，用$\varepsilon$表示。也就是说$\Delta x\to 0$时$\varepsilon\to 0$。当$\Delta x$很小的时候，近似估计误差$\varepsilon\Delta x$更小。  
+虽然我们不知道精确的误差，但是$\varepsilon\Delta x$是二阶小量。对于许多函数，$\Delta x$很小时，误差都更小。
 
 如果$y=f(x)$在$x=a$处可导，$x$从$a$变化到$a+\Delta x$，那么$f$的变化$\Delta y$是
-$$\Delta y=f'(a)\Delta x+\epsilon\Delta x$$
-其中当$\Delta x\to 0$时$\epsilon\to 0$。
+$$\Delta y=f'(a)\Delta x+\varepsilon\Delta x$$
+其中当$\Delta x\to 0$时$\varepsilon\to 0$。
 
 例6 中有
 $$\Delta A=\pi(10.1)^2-\pi(10)^2=2.01\pi=(2\pi+0.01\pi)$$
-前者是$dA=2\pi$，后者$\epsilon\Delta r=0.01\pi$是误差，那么$\epsilon=0.01\pi/\Delta r=0.01\pi/0.1=0.1\pi$。
+前者是$dA=2\pi$，后者$\varepsilon\Delta r=0.01\pi$是误差，那么$\varepsilon=0.01\pi/\Delta r=0.01\pi/0.1=0.1\pi$。
 
 ### 链式法则的证明
 目标是证明$f(u)$是$u$的可导函数，$g(x)$是$x$的可导函数，那么组合函数$y=f(g(x))$是$x$的可导函数。函数可导等价于在定义域内任一点都可导，必须证明$g$在任一点$x_0$是可导的，$f$在任一点$g(x_0)$上是可导的，那么组合函数在$x_0$处可导，且导数满足

@@ -3,12 +3,12 @@
 ![](050.010.png)
 
 **定义**  
-如果对于所有$\epsilon>0$，都有对应的$M$使得对于$f$定义域所有的$x$都有
-$$|f(x)-L|<\epsilon, \text{ whenever } x>M$$
+如果对于所有$\varepsilon>0$，都有对应的$M$使得对于$f$定义域所有的$x$都有
+$$|f(x)-L|<\varepsilon, \text{ whenever } x>M$$
 那么我们说$x$趋于无穷时，$f(x)$的极限是$L$，写作
 $$\lim_{x\to\infty}f(x)=L$$
-如果对于所有$\epsilon>0$，都有对应的$N$使得对于$f$定义域所有的$x$都有
-$$|f(x)-L|<\epsilon, \text{ whenever } x<N$$
+如果对于所有$\varepsilon>0$，都有对应的$N$使得对于$f$定义域所有的$x$都有
+$$|f(x)-L|<\varepsilon, \text{ whenever } x<N$$
 那么我们说$x$趋于负无穷时，$f(x)$的极限是$L$，写作
 $$\lim_{x\to -\infty}f(x)=L$$
 
@@ -24,13 +24,13 @@ $$|f(x)-L|=|k-k|=0<\varepsilon$$
 （a）$\lim_{x\to\infty}\frac{1}{x}=0$  
 （b）$\lim_{x\to-\infty}\frac{1}{x}=0$  
 证明：  
-（a）令$\epsilon>0$，我们必须找到一个$M$使得
-$$|\frac{1}{x}-0|=|\frac{1}{x}|<\epsilon, \text{ whenever } x>M$$
-那么$M=1/\epsilon$或者任意更大的正数。如下图所示：  
+（a）令$\varepsilon>0$，我们必须找到一个$M$使得
+$$|\frac{1}{x}-0|=|\frac{1}{x}|<\varepsilon, \text{ whenever } x>M$$
+那么$M=1/\varepsilon$或者任意更大的正数。如下图所示：  
 ![](050.020.png)  
-（b）令$\epsilon>0$，我们必须找到一个$N$使得
-$$\bigg|\frac{1}{x}-0\bigg|=\bigg|\frac{1}{x}\bigg|<\epsilon, \text{ whenever } x<N$$
-那么$N=-1/\epsilon$或者任意小于$1-\epsilon$的负数。
+（b）令$\varepsilon>0$，我们必须找到一个$N$使得
+$$\bigg|\frac{1}{x}-0\bigg|=\bigg|\frac{1}{x}\bigg|<\varepsilon, \text{ whenever } x<N$$
+那么$N=-1/\varepsilon$或者任意小于$1-\varepsilon$的负数。
 
 **定理8** 定理1的所有法则对 $x\to\infty,x\to-\infty$ 时同样适用。
 
@@ -98,11 +98,11 @@ $$\lim_{x\to\infty}\frac{x^3-2}{|x|^3+1}=\lim_{x\to\infty}\frac{x^3-2}{(-x)^3+1}
 
 例5 $x$轴是函数$y=e^x$的水平渐近线因为
 $$\lim_{x\to -\infty}e^x=0$$
-下面进行证明。令$\epsilon>0$，我们必须找到一个常量$N$使得
-$$|e^x-0|<\epsilon, \text{ whenever } x<N$$
+下面进行证明。令$\varepsilon>0$，我们必须找到一个常量$N$使得
+$$|e^x-0|<\varepsilon, \text{ whenever } x<N$$
 由于$|e^x-0|=e^x$，那么当$x<N$时，需满足条件
-$$e^x<\epsilon$$
-由于$e^x$是递增函数，那么$e^N=\epsilon,N=\ln \epsilon$或者更小能满足上述条件。如下图所示  
+$$e^x<\varepsilon$$
+由于$e^x$是递增函数，那么$e^N=\varepsilon,N=\ln \varepsilon$或者更小能满足上述条件。如下图所示  
 ![](050.050.png)
 
 例6 求  
@@ -226,9 +226,9 @@ $$\lim_{x\to c}f(x)=-\infty$$
 证明：给定任意$B>0$，需要找到$\delta>0$使得
 $$\frac{1}{x^2}>B  \text{ whenever } 0<|x-0|<\delta$$
 那么
-$$\frac{1}{x^2}>B\lrArr x^2<\frac{1}{B}\lrArr |x|<\frac{1}{\sqrt{B}}$$
+$$\frac{1}{x^2}>B\Leftrightarrow x^2<\frac{1}{B}\Leftrightarrow |x|<\frac{1}{\sqrt{B}}$$
 我们选择$\delta=1/\sqrt{B}$或者更小的正数，那么就有
-$$|x|<\delta \rArr \frac{1}{x^2}>\frac{1}{\delta^2}\geq B$$
+$$|x|<\delta \Rightarrow \frac{1}{x^2}>\frac{1}{\delta^2}\geq B$$
 因此，根据定义有
 $$\lim_{x\to 0}\frac{1}{x^2}=\infty$$
 
