@@ -102,3 +102,113 @@ $$\boldsymbol{u}-\boldsymbol{v}=\langle u_1-v_1,u_2-v_2,u_3-v_3\rangle$$
 注意 $(\boldsymbol{u}-\boldsymbol{v})+\boldsymbol{v}=\boldsymbol{u}$，所以矢量 $\boldsymbol{u}-\boldsymbol{v}$ 和 $\boldsymbol{v}$ 的加法如下图（a）所示，矢量差 $\boldsymbol{u}-\boldsymbol{v}$ 是矢量和 $\boldsymbol{u}+(-\boldsymbol{v})$，如下图（b）所示。
 
 ![](020.080.png)
+
+例3 令 $\boldsymbol{u}=\langle -1,3,1\rangle,\boldsymbol{v}=\langle 4,7,0\rangle$。求下面矢量分量
+（a）$2\boldsymbol{u}+3\boldsymbol{v}$
+
+（b）$\boldsymbol{u}-\boldsymbol{v}$
+
+（c）$|\frac{1}{2}\boldsymbol{u}|$
+
+解：
+
+（a）
+$$2\boldsymbol{u}+3\boldsymbol{v}=2\langle -1,3,1\rangle+3\langle 4,7,0\rangle=\langle 10,27,2\rangle$$
+（b）
+$$\boldsymbol{u}-\boldsymbol{v}=\langle -1,3,1\rangle-\langle 4,7,0\rangle=\langle -5,-4,1\rangle$$
+（c）
+$$\bigg|\frac{1}{2}\boldsymbol{u}\bigg|=\bigg|\langle -1,3,1\rangle\bigg|=\sqrt{(\frac{-1}{2})^2+(\frac{3}{2})^2+(\frac{1}{2})^2}=\frac{\sqrt{11}}{2}$$
+
+**矢量操作属性**
+> 令 $\boldsymbol{u},\boldsymbol{v},\boldsymbol{w}$ 是矢量，$a,b$ 是标量，那么
+> $$\boldsymbol{u}+\boldsymbol{v}=\boldsymbol{v}+\boldsymbol{u}$$
+> $$(\boldsymbol{u}+\boldsymbol{v})+\boldsymbol{w}=\boldsymbol{u}+(\boldsymbol{v}+\boldsymbol{w})$$
+> $$\boldsymbol{u}+\boldsymbol{0}=\boldsymbol{u}$$
+> $$\boldsymbol{u}+(-\boldsymbol{u})=\boldsymbol{0}$$
+> $$0\boldsymbol{u}=\boldsymbol{0}$$
+> $$1\boldsymbol{u}=\boldsymbol{u}$$
+> $$a(b\boldsymbol{u})=(ab)\boldsymbol{u}$$
+> $$a(\boldsymbol{u}+\boldsymbol{v})=a\boldsymbol{u}+a\boldsymbol{v}$$
+> $$(a+b)\boldsymbol{u}=a\boldsymbol{u}+b\boldsymbol{u}$$
+
+这些属性都能从矢量加法和矢量与标量的乘法推导出来。比如第一个属性
+$$\begin{aligned}
+\boldsymbol{u}+\boldsymbol{v}&=\langle u_1,u_2,u_3\rangle+\langle v_1,v_2,v_3\rangle\\
+&=\langle u_1+v_1,u_2+v_2,u_3+v_3\rangle\\
+&=\langle v_1+u_1,v_2+u_2,v_3+u_3\rangle\\
+&=\langle v_1,v_2,v_3\rangle+\langle u_1,u_2,u_3\rangle\\
+&=\boldsymbol{v}+\boldsymbol{u}
+\end{aligned}$$
+如果三个或者更多矢量在同一个平面，称为共面矢量（`coplanar`）。比如矢量 $\boldsymbol{u},\boldsymbol{v},\boldsymbol{u}+\boldsymbol{v}$ 总是共面。
+
+### 单位矢量
+长度为 1 的矢量 $\boldsymbol{v}$ 称为单位矢量（`unit vector`）。标准单位矢量（`standard unit vectors`）是
+$$\boldsymbol{i}=\langle 1,0,0\rangle,\boldsymbol{j}=\langle 0,1,0\rangle,\boldsymbol{k}=\langle 0,0,1\rangle$$
+任意矢量 $\boldsymbol{v}=\langle v_1,v_2,v_3\rangle$ 总是可以写成标准单位矢量的线性组合（`linear combination`）。
+$$\begin{aligned}
+\boldsymbol{v}&=\langle v_1,v_2,v_3\rangle\\
+&=\langle v_1,0,0\rangle+\langle 0,v_2,0\rangle+\langle 0,0,v_3\rangle\\
+&=v_1\langle 1,0,0\rangle+v_2\langle 0,1,0\rangle+v_3\langle 0,0,1\rangle\\
+&=v_1\boldsymbol{i}+v_2\boldsymbol{j}+v_3\boldsymbol{k}
+\end{aligned}$$
+那么标量 $v_1$ 是矢量 $\boldsymbol{v}$ 的 $\boldsymbol{i}$ 分量，$v_2$ 是矢量 $\boldsymbol{v}$ 的 $\boldsymbol{j}$ 分量，$v_3$ 是矢量 $\boldsymbol{v}$ 的 $\boldsymbol{k}$ 分量。如下图所示，从点 $P_1(x_1,y_1,z_1)$ 到点 $P_2(x_2,y_2,z_2)$ 的矢量的分量形式
+$$\overrightarrow{P_1P_2}=(x_2-x_1)\boldsymbol{i}+(y_2-y_1)\boldsymbol{j}+(z_2-z_1)\boldsymbol{k}$$
+
+![](020.090.png)
+
+如果 $\boldsymbol{v}\neq\boldsymbol{0}$，那么其长度 $|\boldsymbol{i}|$ 不是零，于是有
+$$\bigg|\frac{1}{|\boldsymbol{v}|}\boldsymbol{v}\bigg|=\frac{1}{|\boldsymbol{v}|}|\boldsymbol{v}|=1$$
+那么 $\boldsymbol{v}/|\boldsymbol{v}|$ 是矢量 $\boldsymbol{v}$ 方向上的单位矢量，称为非零矢量 $\boldsymbol{v}$ 的方向（`the direction`）。
+
+例4 求 $P_1(1,0,1)$ 到 $P_2(3,2,0)$ 的矢量方向上的单位矢量 $\boldsymbol{u}$。
+
+解：
+$$\overrightarrow{P_1P_2}=(3-1)\boldsymbol{i}+(2-0)\boldsymbol{j}+(0-1)\boldsymbol{k}=2\boldsymbol{i}+2\boldsymbol{j}-\boldsymbol{k}$$
+$$|\overrightarrow{P_1P_2}|=\sqrt{2^2+2^2+1^2}=3$$
+$$\boldsymbol{u}=\frac{2\boldsymbol{i}+2\boldsymbol{j}-\boldsymbol{k}}{3}=\frac{2}{3}\boldsymbol{i}+\frac{2}{3}\boldsymbol{j}-\frac{1}{3}\boldsymbol{k}$$
+$\boldsymbol{u}$ 是 $\overrightarrow{P_1P_2}$ 的方向。
+
+例5 如果 $\boldsymbol{v}=3\boldsymbol{i}-4\boldsymbol{j}$ 是速度矢量，用其速度和运动方向的乘积表示 $\boldsymbol{v}$。
+
+解：速度是 $\boldsymbol{v}$ 的大小（长度）
+$$|\boldsymbol{v}|=\sqrt{3^2+(-4)^2}=5$$
+$\boldsymbol{v}$ 的方向是单位矢量 $\boldsymbol{v}/|\boldsymbol{v}|$
+$$\frac{\boldsymbol{v}}{|\boldsymbol{v}|}=\frac{3\boldsymbol{i}-4\boldsymbol{j}}{5}=\frac{3}{5}\boldsymbol{i}-\frac{4}{5}\boldsymbol{j}$$
+所以
+$$\boldsymbol{v}=5(\frac{3}{5}\boldsymbol{i}-\frac{4}{5}\boldsymbol{j})$$
+
+> 如果 $\boldsymbol{v}\neq \boldsymbol{0}$，那么
+> 1. $\frac{\boldsymbol{v}}{|\boldsymbol{v}|}$ 是单位矢量，称为 $\boldsymbol{v}$ 的方向
+> 2. 总是将 $\boldsymbol{v}$ 表示为长度乘以其方向，即 $\boldsymbol{v}=|\boldsymbol{v}|\frac{\boldsymbol{v}}{|\boldsymbol{v}|}$
+
+例6 一个大小 6 牛顿的力作用在矢量 $\boldsymbol{v}=2\boldsymbol{i}+2\boldsymbol{j}-\boldsymbol{k}$ 的方向上。用力的大小乘以方向的形式表示力 $\boldsymbol{F}$。
+
+解：力等于大小 6 乘以方向 $\frac{\boldsymbol{v}}{|\boldsymbol{v}|}$，所以
+$$\begin{aligned}
+\boldsymbol{F}&=6\frac{\boldsymbol{v}}{|\boldsymbol{v}|}\\
+&=6\frac{2\boldsymbol{i}+2\boldsymbol{j}-\boldsymbol{k}}{\sqrt{2^2+2^2+(-1)^2}}\\
+&=6\frac{2\boldsymbol{i}+2\boldsymbol{j}-\boldsymbol{k}}{3}\\
+&=4\boldsymbol{i}+4\boldsymbol{j}-2\boldsymbol{k}
+\end{aligned}$$
+
+### 线段终点
+矢量在几何中应用很广，比如求线段的中点。
+
+> 连接点 $P_1(x_1,y_1,z_1)$ 和点 $P_2(x_2,y_2,z_2)$ 的线段的中点（`midpoint`）$M$ 是点
+> $$\bigg(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2},\frac{z_1+z_2}{2}\bigg)$$
+
+如下图所示。
+
+![](020.100.png)
+
+$$\begin{aligned}
+\overrightarrow{M}&=\overrightarrow{OP_1}+\frac{1}{2}\overrightarrow{P_1P_2}\\
+&=\overrightarrow{OP_1}+\frac{1}{2}(\overrightarrow{OP_2}-\overrightarrow{OP_1})\\
+&=\frac{1}{2}(\overrightarrow{OP_1}+\overrightarrow{OP_2})\\
+&=\frac{x_1+x_2}{2}\boldsymbol{i}+\frac{y_1+y_2}{2}\boldsymbol{j}+\frac{z_1+z_2}{2}\boldsymbol{k}
+\end{aligned}$$
+
+例7 连接点 $P_1(3,-2,0)$ 和点 $P_2(7,4,4)$ 的线段的中点是
+$$\bigg(\frac{3+7}{2},\frac{-2+4}{2},\frac{0+4}{2}\bigg)=(5,1,2)$$
+
+### 应用
