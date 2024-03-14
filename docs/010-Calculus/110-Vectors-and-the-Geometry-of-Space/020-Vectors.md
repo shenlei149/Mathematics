@@ -212,3 +212,43 @@ $$\begin{aligned}
 $$\bigg(\frac{3+7}{2},\frac{-2+4}{2},\frac{0+4}{2}\bigg)=(5,1,2)$$
 
 ### 应用
+例8 一个喷气式飞机自西向东飞，相对于空气速度是 800 km/h，东偏北 $60^\circ$ 顺风 110 km/h。求飞机对地速度和方向。
+
+解：用矢量 $\boldsymbol{u}$ 表示飞机的速度，矢量 $\boldsymbol{v}$ 表示风的速度，那么 $|\boldsymbol{u}|=800,|\boldsymbol{v}|=600$，如下图所示。
+
+![](020.110.png)
+
+相对地面的速度就是 $\boldsymbol{u}+\boldsymbol{v}$。如果 $x$ 轴表示正东，那么
+$$\boldsymbol{u}=\langle 800,0\rangle,\boldsymbol{v}=\langle 110\cos 60^\circ,100\sin 60^\circ\rangle=\langle 55,55\sqrt{3}\rangle$$
+因此
+$$\boldsymbol{u}+\boldsymbol{v}=\langle 855,55\sqrt{3}\rangle=855\boldsymbol{i}+55\sqrt{3}\boldsymbol{j}$$
+$$|\boldsymbol{u}+\boldsymbol{v}|=\sqrt{855^2+(55\sqrt{3})^2}\approx 860.3$$
+$$\theta=\tan^{-1}\frac{55\sqrt{3}}{855}\approx 6.4^\circ$$
+因此，飞机的对地速度是 860.3 km/h，方向是东偏北 $6.4^\circ$。
+
+例9 两根绳子吊着一个 75 N 重的物体，如下图所示。求 $\boldsymbol{F_1},\boldsymbol{F_2}$。
+
+![](020.121.png)
+
+解：力 $\boldsymbol{F_1},\boldsymbol{F_2}$ 的大小是 $|\boldsymbol{F_1}|,|\boldsymbol{F_2}|$，分量满足牛顿定律。合力 $\boldsymbol{F_1}+\boldsymbol{F_2}$ 大小等于力 $\boldsymbol{w}$，方向相反。如下图所示。
+
+![](020.122.png)
+
+由图可以得到
+$$\boldsymbol{F_1}=\langle-|\boldsymbol{F_1}|\cos 55^\circ,|\boldsymbol{F_1}|\sin 55^\circ\rangle,\boldsymbol{F_2}=\langle|\boldsymbol{F_2}|\cos 40^\circ,|\boldsymbol{F_2}|\sin 40^\circ\rangle$$
+由 $\boldsymbol{F_1}+\boldsymbol{F_2}=\langle 0,75\rangle$ 得到
+$$\begin{aligned}
+-|\boldsymbol{F_1}|\cos 55^\circ+|\boldsymbol{F_2}|\cos 40^\circ&=0\\
+|\boldsymbol{F_1}|\sin 55^\circ+|\boldsymbol{F_2}|\sin 40^\circ&=75
+\end{aligned}$$
+由第一个式子得到
+$$|\boldsymbol{F_2}|=\frac{|\boldsymbol{F_1}|\cos 55^\circ}{\cos 40^\circ}$$
+代入第二个式子得到
+$$|\boldsymbol{F_1}|\sin 55^\circ+|\boldsymbol{F_1}|\tan 40^\circ\cos 55^\circ=75$$
+那么
+$$|\boldsymbol{F_1}|=\frac{75}{\sin 55^\circ+\cos 55^\circ\tan 40^\circ}\approx 57.67 N$$
+并且
+$$|\boldsymbol{F_2}|=\frac{|\boldsymbol{F_1}|\cos 55^\circ}{\sin 55^\circ\cos 40^\circ+\cos 55^\circ\sin 40^\circ}=\frac{|\boldsymbol{F_1}|\cos 55^\circ}{\sin(55^\circ+40^\circ)}\approx 43.18N$$
+代回矢量
+$$\boldsymbol{F_1}=\langle-|\boldsymbol{F_1}|\cos 55^\circ,|\boldsymbol{F_1}|\sin 55^\circ\rangle\approx\langle-33.08,47.24\rangle$$
+$$\boldsymbol{F_2}=\langle|\boldsymbol{F_2}|\cos 40^\circ,|\boldsymbol{F_2}|\sin 40^\circ\rangle\approx\langle33.08,27.76\rangle$$
