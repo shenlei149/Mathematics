@@ -83,3 +83,59 @@ v_1&v_2&v_3
 u_1&u_2&u_3\\
 v_1&v_2&v_3
 \end{vmatrix}$$
+
+例1 如果 $\boldsymbol{u}=2\boldsymbol{i}+2\boldsymbol{j}+2\boldsymbol{k},\boldsymbol{v}=-4\boldsymbol{i}+3\boldsymbol{j}+1\boldsymbol{k}$，求 $\boldsymbol{u}\times\boldsymbol{v},\boldsymbol{v}\times\boldsymbol{u}$。
+
+解：使用行列式求解。
+$$\begin{aligned}
+\boldsymbol{u}\times\boldsymbol{v}&=\begin{vmatrix}
+\boldsymbol{i}&\boldsymbol{j}&\boldsymbol{k}\\
+2&1&1\\
+-4&3&1
+\end{vmatrix}\\
+&=\begin{vmatrix}
+1&1\\3&1
+\end{vmatrix}\boldsymbol{i}-\begin{vmatrix}
+2&1\\-4&1
+\end{vmatrix}\boldsymbol{j}+\begin{vmatrix}
+2&1\\-4&3
+\end{vmatrix}\boldsymbol{k}\\
+&=-2\boldsymbol{i}-6\boldsymbol{j}+10\boldsymbol{k}
+\end{aligned}$$
+那么
+$$\boldsymbol{v}\times\boldsymbol{u}=-(\boldsymbol{u}\times\boldsymbol{v})=2\boldsymbol{i}+6\boldsymbol{j}-10\boldsymbol{k}$$
+
+例2 找到一个垂直于由点 $P(1,-1,0),Q(2,1,-1),R(-1,1,2)$ 确定的平面的矢量。
+
+解：矢量 $\overrightarrow{PQ}\times\overrightarrow{PR}$ 垂直于这两个矢量，即垂直于由这两个矢量确定的平面。
+$$\overrightarrow{PQ}=\boldsymbol{i}+2\boldsymbol{j}-\boldsymbol{k}$$
+$$\overrightarrow{PR}=-2\boldsymbol{i}+2\boldsymbol{j}+2\boldsymbol{k}$$
+所以
+$$\begin{aligned}
+\overrightarrow{PQ}\times\overrightarrow{PR}&=\begin{vmatrix}
+\boldsymbol{i}&\boldsymbol{j}&\boldsymbol{k}\\
+1&2&-1\\
+-2&2&2
+\end{vmatrix}\\
+&=\begin{vmatrix}
+2&-1\\2&2
+\end{vmatrix}\boldsymbol{i}-\begin{vmatrix}
+1&-1\\-2&2
+\end{vmatrix}\boldsymbol{j}+\begin{vmatrix}
+1&2\\-2&2
+\end{vmatrix}\boldsymbol{k}\\
+&=6\boldsymbol{i}+6\boldsymbol{k}
+\end{aligned}$$
+
+![](040.050.png)
+
+例3 求点 $P(1,-1,0),Q(2,1,-1),R(-1,1,2)$ 确定的三角形的面积。
+
+解：由这三点确认的平行四边形的面积是
+$$|\overrightarrow{PQ}\times\overrightarrow{PR}|=|6\boldsymbol{i}+6\boldsymbol{k}|=6\sqrt{2}$$
+那么三角形面积是 $3\sqrt{2}$。
+
+例4 求垂直于由点 $P(1,-1,0),Q(2,1,-1),R(-1,1,2)$ 确定的平面的单位矢量。
+
+解：矢量 $\overrightarrow{PQ}\times\overrightarrow{PR}$ 方向上的单位矢量 $\boldsymbol{n}$ 即为所求矢量。
+$$\boldsymbol{n}=\frac{\overrightarrow{PQ}\times\overrightarrow{PR}}{|\overrightarrow{PQ}\times\overrightarrow{PR}|}=\frac{6\boldsymbol{i}+6\boldsymbol{k}}{6\sqrt{2}}=\frac{1}{\sqrt{2}}\boldsymbol{i}+\frac{1}{\sqrt{2}}\boldsymbol{k}$$
