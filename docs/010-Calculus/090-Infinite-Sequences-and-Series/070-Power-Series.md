@@ -138,6 +138,41 @@ $$\begin{aligned}
 > $$f''(x)=\sum_{n=2}^\infty n(n-1)c_n(x-a)^{n-2}$$
 > 等等。每个微分函数在区间 $a-R<x<a+R$ 上都收敛。
 
+证明：简单起见，令 $a=0$。一下证明按照习题 64 的步骤，但是其中第二步又出现了 $c_n$，所以定理 21 的系数使用 $a_n$。
+
+$f(x)$ 收敛半径是 $R$，所以当 $n\to\infty$ 时
+$$\bigg|\frac{a_nx^n}{a_{n-1}x^{n-1}}\bigg|=\bigg|\frac{a_n}{a_{n-1}}x\bigg|<1$$
+令 $g(x)=\sum_{n=1}^\infty na_nx^{n-1}$，比值测试，当 $n\to\infty$ 时
+$$\bigg|\frac{na_nx^{n-1}}{(n-1)a_{n-1}x^{n-2}}\bigg|=\bigg|\frac{a_n}{a_{n-1}}x\bigg|<1$$
+所以 $g(x)$ 在收敛半径是 $R$。下面需要证明 $f'(x)=g(x)$。
+
+对函数 $x^n$ 应用中值定理，选择的两个横坐标是 $x+h,x$，可以得到
+$$\frac{(x+h)^n-x^n}{h}=nc_n^{n-1}$$
+其中 $c_n$ 介于 $x,x+h$ 之间，$n=1,2,3,\cdots$。
+
+对于 $n\geq 2$，$\frac{f(x+h)-f(x)}{h},g(x)$ 的对应项之差是
+$$na_nx^{n-1}-na_nc_n^{n-1}=na_n(x^{n-1}-c_n^{n-1})$$
+而 $n=1$ 时，$\frac{f(x+h)-f(x)}{h},g(x)$ 的项分别是 $a_1\cdot 1\cdot c_1^0=a_1,1\cdot a_1x^0=a_1$，之差是零。$n=0$ 时，$f(x)$ 的第零项与 $x$ 无关，那么 $f(x+h)-f(x)=0$。所以
+$$\bigg|g(x)-\frac{f(x+h)-f(x)}{h}\bigg|=\bigg|\sum_{n=2}na_n(x^{n-1}-c_n^{n-1})\bigg|$$
+对函数 $x^{n-1}$ 应用中值定理，选择的两个横坐标是 $x,c_n$，可以得到
+$$\frac{x^{n-1}-c_n^{n-1}}{x-c_n}=(n-1)d_{n-1}^{n-2}$$
+其中，$d_{n-1}$ 介于 $x,c_n$ 之间，$n=2,3,4,\cdots$。间接地 $d_{n-1}$ 也介于 $x,x+h$ 之间。
+
+$c_n$ 介于 $x,x+h$ 之间，所以 $|x-c_n|<h$。考虑到 $d_{n-1}$ 可能是正数也可能是负数，所有 $d_{n-1}\leq\max{|x|,|x+h|}=\alpha$。
+$$\begin{aligned}
+\bigg|g(x)-\frac{f(x+h)-f(x)}{h}\bigg|&=\bigg|\sum_{n=2}na_n(x^{n-1}-c_n^{n-1})\bigg|\\
+&=\bigg|\sum_{n=2}na_n(n-1)(x-c_n)d_{n-1}^{n-2}\bigg|\\
+&\leq\bigg|\sum_{n=2}na_n(n-1)|h|d_{n-1}^{n-2}\bigg|\\
+&\leq|h|\sum_{n=2}|na_n(n-1)\alpha^{n-2}|\\
+\end{aligned}$$
+现在看下级数 $\sum_{n=2}na_n(n-1)\alpha^{n-2}$ 的收敛性。应用比值测试，$n\to\infty$ 时
+$$\bigg|\frac{n(n-1)a_n\alpha^{n-2}}{(n-1)(n-2)a_{n-1}\alpha^{n-3}}\bigg|=\bigg|\frac{na_n}{(n-2)a_{n-1}}\alpha\bigg|=\bigg|\frac{a_n}{a_{n-1}}\alpha\bigg|<1$$
+所以级数收敛，那么其和是有限的。
+
+当 $h\to 0$ 时，上面式子右边的极限就是零，所以左边的极限值是零，去掉绝对值，极限也是零，所以
+$$\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}=g(x)$$
+这个式子就是导数的定义，所以 $f'(x)=g(x)$。
+
 例4 有如下函数
 $$\begin{aligned}
 f(x)&=\frac{1}{1-x}\\
